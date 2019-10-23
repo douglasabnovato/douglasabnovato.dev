@@ -28,6 +28,7 @@
 9. considerações finais
 10. transformar essa página em uma página pessoal<br>
 `douglasabnovato.github.io`
+11. somente arquivos estáticos
 
 :. De `Criando páginas web com Github Pages`.<br/> 
 Por Marcos Castro : https://www.udemy.com/course/github-pages/learn/lecture/5335520?components=buy_button,introduction_asset,purchase#overview
