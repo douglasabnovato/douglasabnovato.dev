@@ -26,6 +26,7 @@
 7. hospedando a página no github
 8. atualizando a página
 9. considerações finais
+10. transformar essa página em uma página pessoal.
 
 :. De `Criando páginas web com Github Pages`.<br/> 
 Por Marcos Castro : https://www.udemy.com/course/github-pages/learn/lecture/5335520?components=buy_button,introduction_asset,purchase#overview
