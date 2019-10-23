@@ -6,7 +6,7 @@
 
 ## Ferramentas : 
 
-![Udemy](/images/logo-logo-udemy.png)
+![Udemy](/images/logo-udemy.png)
 ![Git](/images/logo-git.png)
 ![Github](/images/logo-github.png)
 ![HTML/CSS/Javascript](/images/logo-html-css-js.jpeg)
