@@ -13,9 +13,13 @@
 ![VSCode](/images/logo-VSCode.png)
 
 
-#### Projet `Github Pages`
+### Projet `Github Pages`
 - Criando páginas web.
 
+### Section 1 - criando páginas web com github pages
+1. apresentação do instrutor
+2. o que é github ?
+3. o que é git ?
 
 :. De `Criando páginas web com Github Pages`.<br/> 
 Por Marcos Castro : https://www.udemy.com/course/github-pages/learn/lecture/5335520?components=buy_button,introduction_asset,purchase#overview
