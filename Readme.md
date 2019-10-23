@@ -1,8 +1,8 @@
-# Github Pages - criando páginas web.
+# Github Pages - criando pÃ¡ginas web.
 
-## Atualização: 23 de outubro de 2019 - 17:20
-## Criação: 23 de outubro de 2019
-## Prática : @douglasabnovato
+## AtualizaÃ§Ã£o: 23 de outubro de 2019 - 17:20
+## CriaÃ§Ã£o: 23 de outubro de 2019
+## PrÃ¡tica : @douglasabnovato
 
 ## Ferramentas : 
 
@@ -14,8 +14,8 @@
 
 
 #### Projet `Github Pages`
-- Criando páginas web.
+- Criando pÃ¡ginas web.
 
 
-:. De `Criando páginas web com Github Pages`.<br/> 
+:. De `Criando pÃ¡ginas web com Github Pages`.<br/> 
 Por Marcos Castro : https://www.udemy.com/course/github-pages/learn/lecture/5335520?components=buy_button,introduction_asset,purchase#overview
