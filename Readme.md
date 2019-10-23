@@ -20,6 +20,12 @@
 1. apresentação do instrutor
 2. o que é github ?
 3. o que é git ?
+4. o que é github pages ?
+5. criando um repositório
+6. criando uma página simples
+7. hospedando a página no github
+8. atualizando a página
+9. considerações finais
 
 :. De `Criando páginas web com Github Pages`.<br/> 
 Por Marcos Castro : https://www.udemy.com/course/github-pages/learn/lecture/5335520?components=buy_button,introduction_asset,purchase#overview
