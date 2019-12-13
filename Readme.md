@@ -1,6 +1,6 @@
 # Github Pages - criando páginas web.
 
-## Atualização: 23 de outubro de 2019 - 17:20
+## Atualização: 13 de dezembro de 2019 - 16:34
 ## Criação: 23 de outubro de 2019
 ## Prática : @douglasabnovato
 
