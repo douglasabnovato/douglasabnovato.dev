@@ -34,5 +34,17 @@ Bonus : Alterar o nome do repositório remoto e do local
 2. faça as mudanças nos repositórios: local e remoto
 3. git remote add origin git@github.com:douglasabnovato/voittocalculator.github.io.git
 
+### Desafio 
+
+#### Inspirações para Estilizar meu portfólio
+
+- [Igor Halfeld](https://igorluiz.me/)
+- [Arthur Oliveira](https://arthurzeras.github.io/)
+- [GDEVL](https://www.gdevl.com/)
+- [Symi](https://mynameissymi.live/)
+- [Bruno Rodrigues](https://itbruno.com.br/)
+- [ZARA](https://www.zara.com/br/)
+
+
 :. De `Criando páginas web com Github Pages`.<br/> 
 Por Marcos Castro : https://www.udemy.com/course/github-pages/learn/lecture/5335520?components=buy_button,introduction_asset,purchase#overview
