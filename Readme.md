@@ -1,10 +1,12 @@
-# Github Pages - criando páginas web.
+### Github Pages - criando páginas web
 
-## Atualização: 13 de dezembro de 2019 - 16:34
-## Criação: 23 de outubro de 2019
-## Prática : @douglasabnovato
+#### Objetivo
 
-## Ferramentas : 
+Uma página com os links para os projetos publicados.
+
+#### Ferramentas / Tecnologias
+
+Uma aplicação web com js, css e html.
 
 ![Udemy](/images/logo-udemy.png)
 ![Git](/images/logo-git.png)
@@ -12,11 +14,19 @@
 ![HTML/CSS/Javascript](/images/logo-html-css-js.jpeg)
 ![VSCode](/images/logo-VSCode.png)
 
+#### Detalhes 
 
-### Projet `Github Pages : douglasabnovato.github.io`
-- Criando páginas web.
+- Criação: 23 de outubro de 2019
+- Atualização: 13 de dezembro de 2019
+- Terminado: Sim 
+- Publicado: [Meu Portifólio](https://douglasabnovato.github.io/)
+
+#### Publicado
+
+![Meu Portifólio](/portifolio-1.jpg)
 
 ### Section 1 - criando páginas web com github pages
+
 1. apresentação do instrutor
 2. o que é github ?
 3. o que é git ?
@@ -34,9 +44,7 @@ Bonus : Alterar o nome do repositório remoto e do local
 2. faça as mudanças nos repositórios: local e remoto
 3. git remote add origin git@github.com:douglasabnovato/voittocalculator.github.io.git
 
-### Desafio 
-
-#### Inspirações para Estilizar meu portfólio
+#### Desafio e Inspirações para Estilizar meu portfólio
 
 - [Igor Halfeld](https://igorluiz.me/)
 - [Arthur Oliveira](https://arthurzeras.github.io/)
@@ -45,6 +53,5 @@ Bonus : Alterar o nome do repositório remoto e do local
 - [Bruno Rodrigues](https://itbruno.com.br/)
 - [ZARA](https://www.zara.com/br/)
 
-
-:. De `Criando páginas web com Github Pages`.<br/> 
-Por Marcos Castro : https://www.udemy.com/course/github-pages/learn/lecture/5335520?components=buy_button,introduction_asset,purchase#overview
+:. [Linkedin - @douglasabnovato](https://www.linkedin.com/in/douglasabnovato/)<br/>
+.. de : [Udemy](https://www.udemy.com/course/github-pages/learn/lecture/5335520?components=buy_button,introduction_asset,purchase#overview)
