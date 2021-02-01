@@ -52,6 +52,10 @@ Bonus : Alterar o nome do repositório remoto e do local
   <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./tela-1.jpg" width="400px">
 </p> 
 
+### Web - v2.0
+
+- utilizar o [site](https://itbruno.com.br/) como referência para fazer a v2.0.
+
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
