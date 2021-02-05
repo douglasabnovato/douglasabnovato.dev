@@ -51,11 +51,7 @@ Bonus : Alterar o nome do repositório remoto e do local
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./tela-1.jpg" width="400px">
   <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./tela-2.jpg" width="400px">
-</p> 
-
-### Web - v2.0
-
-- utilizar o [site](https://itbruno.com.br/) como referência para fazer a v2.0.
+</p>  
 
 ## 🛠 Tecnologias
 
