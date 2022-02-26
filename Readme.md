@@ -71,7 +71,8 @@ Você pode encontrar a fonte no [Google Fonts](https://fonts.google.com/specimen
 Utilizando um template do wschools para aperfeiçoar o layout da aplicação.
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;"> 
-  <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/tela-2.jpg" width="400px">
+  <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/figma-1.jpg" width="400px">
+  <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/figma-2.jpg" width="400px">
 </p>  
 
 ### Web - v1.0
