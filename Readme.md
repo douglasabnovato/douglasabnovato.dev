@@ -35,8 +35,9 @@ Neste desafio devo criar uma página web para que seja meu portfolio e currícul
 
 - Layout descritivo no figma
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;"> 
-  <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/tela-2.jpg" width="400px">
-</p>
+  <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/figma-1.jpeg" width="400px">
+  <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/figma-2.jpeg" width="400px">
+</p>  
 
 - 💡 Como começar: 
 1 - Use o link do Figma como base para o projeto.
@@ -70,10 +71,9 @@ Você pode encontrar a fonte no [Google Fonts](https://fonts.google.com/specimen
 ### Web - v2.0
 Utilizando um template do wschools para aperfeiçoar o layout da aplicação.
 
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;"> 
-  <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/figma-1.jpeg" width="400px">
-  <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/figma-2.jpeg" width="400px">
-</p>  
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/tela-2.jpg" width="400px">
+</p>   
 
 ### Web - v1.0
 Uma estrutura simples em html com um avatar e algumas informações.
