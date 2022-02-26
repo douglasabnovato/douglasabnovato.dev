@@ -1,0 +1,91 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.left{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column; 
+}
+ 
+.profile{
+    border: solid 1px; 
+}
+
+.links{
+    border: solid 1px; 
+}
+
+.technologies{
+    border: solid 1px; 
+}
+
+.experiences{
+    border: solid 1px; 
+}
+
+.education{
+    border: solid 1px; 
+}
+
+.right{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column; 
+}
+
+.my-projects{
+    border: solid 1px; 
+}
+
+.box-projects{
+    display: flex;
+    justify-content: space-around; 
+}
+
+.project-1{
+    border: solid 1px; 
+}
+
+.project-2{
+    border: solid 1px; 
+}
+
+.recent-posts{
+    border: solid 1px; 
+}
+
+.box-posts{
+    display: flex;
+    justify-content: space-around; 
+    flex-direction: column; 
+}
+
+.post-1{
+    display: flex;
+    justify-content: space-around; 
+
+    border: solid 1px; 
+}
+
+.box-post-left{  
+    border: solid 1px; 
+}
+
+.box-post-right{  
+    border: solid 1px; 
+}
+
+.post-2{
+    display: flex;
+    justify-content: space-around; 
+
+    border: solid 1px; 
+}
+
+.footer{
+    text-align: center;
+    
+    border: solid 1px;
+}
