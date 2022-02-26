@@ -12,10 +12,14 @@
     justify-content: space-around;
     flex-direction: column;
     
-    border: solid 1px red;  
-    margin-top: 2.5rem;
-    margin-left: 2.5rem;
+    border: solid 1px red; 
     gap: 2rem;
+
+    width: 40%;
+    max-width: 348px;
+
+    margin-top: 2.5rem;
+    margin-left: 2.5rem; 
 }
  
 .profile{
@@ -53,7 +57,8 @@
     flex-direction: column; 
     
     border: solid 1px red;  
-    margin-top: 2.5rem;
+    margin-top: 2.5rem; 
+    width: auto; 
 }
 
 .my-projects{
