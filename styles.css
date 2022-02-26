@@ -58,6 +58,7 @@
     
     border: solid 1px red;  
     margin-top: 2.5rem; 
+    margin-right: 2.5rem; 
     width: auto; 
 }
 
@@ -107,6 +108,9 @@
 
     border: solid 1px;  
     margin-bottom: 2.5rem;
+    
+    width: 952px;
+    height: 201px;
 }
 
 .box-post-left{  
@@ -123,6 +127,9 @@
 
     border: solid 1px; 
     margin-bottom: 2.5rem;
+    
+    width: 952px;
+    height: 201px; 
 }
 
 .footer{
