@@ -29,6 +29,11 @@ Também exibindo os links das minhas redes sociais.
 
 Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
+
+### Web - v3.0
+Um desafio de layout criado figma e com a descrição no notion.
+
+
 ### Web - v2.0
 Utilizando um template do wschools para aperfeiçoar o layout da aplicação.
 
