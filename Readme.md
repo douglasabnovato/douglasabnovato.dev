@@ -39,9 +39,9 @@ Neste desafio devo criar uma página web para que seja meu portfolio e currícul
   <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/figma-2.jpeg" width="400px">
 </p>  
 
-- 💡 Como começar: 
-1 - Use o link do Figma como base para o projeto.
-2 - Todas as imagens e ícones estão na pasta assets.
+- 💡 Como começar:</br> 
+1 - Use o link do Figma como base para o projeto.</br> 
+2 - Todas as imagens e ícones estão na pasta assets.</br> 
 3 - Techs: HTML e CSS
 
 #### 🚀 Requisitos para o desafio 
