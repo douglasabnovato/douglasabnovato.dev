@@ -25,9 +25,20 @@ Também exibindo os links das minhas redes sociais.
 2. Medium - meus artigos
 3. Redes Sociais
 
-## 🎨 Layout
+## 🎨 Versões Layout
 
-Uma aplicação web com js, css e html, criando páginas web com github pages
+Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
+
+### Web - v2.0
+Utilizando um template do wschools para aperfeiçoar o layout da aplicação.
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;"> 
+  <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/tela-2.jpg" width="400px">
+</p>  
+
+### Web - v1.0
+Uma estrutura simples em html com um avatar e algumas informações.
+Realizado os principais comandos de git para testar o fluxo de trabalho com esse código.
 
 1. apresentação do instrutor
 2. o que é github ?
@@ -38,23 +49,18 @@ Uma aplicação web com js, css e html, criando páginas web com github pages
 7. hospedando a página no github
 8. atualizando a página
 9. considerações finais
-10. transformar essa página em uma página pessoal<br>
-`douglasabnovato.github.io`
-11. somente arquivos estáticos<br>
-Bonus : Alterar o nome do repositório remoto e do local
-1. git remote remove origin
-2. faça as mudanças nos repositórios: local e remoto
-3. git remote add origin git@github.com:douglasabnovato/voittocalculator.github.io.git
-
-### Web - v2.0
+10. transformar essa página em uma página pessoal: `douglasabnovato.github.io`
+11. somente arquivos estáticos 
+12. Bonus : Alterar o nome do repositório remoto e do local
+13. git remote remove origin
+14. faça as mudanças nos repositórios: local e remoto
+15. git remote add origin git@github.com:douglasabnovato/nome-repositorio.github.io.git
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/tela-1.jpg" width="400px">
-  <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/tela-2.jpg" width="400px">
 </p>  
 
 ## 🛠 Tecnologias
-
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Css][css]
@@ -65,15 +71,12 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Github Pages][githubpages]
 
 ## 🚀 Como executar o projeto
-
 Podemos considerar este projeto como sendo com uma parte:
 1. Front End (pasta web)  
 
 ### Pré-requisitos
-
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js][nodejs]. 
-Além disto é bom ter um editor para trabalhar com o código como [VSCode][vscode]
+[Git](https://git-scm.com), [Node.js][nodejs]. Além disso, é bom ter um editor para trabalhar com o código como [VSCode][vscode].
 
 ### 🧭 Rodando a aplicação web (Front End)
 
