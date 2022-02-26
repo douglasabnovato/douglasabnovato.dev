@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./tela-2.jpg" />
+    <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/tela-2.jpg" />
 </h1>
 
 <h4 align="center"> 
@@ -49,8 +49,8 @@ Bonus : Alterar o nome do repositório remoto e do local
 ### Web - v2.0
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./tela-1.jpg" width="400px">
-  <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./tela-2.jpg" width="400px">
+  <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/tela-1.jpg" width="400px">
+  <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/tela-2.jpg" width="400px">
 </p>  
 
 ## 🛠 Tecnologias
