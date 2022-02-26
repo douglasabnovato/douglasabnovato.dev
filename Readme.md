@@ -102,23 +102,6 @@ Open Live Server
 4. Envie as suas alterações: `git push origin my-feature`
 > Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](https://github.com/firstcontributions/first-contributions)
 
-
-## 📝 Licença
-
-Este projeto esta sobe a licença MIT.
-
-Feito com ❤️ por Douglas A B Novato 👋🏽 [Entre em contato!](https://www.linkedin.com/in/douglasabnovato/)
-
-[git]: https://git-scm.com/doc
-[github]: https://docs.github.com/en 
-[css]: https://developer.mozilla.org/en-US/docs/Web/CSS 
-[html]: https://developer.mozilla.org/en-US/docs/Web/HTML
-[javascript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript 
-[githubpages]: https://pages.github.com/
-
-Fonte - de : [Udemy](https://www.udemy.com/course/github-pages/learn/lecture/5335520?components=buy_button,introduction_asset,purchase#overview)
-
-
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](.github/LICENSE.md) para mais detalhes.
@@ -127,3 +110,10 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](.github/LICENSE.
 
 Feito com ❤️ por Douglas A B Novato 👋🏽 [Entre em contato!](https://www.linkedin.com/in/douglasabnovato/) 
 Fonte do projeto Por [Udemy](https://www.udemy.com/course/github-pages/learn/lecture/5335520?components=buy_button,introduction_asset,purchase#overview)
+
+[git]: https://git-scm.com/doc
+[github]: https://docs.github.com/en 
+[css]: https://developer.mozilla.org/en-US/docs/Web/CSS 
+[html]: https://developer.mozilla.org/en-US/docs/Web/HTML
+[javascript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript 
+[githubpages]: https://pages.github.com/
