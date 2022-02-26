@@ -1,58 +1,91 @@
-.container{
+* {
+    margin: 0;
+}
+
+.container{ 
     display: flex;
-    justify-content: space-around;
+    gap: 3.75rem;
 }
 
 .left{
     display: flex;
     justify-content: space-around;
-    flex-direction: column; 
+    flex-direction: column;
+    
+    border: solid 1px red;  
+    margin-top: 2.5rem;
+    margin-left: 2.5rem;
+    gap: 2rem;
 }
  
 .profile{
+    width: 348px;
+    height: 292px;
     border: solid 1px; 
 }
 
 .links{
+    width: 348px;
+    height: 348px;
     border: solid 1px; 
 }
 
 .technologies{
+    width: 348px;
+    height: 208px;
     border: solid 1px; 
 }
 
 .experiences{
+    width: 348px;
+    height: 349px;
     border: solid 1px; 
 }
 
 .education{
+    width: 348px;
+    height: 352px;
     border: solid 1px; 
 }
 
 .right{
-    display: flex;
-    justify-content: space-around;
+    display: flex; 
     flex-direction: column; 
+    
+    border: solid 1px red;  
+    margin-top: 2.5rem;
 }
 
 .my-projects{
-    border: solid 1px; 
+    width: 952px;
+    height: 86px;
+    border: solid 1px;  
 }
 
 .box-projects{
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;  
+    gap: 2rem; 
 }
 
 .project-1{
+    width: 461px;
+    height: 186px;  
+    margin-top: 2.5rem;
     border: solid 1px; 
 }
 
 .project-2{
+    width: 461px;
+    height: 186px;  
+    margin-top: 2.5rem;
     border: solid 1px; 
 }
 
 .recent-posts{
+    width: 952px;
+    height: 86px;
+    margin-top: 2.5rem;
     border: solid 1px; 
 }
 
@@ -60,13 +93,15 @@
     display: flex;
     justify-content: space-around; 
     flex-direction: column; 
+    margin-top: 2.5rem;
 }
 
 .post-1{
     display: flex;
     justify-content: space-around; 
 
-    border: solid 1px; 
+    border: solid 1px;  
+    margin-bottom: 2.5rem;
 }
 
 .box-post-left{  
@@ -82,6 +117,7 @@
     justify-content: space-around; 
 
     border: solid 1px; 
+    margin-bottom: 2.5rem;
 }
 
 .footer{
