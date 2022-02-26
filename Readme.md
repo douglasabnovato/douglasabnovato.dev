@@ -3,7 +3,7 @@
 </h1>
 
 <h4 align="center"> 
-	🚧 douglasabnovato.dev  🚀 em construção... 🚧
+	🚧 douglasabnovato.dev 🚀
 </h4> 
 
 <p align="center">
@@ -57,12 +57,12 @@ Bonus : Alterar o nome do repositório remoto e do local
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- [Css][css]: posicionamento, dimensionamento e muito mais
+- [Css][css]
 - [Javascript][javascript]
-- [HTML][html]: estrutura e efeitos 
+- [HTML][html]
 - [Git][git]
 - [Github][github] 
-- [Github Pages](https://pages.github.com/)
+- [Github Pages][githubpages]
 
 ## 🚀 Como executar o projeto
 
@@ -107,21 +107,20 @@ Este projeto esta sobe a licença MIT.
 Feito com ❤️ por Douglas A B Novato 👋🏽 [Entre em contato!](https://www.linkedin.com/in/douglasabnovato/)
 
 [git]: https://git-scm.com/doc
-[github]: https://docs.github.com/en
-[nodejs]: https://nodejs.org/
-[typescript]: https://www.typescriptlang.org/
-[expo]: https://expo.io/
-[reactjs]: https://reactjs.org
-[rn]: https://facebook.github.io/react-native/
-[yarn]: https://yarnpkg.com/
-[vscode]: https://code.visualstudio.com/
-[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
-[license]: https://opensource.org/licenses/MIT
-[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
-[prettier]: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
-[rs]: https://rocketseat.com.br 
+[github]: https://docs.github.com/en 
 [css]: https://developer.mozilla.org/en-US/docs/Web/CSS 
 [html]: https://developer.mozilla.org/en-US/docs/Web/HTML
 [javascript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript 
+[githubpages]: https://pages.github.com/
 
 Fonte - de : [Udemy](https://www.udemy.com/course/github-pages/learn/lecture/5335520?components=buy_button,introduction_asset,purchase#overview)
+
+
+## :memo: Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](.github/LICENSE.md) para mais detalhes.
+
+---  
+
+Feito com ❤️ por Douglas A B Novato 👋🏽 [Entre em contato!](https://www.linkedin.com/in/douglasabnovato/) 
+Fonte do projeto Por [Udemy](https://www.udemy.com/course/github-pages/learn/lecture/5335520?components=buy_button,introduction_asset,purchase#overview)
