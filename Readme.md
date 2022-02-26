@@ -31,8 +31,41 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
 
 ### Web - v3.0
-Um desafio de layout criado figma e com a descrição no notion.
+Neste desafio devo criar uma página web para que seja meu portfolio e currículo. Utilizando HTML e CSS.
 
+- Layout descritivo no figma
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;"> 
+  <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/tela-2.jpg" width="400px">
+</p>
+
+- 💡 Como começar: 
+1 - Use o link do Figma como base para o projeto.
+2 - Todas as imagens e ícones estão na pasta assets.
+3 - Techs: HTML e CSS
+
+#### 🚀 Requisitos para o desafio 
+
+- [ ] Os cards dos projetos deverão ser clicáveis
+- [ ] Os cards dos posts deverão ser clicláveis
+
+#### 🚀 Se desafie também 
+
+- [ ] Tornando o design responsivo 
+- [ ] Consumir a API do Github 
+
+#### 🎨 Style Guide
+- Cores
+````css
+  :root {
+    --body-bg-color: #22212C;
+    --text-color: #837E9F;
+    --bg-cards: #302F3D;
+    --bg-techs: #CB92B1;
+  }
+````
+- Tipo de fonte: font-family: Merriweather Sans, font-weight: 400, 500 e 700
+
+Você pode encontrar a fonte no [Google Fonts](https://fonts.google.com/specimen/Merriweather+Sans?query=Merriweather+Sans)
 
 ### Web - v2.0
 Utilizando um template do wschools para aperfeiçoar o layout da aplicação.
