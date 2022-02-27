@@ -36,6 +36,7 @@ body{
 
 .cards{ 
     background-color: var(--bg-cards);
+    border-radius: 1em;
 }
  
 .profile{
@@ -74,6 +75,30 @@ body{
 .education{
     width: 348px;
     height: 352px; 
+}
+
+.education > h2{
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.education-list{
+    margin-top: 20px;
+    margin-left: 27px;
+}
+
+.education-list .certification{
+    margin-bottom: 20px;
+}
+
+.education-list .certification span{
+    font-weight: bold;
+}
+
+.education-list .certification ul{
+    list-style: none;
+    margin-left: -40px;
+    font-size: 12px;
 }
 
 .right{
