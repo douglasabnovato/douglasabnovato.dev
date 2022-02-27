@@ -10,6 +10,7 @@
 }
 
 body{
+    font-family: 'Merriweather Sans', sans-serif;; 
     background-color: var(--body-bg-color);
     color: var(--text-color);
 }
@@ -24,7 +25,6 @@ body{
     justify-content: space-around;
     flex-direction: column;
     
-    border: solid 1px red; 
     gap: 2rem;
 
     width: 40%;
@@ -41,19 +41,16 @@ body{
 .profile{
     width: 348px;
     height: 292px;
-    border: solid 1px; 
 }
 
 .links{
     width: 348px;
     height: 348px;
-    border: solid 1px; 
 }
 
 .technologies{
     width: 348px;
     height: 208px;
-    border: solid 1px; 
 }
 
 .tooltip{
@@ -72,20 +69,16 @@ body{
 .experiences{
     width: 348px;
     height: 349px;
-    border: solid 1px; 
 }
 
 .education{
     width: 348px;
-    height: 352px;
-    border: solid 1px; 
+    height: 352px; 
 }
 
 .right{
     display: flex; 
     flex-direction: column; 
-    
-    border: solid 1px red;  
     margin-top: 2.5rem; 
     margin-right: 2.5rem; 
     width: auto; 
@@ -94,7 +87,6 @@ body{
 .my-projects{
     width: 952px;
     height: 86px;
-    border: solid 1px;  
 }
 
 .box-projects{
@@ -107,21 +99,18 @@ body{
     width: 461px;
     height: 186px;  
     margin-top: 2.5rem;
-    border: solid 1px; 
 }
 
 .project-2{
     width: 461px;
     height: 186px;  
-    margin-top: 2.5rem;
-    border: solid 1px; 
+    margin-top: 2.5rem; 
 }
 
 .recent-posts{
     width: 952px;
     height: 86px;
     margin-top: 2.5rem;
-    border: solid 1px; 
 }
 
 .box-posts{
@@ -135,26 +124,15 @@ body{
     display: flex;
     justify-content: space-around; 
 
-    border: solid 1px;  
     margin-bottom: 2.5rem;
     
     width: 952px;
     height: 201px;
 }
 
-.box-post-left{  
-    border: solid 1px; 
-}
-
-.box-post-right{  
-    border: solid 1px; 
-}
-
 .post-2{
     display: flex;
-    justify-content: space-around; 
-
-    border: solid 1px; 
+    justify-content: space-around;
     margin-bottom: 2.5rem;
     
     width: 952px;
@@ -163,6 +141,4 @@ body{
 
 .footer{
     text-align: center;
-    
-    border: solid 1px;
 }
