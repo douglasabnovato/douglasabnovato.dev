@@ -65,16 +65,40 @@ body{
 .techs{
     display: flex;
     gap: 1.5rem; 
-}
+} 
 
 .experiences{
     width: 348px;
-    height: 349px;
+    height: 369px;
+}
+
+.experiences > h2{
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.experiences-list{
+    margin-top: 20px;
+    margin-left: 27px;
+}
+
+.experiences-list .experience{
+    margin-bottom: 20px;
+}
+
+.experiences-list .experience span{
+    font-weight: bold;
+}
+
+.experiences-list .experience ul{
+    list-style: none;
+    margin-left: -40px;
+    font-size: 12px;
 }
 
 .education{
     width: 348px;
-    height: 352px; 
+    height: 372px; 
 }
 
 .education > h2{

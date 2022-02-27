@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/tela-2.jpg" />
+    <img alt="versão lts do projeto" title="#douglasabnovato.dev" src="./.github/tela-2.jpg" />
 </h1>
 
 <h4 align="center"> 
@@ -35,8 +35,8 @@ Neste desafio devo criar uma página web para que seja meu portfolio e currícul
 
 - Layout descritivo no figma
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;"> 
-  <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/figma-1.jpeg" width="400px">
-  <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/figma-2.jpeg" width="400px">
+  <img alt="Layout um no figma" title="#douglasabnovato.dev" src="./.github/figma-1.jpeg" width="400px">
+  <img alt="Layout dois no figma" title="#douglasabnovato.dev" src="./.github/figma-2.jpeg" width="400px">
 </p>  
 
 - 💡 Como começar:</br> 
@@ -72,7 +72,7 @@ Você pode encontrar a fonte no [Google Fonts](https://fonts.google.com/specimen
 Utilizando um template do wschools para aperfeiçoar o layout da aplicação.
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/tela-2.jpg" width="400px">
+  <img alt="versão 2 do projeto" title="#douglasabnovato.dev" src="./.github/tela-2.jpg" width="400px">
 </p>   
 
 ### Web - v1.0
@@ -96,7 +96,7 @@ Realizado os principais comandos de git para testar o fluxo de trabalho com esse
 15. git remote add origin git@github.com:douglasabnovato/nome-repositorio.github.io.git
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="douglasabnovato.dev" title="#douglasabnovato.dev" src="./.github/tela-1.jpg" width="400px">
+  <img alt="versão um do projeto" title="#douglasabnovato.dev" src="./.github/tela-1.jpg" width="400px">
 </p>  
 
 ## 🛠 Tecnologias
@@ -108,6 +108,11 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Git][git]
 - [Github][github] 
 - [Github Pages][githubpages]
+
+- Referências de conteúdo para construir esse projeto
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;"> 
+  <img alt="Conteúdo referência para construir esse projeto" title="#douglasabnovato.dev" src="./.github/referencias-1.jpeg" width="400px">
+</p> 
 
 ## 🚀 Como executar o projeto
 Podemos considerar este projeto como sendo com uma parte:
