@@ -54,18 +54,35 @@ body{
     height: 208px;
 }
 
-.tooltip{
-    background-color: var(--bg-techs); 
+.technologies h2{
+    margin-top: 30px;
+    margin-left: 20px;
 }
 
-.tech{
-    margin-top: 1.5rem;
+.technologies .box-techs{
+    margin-left: 25px;
+    margin-top: 25px;
 }
-
-.techs{
+ 
+.technologies .techs{
     display: flex;
-    gap: 1.5rem; 
+    gap: 1rem; 
+    margin-top: 15px;
 } 
+
+.technologies .tooltip{
+    background-color: var(--bg-techs);
+    color: #000000;
+    width: 90px;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
 
 .experiences{
     width: 348px;
