@@ -111,7 +111,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - Referências de conteúdo para construir esse projeto
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;"> 
-  <img alt="Conteúdo referência para construir esse projeto" title="#douglasabnovato.dev" src="./.github/referencias-1.jpeg" width="400px">
+  <img alt="Conteúdo referência para construir esse projeto" title="#douglasabnovato.dev" src="./.github/referencias-1.jpg" width="400px">
 </p> 
 
 ## 🚀 Como executar o projeto
