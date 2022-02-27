@@ -140,5 +140,12 @@ body{
 }
 
 .footer{
-    text-align: center;
+    text-align: center; 
+    height: 58px; 
+    position: relative
+}
+
+.footer span{
+    position: absolute;
+    top: 35%;
 }
