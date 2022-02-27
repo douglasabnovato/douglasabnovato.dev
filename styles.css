@@ -1,5 +1,17 @@
+:root {
+    --body-bg-color: #22212C;
+    --text-color: #837E9F;
+    --bg-cards: #302F3D;
+    --bg-techs: #CB92B1;
+  }
+  
 * {
     margin: 0;
+}
+
+body{
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
 }
 
 .container{ 
@@ -21,6 +33,10 @@
     margin-top: 2.5rem;
     margin-left: 2.5rem; 
 }
+
+.cards{ 
+    background-color: var(--bg-cards);
+}
  
 .profile{
     width: 348px;
@@ -38,6 +54,19 @@
     width: 348px;
     height: 208px;
     border: solid 1px; 
+}
+
+.tooltip{
+    background-color: var(--bg-techs); 
+}
+
+.tech{
+    margin-top: 1.5rem;
+}
+
+.techs{
+    display: flex;
+    gap: 1.5rem; 
 }
 
 .experiences{
