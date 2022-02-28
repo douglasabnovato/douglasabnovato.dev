@@ -102,12 +102,12 @@ Realizado os principais comandos de git para testar o fluxo de trabalho com esse
 ## 🛠 Tecnologias
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- [Css][css]
-- [Javascript][javascript]
-- [HTML][html]
-- [Git][git]
-- [Github][github] 
-- [Github Pages][githubpages]
+- [Css](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [Git](https://git-scm.com/doc)
+- [Github](https://docs.github.com/en ) 
+- [Github Pages](https://pages.github.com/)
 
 - Referências de conteúdo para construir esse projeto
 
@@ -163,10 +163,3 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](.github/LICENSE.
 
 Feito com ❤️ por Douglas A B Novato 👋🏽 [Entre em contato!](https://www.linkedin.com/in/douglasabnovato/) 
 Fonte do projeto Por [Udemy](https://www.udemy.com/course/github-pages/learn/lecture/5335520?components=buy_button,introduction_asset,purchase#overview)
-
-[git]: https://git-scm.com/doc
-[github]: https://docs.github.com/en 
-[css]: https://developer.mozilla.org/en-US/docs/Web/CSS 
-[html]: https://developer.mozilla.org/en-US/docs/Web/HTML
-[javascript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript 
-[githubpages]: https://pages.github.com/
