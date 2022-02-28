@@ -253,19 +253,113 @@ body{
     display: flex;
     justify-content: space-around;  
     gap: 2rem; 
+    
+    margin-right: 1.5rem;
 }
 
-.project-1{
+.box-projects .project-1{
     width: 461px;
     height: 186px;  
     margin-top: 2.5rem;
 }
 
-.project-2{
+.box-projects .project-1 .fragment{
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.box-projects .project-1 .title-project-1{
+    margin-bottom: 13px;
+}
+
+.project-1 .icons-folder {
+    content: url(/assets/folder.svg);    
+    margin-right: 6px; 
+}
+
+.box-projects .project-1 .description-project-1{
+    margin-bottom: 13px;
+}
+
+.box-projects .project-1 .details-project-1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+
+.project-1 .icons-star {
+    content: url(/assets/star.svg);    
+    margin-right: 6px;
+}   
+
+.project-1 .icons-gitbranch {
+    content: url(/assets/git-branch.svg);    
+    margin-right: 6px;
+} 
+
+.project-1 .icons-languages {
+    content: url(/assets/ellipse.svg);    
+    margin-right: 6px;
+} 
+
+.project-1 span:nth-child(2){
+    font-weight: lighter;
+    font-size: 18px;    
+}  
+
+.box-projects .project-2{
     width: 461px;
     height: 186px;  
-    margin-top: 2.5rem; 
+    margin-top: 2.5rem;
 }
+
+.box-projects .project-2 .fragment{
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.box-projects .project-2 .title-project-2{
+    margin-bottom: 13px;
+}
+
+.project-2 .icons-folder {
+    content: url(/assets/folder.svg);    
+    margin-right: 6px; 
+}
+
+.box-projects .project-2 .description-project-2{
+    margin-bottom: 13px;
+}
+
+.box-projects .project-2 .details-project-2{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+
+.project-2 .icons-star {
+    content: url(/assets/star.svg);    
+    margin-right: 6px;
+}   
+
+.project-2 .icons-gitbranch {
+    content: url(/assets/git-branch.svg);    
+    margin-right: 6px;
+} 
+
+.project-2 .icons-languages {
+    content: url(/assets/ellipse.svg);    
+    margin-right: 6px;
+} 
+
+.project-2 span:nth-child(2){
+    font-weight: lighter;
+    font-size: 18px;    
+}  
 
 .recent-posts{
     width: 952px;
@@ -288,15 +382,6 @@ body{
     
     width: 952px;
     height: 201px;
-}
-
-.post-2{
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 2.5rem;
-    
-    width: 952px;
-    height: 201px; 
 }
 
 .footer{
