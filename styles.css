@@ -10,7 +10,7 @@
 }
 
 body{
-    font-family: 'Merriweather Sans', sans-serif;; 
+    font-family: 'Merriweather Sans', sans-serif;
     background-color: var(--body-bg-color);
     color: var(--text-color);
 }
@@ -62,42 +62,38 @@ body{
 
 .links .icons{
     margin-right: 28px;
-    fill: var(--text-color);
-    border: solid 1px red;
+    border: solid 2px red;
 } 
 
 .links .social-media span:nth-child(2){
     border: solid 1px red;
 }  
 
-.links .icons-local::before {
+.links .icons-local {
     content: url(/assets/map-pin.svg);
 }
 
-
-.links .icons-sa::before {
+.links .icons-sa {
     content: url(/assets/briefcase.svg);
 }
 
-
-.links .icons-github::before {
+.links .icons-github {
     content: url(/assets/github.svg);
 }
 
-
-.links .icons-linkedin::before {
+.links .icons-linkedin {
     content: url(/assets/linkedin.svg);
 }
 
-.links .icons-twitter::before {
+.links .icons-twitter {
     content: url(/assets/twitter.svg);
 }
 
-.links .icons-globe::before {
+.links .icons-globe {
     content: url(/assets/globe.svg);
 }
 
-.links .icons-mail::before {
+.links .icons-mail {
     content: url(/assets/mail.svg);
 } 
 
