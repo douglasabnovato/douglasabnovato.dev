@@ -107,9 +107,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [Git](https://git-scm.com/doc)
 - [Github](https://docs.github.com/en ) 
-- [Github Pages](https://pages.github.com/)
+- [Github Pages](https://pages.github.com/)</br>
 
-- Referências de conteúdo para construir esse projeto
+Referências de conteúdo para construir esse projeto
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;"> 
   <img alt="Conteúdo referência para construir esse projeto" title="#douglasabnovato.dev" src="./.github/referencias-1.jpg" width="400px">
