@@ -44,6 +44,32 @@ body{
     height: 292px;
 }
 
+.profile .avatar{
+    margin-top: 32px;
+}
+
+.profile .avatar img{
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.profile .texts .name{
+    margin-top: 30px;
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center; 
+}
+
+.profile .texts .job{
+    margin-top: 13px;
+    text-align: center ;
+}
+
 .links{
     width: 348px;
     height: 348px;
