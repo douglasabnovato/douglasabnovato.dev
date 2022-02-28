@@ -114,7 +114,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;"> 
   <img alt="Conteúdo referência para construir esse projeto" title="#douglasabnovato.dev" src="./.github/referencias-1.jpg" width="400px">
 </p> 
-- segue os links correspondentes para colaborar na construção do desafio.
+- Segue os links correspondentes para colaborar na construção do desafio.
 
 - [O guia estelar de HTML](https://app.rocketseat.com.br/node/o-guia-estelar-de-html)
 - [O guia estelar de CSS](https://app.rocketseat.com.br/node/o-guia-estelar-de-css)
