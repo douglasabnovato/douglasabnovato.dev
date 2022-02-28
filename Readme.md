@@ -100,6 +100,7 @@ Realizado os principais comandos de git para testar o fluxo de trabalho com esse
 </p>  
 
 ## 🛠 Tecnologias
+
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Css][css]
@@ -110,9 +111,11 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Github Pages][githubpages]
 
 - Referências de conteúdo para construir esse projeto
+
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;"> 
   <img alt="Conteúdo referência para construir esse projeto" title="#douglasabnovato.dev" src="./.github/referencias-1.jpg" width="400px">
 </p> 
+
 - segue os links correspondentes para colaborar na construção do desafio.
 
 - [O guia estelar de HTML](https://app.rocketseat.com.br/node/o-guia-estelar-de-html)
