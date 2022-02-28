@@ -52,21 +52,24 @@ body{
 .links .social-medias{
     margin-left: 40px;
     margin-top: 30px;
-    border: solid 1px red;
 }
 
 .links .social-media{
-    margin-bottom: 15px;
-    border: solid 1px red;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    display: flex;
 }
 
 .links .icons{
     margin-right: 28px;
-    border: solid 2px red;
+    margin-left: 5px;
+    align-self: center;
 } 
 
 .links .social-media span:nth-child(2){
-    border: solid 1px red;
+    align-self: center;
 }  
 
 .links .icons-local {
