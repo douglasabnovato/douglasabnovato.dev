@@ -227,9 +227,10 @@ body{
 
 .my-projects{
     height: 86px; 
-    margin-right: 1.5rem;
+    margin-right: 3.5rem;
     position: relative;
 } 
+
 .my-projects .title-project{
     display: flex;
     justify-content: space-between;
@@ -251,96 +252,107 @@ body{
 
 .box-projects{
     display: flex;
-    justify-content: space-around;  
-    gap: 2rem; 
-    margin-right: 1.5rem;
+    justify-content: space-between;  
+    gap: 1.5rem; 
+    margin-right: 3.5rem;
 }
 
 .box-projects .project-1{
-    width: 461px;
     height: 186px;  
     margin-top: 2.5rem;
 }
 
 .box-projects .project-1 .fragment{
     margin-top: 2rem;
-    margin-right: 1rem;
+    margin-right: 3.5rem;
     margin-bottom: 1rem;
-    margin-left: 2rem;
+    margin-left: 3rem;
 }
 
 .box-projects .project-1 .title-project-1{
     margin-bottom: 13px;
 }
 
-.project-1 .icons-folder {
+.project-1 .title-project-1 span:nth-child(2){
+    font-weight: bold;
+    font-size: 20px;    
+} 
+
+.project-1 .title-project-1 .icons-folder {
     content: url(/assets/folder.svg);    
     margin-right: 6px; 
 }
 
-.box-projects .project-1 .description-project-1{
+.project-1 .description-project-1{
+    margin-top: 20px;
     margin-bottom: 13px;
 }
 
-.box-projects .project-1 .details-project-1{
+.project-1 .details-project-1{
     display: flex;
     justify-content: space-between;
     margin-bottom: 13px;
+    margin-top: 20px;
 }
 
-.box-projects .details-project-1 .stars-branches{
+.project-1 .details-project-1 .stars-branches{
     display: flex;
     justify-content: space-between;
 }
 
-.project-1 .icons-star {
+.project-1 .details-project-1 .icons-star {
     content: url(/assets/star.svg);    
     margin-right: 6px;
 }   
 
-.project-1 .icons-gitbranch {
+.project-1 .details-project-1 .icons-gitbranch {
     content: url(/assets/git-branch.svg); 
     margin-left: 12px;   
     margin-right: 6px;
 } 
 
-.project-1 .icons-languages {
+.project-1 .details-project-1 .icons-languages {
     content: url(/assets/ellipse.svg);    
     margin-right: 6px;
 } 
 
-.project-1 span:nth-child(2){
+.project-1 .details-project-1 span:nth-child(2){
     font-weight: lighter;
     font-size: 18px;    
 }  
 
 .box-projects .project-2{
-    width: 461px;
     height: 186px;  
     margin-top: 2.5rem;
 }
 
 .box-projects .project-2 .fragment{
     margin-top: 2rem;
-    margin-right: 1rem;
+    margin-right: 3.5rem;
     margin-bottom: 1rem;
-    margin-left: 2rem;
+    margin-left: 3rem;
 }
 
 .box-projects .project-2 .title-project-2{
     margin-bottom: 13px;
 }
 
-.project-2 .icons-folder {
+.project-2 .title-project-2 .icons-folder {
     content: url(/assets/folder.svg);    
     margin-right: 6px; 
 }
 
-.box-projects .project-2 .description-project-2{
+.project-2 .title-project-2 span:nth-child(2){
+    font-weight: bold;
+    font-size: 20px;    
+} 
+
+.project-2 .description-project-2{
+    margin-top: 20px;
     margin-bottom: 13px;
 }
 
-.box-projects .project-2 .details-project-2{
+.project-2 .details-project-2{
     display: flex;
     justify-content: space-between;
     margin-bottom: 13px;
@@ -373,16 +385,12 @@ body{
 }  
 
 .recent-posts{
-    width: 952px;
-    height: 86px;
-    margin-top: 2.5rem;
-}
-
-.recent-posts{
     height: 86px; 
-    margin-right: 1.5rem;
+    margin-top: 2.5rem;
+    margin-right: 3.5rem;
     position: relative;
 } 
+
 .recent-posts .title-recent-posts{
     display: flex;
     justify-content: space-between;
@@ -399,12 +407,12 @@ body{
     display: flex;
     flex-direction: column; 
     margin-top: 2.5rem;
+    margin-right: 3.5rem;
 }  
  
 .post-1{
     display: flex; 
     margin-bottom: 2.5rem;
-    width: 952px;
     height: 201px;
 }
 
