@@ -416,7 +416,7 @@ body{
 }
 
 .post-title{
-    margin-top: 15px;
+    margin-top: 18px;
 }
 
 .post-title div:nth-child(1){
@@ -430,7 +430,7 @@ body{
 }
 
 .post-details{
-    margin-top: -2px;
+    margin-top: -5px;
 }
 
 .post-details div:nth-child(1){
