@@ -257,129 +257,66 @@ body{
     margin-right: 3.5rem;
 }
 
-.box-projects .project-1{
+.box-projects .project{
     height: 186px;  
     margin-top: 2.5rem;
 }
 
-.box-projects .project-1 .fragment{
+.box-projects .project .fragment{
     margin-top: 2rem;
     margin-right: 3.5rem;
     margin-bottom: 1rem;
     margin-left: 3rem;
 }
 
-.box-projects .project-1 .title-project-1{
+.box-projects .project .title-project{
     margin-bottom: 13px;
 }
 
-.project-1 .title-project-1 span:nth-child(2){
+.project .title-project span:nth-child(2){
     font-weight: bold;
     font-size: 20px;    
 } 
 
-.project-1 .title-project-1 .icons-folder {
+.project .title-project .icons-folder {
     content: url(/assets/folder.svg);    
     margin-right: 6px; 
 }
 
-.project-1 .description-project-1{
+.project .description-project{
     margin-top: 20px;
     margin-bottom: 13px;
 }
 
-.project-1 .details-project-1{
+.project .details-project{
     display: flex;
     justify-content: space-between;
     margin-bottom: 13px;
     margin-top: 20px;
 }
 
-.project-1 .details-project-1 .stars-branches{
+.project .details-project .stars-branches{
     display: flex;
     justify-content: space-between;
 }
 
-.project-1 .details-project-1 .icons-star {
+.project .details-project .icons-star {
     content: url(/assets/star.svg);    
     margin-right: 6px;
 }   
 
-.project-1 .details-project-1 .icons-gitbranch {
+.project .details-project .icons-gitbranch {
     content: url(/assets/git-branch.svg); 
     margin-left: 12px;   
     margin-right: 6px;
 } 
 
-.project-1 .details-project-1 .icons-languages {
+.project .details-project .icons-languages {
     content: url(/assets/ellipse.svg);    
     margin-right: 6px;
 } 
 
-.project-1 .details-project-1 span:nth-child(2){
-    font-weight: lighter;
-    font-size: 18px;    
-}  
-
-.box-projects .project-2{
-    height: 186px;  
-    margin-top: 2.5rem;
-}
-
-.box-projects .project-2 .fragment{
-    margin-top: 2rem;
-    margin-right: 3.5rem;
-    margin-bottom: 1rem;
-    margin-left: 3rem;
-}
-
-.box-projects .project-2 .title-project-2{
-    margin-bottom: 13px;
-}
-
-.project-2 .title-project-2 .icons-folder {
-    content: url(/assets/folder.svg);    
-    margin-right: 6px; 
-}
-
-.project-2 .title-project-2 span:nth-child(2){
-    font-weight: bold;
-    font-size: 20px;    
-} 
-
-.project-2 .description-project-2{
-    margin-top: 20px;
-    margin-bottom: 13px;
-}
-
-.project-2 .details-project-2{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 13px;
-}
-
-.box-projects .details-project-2 .stars-branches{
-    display: flex;
-    justify-content: space-between;
-}
-
-.project-2 .icons-star {
-    content: url(/assets/star.svg);    
-    margin-right: 6px;
-}   
-
-.project-2 .icons-gitbranch {
-    content: url(/assets/git-branch.svg); 
-    margin-left: 12px;      
-    margin-right: 6px;
-} 
-
-.project-2 .icons-languages {
-    content: url(/assets/ellipse.svg);    
-    margin-right: 6px;
-} 
-
-.project-2 span:nth-child(2){
+.project .details-project span:nth-child(2){
     font-weight: lighter;
     font-size: 18px;    
 }  
@@ -410,7 +347,7 @@ body{
     margin-right: 3.5rem;
 }  
  
-.post-1{
+.post{
     display: flex; 
     margin-bottom: 2.5rem;
     height: 201px;
