@@ -79,21 +79,9 @@ Utilizando um template do wschools para aperfeiçoar o layout da aplicação.
 Uma estrutura simples em html com um avatar e algumas informações.
 Realizado os principais comandos de git para testar o fluxo de trabalho com esse código.
 
-1. apresentação do instrutor
-2. o que é github ?
-3. o que é git ?
-4. o que é github pages ?
-5. criando um repositório
-6. criando uma página simples
-7. hospedando a página no github
-8. atualizando a página
-9. considerações finais
-10. transformar essa página em uma página pessoal: `douglasabnovato.github.io`
-11. somente arquivos estáticos 
-12. Bonus : Alterar o nome do repositório remoto e do local
-13. git remote remove origin
-14. faça as mudanças nos repositórios: local e remoto
-15. git remote add origin git@github.com:douglasabnovato/nome-repositorio.github.io.git
+- github, git, github pages, repositório, página simples
+- transformar essa página em uma página pessoal: `douglasabnovato.github.io`, somente arquivos estáticos 
+- alterar o nome do repositório remoto e do local: `git remote remove origin`: `git@github.com:douglasabnovato/nome-repositorio.github.io.git`
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   <img alt="versão um do projeto" title="#douglasabnovato.dev" src="./.github/tela-1.jpg" width="400px">
