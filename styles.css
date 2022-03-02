@@ -416,6 +416,7 @@ body{
 }
 
 .post-title{
+    margin-top: 15px;
 }
 
 .post-title div:nth-child(1){
@@ -428,6 +429,10 @@ body{
     font-size: 14px;
 }
 
+.post-details{
+    margin-top: -2px;
+}
+
 .post-details div:nth-child(1){
     font-size: 16px;
 } 
@@ -435,7 +440,7 @@ body{
 .post-details div:nth-child(2){
     margin-top: 8px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     font-size: 14px;
 } 
 
