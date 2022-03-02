@@ -253,7 +253,6 @@ body{
     display: flex;
     justify-content: space-around;  
     gap: 2rem; 
-    
     margin-right: 1.5rem;
 }
 
@@ -264,10 +263,10 @@ body{
 }
 
 .box-projects .project-1 .fragment{
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 
 .box-projects .project-1 .title-project-1{
@@ -289,13 +288,19 @@ body{
     margin-bottom: 13px;
 }
 
+.box-projects .details-project-1 .stars-branches{
+    display: flex;
+    justify-content: space-between;
+}
+
 .project-1 .icons-star {
     content: url(/assets/star.svg);    
     margin-right: 6px;
 }   
 
 .project-1 .icons-gitbranch {
-    content: url(/assets/git-branch.svg);    
+    content: url(/assets/git-branch.svg); 
+    margin-left: 12px;   
     margin-right: 6px;
 } 
 
@@ -316,10 +321,10 @@ body{
 }
 
 .box-projects .project-2 .fragment{
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 
 .box-projects .project-2 .title-project-2{
@@ -341,13 +346,19 @@ body{
     margin-bottom: 13px;
 }
 
+.box-projects .details-project-2 .stars-branches{
+    display: flex;
+    justify-content: space-between;
+}
+
 .project-2 .icons-star {
     content: url(/assets/star.svg);    
     margin-right: 6px;
 }   
 
 .project-2 .icons-gitbranch {
-    content: url(/assets/git-branch.svg);    
+    content: url(/assets/git-branch.svg); 
+    margin-left: 12px;      
     margin-right: 6px;
 } 
 
