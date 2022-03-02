@@ -32,6 +32,9 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
 ### Web - v3.0
 Neste desafio devo criar uma página web para que seja meu portfolio e currículo. Utilizando HTML e CSS.
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="versão 3 do projeto" title="#douglasabnovato.dev" src="./.github/tela-3.jpg" width="400px">
+</p>  
 
 - Layout descritivo no figma
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;"> 
