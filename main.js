@@ -9,27 +9,7 @@ function getGithub(url){
 
 function getRepositorio(user){
 
-    repository = document.createElement("tr")
 
-    namerepos = document.createElement("td")
-    description = document.createElement("td")
-    stars = document.createElement("td")
-    gitbranches = document.createElement("td")
-    language = document.createElement("td")
-
-    namerepos.innerHTML = user.name
-    description.innerHTML = user.description
-    stars.innerHTML = user.stargazers_count
-    gitbranches.innerHTML = user.forks_count
-    language.innerHTML = user.language
-
-    repository.appendChild(namerepos)
-    repository.appendChild(description)
-    repository.appendChild(stars)
-    repository.appendChild(gitbranches)
-    repository.appendChild(language)
-
-    return repository
 
 }
 

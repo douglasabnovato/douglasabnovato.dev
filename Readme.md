@@ -164,4 +164,54 @@ Fonte do projeto Por [Udemy](https://www.udemy.com/course/github-pages/learn/lec
           <div id="tablerepos"></div>
       </div>
   </div>
+
+  <div class="box-projects">
+                    
+      <div class="project cards">
+          <div class="fragment">
+              <div class="title-project">
+                  <span class="icons-folder"></span>
+                  <span>my-onix</span>
+              </div>
+              <div class="description-project">Consulte os códigos de erro que aparecem no painel do veículo Onix.</div>
+              <div class="details-project">
+                  <div class="stars-branches">
+                      <div>
+                          <span class="icons-star"></span>
+                          <span>201</span>
+                      </div>
+                      <div>
+                          <span class="icons-gitbranch"></span>
+                          <span>112</span>
+                      </div> 
+                  </div> 
+                  <div>
+                      <span class="icons-languages"></span>
+                      <span>Javascript</span>
+                  </div> 
+              </div>
+          </div>                        
+      </div>
+
+    repository = document.createElement("tr")
+
+    namerepos = document.createElement("td")
+    description = document.createElement("td")
+    stars = document.createElement("td")
+    gitbranches = document.createElement("td")
+    language = document.createElement("td")
+
+    namerepos.innerHTML = user.name
+    description.innerHTML = user.description
+    stars.innerHTML = user.stargazers_count
+    gitbranches.innerHTML = user.forks_count
+    language.innerHTML = user.language
+
+    repository.appendChild(namerepos)
+    repository.appendChild(description)
+    repository.appendChild(stars)
+    repository.appendChild(gitbranches)
+    repository.appendChild(language)
+
+    return repository
 -->
