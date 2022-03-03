@@ -38,6 +38,18 @@ Aperfeiçoando a aplicação acrescentando dinamismo.
 - [ ] Tornando o design responsivo 
 - [ ] Consumir a API do Github 
 
+#### detalhes da api
+````javascript
+    for(let i=0; i < users.length; i++){        
+        console.log("Repository: ",i)
+        console.log(users[i].name)
+        console.log(users[i].description)
+        console.log(users[i].stargazers_count)
+        console.log(users[i].forks_count)
+        console.log(users[i].language) 
+    }
+````
+
 ### Web - v3.0
 Neste desafio devo criar uma página web para que seja meu portfolio e currículo. Utilizando HTML e CSS.
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
@@ -140,15 +152,3 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](.github/LICENSE.
 
 Feito com ❤️ por Douglas A B Novato 👋🏽 [Entre em contato!](https://www.linkedin.com/in/douglasabnovato/) 
 Fonte do projeto Por [Udemy](https://www.udemy.com/course/github-pages/learn/lecture/5335520?components=buy_button,introduction_asset,purchase#overview)
-
-
-<!--  
-    for(let i=0; i < users.length; i++){        
-        console.log("Repository: ",i)
-        console.log(users[i].name)
-        console.log(users[i].description)
-        console.log(users[i].stargazers_count)
-        console.log(users[i].forks_count)
-        console.log(users[i].language) 
-    }
--->
