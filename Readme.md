@@ -29,6 +29,18 @@ Também exibindo os links das minhas redes sociais.
 
 Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
+### Web - v3.1
+Aperfeiçoando a aplicação acrescentando dinamismo.
+
+#### 🚀 Requisitos para o desafio 
+
+- [ ] Os cards dos projetos deverão ser clicáveis
+- [ ] Os cards dos posts deverão ser clicláveis
+
+#### 🚀 Se desafie também 
+
+- [ ] Tornando o design responsivo 
+- [ ] Consumir a API do Github 
 
 ### Web - v3.0
 Neste desafio devo criar uma página web para que seja meu portfolio e currículo. Utilizando HTML e CSS.
@@ -45,17 +57,8 @@ Neste desafio devo criar uma página web para que seja meu portfolio e currícul
 - 💡 Como começar:</br> 
 1 - Use o link do Figma como base para o projeto.</br> 
 2 - Todas as imagens e ícones estão na pasta assets.</br> 
-3 - Techs: HTML e CSS
-
-#### 🚀 Requisitos para o desafio 
-
-- [ ] Os cards dos projetos deverão ser clicáveis
-- [ ] Os cards dos posts deverão ser clicláveis
-
-#### 🚀 Se desafie também 
-
-- [ ] Tornando o design responsivo 
-- [ ] Consumir a API do Github 
+3 - Techs: HTML e CSS.</br> 
+4 - Informações estáticas
 
 #### 🎨 Style Guide
 - Cores
