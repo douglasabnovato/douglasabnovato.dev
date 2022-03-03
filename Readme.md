@@ -1,11 +1,9 @@
 <h1 align="center">
     <img alt="versão lts do projeto" title="#douglasabnovato.dev" src="./.github/tela-3-2.jpg" />
 </h1>
-
 <h4 align="center"> 
 	🚧 douglasabnovato.dev 🚀
 </h4> 
-
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/douglasabnovato/douglasabnovato.dev?color=%2304D361">
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/douglasabnovato/douglasabnovato.dev">
@@ -33,12 +31,10 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 Aperfeiçoando a aplicação acrescentando dinamismo.
 
 #### 🚀 Requisitos para o desafio 
-
 - [ ] Os cards dos projetos deverão ser clicáveis
 - [ ] Os cards dos posts deverão ser clicláveis
 
 #### 🚀 Se desafie também 
-
 - [ ] Tornando o design responsivo 
 - [ ] Consumir a API do Github 
 
@@ -48,7 +44,7 @@ Neste desafio devo criar uma página web para que seja meu portfolio e currícul
   <img alt="versão 3 do projeto" title="#douglasabnovato.dev" src="./.github/tela-3.jpg" width="400px">
 </p>  
 
-- Layout descritivo no figma
+Layout descritivo no figma
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;"> 
   <img alt="Layout um no figma" title="#douglasabnovato.dev" src="./.github/figma-1.jpeg" width="400px">
   <img alt="Layout dois no figma" title="#douglasabnovato.dev" src="./.github/figma-2.jpeg" width="400px">
@@ -70,13 +66,10 @@ Neste desafio devo criar uma página web para que seja meu portfolio e currícul
     --bg-techs: #CB92B1;
   }
 ````
-- Tipo de fonte: font-family: Merriweather Sans, font-weight: 400, 500 e 700
-
-Você pode encontrar a fonte no [Google Fonts](https://fonts.google.com/specimen/Merriweather+Sans?query=Merriweather+Sans)
+- Tipo de fonte: font-family: Merriweather Sans, font-weight: 400, 500 e 700. Você pode encontrar a fonte no [Google Fonts](https://fonts.google.com/specimen/Merriweather+Sans?query=Merriweather+Sans)
 
 ### Web - v2.0
 Utilizando um template do wschools para aperfeiçoar o layout da aplicação.
-
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   <img alt="versão 2 do projeto" title="#douglasabnovato.dev" src="./.github/tela-2.jpg" width="400px">
 </p>   
@@ -88,14 +81,12 @@ Realizado os principais comandos de git para testar o fluxo de trabalho com esse
 - github, git, github pages, repositório, página simples
 - transformar essa página em uma página pessoal: `douglasabnovato.github.io`, somente arquivos estáticos 
 - alterar o nome do repositório remoto e do local: `git remote remove origin`: `git@github.com:douglasabnovato/nome-repositorio.github.io.git`
-
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   <img alt="versão um do projeto" title="#douglasabnovato.dev" src="./.github/tela-1.jpg" width="400px">
 </p>  
 
 ## 🛠 Tecnologias
 As seguintes ferramentas foram usadas na construção do projeto:
-
 - [Css](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
@@ -104,13 +95,11 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Github Pages](https://pages.github.com/)</br>
 
 Referências de conteúdo para construir esse projeto
-
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;"> 
   <img alt="Conteúdo referência para construir esse projeto" title="#douglasabnovato.dev" src="./.github/referencias-1.jpg" width="400px">
 </p> 
 
 Segue os links correspondentes para colaborar na construção do desafio.
-
 - [O guia estelar de HTML](https://app.rocketseat.com.br/node/o-guia-estelar-de-html)
 - [O guia estelar de CSS](https://app.rocketseat.com.br/node/o-guia-estelar-de-css)
 - [Posicionando foguetes](https://app.rocketseat.com.br/node/posicionando-foguetes)
@@ -127,23 +116,17 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 [Git](https://git-scm.com), [Node.js][nodejs]. Além disso, é bom ter um editor para trabalhar com o código como [VSCode][vscode].
 
 ### 🧭 Rodando a aplicação web (Front End)
-
 ```bash 
 # Clone este repositório
 $ git clone https://github.com/douglasabnovato/douglasabnovato.dev
-
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd douglasabnovato.dev 
-
 # Execute a aplicação em modo de desenvolvimento
 Open Live Server
-
 # A aplicação será aberta na porta:3000 - acesse http://localhost:3000
-
 ```
 
 ## 😯 Como contribuir para o projeto
-
 1. Faça um **fork** do projeto.
 2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
 3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`
@@ -151,7 +134,6 @@ Open Live Server
 > Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](https://github.com/firstcontributions/first-contributions)
 
 ## :memo: Licença
-
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](.github/LICENSE.md) para mais detalhes.
 
 ---  
