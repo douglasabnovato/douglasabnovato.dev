@@ -41,7 +41,6 @@ function main(){
         let repository = createRepository(project)
         tableRepo.appendChild(repository)
     })
-
 }
 
 main()
