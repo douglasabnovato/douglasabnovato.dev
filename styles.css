@@ -99,31 +99,31 @@ body{
 }  
 
 .links .icons-local {
-    content: url(/assets/map-pin.svg);
+    content: url(/public/assets/map-pin.svg);
 }
 
 .links .icons-sa {
-    content: url(/assets/briefcase.svg);
+    content: url(/public/assets/briefcase.svg);
 }
 
 .links .icons-github {
-    content: url(/assets/github.svg);
+    content: url(/public/assets/github.svg);
 }
 
 .links .icons-linkedin {
-    content: url(/assets/linkedin.svg);
+    content: url(/public/assets/linkedin.svg);
 }
 
 .links .icons-twitter {
-    content: url(/assets/twitter.svg);
+    content: url(/public/assets/twitter.svg);
 }
 
 .links .icons-globe {
-    content: url(/assets/globe.svg);
+    content: url(/public/assets/globe.svg);
 }
 
 .links .icons-mail {
-    content: url(/assets/mail.svg);
+    content: url(/public/assets/mail.svg);
 } 
 
 .technologies{
@@ -279,7 +279,7 @@ body{
 } 
 
 .project .title-project .icons-folder {
-    content: url(/assets/folder.svg);    
+    content: url(/public/assets/folder.svg);    
     margin-right: 6px; 
 }
 
@@ -301,18 +301,18 @@ body{
 }
 
 .project .details-project .icons-star {
-    content: url(/assets/star.svg);    
+    content: url(/public/assets/star.svg);    
     margin-right: 6px;
 }   
 
 .project .details-project .icons-gitbranch {
-    content: url(/assets/git-branch.svg); 
+    content: url(/public/assets/git-branch.svg); 
     margin-left: 12px;   
     margin-right: 6px;
 } 
 
 .project .details-project .icons-languages {
-    content: url(/assets/ellipse.svg);    
+    content: url(/public/assets/ellipse.svg);    
     margin-right: 6px;
 } 
 
