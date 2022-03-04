@@ -27,8 +27,8 @@ Também exibindo os links das minhas redes sociais.
 
 Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
-### Web - v3.1
-Aperfeiçoando a aplicação acrescentando dinamismo.
+### Web - v3.2: próximo passo
+Aperfeiçoar a aplicação acrescentando dinamismo.
 
 #### 🚀 Requisitos para o desafio 
 - [ ] Os cards dos projetos deverão ser clicáveis
@@ -49,6 +49,9 @@ Aperfeiçoando a aplicação acrescentando dinamismo.
         console.log(users[i].language) 
     }
 ````
+
+### Web - v3.1
+Aperfeiçoando a aplicação acrescentando dados estáticos para os links das redes sociais.
 
 ### Web - v3.0
 Neste desafio devo criar uma página web para que seja meu portfolio e currículo. Utilizando HTML e CSS.
