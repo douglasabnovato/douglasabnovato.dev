@@ -30,6 +30,8 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 ### Web - v3.2: próximo passo
 Aperfeiçoar a aplicação acrescentando dinamismo.
 
+- estudar as referências indicadas
+
 #### 🚀 Requisitos para o desafio 
 - [ ] Os cards dos projetos deverão ser clicáveis
 - [ ] Os cards dos posts deverão ser clicláveis
