@@ -15,6 +15,47 @@ body{
     color: var(--text-color);
 }
 
+.social-medias a,
+.social-medias a:link,
+.social-medias a:visited,
+.social-medias a:hover,
+.social-medias a:active
+{
+    margin-bottom: -5px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.profile a,
+.profile a:link,
+.profile a:visited,
+.profile a:hover,
+.profile a:active
+{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.box-techs a,
+.box-techs a:link,
+.box-techs a:visited,
+.box-techs a:hover,
+.box-techs a:active
+{
+    color: black;
+    text-decoration: none;
+}
+
+.project a,
+.project a:link,
+.project a:visited,
+.project a:hover,
+.project a:active
+{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
 .container{ 
     display: flex;
     gap: 3.75rem;
@@ -275,7 +316,7 @@ body{
 
 .project .title-project span:nth-child(2){
     font-weight: bold;
-    font-size: 20px;    
+    font-size: 18px;    
 } 
 
 .project .title-project .icons-folder {
