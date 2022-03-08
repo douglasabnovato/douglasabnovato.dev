@@ -281,11 +281,12 @@ body{
     height: 86px; 
     margin-right: 3.5rem;
     position: relative;
+    margin-bottom: 1.5rem;
 } 
 
 .my-projects .title-project{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 
 .my-projects div:nth-child(1){
@@ -305,14 +306,13 @@ body{
 .box-projects{
     display: flex;
     justify-content: space-between;  
-    gap: 1.5rem; 
+    gap: 1rem; 
     margin-right: 3.5rem;
     flex-wrap: wrap;
 }
 
-.box-projects .project{
-    height: 186px;  
-    margin-top: 2.5rem;
+.box-projects .project{  
+    margin-top: 0.5rem;
 }
 
 .box-projects .project .fragment{
