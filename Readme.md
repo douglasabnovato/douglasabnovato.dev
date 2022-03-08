@@ -30,6 +30,7 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 ### Web - v3.4: próximo passo
 - [ ] Tornando o design responsivo 
 - [ ] Paginação dos projetos
+- [ ] Tornar os cards dos projetos clicáveis com infos da api
 
 ### Web - v3.3:
 Aperfeiçoar a aplicação acrescentando dinamismo.
