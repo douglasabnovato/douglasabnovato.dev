@@ -30,23 +30,12 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 ### Web - v3.3: próximo passo
 Aperfeiçoar a aplicação acrescentando dinamismo.
 
-- [ ] estudar as referências indicadas
+- [x] estudar as referências indicadas
 
 #### 🚀 Se desafie também 
 - [ ] Tornando o design responsivo 
-- [ ] Consumir a API do Github 
-
-#### detalhes da api
-````javascript
-    for(let i=0; i < users.length; i++){        
-        console.log("Repository: ",i)
-        console.log(users[i].name)
-        console.log(users[i].description)
-        console.log(users[i].stargazers_count)
-        console.log(users[i].forks_count)
-        console.log(users[i].language) 
-    }
-````
+- [x] Consumir a API do Github: name, description, stargazers_count, forks_count,language
+- [ ] Ajustar o layout com os dados vindos da API  
 
 ### Web - v3.2
 Aperfeiçoar a aplicação tornando os cards clicáveis
