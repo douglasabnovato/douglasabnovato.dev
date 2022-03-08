@@ -393,48 +393,58 @@ body{
     margin-bottom: 2.5rem;
     height: 201px;
 }
+ 
+.box-posts a,
+.box-posts a:link,
+.box-posts a:visited,
+.pbox-postsost a:hover,
+.box-posts a:active
+{
+    color: var(--text-color);
+    text-decoration: none;
+}
 
-.post-avatar{
+.post .post-avatar{
     margin-top: 32px;
     margin-left: 30px;
     margin-right: 20px;
 }
 
-.post-avatar img{
+.post .post-avatar img{
     width: 128px;
     height: 128px;
     border-radius: 50%;
 }
 
-.box-post-right{
+.post .box-post-right{
     display: flex;
     flex-direction: column; 
     justify-content: space-around;
 }
 
-.post-title{
-    margin-top: 18px;
+.post .post-title{
+    margin-top: 7px;
 }
 
-.post-title div:nth-child(1){
+.post .post-title div:nth-child(1){
     font-weight: bold;
     font-size: 18px;
 }
  
-.post-title div:nth-child(2){
+.post .post-title div:nth-child(2){
     margin-top: 8px;
     font-size: 14px;
 }
 
-.post-details{
+.post .post-details{
     margin-top: -5px;
 }
 
-.post-details div:nth-child(1){
+.post .post-details div:nth-child(1){
     font-size: 16px;
 } 
 
-.post-details div:nth-child(2){
+.post .post-details div:nth-child(2){
     margin-top: 8px;
     display: flex;
     justify-content: space-between;
