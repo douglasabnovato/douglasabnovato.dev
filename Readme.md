@@ -27,13 +27,16 @@ Também exibindo os links das minhas redes sociais.
 
 Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
-### Web - v3.3: próximo passo
+### Web - v3.4: próximo passo
+- [ ] Tornando o design responsivo 
+- [ ] Paginação dos projetos
+
+### Web - v3.3:
 Aperfeiçoar a aplicação acrescentando dinamismo.
 
 - [x] estudar as referências indicadas
 
 #### 🚀 Se desafie também 
-- [ ] Tornando o design responsivo 
 - [x] Consumir a API do Github: name, description, stargazers_count, forks_count,language
 - [x] Ajustar o layout com os dados vindos da API  
 
