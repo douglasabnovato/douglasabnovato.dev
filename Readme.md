@@ -27,14 +27,10 @@ Também exibindo os links das minhas redes sociais.
 
 Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
-### Web - v3.2: próximo passo
+### Web - v3.3: próximo passo
 Aperfeiçoar a aplicação acrescentando dinamismo.
 
 - [ ] estudar as referências indicadas
-
-#### 🚀 Requisitos para o desafio 
-- [ ] Os cards dos projetos deverão ser clicáveis
-- [ ] Os cards dos posts deverão ser clicláveis
 
 #### 🚀 Se desafie também 
 - [ ] Tornando o design responsivo 
@@ -51,6 +47,13 @@ Aperfeiçoar a aplicação acrescentando dinamismo.
         console.log(users[i].language) 
     }
 ````
+
+### Web - v3.2
+Aperfeiçoar a aplicação tornando os cards clicáveis
+
+#### 🚀 Requisitos para o desafio 
+- [ ] Os cards dos projetos deverão ser clicáveis
+- [ ] Os cards dos posts deverão ser clicláveis
 
 ### Web - v3.1
 Aperfeiçoando a aplicação acrescentando dados estáticos para os links das redes sociais.
