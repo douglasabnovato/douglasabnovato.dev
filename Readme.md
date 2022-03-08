@@ -35,7 +35,7 @@ Aperfeiçoar a aplicação acrescentando dinamismo.
 #### 🚀 Se desafie também 
 - [ ] Tornando o design responsivo 
 - [x] Consumir a API do Github: name, description, stargazers_count, forks_count,language
-- [ ] Ajustar o layout com os dados vindos da API  
+- [x] Ajustar o layout com os dados vindos da API  
 
 ### Web - v3.2
 Aperfeiçoar a aplicação tornando os cards clicáveis
