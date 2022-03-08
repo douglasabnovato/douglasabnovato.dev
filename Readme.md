@@ -52,8 +52,8 @@ Aperfeiçoar a aplicação acrescentando dinamismo.
 Aperfeiçoar a aplicação tornando os cards clicáveis
 
 #### 🚀 Requisitos para o desafio 
-- [ ] Os cards dos projetos deverão ser clicáveis
-- [ ] Os cards dos posts deverão ser clicláveis
+- [x] Os cards dos projetos deverão ser clicáveis
+- [x] Os cards dos posts deverão ser clicláveis
 
 ### Web - v3.1
 Aperfeiçoando a aplicação acrescentando dados estáticos para os links das redes sociais.
