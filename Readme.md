@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="versão lts do projeto" title="#douglasabnovato.dev" src="./.github/tela-3-2.jpg" />
+    <img alt="versão lts do projeto" title="#douglasabnovato.dev" src="./.github/tela-3-3.jpg" />
 </h1>
 <h4 align="center"> 
 	🚧 douglasabnovato.dev 🚀
@@ -34,6 +34,10 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
 ### Web - v3.3:
 Aperfeiçoar a aplicação acrescentando dinamismo.
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="versão 3.3 do projeto" title="#douglasabnovato.dev" src="./.github/tela-3-3.jpg" width="400px">
+</p> 
 
 - [x] estudar as referências indicadas
 
