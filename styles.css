@@ -63,7 +63,7 @@ body{
 
 .left{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-direction: column;
     
     gap: 2rem;
@@ -76,6 +76,17 @@ body{
 }
 
 .cards{ 
+    background-color: var(--bg-cards);
+    border-radius: 1em;
+    width: 48.5%;
+}
+
+.cards-title{ 
+    background-color: var(--bg-cards);
+    border-radius: 1em;
+}
+
+.cards-posts{ 
     background-color: var(--bg-cards);
     border-radius: 1em;
 }
@@ -296,6 +307,7 @@ body{
     justify-content: space-between;  
     gap: 1.5rem; 
     margin-right: 3.5rem;
+    flex-wrap: wrap;
 }
 
 .box-projects .project{
@@ -397,7 +409,7 @@ body{
 .box-posts a,
 .box-posts a:link,
 .box-posts a:visited,
-.pbox-postsost a:hover,
+.box-posts a:hover,
 .box-posts a:active
 {
     color: var(--text-color);
@@ -450,6 +462,10 @@ body{
     justify-content: space-between;
     font-size: 14px;
 } 
+
+.post .post-details div:nth-child(2) span{
+    margin-right: 10px;
+}
 
 .footer{
     text-align: center; 
