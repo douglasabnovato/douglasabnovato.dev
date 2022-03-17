@@ -55,6 +55,9 @@ Aperfeiçoar a aplicação acrescentando dinamismo.
 - [como estilizar o segundo elemento child :nth-child()](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child)
 - [como inserir icone svg](https://www.alura.com.br/artigos/como-utilizar-icones-em-paginas-web)
 - [como estilizar um  tooltip](http://www.w3bai.com/pt/css/css_tooltip.html)
+- [como estilizar boxes com cantos arredondados e sombras](https://www.w3.org/Style/Examples/007/roundshadow.pt_BR.html)
+- [Como remover as bolinhas de uma lista não ordenada](https://www.demorodavel.com/como-remover-as-bolinhas-de-uma-lista-nao-ordenada/)
+- [criar, gerir e automatizar quadros de projeto GitHub](https://docs.github.com/pt/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards)
 
 como inserir icone svg
 
