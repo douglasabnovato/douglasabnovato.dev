@@ -59,8 +59,6 @@ Aperfeiçoar a aplicação acrescentando dinamismo.
 - [Como remover as bolinhas de uma lista não ordenada](https://www.demorodavel.com/como-remover-as-bolinhas-de-uma-lista-nao-ordenada/)
 - [criar, gerir e automatizar quadros de projeto GitHub](https://docs.github.com/pt/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards)
 
-como inserir icone svg
-
 #### 🚀 Se desafie também 
 - [x] Consumir a API do Github: name, description, stargazers_count, forks_count,language
 - [x] Ajustar o layout com os dados vindos da API  
