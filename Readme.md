@@ -41,6 +41,23 @@ Aperfeiçoar a aplicação acrescentando dinamismo.
 
 - [x] estudar as referências indicadas
 
+## 🛠 Buscas no Google
+
+- [como modificar atributos, classes e styles na DOM](https://www.digitalocean.com/community/tutorials/how-to-modify-attributes-classes-and-styles-in-the-dom)
+- [como consumir os repositorios da api github ](https://api.github.com/users/douglasabnovato/repos)
+- [como fazer merge entre duas branches no git ](https://git-scm.com/book/pt-br/v2/Branches-no-Git-O-b%C3%A1sico-de-Ramifica%C3%A7%C3%A3o-Branch-e-Mesclagem-Merge)
+- [como centralizar horizontalmente com justify-content: space-between](https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_justify-content_space-between)
+- [como centralizar verticalmente ](https://www.w3schools.com/howto/howto_css_center-vertical.asp)
+- [como centralizar vertical e horizontalmente](https://www.w3.org/Style/Examples/007/center.pt_BR.html#:~:text=Centrar%20linhas%20de%20textos,-Centrar%20textos%20de&text=Todas%20as%20linhas%20desse%20par%C3%A1grafo,CSS%20'text%2Dalign')
+- [como posicionar elementos CSS - display: flex ](https://origamid.com/projetos/flexbox-guia-completo/)
+- [como criar avatar com imagens ](https://www.w3schools.com/howto/howto_css_image_avatar.asp)
+- [ como estilizar SVG com CSS](https://willianjusten.com.br/estilizando-svg-com-css-parte-1)
+- [como estilizar o segundo elemento child :nth-child()](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child)
+- [como inserir icone svg](https://www.alura.com.br/artigos/como-utilizar-icones-em-paginas-web)
+- [como estilizar um  tooltip](http://www.w3bai.com/pt/css/css_tooltip.html#:~:text=Dica%20b%C3%A1sica&text=HTML)%20Use%20um%20elemento%20de,com%20class%3D%22tooltiptext%22%20)
+
+como inserir icone svg
+
 #### 🚀 Se desafie também 
 - [x] Consumir a API do Github: name, description, stargazers_count, forks_count,language
 - [x] Ajustar o layout com os dados vindos da API  
