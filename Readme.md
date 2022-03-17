@@ -54,7 +54,7 @@ Aperfeiçoar a aplicação acrescentando dinamismo.
 - [ como estilizar SVG com CSS](https://willianjusten.com.br/estilizando-svg-com-css-parte-1)
 - [como estilizar o segundo elemento child :nth-child()](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child)
 - [como inserir icone svg](https://www.alura.com.br/artigos/como-utilizar-icones-em-paginas-web)
-- [como estilizar um  tooltip](http://www.w3bai.com/pt/css/css_tooltip.html#:~:text=Dica%20b%C3%A1sica&text=HTML)%20Use%20um%20elemento%20de,com%20class%3D%22tooltiptext%22%20)
+- [como estilizar um  tooltip](http://www.w3bai.com/pt/css/css_tooltip.html)
 
 como inserir icone svg
 
