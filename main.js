@@ -17,6 +17,7 @@ function createRepo(repository){
         const a_repos = document.createElement('a')
         a_repos.setAttribute('href', repository.html_url)
         a_repos.setAttribute('target', '_blank')
+        a_repos.setAttribute('rel', 'noopener') 
 
             const div_fragment = document.createElement('div')
             div_fragment.setAttribute('class', 'fragment')
