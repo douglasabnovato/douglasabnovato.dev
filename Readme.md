@@ -27,9 +27,12 @@ Também exibindo os links das minhas redes sociais.
 
 Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
-### Web - v3.4: próximo passo
+### Web - próximo passo
 - [ ] Tornando o design responsivo 
 - [ ] Paginação dos projetos
+
+### Web - v3.4: 
+
 - [x] Tornar os cards dos projetos clicáveis com infos da api: issue #1
 
 ### Web - v3.3:
