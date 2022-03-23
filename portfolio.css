@@ -1,0 +1,479 @@
+:root {
+    --portfolio-body-bg-color: #22212C;
+    --portfolio-text-color: #837E9F;
+    --portfolio-bg-cards: #302F3D;
+    --portfolio-bg-techs: #CB92B1;
+  }
+  
+* {
+    margin: 0;
+}
+
+body{
+    font-family: 'Merriweather Sans', sans-serif;
+    background-color: var(--portfolio-body-bg-color);
+    color: var(--portfolio-text-color);
+}
+
+.social-medias a,
+.social-medias a:link,
+.social-medias a:visited,
+.social-medias a:hover,
+.social-medias a:active
+{
+    margin-bottom: -5px;
+    color: var(--portfolio-text-color);
+    text-decoration: none;
+}
+
+.profile a,
+.profile a:link,
+.profile a:visited,
+.profile a:hover,
+.profile a:active
+{
+    color: var(--portfolio-text-color);
+    text-decoration: none;
+}
+
+.box-techs a,
+.box-techs a:link,
+.box-techs a:visited,
+.box-techs a:hover,
+.box-techs a:active
+{
+    color: black;
+    text-decoration: none;
+}
+
+.project a,
+.project a:link,
+.project a:visited,
+.project a:hover,
+.project a:active
+{
+    color: var(--portfolio-text-color);
+    text-decoration: none;
+}
+
+.container{ 
+    display: flex;
+    gap: 3.75rem;
+}
+
+.left{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    
+    gap: 2rem;
+
+    width: 40%;
+    max-width: 348px;
+
+    margin-top: 2.5rem;
+    margin-left: 2.5rem; 
+}
+
+.cards{ 
+    background-color: var(--portfolio-bg-cards);
+    border-radius: 1em;
+    width: 48.5%;
+}
+
+.cards-title{ 
+    background-color: var(--portfolio-bg-cards);
+    border-radius: 1em;
+}
+
+.cards-posts{ 
+    background-color: var(--portfolio-bg-cards);
+    border-radius: 1em;
+}
+ 
+.profile{
+    width: 348px;
+    height: 292px;
+}
+
+.profile .avatar{
+    margin-top: 32px;
+}
+
+.profile .avatar img{
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.profile .texts .name{
+    margin-top: 30px;
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center; 
+}
+
+.profile .texts .job{
+    margin-top: 13px;
+    text-align: center ;
+}
+
+.links{
+    width: 348px;
+    height: 348px;
+}
+
+.links .social-medias{
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.links .social-media{
+    margin-bottom: 20px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    display: flex;
+}
+
+.links .icons{
+    margin-right: 28px;
+    margin-left: 5px;
+    align-self: center;
+} 
+
+.links .social-media span:nth-child(2){
+    align-self: center;
+}  
+
+.links .icons-local {
+    content: url(/public/assets/map-pin.svg);
+}
+
+.links .icons-sa {
+    content: url(/public/assets/briefcase.svg);
+}
+
+.links .icons-github {
+    content: url(/public/assets/github.svg);
+}
+
+.links .icons-linkedin {
+    content: url(/public/assets/linkedin.svg);
+}
+
+.links .icons-twitter {
+    content: url(/public/assets/twitter.svg);
+}
+
+.links .icons-globe {
+    content: url(/public/assets/globe.svg);
+}
+
+.links .icons-mail {
+    content: url(/public/assets/mail.svg);
+} 
+
+.technologies{
+    width: 348px;
+    height: 208px;
+}
+
+.technologies h2{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.technologies .box-techs{
+    margin-left: 25px;
+    margin-top: 25px;
+}
+ 
+.technologies .techs{
+    display: flex;
+    gap: 1rem; 
+    margin-top: 15px;
+} 
+
+.technologies .tooltip{
+    background-color: var(--portfolio-bg-techs);
+    color: #000000;
+    width: 90px;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.experiences{
+    width: 348px;
+    height: 369px;
+}
+
+.experiences > h2{
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.experiences-list{
+    margin-top: 20px;
+    margin-left: 27px;
+}
+
+.experiences-list .experience{
+    margin-bottom: 20px;
+}
+
+.experiences-list .experience span{
+    font-weight: bold;
+}
+
+.experiences-list .experience ul{
+    list-style: none;
+    margin-left: -40px;
+    font-size: 12px;
+}
+
+.education{
+    width: 348px;
+    height: 372px; 
+}
+
+.education > h2{
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.education-list{
+    margin-top: 20px;
+    margin-left: 27px;
+}
+
+.education-list .certification{
+    margin-bottom: 20px;
+}
+
+.education-list .certification span{
+    font-weight: bold;
+}
+
+.education-list .certification ul{
+    list-style: none;
+    margin-left: -40px;
+    font-size: 12px;
+}
+
+.right{
+    display: flex; 
+    flex-direction: column; 
+    margin-top: 2.5rem; 
+}
+
+.my-projects{
+    height: 86px; 
+    margin-right: 3.5rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+} 
+
+.my-projects .title-project{
+    display: flex;
+    justify-content: space-between; 
+}
+
+.my-projects div:nth-child(1){
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 26px; 
+    margin-top: 11px;
+} 
+
+.my-projects div:nth-child(2){
+    margin-right: 30px;
+    font-weight: lighter;
+    font-size: 18px; 
+    margin-top: 12px;
+}   
+
+.box-projects{
+    display: flex;
+    justify-content: space-between;  
+    gap: 1rem; 
+    margin-right: 3.5rem;
+    flex-wrap: wrap;
+}
+
+.box-projects .project{  
+    margin-top: 0.5rem;
+}
+
+.box-projects .project .fragment{
+    margin-top: 2rem;
+    margin-right: 3.5rem;
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+}
+
+.box-projects .project .title-project{
+    margin-bottom: 13px;
+}
+
+.project .title-project span:nth-child(2){
+    font-weight: bold;
+    font-size: 18px;    
+} 
+
+.project .title-project .icons-folder {
+    content: url(/public/assets/folder.svg);    
+    margin-right: 6px; 
+}
+
+.project .description-project{
+    margin-top: 20px;
+    margin-bottom: 13px;
+}
+
+.project .details-project{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 13px;
+    margin-top: 20px;
+}
+
+.project .details-project .stars-branches{
+    display: flex;
+    justify-content: space-between;
+}
+
+.project .details-project .icons-star {
+    content: url(/public/assets/star.svg);    
+    margin-right: 6px;
+}   
+
+.project .details-project .icons-gitbranch {
+    content: url(/public/assets/git-branch.svg); 
+    margin-left: 12px;   
+    margin-right: 6px;
+} 
+
+.project .details-project .icons-languages {
+    content: url(/public/assets/ellipse.svg);    
+    margin-right: 6px;
+} 
+
+.project .details-project span:nth-child(2){
+    font-weight: lighter;
+    font-size: 18px;    
+}  
+
+.recent-posts{
+    height: 86px; 
+    margin-top: 2.5rem;
+    margin-right: 3.5rem;
+    position: relative;
+} 
+
+.recent-posts .title-recent-posts{
+    display: flex;
+    justify-content: space-between;
+}
+
+.recent-posts div:nth-child(1){
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 26px; 
+    margin-top: 11px;
+} 
+
+.box-posts{
+    display: flex;
+    flex-direction: column; 
+    margin-top: 2.5rem;
+    margin-right: 3.5rem;
+}  
+ 
+.post{
+    display: flex; 
+    margin-bottom: 2.5rem;
+    height: 201px;
+}
+ 
+.box-posts a,
+.box-posts a:link,
+.box-posts a:visited,
+.box-posts a:hover,
+.box-posts a:active
+{
+    color: var(--portfolio-text-color);
+    text-decoration: none;
+}
+
+.post .post-avatar{
+    margin-top: 32px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.post .post-avatar img{
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+}
+
+.post .box-post-right{
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+}
+
+.post .post-title{
+    margin-top: 7px;
+}
+
+.post .post-title div:nth-child(1){
+    font-weight: bold;
+    font-size: 18px;
+}
+ 
+.post .post-title div:nth-child(2){
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.post .post-details{
+    margin-top: -5px;
+}
+
+.post .post-details div:nth-child(1){
+    font-size: 16px;
+} 
+
+.post .post-details div:nth-child(2){
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+} 
+
+.post .post-details div:nth-child(2) span{
+    margin-right: 10px;
+}
+
+.footer{
+    text-align: center; 
+    height: 58px; 
+    position: relative
+}
+
+.footer span{
+    position: absolute;
+    top: 35%;
+}
