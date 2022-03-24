@@ -143,31 +143,31 @@ body{
 }  
 
 .links .icons-local {
-    content: url(/portfolio/assets/map-pin.svg);
+    content: url(./portfolio/assets/map-pin.svg);
 }
 
 .links .icons-sa {
-    content: url(/portfolio/assets/briefcase.svg);
+    content: url(./portfolio/assets/briefcase.svg);
 }
 
 .links .icons-github {
-    content: url(/portfolio/assets/github.svg);
+    content: url(./portfolio/assets/github.svg);
 }
 
 .links .icons-linkedin {
-    content: url(/portfolio/assets/linkedin.svg);
+    content: url(./portfolio/assets/linkedin.svg);
 }
 
 .links .icons-twitter {
-    content: url(/portfolio/assets/twitter.svg);
+    content: url(./portfolio/assets/twitter.svg);
 }
 
 .links .icons-globe {
-    content: url(/portfolio/assets/globe.svg);
+    content: url(./portfolio/assets/globe.svg);
 }
 
 .links .icons-mail {
-    content: url(/portfolio/assets/mail.svg);
+    content: url(./portfolio/assets/mail.svg);
 } 
 
 /* fim - links social-medias */
@@ -364,7 +364,7 @@ body{
 } 
 
 .project .title-project .icons-folder {
-    content: url(/portfolio/assets/folder.svg);    
+    content: url(./portfolio/assets/folder.svg);    
     margin-right: 11px; 
 }
 
@@ -386,18 +386,18 @@ body{
 }
 
 .project .details-project .icons-star {
-    content: url(/portfolio/assets/star.svg);    
+    content: url(./portfolio/assets/star.svg);    
     margin-right: 6px;
 }   
 
 .project .details-project .icons-gitbranch {
-    content: url(/portfolio/assets/git-branch.svg); 
+    content: url(./portfolio/assets/git-branch.svg); 
     margin-left: 12px;   
     margin-right: 6px;
 } 
 
 .project .details-project .icons-languages {
-    content: url(/portfolio/assets/ellipse.svg);    
+    content: url(./portfolio/assets/ellipse.svg);    
     margin-right: 6px;
 } 
 
