@@ -27,10 +27,9 @@ Também exibindo os links das minhas redes sociais.
 
 Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
-### Web - próximo passo
+### Web - v4.0: 
 
-- [ ] Tornando o design responsivo 
-- [ ] Paginação dos projetos
+- [ ] Tornar o design responsivo: first mobile
 
 ### Web - v3.5: 
 
