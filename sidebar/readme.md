@@ -8,14 +8,13 @@ Neste desafio você deve criar uma sidebar como na imagem acima.
 Quando o usuário clicar no ícone do menu isso deve fazer com que o estado da sidebar mude entre "aberto", mostrando ícones e texto e "fechado", mostrando apenas os ícones.
 
 ![Animação.gif](./.github/animacao.gif)
-- Consultar o layout do projeto no [figma](https://www.figma.com/file/iOuqAlZvhAMkkfjCMFyc7Y/DD-%2F-Sidebar-Responsiva/duplicate).
 - Baixar os assets em `src/assets`
 - O layout dos dois estados: sidebar close e sidebar open
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;"> 
-  <img alt="sidebar" title="#sidebar" src="./.github/sidebar.jpg" width="400px"> 
-  <img alt="sidebar close" title="#sidebarclose" src="./.github/sidebar-close.jpg" width="400px"> 
-  <img alt="sidebar open" title="#sidebaropen" src="./.github/sidebar-open.png" width="400px"> 
+  <img alt="sidebar" title="#sidebar" src="../.github/sidebar.jpg" width="400px"> 
+  <img alt="sidebar close" title="#sidebarclose" src="../.github/sidebar-close.jpg" width="400px"> 
+  <img alt="sidebar open" title="#sidebaropen" src="../.github/sidebar-open.png" width="400px"> 
 </p> 
 
 ### 🎨 Style Guide
