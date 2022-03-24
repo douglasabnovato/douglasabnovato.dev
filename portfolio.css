@@ -294,10 +294,10 @@ body{
 }
 
 .my-projects{
-    height: 86px; 
-    margin-right: 3.5rem;
     position: relative;
-    margin-bottom: 1.5rem;
+    height: 82px; 
+    margin-right: 3.5rem;
+    margin-bottom: 0.25rem;
 } 
 
 .my-projects .title-project{
@@ -307,16 +307,16 @@ body{
 
 .my-projects div:nth-child(1){
     margin-left: 30px;
+    margin-top: 11px;
     font-weight: bold;
     font-size: 26px; 
-    margin-top: 11px;
 } 
 
 .my-projects div:nth-child(2){
     margin-right: 30px;
+    margin-top: 12px;
     font-weight: lighter;
     font-size: 18px; 
-    margin-top: 12px;
 }   
 
 /* box-projects - construido em js */
@@ -324,12 +324,13 @@ body{
 .box-projects{
     display: flex;
     justify-content: space-between;
-    margin-right: 3.5rem;
     flex-wrap: wrap;
+    margin-right: 3.5rem;
 }
 
 .box-projects .project{  
-    margin-top: 0.5rem;
+    margin-top: 0.5rem; 
+    margin-right: 0.5rem;
 }
 
 .project a,
@@ -405,7 +406,7 @@ body{
 
 .recent-posts{
     height: 86px; 
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
     margin-right: 3.5rem;
     position: relative;
 } 
@@ -417,21 +418,21 @@ body{
 
 .recent-posts div:nth-child(1){
     margin-left: 30px;
+    margin-top: 11px;
     font-weight: bold;
     font-size: 26px; 
-    margin-top: 11px;
 } 
 
 .box-posts{
     display: flex;
     flex-direction: column; 
-    margin-top: 2.5rem;
+    margin-top: 0.5rem;
     margin-right: 3.5rem;
 }  
  
 .post{
     display: flex; 
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     height: 201px;
 }
  
