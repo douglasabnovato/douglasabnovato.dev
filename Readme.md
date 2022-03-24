@@ -30,6 +30,7 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 ### Web - v4.0: 
 
 - [ ] Tornar o design responsivo: first mobile
+- [ ] Pesquisar como fazer responsividade com html, css, javascript
 
 ### Web - v3.5: 
 
