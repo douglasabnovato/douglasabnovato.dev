@@ -51,6 +51,8 @@ body{
 
 /* fim - gerais */
 
+/* left */
+
 /* profile */
 
 .profile{
@@ -281,16 +283,9 @@ body{
 
 /* fim - education */
 
-.project a,
-.project a:link,
-.project a:visited,
-.project a:hover,
-.project a:active
-{
-    color: var(--portfolio-text-color);
-    text-decoration: none;
-}
+/* fim - left */
 
+/* right */
 
 .right{
     display: flex; 
@@ -324,10 +319,11 @@ body{
     margin-top: 12px;
 }   
 
+/* box-projects - construido em js */
+
 .box-projects{
     display: flex;
-    justify-content: space-between;  
-    gap: 1rem; 
+    justify-content: space-between;
     margin-right: 3.5rem;
     flex-wrap: wrap;
 }
@@ -336,8 +332,18 @@ body{
     margin-top: 0.5rem;
 }
 
+.project a,
+.project a:link,
+.project a:visited,
+.project a:hover,
+.project a:active
+{
+    color: var(--portfolio-text-color);
+    text-decoration: none;
+}
+
 .box-projects .project .fragment{
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-right: 3.5rem;
     margin-bottom: 1rem;
     margin-left: 3rem;
@@ -394,6 +400,8 @@ body{
     font-weight: lighter;
     font-size: 18px;    
 }  
+
+/* fim - box-projects */
 
 .recent-posts{
     height: 86px; 
