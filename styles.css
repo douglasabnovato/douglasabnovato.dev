@@ -1,4 +1,4 @@
-/* Gerais */
+/* gerais */
 :root {
     --sidebar-body-bg-color: #dce4e3;
     --sidebar-green: #18c29c;
@@ -26,7 +26,7 @@ body{
 /* Sidebar */
 
 .sidebar.open{
-  width: 280px;
+  width: 270px;
 }
 
 .sidebar{
@@ -267,7 +267,7 @@ body{
 }
 
 .sidebar.open li.profile{
-  width: 280px;
+  width: 270px;
 }
 
 .sidebar .login{
@@ -368,8 +368,8 @@ body{
 }
 
 .sidebar.open ~ .home-section{
-  left: 280px;
-  width: calc(100% - 280px);
+  left: 270px;
+  width: calc(100% - 270px);
 } 
 
 .home-section .text{

@@ -17,20 +17,13 @@ body{
     color: var(--portfolio-text-color);
 }
 
+/* fim - gerais */
+
+/* Página Portfólio */
+
 .container{ 
     display: flex;
     gap: 0.55rem;
-}
-
-.left{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;    
-    gap: 0.55rem;
-    width: 40%;
-    max-width: 348px;
-    margin-top: 2.5rem;
-    margin-left: 2.5rem; 
 }
 
 .cards{ 
@@ -49,9 +42,20 @@ body{
     border-radius: 1em;
 }
 
-/* fim - gerais */
+/* fim - Página Portfólio */
 
 /* left */
+
+.left{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;    
+    gap: 0.55rem;
+    width: 40%;
+    max-width: 348px;
+    margin-top: 1.5rem;
+    margin-left: 0.8rem; 
+}
 
 /* profile */
 
@@ -289,8 +293,8 @@ body{
 
 .right{
     display: flex; 
-    flex-direction: column; 
-    margin-top: 2.5rem; 
+    flex-direction: column;
+    margin-top: 1.5rem;
 }
 
 .my-projects{
@@ -432,7 +436,7 @@ body{
  
 .post{
     display: flex; 
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     height: 201px;
 }
  
