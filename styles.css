@@ -54,8 +54,16 @@ body{
 }
 
 .sidebar .logo-details .icon{
+  margin-left: 7px;
   opacity: 0;
   transition: all 0.5s ease;
+  width: 32px;
+  height: 32px;
+}
+
+.sidebar .logo-details .icon img{
+  width: 32px;
+  height: 32px;
 }
 
 .sidebar.open .logo-details #btn{
@@ -389,20 +397,4 @@ body{
   }
 }
  
-.home-section .main{
-    margin-top: 10px;
-    margin-left: 15px;
-    margin-right: 10px;
-}
-
-.home-section .main .title{
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-
-.home-section .main .text-section{
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-}
 /* fim - seções */

@@ -1,6 +1,7 @@
 /* gerais */
 :root {
     --portfolio-body-bg-color: #22212C;
+    --sidebar-body-bg-color: #dce4e3;
     --portfolio-text-color: #837E9F;
     --portfolio-text-color-black: #000000;
     --portfolio-bg-cards: #302F3D;
@@ -13,7 +14,6 @@
 
 body{
     font-family: 'Merriweather Sans', sans-serif;
-    background-color: var(--portfolio-body-bg-color);
     color: var(--portfolio-text-color);
 }
 
@@ -300,7 +300,7 @@ body{
 .my-projects{
     position: relative;
     height: 82px; 
-    margin-right: 3.5rem;
+    margin-right: 4rem;
     margin-bottom: 0.25rem;
 } 
 
@@ -348,14 +348,14 @@ body{
 }
 
 .box-projects .project .fragment{
-    margin-top: 1rem;
-    margin-right: 3.5rem;
-    margin-bottom: 1rem;
-    margin-left: 3rem;
+    margin-top: 2rem;
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 2rem;
 }
 
 .box-projects .project .title-project{
-    margin-bottom: 13px;
+    margin-bottom: 11px;
 }
 
 .project .title-project span:nth-child(2){
@@ -365,19 +365,19 @@ body{
 
 .project .title-project .icons-folder {
     content: url(/portfolio/assets/folder.svg);    
-    margin-right: 6px; 
+    margin-right: 11px; 
 }
 
 .project .description-project{
     margin-top: 20px;
-    margin-bottom: 13px;
+    margin-bottom: 20px;
 }
 
 .project .details-project{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 13px;
     margin-top: 20px;
+    margin-bottom: 12px;
 }
 
 .project .details-project .stars-branches{
