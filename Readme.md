@@ -28,12 +28,17 @@ Também exibindo os links das minhas redes sociais.
 Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
 ### Web - próximo passo
+
 - [ ] Tornando o design responsivo 
 - [ ] Paginação dos projetos
 
+### Web - v3.5: 
+
+- [ ] Implementar o desafio portfólio como a página home com o desafio sidebar.
+
 ### Web - v3.4: 
 
-- [x] Tornar os cards dos projetos clicáveis com infos da api: issue #1
+- [x] Tornar os cards dos projetos clicáveis com infos da api: issue #1 (sem branch)
 
 ### Web - v3.3:
 Aperfeiçoar a aplicação acrescentando dinamismo.
