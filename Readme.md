@@ -35,9 +35,6 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 ### Web - v3.5: 
 
 - [ ] implementar o desafio portfólio como a página home com a estrutura do desafio sidebar.
-- [ ] criar um branch para essa evolução.
-- [ ] inserir a coluna da esquerda do portfolio no projeto principal com a sidebar.
-- [ ] acertar as cores
 
 ### Web - v3.4: 
 
