@@ -34,6 +34,12 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
 ### Web - v3.5: 
 
+Aperfeiçoar em forma de site com uma sidebar onde o primeiro item do menu sendo a home contendo o portfólio.
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="versão 3.3 do projeto" title="#douglasabnovato.dev" src="./.github/tela-3-3.jpg" width="400px">
+</p> 
+
 - [x] implementar o desafio portfólio como a página home com a estrutura do desafio sidebar.
 
 ### Web - v3.4: 

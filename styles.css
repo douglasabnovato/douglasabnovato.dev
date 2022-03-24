@@ -341,7 +341,7 @@ body{
 .sidebar .login .logout a{ 
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 0.1rem;
   margin-left: 11px;
   background: var(--sidebar-light-green);
 } 
