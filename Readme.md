@@ -27,10 +27,14 @@ Também exibindo os links das minhas redes sociais.
 
 Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
+### Próximo Passo
+
+- [ ] Acessibilidade
+
 ### Web - v4.0: 
 
 - [ ] Tornar o design responsivo: first mobile
-- [ ] Pesquisar como fazer responsividade com html, css, javascript
+- Pesquisar como fazer responsividade com html, css, javascript
 
 ### Web - v3.5: 
 
