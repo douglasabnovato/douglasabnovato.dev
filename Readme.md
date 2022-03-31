@@ -37,6 +37,8 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
 - [ ] Responsividade: first mobile
 - Pesquisar como fazer responsividade com html, css, javascript
+- [ ] Aperfeiçoamento no consumo da API 
+- [ ] Aperfeiçoamento na manipulação com JSON
 
 ### Web - v3.5: 
 
