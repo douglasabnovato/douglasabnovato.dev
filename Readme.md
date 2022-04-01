@@ -31,12 +31,12 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
 ### Próximo Passo
 
-- [ ] Acessibilidade
+- [ ] acessibilidade
 
 ### Web - v4.0: 
 
-- [ ] Responsividade: first mobile
-- Pesquisar como fazer responsividade com html, css, javascript
+- [ ] mobile first
+- [ ] responsividade
 
 ### Web - v3.5: 
 
