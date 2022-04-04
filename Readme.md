@@ -35,7 +35,7 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
 ### Web - v4.0: 
 
-- [ ] mobile first
+- [x] mobile first: pesquisado o significado. trata-se de um paradigma.
 - [ ] responsividade
 
 ### Web - v3.5: 
