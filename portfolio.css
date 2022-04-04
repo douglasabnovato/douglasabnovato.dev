@@ -21,9 +21,31 @@ body{
 
 /* Página Portfólio */
 
+
+@media (max-width: 630px) {
+    .container {
+        color: rgb(101, 233, 40);
+    }
+}
+
+@media (max-width: 540px) {
+    .container {
+        color: red;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        color: yellow;
+    }
+}
+
 .container{ 
     display: flex;
     gap: 0.55rem;
+
+    width: 92%;
+    max-width: 100%;
 }
 
 .cards{ 
@@ -51,8 +73,10 @@ body{
     justify-content: flex-start;
     flex-direction: column;    
     gap: 0.55rem;
+
     width: 40%;
     max-width: 348px;
+    
     margin-top: 1.5rem;
     margin-left: 0.8rem; 
 }
@@ -61,7 +85,7 @@ body{
 
 .profile{
     width: 348px;
-    height: 292px;
+    height: auto;
 }
 
 .profile a,
@@ -80,7 +104,7 @@ body{
 
 .profile .avatar img{
     width: 128px;
-    height: 128px;
+    height: auto;
     border-radius: 50%;
     display: block;
     margin-left: auto;
@@ -105,7 +129,7 @@ body{
 
 .links {
     width: 348px;
-    height: 348px;
+    height: auto;
 }
 
 .links .social-medias{
@@ -176,7 +200,7 @@ body{
 
 .technologies{
     width: 348px;
-    height: 208px;
+    height: auto;
 }
 
 .technologies > h2{
@@ -225,7 +249,7 @@ body{
  
 .experiences{
     width: 348px;
-    height: 369px;
+    height: auto;
 }
 
 .experiences > h2{
@@ -258,7 +282,7 @@ body{
 
 .education{
     width: 348px;
-    height: 372px; 
+    height: auto; 
 }
 
 .education > h2{
@@ -299,7 +323,7 @@ body{
 
 .my-projects{
     position: relative;
-    height: 82px; 
+    height: auto; 
     margin-right: 4rem;
     margin-bottom: 0.25rem;
 } 
@@ -409,7 +433,7 @@ body{
 /* fim - box-projects */
 
 .recent-posts{
-    height: 86px; 
+    height: auto; 
     margin-top: 1.5rem;
     margin-right: 3.5rem;
     position: relative;
@@ -437,7 +461,6 @@ body{
 .post{
     display: flex; 
     margin-bottom: 0.5rem;
-    height: 201px;
 }
  
 .box-posts a,
@@ -503,7 +526,7 @@ body{
 
 .footer{
     text-align: center; 
-    height: 58px; 
+    height: auto; 
     position: relative
 }
 
