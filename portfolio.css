@@ -8,25 +8,31 @@
     --portfolio-bg-techs: #CB92B1;
 }
 
-.container {
-    color: pink;
+@media (min-width: 45em) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
 }
 
 @media (max-width: 630px) {
     .container {
-        color: rgb(101, 233, 40);
+        display: grid;
+        grid-template-columns: 1fr 2fr; 
     }
 }
 
 @media (max-width: 540px) {
     .container {
-        color: red;
+        display: grid;
+        grid-template-columns: 0fr 2fr;
     }
 }
 
 @media (max-width: 320px) {
     .container {
-        color: yellow;
+        display: grid;
+        grid-template-columns: 0fr 1fr;
     }
 }
 
@@ -344,6 +350,7 @@ section .home-section{
 .my-projects .title-project{
     display: flex;
     justify-content: space-between; 
+    color: var(--portfolio-text-color);
 }
 
 .my-projects div:nth-child(1),
