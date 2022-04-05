@@ -1,4 +1,6 @@
-/* gerais */
+
+/* Página Portfólio */
+
 :root {
     --portfolio-body-bg-color: #22212C;
     --sidebar-body-bg-color: #dce4e3;
@@ -6,21 +8,7 @@
     --portfolio-text-color-black: #000000;
     --portfolio-bg-cards: #302F3D;
     --portfolio-bg-techs: #CB92B1;
-  }
-  
-* {
-    margin: 0;
 }
-
-body{
-    font-family: 'Merriweather Sans', sans-serif;
-    color: var(--portfolio-text-color);
-}
-
-/* fim - gerais */
-
-/* Página Portfólio */
-
 
 @media (max-width: 630px) {
     .container {
@@ -38,6 +26,11 @@ body{
     .container {
         color: yellow;
     }
+}
+
+section .home-section{
+    font-family: 'Merriweather Sans', sans-serif;
+    color: var(--portfolio-text-color);
 }
 
 .container{ 
