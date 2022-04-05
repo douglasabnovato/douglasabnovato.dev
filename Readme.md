@@ -35,8 +35,22 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
 ### Web - v4.0: 
 
-- [x] mobile first: pesquisado o significado. trata-se de um paradigma.
-- [ ] responsividade
+- [x] [mobile first](https://www.moblee.com.br/blog/mobile-first-principais-vantagens/): pesquisa 
+- [ ] [responsividade](https://web.dev/learn/design/):
+- [ ] media queries
+- [ ] internationalization
+- [ ] macro layouts
+- [ ] micro layouts
+- [ ] typography
+- [ ] images
+- [ ] picture
+- [ ] icon
+- [ ] theming
+- [ ] accessibility
+- [ ] interation
+- [ ] user interface patterns
+- [ ] media features
+- [ ] screen configuration
 
 ### Web - v3.5: 
 
