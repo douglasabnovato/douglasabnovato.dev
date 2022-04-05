@@ -37,9 +37,9 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
 - [x] [mobile first](https://www.moblee.com.br/blog/mobile-first-principais-vantagens/): pesquisa 
 - [ ] [responsividade](https://web.dev/learn/design/):
-- [ ] media queries
+- [x] media queries
 - [x] internationalization
-- [ ] macro layouts: revisando adaptações
+- [x] macro layouts: flexbox e grid
 - [ ] micro layouts
 - [ ] typography
 - [ ] images
