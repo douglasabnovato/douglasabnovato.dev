@@ -8,34 +8,6 @@
     --portfolio-bg-techs: #CB92B1;
 }
 
-@media (min-width: 45em) {
-    .container {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-    }
-}
-
-@media (max-width: 630px) {
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 2fr; 
-    }
-}
-
-@media (max-width: 540px) {
-    .container {
-        display: grid;
-        grid-template-columns: 0fr 2fr;
-    }
-}
-
-@media (max-width: 320px) {
-    .container {
-        display: grid;
-        grid-template-columns: 0fr 1fr;
-    }
-}
-
 section .home-section{
     font-family: 'Merriweather Sans', sans-serif;
     color: var(--portfolio-text-color);
@@ -46,13 +18,12 @@ section .home-section{
     gap: 0.55rem;
 
     width: 100%;
-    max-width: 1024px;
+    max-width: 1048px;
 }
 
 .cards{ 
     background-color: var(--portfolio-bg-cards);
     border-radius: 1em;
-    width: 48.5%;
 }
 
 .cards-title{ 
@@ -337,7 +308,12 @@ section .home-section{
     display: flex; 
     flex-direction: column;
     margin-block-start: 1.5rem;
-    column-count: 2;
+}
+
+.right .box-projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(19em, 1fr));
+    grid-gap: 0.2em;
 }
 
 .my-projects{
