@@ -39,7 +39,7 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 - [ ] [responsividade](https://web.dev/learn/design/):
 - [ ] media queries
 - [x] internationalization
-- [ ] macro layouts: revisando
+- [ ] macro layouts: revisando adaptações
 - [ ] micro layouts
 - [ ] typography
 - [ ] images
