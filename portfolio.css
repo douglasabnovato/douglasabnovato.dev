@@ -341,16 +341,21 @@ body{
     justify-content: space-between; 
 }
 
-.my-projects div:nth-child(1){
+.my-projects div:nth-child(1),
+.recent-posts div:nth-child(1)
+{
     margin-left: 30px;
     margin-top: 11px;
+    margin-bottom: 4px;
     font-weight: bold;
     font-size: 26px; 
 } 
 
-.my-projects div:nth-child(2){
+.my-projects div:nth-child(2),
+.recent-posts div:nth-child(2){
     margin-right: 30px;
     margin-top: 12px;
+    margin-bottom: 4px;
     font-weight: lighter;
     font-size: 18px; 
 }   
@@ -485,6 +490,7 @@ body{
     margin-top: 32px;
     margin-left: 30px;
     margin-right: 20px;
+    margin-bottom: 6px;
 }
 
 .post .post-avatar img{
@@ -497,6 +503,7 @@ body{
     display: flex;
     flex-direction: column; 
     justify-content: space-around;
+    margin-bottom: 5px;
 }
 
 .post .post-title{
