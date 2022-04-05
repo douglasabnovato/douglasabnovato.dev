@@ -1,5 +1,4 @@
-
-/* Página Portfólio */
+/* Portfólio */
 
 :root {
     --portfolio-body-bg-color: #22212C;
@@ -198,6 +197,7 @@ section .home-section{
 .technologies{
     width: 348px;
     height: auto;
+    color: var(--portfolio-text-color);
 }
 
 .technologies > h2{
@@ -251,6 +251,7 @@ section .home-section{
 .experiences{
     width: 348px;
     height: auto;
+    color: var(--portfolio-text-color);
 }
 
 .experiences > h2{
@@ -284,6 +285,7 @@ section .home-section{
 .education{
     width: 348px;
     height: auto; 
+    color: var(--portfolio-text-color);
 }
 
 .education > h2{
@@ -443,6 +445,7 @@ section .home-section{
     margin-top: 1.5rem;
     margin-right: 3.5rem;
     position: relative;
+    color: var(--portfolio-text-color);
 } 
 
 .recent-posts .title-recent-posts{
