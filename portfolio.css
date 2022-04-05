@@ -8,6 +8,10 @@
     --portfolio-bg-techs: #CB92B1;
 }
 
+.container {
+    color: pink;
+}
+
 @media (max-width: 630px) {
     .container {
         color: rgb(101, 233, 40);
@@ -321,6 +325,7 @@ section .home-section{
     display: flex; 
     flex-direction: column;
     margin-top: 1.5rem;
+    column-count: 2;
 }
 
 .my-projects{
