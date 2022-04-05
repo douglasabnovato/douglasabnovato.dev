@@ -5,9 +5,8 @@
     --sidebar-light-green: #8ed7c6;
     --sidebar-light-grey: #dce4e3;
     --sidebar-tooltip: #fff;
-    --sidebar-search: #fff;
     --sidebar-text-color: #084236;
-    --sidebar-search: #E4E9F7
+    --sidebar-search: #E4E9F7;
 }
 
 .sidebar.open{
@@ -141,7 +140,6 @@
   align-items: center; 
   transition: var(--sidebar-tran-05);
   padding: 13px 29px;
-  background: var(--sidebar-light-grey);
   border-radius: 6px;
 }
 
@@ -352,7 +350,6 @@
 /* seções */
 .home-section{
   position: relative;
-  background: var(--sidebar-search);
   min-height: 100vh;
   top: 0;
   left: 78px;
