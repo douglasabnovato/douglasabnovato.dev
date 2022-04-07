@@ -1,18 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
 
     list-style: none;
     text-decoration: none;
 
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
 
-body{
-    background: var(--sidebar-search);  
-    
+
+body {
+    background: var(--sidebar-search);
+
     height: 100vh;
     width: 100vw;
 
     font-size: 16px;
+
+    display: inline-block;
+    overflow-x: hidden
 }
