@@ -1,5 +1,3 @@
-/* Portfólio */
-
 :root {
     --portfolio-body-bg-color: #22212C;
     --portfolio-text-color: #837E9F;
@@ -18,7 +16,7 @@ section .home-section{
     gap: 0.55rem;
 
     width: 100%;
-    max-width: 1048px;
+    max-width: 100vw;
 }
 
 .cards{ 
