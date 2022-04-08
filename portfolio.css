@@ -31,7 +31,8 @@ section .home-section{
 .left{
     display: flex;
     justify-content: flex-start;
-    flex-direction: column;    
+    flex-direction: column;  
+
     gap: 0.35rem;
 
     width: 100%;
@@ -296,7 +297,14 @@ section .home-section{
 .right{
     display: flex; 
     flex-direction: column;
-    margin-block-start: 1.5rem;
+
+    gap: 0.35rem;
+
+    width: 100%;
+    max-width: 80vw;
+    
+    margin-block-start: 1.1vh;
+    margin-inline-start: 0.5vw; 
 }
 
 .right .box-projects{
