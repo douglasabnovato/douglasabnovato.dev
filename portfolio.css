@@ -13,28 +13,18 @@ section .home-section{
 
 .container{ 
     display: flex;
-    gap: 0.55rem;
+    gap: 0.30rem;
 
     width: 100%;
     max-width: 100vw;
 }
 
-.cards{ 
-    background-color: var(--portfolio-bg-cards);
-    border-radius: 1em;
-}
-
-.cards-title{ 
-    background-color: var(--portfolio-bg-cards);
-    border-radius: 1em;
-}
-
+.cards,
+.cards-title,
 .cards-posts{ 
     background-color: var(--portfolio-bg-cards);
     border-radius: 1em;
 }
-
-/* fim - Página Portfólio */
 
 /* left */
 
@@ -42,20 +32,20 @@ section .home-section{
     display: flex;
     justify-content: flex-start;
     flex-direction: column;    
-    gap: 0.55rem;
+    gap: 0.35rem;
 
     width: 100%;
-    max-width: 348px;
+    max-width: 20vw;
     
-    margin-block-start: 1.5rem;
-    margin-inline-start: 0.8rem; 
+    margin-block-start: 1.1vh;
+    margin-inline-start: 0.5vw; 
 }
 
 /* profile */
 
 .profile{
     width: 100%;
-    max-width: 348px;
+    max-width: 20vw;
     height: auto;
 }
 
@@ -70,12 +60,12 @@ section .home-section{
 }
 
 .profile .avatar{
-    margin-block-start: 22px;
+    margin-block-start: 2.5vh;
 }
 
 .profile .avatar img{
     width: 100%;
-    max-width: 128px;
+    max-width: 8vw;
     height: auto;
     border-radius: 50%;
     display: block;
@@ -84,18 +74,18 @@ section .home-section{
 }
 
 .profile .texts{
-    margin-block-end: 7px;
+    margin-block-end: 2vh;
 }
 
 .profile .texts .name{
-    margin-block-start: 15px;
-    font-size: 23px;
+    margin-block-start: 2vh;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center; 
 }
 
 .profile .texts .job{
-    margin-block-start: 13px;
+    margin-block-start: 0.8vh;
     text-align: center ;
 }
 
@@ -105,18 +95,18 @@ section .home-section{
 
 .links {
     width: 100%;
-    max-width: 348px;
+    max-width: 20vw;
     height: auto;
 }
 
 .links .social-medias{
-    margin-inline-start: 12px;
-    margin-block-start: 22px;
+    margin-inline-start: 2vw;
+    margin-block-start: 2.5vh;
 }
 
 .links .social-media{
-    margin-block-end: 20px;
-    margin-inline-end: 5px;
+    margin-block-end: 1.5vh;
+    margin-inline-end: 2vw;
     display: flex;
 }
 
@@ -126,14 +116,13 @@ section .home-section{
 .social-medias a:hover,
 .social-medias a:active
 {
-    margin-block-end: -5px;
     color: var(--portfolio-text-color);
     text-decoration: none;
 }
 
 .links .icons{
-    margin-inline-end: 28px;
-    margin-inline-start: 5px;
+    margin-inline-end: 1vw;
+    margin-inline-start: 1vw;
     align-self: center;
 } 
 
@@ -175,45 +164,48 @@ section .home-section{
 
 .technologies{
     width: 100%;
-    max-width: 348px;
+    max-width: 20vw;
     height: auto;
     color: var(--portfolio-text-color);
 }
 
 .technologies > h2{
-    margin-inline-start: 35px;
-    margin-block-start: 20px;
+    margin-inline-start: 2.5vw;
+    margin-block-start: 3.5vh;
 }
 
 .technologies .box-techs{
-    margin-inline-start: 20px;
-    margin-block-start: 15px;
-    margin-inline-end: 20px;
+    margin-inline-start: 1.7vw;
+    margin-inline-end: 2.5vw;
+    margin-block-start: 4vh;
 }
  
 .technologies .box-techs .techs{
     display: flex;
-    gap: 1rem; 
-    margin-block-start: 12px;
+    gap: 0.35rem; 
+    margin-block-start: 1.9vh;
 } 
 
 .technologies .box-techs .techs:nth-child(3){
-    margin-block-end: 12px;
+    margin-block-end: 2vw;
 }
 
 .technologies .tooltip{
     background-color: var(--portfolio-bg-techs);
     color: var(--portfolio-text-color-black);
+    
     width: 100%;
-    max-width: 90px;
-    font-size: 11px;
+    max-width: 25vw;
+
+    border-radius: 20px;
+    font-size: 0.7rem;
     font-weight: bold;
     text-align: center;
-    border-radius: 30px;
-    padding-block-start: 5px;
-    padding-block-end: 5px;
-    padding-inline-start: 2px;
-    padding-right: 2px;
+
+    padding-block-start: 1vh;
+    padding-block-end: 1vh;
+    padding-inline-start: 0.5vw;
+    padding-inline-end: 0.5vw;
 }
 
 .box-techs a,
@@ -232,7 +224,7 @@ section .home-section{
  
 .experiences{
     width: 100%;
-    max-width: 348px;
+    max-width: 20vw;
     height: auto;
     color: var(--portfolio-text-color);
 }
@@ -267,7 +259,7 @@ section .home-section{
 
 .education{
     width: 100%;
-    max-width: 348px;
+    max-width: 20vw;
     height: auto; 
     color: var(--portfolio-text-color);
 }
