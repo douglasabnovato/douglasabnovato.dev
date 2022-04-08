@@ -11,20 +11,25 @@
 
 .sidebar.open{
   width: 100%;
-  max-width: 270px;
+  max-width: 20vw;
 }
 
 .sidebar{
   font-family: 'Poppins', sans-serif;
   position: fixed;
+
   left: 0;
   top: 0;
+
   height: 100%;
   width: 100%;
-  max-width: 78px;
+  max-width: 5vw;
+
   background: var(--sidebar-green);
+
   padding: 6px 14px;
   z-index: 99;
+  
   transition: all 0.5s ease;
 }
 
