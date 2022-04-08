@@ -178,6 +178,7 @@ section .home-section{
     margin-inline-start: 1.7vw;
     margin-inline-end: 2.5vw;
     margin-block-start: 4vh;
+    margin-block-end: 1vw;
 }
  
 .technologies .box-techs .techs{
@@ -185,10 +186,6 @@ section .home-section{
     gap: 0.35rem; 
     margin-block-start: 1.9vh;
 } 
-
-.technologies .box-techs .techs:nth-child(3){
-    margin-block-end: 2vw;
-}
 
 .technologies .tooltip{
     background-color: var(--portfolio-bg-techs);
@@ -214,7 +211,7 @@ section .home-section{
 .box-techs a:hover,
 .box-techs a:active
 {
-    color: black;
+    color: var(--portfolio-text-color-black);
     text-decoration: none;
 }
 
@@ -229,18 +226,19 @@ section .home-section{
     color: var(--portfolio-text-color);
 }
 
-.experiences > h2{
-    margin-inline-start: 35px;
-    margin-block-start: 20px;
+.experiences > h2{ 
+    margin-inline-start: 2.5vw;
+    margin-block-start: 3.5vh;
 }
 
 .experiences-list{
-    margin-block-start: 20px;
-    margin-inline-start: 27px;
+    margin-block-start: 2.5vh;
+    margin-block-end: 2vh;
+    margin-inline-start: 2.5vw;
 }
 
 .experiences-list .experience{
-    margin-block-end: 10px;
+    margin-block-end: 1.5vh;
 }
 
 .experiences-list .experience span{
@@ -249,8 +247,8 @@ section .home-section{
 
 .experiences-list .experience ul{
     list-style: none;
-    margin-inline-start: 15px;
-    font-size: 12px;
+    margin-inline-start: 1.2vw;
+    font-size: 1rem;
 }
 
 /* fim - experiences */
@@ -265,17 +263,18 @@ section .home-section{
 }
 
 .education > h2{
-    margin-inline-start: 35px;
-    margin-block-start: 20px;
+    margin-inline-start: 2.5vw;
+    margin-block-start: 3.5vh;
 }
 
 .education-list{
-    margin-block-start: 20px;
-    margin-inline-start: 27px;
+    margin-block-start: 2.5vh;
+    margin-block-end: 2vh;
+    margin-inline-start: 2.5vw;
 }
 
 .education-list .certification{
-    margin-block-end: 10px;
+    margin-block-end: 1.5vh;
 }
 
 .education-list .certification span{
@@ -284,8 +283,8 @@ section .home-section{
 
 .education-list .certification ul{
     list-style: none;
-    margin-inline-start: 15px;
-    font-size: 12px;
+    margin-inline-start: 1.2vw;
+    font-size: 1rem;
 }
 
 /* fim - education */
