@@ -53,9 +53,9 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 - [ ] screen configuration
 - [x] portfólio: alterado as unidades de medidas de fixas para as fluídas: de px para %, vw, vh, rem, auto
 - [x] sidebar: alterado as unidades de medidas de fixas para as fluídas: de px para %, vw, vh, rem, auto
-- [ ] verificar o comportamento em desktop
-- [ ] verificar o comportamento em tablet
-- [ ] verificar o comportamento em mobile
+- [x] verificar o comportamento em desktop
+- [x] verificar o comportamento em tablet
+- [ ] verificar o comportamento em mobile: montar o layout mobile com a sidebar no topo, sobreposição das colunas
 
 ### Web - v3.5: 
 
