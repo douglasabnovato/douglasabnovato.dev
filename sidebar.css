@@ -30,7 +30,7 @@
   padding: 1.8vh 0.8vw;
   z-index: 99;
   
-  transition: all 0.7s ease;
+  transition: all 0.8s ease;
 }
 
 /* Menu topo */
@@ -49,7 +49,7 @@
   margin-inline-start: 0.2vw;
   
   opacity: 0;
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
 }
 
 .sidebar .logo-details .icon img{  
@@ -70,7 +70,7 @@
   right: 0;
 
   transform: translateY(-50%);
-  transition: all 0.4s ease;
+  transition: all 0.8s ease;
 
   text-align: center;
   cursor: pointer;
@@ -127,7 +127,7 @@
 .sidebar .nav-list li:hover .tooltip{
   opacity: 1;
   pointer-events: auto;
-  transition: all 0.4s ease;
+  transition: all 0.8s ease;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -178,7 +178,7 @@
   border-radius: 1.2vw;
   color: var(--sidebar-text-color);
   background: var(--sidebar-light-grey);
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
 }
 
 .sidebar.open .nav-list input{
@@ -202,7 +202,7 @@
 
 .sidebar .nav-list .menuitem{
   display: flex;
-  transition: all 0.4s ease; 
+  transition: all 0.8s ease; 
 
   height: 100%;
   max-height: 8vh;
@@ -253,16 +253,22 @@
   width: 100%;
   max-width: 2vw;
 
+  margin-inline-start: 0.7vw;
+  margin-block-start: 4.5vh;
+
   object-fit: cover;
   border-radius: 0.4vw;
 }
  
 .sidebar.open .nav-list .menuitem img{
   height: 100%;
-  max-height: 5vh;
+  max-height: 3.5vh;
 
   width: 100%;
-  max-width: 2.5vw; 
+  max-width: 2vw; 
+  
+  margin-inline-start: 0.5vw;
+  margin-block-start: 1.5vh;
 }
 
 .sidebar .nav-list .menuitem .links_name{
@@ -280,10 +286,13 @@
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
+  
+  margin-inline-start: 0.5vw;
+  margin-block-start: -5vh;
 }
 
 .sidebar .nav-list .menuitem:hover .links_name{
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
   color: var(--sidebar-text-color);
 }
 /* fim - itens menu  */
@@ -291,21 +300,27 @@
 /* profile */
 .sidebar li.profile{
   position: fixed;
+
   height: 100%;
-  max-height: 60px;
+  max-height: 10vh;
+
   width: 100%;
-  max-width: 78px;
+  max-width: 5vw;
+
   left: 0;
-  bottom: -8px;
-  padding: 10px 14px;
+  bottom: -1vh;
+
+  padding-block-start: 0.5vh; 
+  padding-inline-start: 1.8vw;
+
   background: var(--sidebar-light-green);
-  transition: all 0.5s ease;
+  transition: all 0.7s ease;
   overflow: hidden;
 }
 
 .sidebar.open li.profile{
   width: 100%;
-  max-width: 270px;
+  max-width: 20vw;
 }
 
 .sidebar .login{
@@ -318,6 +333,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+  transition: all 0.8s ease;
 } 
 /* foto */
 .sidebar .login .foto {
@@ -325,16 +341,17 @@
 }  
 /* imagem */
 .sidebar .login .foto .imagem{ 
-  margin-inline-end: 20px;
+  margin-inline-start: -0.5vw;
+  margin-inline-end: 1.5vw;
   display: flex;
   align-items: center;
 }   
 
 .sidebar .login .foto .imagem img{ 
   width:100%;
-  max-width: 48px;
+  max-width: 8vw;
   height: 100%;
-  max-height: 48px;
+  max-height: 8vh;
   border-radius: 50%;
   display: block;
   margin-inline-start: auto;
@@ -344,55 +361,40 @@
 /* nome_profissao */
 .sidebar .login .foto .nome_profissao { 
   align-items: center;
-  margin-block-start: 5px;
+  margin-block-start: 1vh;
 } 
 
 .sidebar .login .foto .nome_profissao .profissional{ 
-  font-size: 14px;
-  margin-block-end: 4px;
+  font-size: 1rem;
+  margin-block-end: 0.5vh;
 } 
 
 .sidebar .login .foto .nome_profissao .carreira{ 
-  font-size: 11px;
+  font-size: 0.7rem;
 } 
 /* logout */
 .sidebar .login .logout{
   display: flex;
   position: absolute;
+  align-items: center;
   top: 50%;
   right: 0;
   width: 100%;
   height: 100%;
-  margin-inline-end: 16px;
+  margin-inline-start: 0.8vw;
   border-radius: 0px;
   transform: translateY(-50%);
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
   background: var(--sidebar-light-green);
 }
-
-.sidebar .login .logout a{ 
-  display: flex;
-  align-items: center;
-  margin-top: 0.1rem;
-  margin-inline-start: 11px;
-  background: var(--sidebar-light-green);
-} 
 
 .sidebar.open .login .logout{
   width: 100%;
-  max-width: 50px;
+  max-width: 2vw;
+  height: 100%;
+  max-height: 1vh;
   background: var(--sidebar-light-green);
-  margin-inline-end: 30px;
-}
-
-.sidebar.open .login .logout a {
-  margin-block-start: 0vh;
-  margin-inline-start: 0vw;
-  background: var(--sidebar-light-green);
-}
-
-.sidebar.open .login .logout a img{
-  background: var(--sidebar-light-green);
+  margin-inline-end: 2.1vw;
 }
 /* fim - profile */
 
@@ -401,15 +403,15 @@
   position: relative;
   min-height: 100vh;
   top: 0;
-  left: 78px;
-  width: calc(100% - 78px);
-  transition: all 0.5s ease;
+  left: 5vw;
+  width: calc(100% - 5vw);
+  transition: all 0.8s ease;
   z-index: 2;
 }
 
 .sidebar.open ~ .home-section{
-  left: 270px;
-  width: calc(100% - 270px);
+  left: 20vw;
+  width: calc(100% - 20vw);
 } 
 
 .home-section .text{
@@ -422,11 +424,11 @@
   display: flex;
   flex-direction: column;
 }
-
+ 
+/* fim - seções */
+ 
 @media (max-width: 420px) {
   .sidebar li .tooltip{
     display: none;
   }
 }
- 
-/* fim - seções */
