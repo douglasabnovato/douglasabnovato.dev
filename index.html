@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,288 +15,328 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">     
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;700&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    
+
     <title>douglasabnovato.dev</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="sidebar">
-      <div class="logo-details">
-        <div class="icon">
-            <img id="logo" src="./sidebar/assets/dev.png" alt="profile_logo">
-        </div> 
-        <div class="btn" id="btn">
-            <a href="#">
-                <img id="menu" src="./sidebar/assets/menu.svg" alt="profile_menu">
-            </a>
-        </div>
-      </div> 
-      <ul class="nav-list">
-        <li class='li-search'>
-          <img class="search bx-search" src="./sidebar/assets/search.svg">
-          <input type="text" placeholder="Buscar">
-          <span class="tooltip">Buscar</span>
-        </li>
-        <li>
-          <a href="#portfolio">
-            <img class="grid bx-grid-alt" src="./sidebar/assets/grid.svg">
-            <span class="links_name">Portfólio</span>
-          </a>
-          <span class="tooltip">Portfólio</span>
-        </li>
-        <li class="profile">
-          <div class="login">
-            <div class="foto">
-                <div class="imagem">
-                    <img src="./sidebar/assets/avatar-profile.jpeg" alt="foto">
-                </div>
-                <div class="nome_profissao">
-                    <div class="profissional">Douglas</div>
-                    <div class="carreira">Desenvolvedor</div>
-                </div>
+        <div class="logo-details">
+            <div class="icon">
+                <img id="logo" src="./sidebar/assets/dev.png" alt="profile_logo">
             </div>
-            <div class="logout">
-                <a href="#logout">
-                    <img src="./sidebar/assets/log-out.svg" alt="logout">
+            <div class="btn" id="btn">
+                <a href="#">
+                    <img id="menu" src="./sidebar/assets/menu.svg" alt="profile_menu">
                 </a>
             </div>
-          </div>
-        </li>
-      </ul>
+        </div>
+        <ul class="nav-list">
+            <li class='li-search'>
+                <img class="search bx-search" src="./sidebar/assets/search.svg">
+                <input type="text" placeholder="Buscar">
+                <span class="tooltip">Buscar</span>
+            </li>
+
+            <li class="portfolio">
+                <a href="#portfolio">
+                    <img class="grid bx-grid-alt" src="./sidebar/assets/grid.svg">
+                    <span class="links_name">Portfólio</span>
+                </a>
+                <span class="tooltip">Portfólio</span>
+            </li>
+
+            <li class="portfolio">
+                <a href="#blog">
+                    <img class="grid bx-grid-alt" src="./sidebar/assets/grid.svg">
+                    <span class="links_name">Blog</span>
+                </a>
+                <span class="tooltip">Blog</span>
+            </li>
+
+            <li class="portfolio">
+                <a href="#hackdev">
+                    <img class="grid bx-grid-alt" src="./sidebar/assets/grid.svg">
+                    <span class="links_name">Hack Dev</span>
+                </a>
+                <span class="tooltip">Hack Dev</span>
+            </li>
+
+            <li class="portfolio">
+                <a href="#meucracha">
+                    <img class="grid bx-grid-alt" src="./sidebar/assets/grid.svg">
+                    <span class="links_name">Meu Crachá</span>
+                </a>
+                <span class="tooltip">Meu Crachá</span>
+            </li>
+
+            <li class="portfolio">
+                <a href="#meuaniversario">
+                    <img class="grid bx-grid-alt" src="./sidebar/assets/grid.svg">
+                    <span class="links_name">Meu Ainversário</span>
+                </a>
+                <span class="tooltip">Meu Ainversário</span>
+            </li>
+
+            <li class="profile">
+                <div class="login">
+                    <div class="foto">
+                        <div class="imagem">
+                            <img src="./sidebar/assets/avatar-profile.jpeg" alt="foto">
+                        </div>
+                        <div class="nome_profissao">
+                            <div class="profissional">Douglas</div>
+                            <div class="carreira">Desenvolvedor</div>
+                        </div>
+                    </div>
+                    <div class="logout">
+                        <a href="#logout">
+                            <img src="./sidebar/assets/log-out.svg" alt="logout">
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
     <section class="home-section">
-      <div class="container"> 
-        <div class="left">
-            <div class="profile cards">
-                <a href="https://github.com/douglasabnovato" target="_blank" alt="profile card">
-                    <div class="avatar">
-                        <img src="./portfolio/assets/avatar-profile.jpeg" alt="Avatar">
-                    </div>
-                    <div class="texts">
-                        <div class="name">Douglas A. B. Novato</div>
-                        <div class="job">
-                            Desenvolvedor Frontend <br>
-                            em <span>Javascript</span> | <span>ReactJS</span>
+        <div class="container">
+            <div class="left">
+                <div class="profile cards">
+                    <a href="https://github.com/douglasabnovato" target="_blank" alt="profile card">
+                        <div class="avatar">
+                            <img src="./portfolio/assets/avatar-profile.jpeg" alt="Avatar">
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="links cards">
-                <div class="social-medias">
-                    <div class="social-media">
-                        <a href="https://goo.gl/maps/AKj5eek8tst6fM3YA" target="_blank" alt="localização card">
-                            <span class="icons-local icons"></span>
-                            <span>Juiz de Fora - MG</span> 
-                        </a>
-                    </div>
-                    <div class="social-media">
-                        <a href="https://goo.gl/maps/AKj5eek8tst6fM3YA" target="_blank" alt="empresa card">
-                            <span class="icons-sa icons"></span>
-                            <span>My Job</span> 
-                        </a>
-                    </div>
-                    <div class="social-media">
-                        <a href="https://github.com/douglasabnovato" target="_blank" alt="github card">
-                            <span class="icons-github icons"></span>
-                            <span>Meus repositórios</span> 
-                        </a>
-                    </div>
-                    <div class="social-media">
-                        <a href="https://www.linkedin.com/in/douglasabnovato/" target="_blank" alt="linkedin card">
-                            <span class="icons-linkedin icons"></span>
-                            <span>Minhas Experiências</span> 
-                        </a>
-                    </div>
-                    <div class="social-media">
-                        <a href="https://twitter.com/douglasabnovato" target="_blank" alt="twitter card">
-                            <span class="icons-twitter icons"></span>
-                            <span>Rede Social</span> 
-                        </a>
-                    </div>
-                    <div class="social-media">
-                        <a href="https://linktr.ee/douglasabnovato" target="_blank" alt="meu portfólio card">
-                            <span class="icons-globe icons"></span>
-                            <span>Meu Currículo</span> 
-                        </a>
-                    </div>
-                    <div class="social-media">
-                        <a href="https://douglasabnovato@gmail.com" target="_blank" alt="e-mail card">
-                            <span class="icons-mail icons"></span>
-                            <span>Meu E-mail</span> 
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="technologies cards">
-                <h2> Technologies </h2>
-                <div class="box-techs">
-                    <div class="techs">
-                        <div class="tech tooltip">
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" alt="javascript card">
-                                <span>JAVASCRIPT</span>
-                            </a>
-                        </div>
-                        <div class="tech tooltip">
-                            <a href="https://reactjs.org/docs/getting-started.html" target="_blank" alt="reactjs card">
-                                <span>REACTJS</span>
-                            </a>
-                        </div>
-                        <div class="tech tooltip">
-                            <a href="https://nodejs.org/en/docs/" target="_blank" alt="nodejs card">
-                                <span>NODEJS</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="techs">
-                        <div class="tech tooltip">
-                            <a href="https://git-scm.com/docs" target="_blank" alt="git card">
-                                <span>GIT</span>
-                            </a>
-                        </div>
-                        <div class="tech tooltip">
-                            <a href="https://docs.github.com/en" target="_blank" alt="github card">
-                                <span>GITHUB</span>
-                            </a>
-                        </div>
-                        <div class="tech tooltip">
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" alt="html card">
-                                <span>HTML</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="techs">
-                        <div class="tech tooltip">
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" alt="css card">
-                                <span>CSS</span>
-                            </a>
-                        </div>
-                        <div class="tech tooltip">
-                            <a href="https://docs.microsoft.com/en-us/sql/?view=sql-server-ver15" target="_blank" alt="sql card">
-                                <span>SQL</span>
-                            </a>
-                        </div>
-                        <div class="tech tooltip">
-                            <a href="https://www.sqlite.org/docs.html" target="_blank" alt="sqlite card">
-                                <span>SQLite</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="experiences cards">
-                <h2>
-                    Experiences
-                </h2>
-                <ul class="experiences-list">
-                    <li class="experience"><span>Rocketseat</span>
-                        <ul>
-                            <li>2019 - Concluído</li>
-                            <li>Trilhas Discover Conectar</li>
-                        </ul>
-                    </li>
-                    <li class="experience"><span>Rocketseat</span>
-                        <ul>
-                            <li>2020 - Concluído</li>
-                            <li>Trilhas Discover Descobrir</li>
-                        </ul>
-                    </li>
-                    <li class="experience"><span>Rocketseat</span>
-                        <ul>
-                            <li>2021 - Concluído</li>
-                            <li>Trilhas Discover Fundamentar</li>
-                        </ul>
-                    </li>
-                    <li class="experience"><span>Rocketseat</span>
-                        <ul>
-                            <li>2022 - Atualmente</li>
-                            <li>Desafios</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="education cards">
-                <h2>
-                    Education
-                </h2>
-                <ul class="education-list">
-                    <li class="certification"><span>UFJF</span>
-                        <ul>
-                            <li>2008 - 2014</li>
-                            <li>Ciência da Computação</li>
-                        </ul>
-                    </li>
-                    <li class="certification"><span>IF Sudeste MG-JF</span>
-                        <ul>
-                            <li>2016 - 2017</li>
-                            <li>Informática</li>
-                        </ul>
-                    </li>
-                    <li class="certification"><span>Rocketseat</span>
-                        <ul>
-                            <li>2018 - 2019</li>
-                            <li>GoStack</li>
-                        </ul>
-                    </li>
-                    <li class="certification"><span>Cod3r</span>
-                        <ul>
-                            <li>2020 - 2021</li>
-                            <li>React + Redux</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div> 
-        <div class="right">
-            <div class="my-projects cards-title">
-                <div class="title-project">
-                    <div>My Projects</div> 
-                    <div>do github</div>  
-                </div>
-            </div>
-            <div class="box-projects" id="box-projects">
-            </div>                    
-            <div class="recent-posts cards-title">
-                <div class="title-recent-posts">
-                    <div>Recent Posts</div> 
-                    <div>do github</div>
-                </div>
-            </div>
-            <div class="box-posts">
-                <a href="https://github.com/douglasabnovato/cracha-virtual" target="_blank" alt="github card">
-                    <div class="post cards-posts">
-                        <div class="box-post-left">
-                            <div class="post-avatar">
-                                <img 
-                                    src="./portfolio/assets/avatar-profile-post-rocket.jpg" 
-                                    alt="Avatar">
+                        <div class="texts">
+                            <div class="name">Douglas A. B. Novato</div>
+                            <div class="job">
+                                Desenvolvedor Frontend <br>
+                                em <span>Javascript</span> | <span>ReactJS</span>
                             </div>
-                        </div>  
-                        <div class="box-post-right">
-                            <div class="post-title">
-                                <div>douglasabnovato/cracha-virtual </div>
-                                <div>2 dias atrás</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="links cards">
+                    <div class="social-medias">
+                        <div class="social-media">
+                            <a href="https://goo.gl/maps/AKj5eek8tst6fM3YA" target="_blank" alt="localização card">
+                                <span class="icons-local icons"></span>
+                                <span>Juiz de Fora - MG</span>
+                            </a>
+                        </div>
+                        <div class="social-media">
+                            <a href="https://goo.gl/maps/AKj5eek8tst6fM3YA" target="_blank" alt="empresa card">
+                                <span class="icons-sa icons"></span>
+                                <span>My Job</span>
+                            </a>
+                        </div>
+                        <div class="social-media">
+                            <a href="https://github.com/douglasabnovato" target="_blank" alt="github card">
+                                <span class="icons-github icons"></span>
+                                <span>Meus repositórios</span>
+                            </a>
+                        </div>
+                        <div class="social-media">
+                            <a href="https://www.linkedin.com/in/douglasabnovato/" target="_blank" alt="linkedin card">
+                                <span class="icons-linkedin icons"></span>
+                                <span>Minhas Experiências</span>
+                            </a>
+                        </div>
+                        <div class="social-media">
+                            <a href="https://twitter.com/douglasabnovato" target="_blank" alt="twitter card">
+                                <span class="icons-twitter icons"></span>
+                                <span>Rede Social</span>
+                            </a>
+                        </div>
+                        <div class="social-media">
+                            <a href="https://linktr.ee/douglasabnovato" target="_blank" alt="meu portfólio card">
+                                <span class="icons-globe icons"></span>
+                                <span>Meu Currículo</span>
+                            </a>
+                        </div>
+                        <div class="social-media">
+                            <a href="https://douglasabnovato@gmail.com" target="_blank" alt="e-mail card">
+                                <span class="icons-mail icons"></span>
+                                <span>Meu E-mail</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="technologies cards">
+                    <h2> Technologies </h2>
+                    <div class="box-techs">
+                        <div class="techs">
+                            <div class="tech tooltip">
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
+                                    alt="javascript card">
+                                    <span>JAVASCRIPT</span>
+                                </a>
                             </div>
-                            <div class="post-details">
-                                <div>Estilização com responsividade de um crachá digital para eventos.</div>
-                                <div>
-                                    <span>#html</span>
-                                    <span>#css</span>
-                                    <span>#javascript</span>
-                                    <span>#git</span>
-                                    <span>#kanban</span>
-                                    <span>#reactjs</span>
-                                    <span>#nextjs</span>
-                                    <span>#redux</span>
-                                    <span>#sqlite</span>
+                            <div class="tech tooltip">
+                                <a href="https://reactjs.org/docs/getting-started.html" target="_blank"
+                                    alt="reactjs card">
+                                    <span>REACTJS</span>
+                                </a>
+                            </div>
+                            <div class="tech tooltip">
+                                <a href="https://nodejs.org/en/docs/" target="_blank" alt="nodejs card">
+                                    <span>NODEJS</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="techs">
+                            <div class="tech tooltip">
+                                <a href="https://git-scm.com/docs" target="_blank" alt="git card">
+                                    <span>GIT</span>
+                                </a>
+                            </div>
+                            <div class="tech tooltip">
+                                <a href="https://docs.github.com/en" target="_blank" alt="github card">
+                                    <span>GITHUB</span>
+                                </a>
+                            </div>
+                            <div class="tech tooltip">
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"
+                                    alt="html card">
+                                    <span>HTML</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="techs">
+                            <div class="tech tooltip">
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"
+                                    alt="css card">
+                                    <span>CSS</span>
+                                </a>
+                            </div>
+                            <div class="tech tooltip">
+                                <a href="https://docs.microsoft.com/en-us/sql/?view=sql-server-ver15" target="_blank"
+                                    alt="sql card">
+                                    <span>SQL</span>
+                                </a>
+                            </div>
+                            <div class="tech tooltip">
+                                <a href="https://www.sqlite.org/docs.html" target="_blank" alt="sqlite card">
+                                    <span>SQLite</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="experiences cards">
+                    <h2>
+                        Experiences
+                    </h2>
+                    <ul class="experiences-list">
+                        <li class="experience"><span>Rocketseat</span>
+                            <ul>
+                                <li>2019 - Concluído</li>
+                                <li>Trilhas Discover Conectar</li>
+                            </ul>
+                        </li>
+                        <li class="experience"><span>Rocketseat</span>
+                            <ul>
+                                <li>2020 - Concluído</li>
+                                <li>Trilhas Discover Descobrir</li>
+                            </ul>
+                        </li>
+                        <li class="experience"><span>Rocketseat</span>
+                            <ul>
+                                <li>2021 - Concluído</li>
+                                <li>Trilhas Discover Fundamentar</li>
+                            </ul>
+                        </li>
+                        <li class="experience"><span>Rocketseat</span>
+                            <ul>
+                                <li>2022 - Atualmente</li>
+                                <li>Desafios</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="education cards">
+                    <h2>
+                        Education
+                    </h2>
+                    <ul class="education-list">
+                        <li class="certification"><span>UFJF</span>
+                            <ul>
+                                <li>2008 - 2014</li>
+                                <li>Ciência da Computação</li>
+                            </ul>
+                        </li>
+                        <li class="certification"><span>IF Sudeste MG-JF</span>
+                            <ul>
+                                <li>2016 - 2017</li>
+                                <li>Informática</li>
+                            </ul>
+                        </li>
+                        <li class="certification"><span>Rocketseat</span>
+                            <ul>
+                                <li>2018 - 2019</li>
+                                <li>GoStack</li>
+                            </ul>
+                        </li>
+                        <li class="certification"><span>Cod3r</span>
+                            <ul>
+                                <li>2020 - 2021</li>
+                                <li>React + Redux</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+                <div class="my-projects cards-title">
+                    <div class="title-project">
+                        <div>My Projects</div>
+                        <div>do github</div>
+                    </div>
+                </div>
+                <div class="box-projects" id="box-projects">
+                </div>
+                <div class="recent-posts cards-title">
+                    <div class="title-recent-posts">
+                        <div>Recent Posts</div>
+                        <div>do github</div>
+                    </div>
+                </div>
+                <div class="box-posts">
+                    <a href="https://github.com/douglasabnovato/cracha-virtual" target="_blank" alt="github card">
+                        <div class="post cards-posts">
+                            <div class="box-post-left">
+                                <div class="post-avatar">
+                                    <img src="./portfolio/assets/avatar-profile-post-rocket.jpg" alt="Avatar">
+                                </div>
+                            </div>
+                            <div class="box-post-right">
+                                <div class="post-title">
+                                    <div>douglasabnovato/cracha-virtual </div>
+                                    <div>2 dias atrás</div>
+                                </div>
+                                <div class="post-details">
+                                    <div>Estilização com responsividade de um crachá digital para eventos.</div>
+                                    <div>
+                                        <span>#html</span>
+                                        <span>#css</span>
+                                        <span>#javascript</span>
+                                        <span>#git</span>
+                                        <span>#kanban</span>
+                                        <span>#reactjs</span>
+                                        <span>#nextjs</span>
+                                        <span>#redux</span>
+                                        <span>#sqlite</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
-        </div> 
-      </div> 
+        </div>
     </section>
     <footer class="footer">
         <span>Feito com 💜 por @douglasabnovato</span>
@@ -303,5 +344,6 @@
     <script src="./main.js"></script>
     <script src="./sidebar.js"></script>
     <script src="./portfolio.js"></script>
-  </body>
+</body>
+
 </html>

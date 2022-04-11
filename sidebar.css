@@ -98,8 +98,9 @@
 .sidebar .nav-list li{
   position: relative;
 
-  margin-inline-start: 0.1vw;
-  margin-inline-end: 0vw;
+  margin-inline-start: 0.2vw;
+  margin-inline-end: 0.1vw;
+
   margin-block-start: 0.5vh;
   margin-block-end: 0.3vh;
 
@@ -109,7 +110,7 @@
 /* tooltip dos itens menu e do buscar */
 .sidebar .nav-list li .tooltip{
   position: absolute;
-  top: -20px;
+  top: -1.5vw;
   left: calc(100% + 15px);
   z-index: 3;  
   padding: 0.6vh 0.9vw;
@@ -139,10 +140,10 @@
 /* item de menu: search */
 .sidebar.open .nav-list .li-search{
   background: var(--sidebar-light-grey);
-  margin-block-end: 35px;
-  padding: 13px 30px;
-  font-size: 16px;
-  border-radius: 6px;
+  margin-block-end: 2vh;
+  padding: 2.6vh 2vw;
+  font-size: 1rem;
+  border-radius: 0.6vw;
 
   display: block;
   position: relative;
@@ -199,27 +200,29 @@
 /* fim - item de menu: search */ 
 
 /* itens de menu sidebar*/ 
+
+.sidebar .nav-list .portfolio{
+  margin-block-start: 3.5vh;
+}
+
 .sidebar .nav-list li a{
   display: flex;
   transition: all 0.4s ease;
+
   height: 100%;
-  width: 100%; 
-  padding: 12px 10px;
+  width: 100%;  
+
   align-items: center;
   text-decoration: none;
-  background: var(--sidebar-green);
 }
 
 .sidebar .nav-list li a:hover{ 
-  margin-inline-start: -10px;
-  padding: 13px 29px 13px 29px;
-  background: var(--sidebar-light-green);
-  border-radius: 6px;
-}
+  margin-inline-start: -0.6vw;
 
-.sidebar .nav-list li a img:hover{ 
-  margin-inline-end: 40px;
-  margin-inline-start: -10px;
+  padding: 13px 29px 13px 29px;
+  
+  border-radius: 0.5vw;
+  background: var(--sidebar-light-green);
 }
 
 .sidebar.open .nav-list li a{
