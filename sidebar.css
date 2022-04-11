@@ -27,18 +27,18 @@
 
   background: var(--sidebar-green);
 
-  padding: 6px 14px;
+  padding: 1.8vh 0.8vw;
   z-index: 99;
   
-  transition: all 0.5s ease;
+  transition: all 0.7s ease;
 }
 
 /* Menu topo */
 .sidebar .logo-details{
-  height: 60px;
   display: flex;
-  align-items: center;
   position: relative;
+  align-items: center;
+  height: 8vh;
 }
 
 .sidebar.open .logo-details .icon{
@@ -46,20 +46,18 @@
 }
 
 .sidebar .logo-details .icon{
-  margin-inline-start: 7px;
+  margin-inline-start: 0.2vw;
+  
   opacity: 0;
   transition: all 0.5s ease;
-  width: 100%;
-  max-width: 32px; 
-  height: 100%;
-  max-height: 32px;
 }
 
 .sidebar .logo-details .icon img{  
   width: 100%;
-  max-width: 32px;
+  max-width: 5vw;
+
   height: 100%;
-  max-height: 32px;
+  max-height: 5vh;
 }
 
 .sidebar.open .logo-details #btn{
@@ -78,39 +76,56 @@
   cursor: pointer;
 
   color: var(--sidebar-text-color);
-  height: 60px;
-  min-width: 50px;
-  line-height: 60px;
+
+  line-height: 2vh;
+ 
+  height: 100%;
+  max-height: 6vh;
+  min-height: 3vw;
+
+  width: 100%;
+  max-width: 6vw;
+  min-width: 3vw;
 }
 /* FIM - Menu topo */
 
 /* itens menu  */
 .sidebar .nav-list{
-  margin-block-start: 20px;
+  margin-block-start: 1.5vh;
   height: 100%;
 }
 
 .sidebar .nav-list li{
   position: relative;
-  margin: 8px 0;
+
+  margin-inline-start: 0.1vw;
+  margin-inline-end: 0vw;
+  margin-block-start: 0.5vh;
+  margin-block-end: 0.3vh;
+
   list-style: none;
 }
 
+/* tooltip dos itens menu e do buscar */
 .sidebar .nav-list li .tooltip{
   position: absolute;
   top: -20px;
   left: calc(100% + 15px);
-  z-index: 3;
-  background: var(--sidebar-tooltip);
-  box-shadow: 0 5px 10px var(--sidebar-text-color);
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 15px;
+  z-index: 3;  
+  padding: 0.6vh 0.9vw;
+  border-radius: 0.5vw;
+  font-size: 1rem;
   font-weight: 400;
-  opacity: 0;
   white-space: nowrap;
   pointer-events: none;
-  transition: 0s;
+  background: var(--sidebar-tooltip);
+  opacity: 0;
+  box-shadow: 0 0.1vw 0.1vh var(--sidebar-text-color);
+  transition: 0.3s;
+}
+
+.sidebar.open .nav-list li .tooltip{
+  display: none;
 }
 
 .sidebar .nav-list li:hover .tooltip{
@@ -119,10 +134,6 @@
   transition: all 0.4s ease;
   top: 50%;
   transform: translateY(-50%);
-}
-
-.sidebar.open .nav-list li .tooltip{
-  display: none;
 }
 
 /* item de menu: search */
@@ -140,53 +151,49 @@
 }
 
 .sidebar .nav-list .li-search{
-  background: var(--sidebar-light-grey);
-  margin-inline-start: -8px;
-  margin-block-end: 35px;
-  padding: 13px 29px;
-  font-size: 16px;
-  border-radius: 6px;
+  margin-inline-start: -0.6vw;
+  margin-block-end: 0.7vh;  
+  padding: 2vh 2.3vw;
   display: block;
   position: relative;
   align-items: center; 
+  border-radius: 0.4vw;
+  font-size: 1rem;
+  background: var(--sidebar-light-grey);
   transition: var(--sidebar-tran-05);
-  padding: 13px 29px;
-  border-radius: 6px;
 }
 
 .sidebar .nav-list .bx-search{
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
-  font-size: 22px;
-  background: var(--sidebar-light-grey);
+  margin-inline-start: 1.2vw;
   color: var(--sidebar-text-color);
-  margin-inline-start: 15px;
+  background: var(--sidebar-light-grey);
+  transform: translateY(-50%);
 }
 
 .sidebar .nav-list input{
-  background: var(--sidebar-light-green);
-  color: var(--sidebar-text-color);
-  font-size: 18px;
-  border-radius: 12px;
   height: 100%;
   width: 100%;
   outline: none;
   border: none;
+  margin-inline-start: 2vw;
+  border-radius: 1.2vw;
+  color: var(--sidebar-text-color);
+  background: var(--sidebar-light-grey);
   transition: all 0.5s ease;
-  margin-inline-start: 18px;
 }
 
 .sidebar.open .nav-list input{
-  padding: 5px 20px 5px 0px;
+  padding: 0.1vh 0.2vw 0.1vh 0.1vw;
   width: 100%;
   height: 100%;
   outline: none;
   border: none;
   background: var(--sidebar-light-grey);
   transition: var(--sidebar-tran-05);
-  font-size: 16px; 
+  font-size: 1.2rem; 
   color: var(--sidebar-text-color);
 }
 /* fim - item de menu: search */ 
