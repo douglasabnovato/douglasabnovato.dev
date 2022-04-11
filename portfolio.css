@@ -195,7 +195,7 @@ section .home-section{
     width: 100%;
     max-width: 25vw;
 
-    border-radius: 20px;
+    border-radius: 1em; 
     font-size: 0.7rem;
     font-weight: bold;
     text-align: center;
@@ -491,46 +491,49 @@ section .home-section{
     display: flex;
     flex-direction: column; 
     justify-content: space-around;
-    margin-block-end: 5px;
+    margin-block-end: 2vh;
 }
 
 .post .post-title{
-    margin-block-start: 7px;
+    margin-block-start: 2vh;
 }
 
 .post .post-title div:nth-child(1){
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.4rem;
 }
  
 .post .post-title div:nth-child(2){
-    margin-block-start: 8px;
-    font-size: 14px;
+    margin-block-start: 0vh;
+    font-size: 0.8rem;
 }
 
 .post .post-details{
-    margin-block-start: -5px;
+    margin-block-start: 1.8vh;
 }
 
 .post .post-details div:nth-child(1){
-    font-size: 16px;
+    font-size: 1.1rem;
 } 
 
 .post .post-details div:nth-child(2){
-    margin-block-start: 8px;
+    margin-block-start: 0vh;
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
+    font-size: 0.8rem;
 } 
 
 .post .post-details div:nth-child(2) span{
-    margin-inline-end: 10px;
+    margin-inline-end: 0.6vw;
 }
 
 .footer{
+    position: relative;
+
     text-align: center; 
+
     height: auto; 
-    position: relative
+    width: auto;
 }
 
 .footer span{

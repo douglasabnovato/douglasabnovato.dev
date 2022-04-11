@@ -51,7 +51,8 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 - [ ] user interface patterns
 - [ ] media features
 - [ ] screen configuration
-- [x] alterado as unidades de medidas de fixas para as fluídas
+- [x] portfólio: alterado as unidades de medidas de fixas para as fluídas: de px para %, vw, vh, rem, auto
+- [x] sidebar: alterado as unidades de medidas de fixas para as fluídas: de px para %, vw, vh, rem, auto
 - [ ] verificar o comportamento em desktop
 - [ ] verificar o comportamento em tablet
 - [ ] verificar o comportamento em mobile
