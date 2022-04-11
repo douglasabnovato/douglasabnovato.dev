@@ -92,17 +92,12 @@
 /* itens menu  */
 .sidebar .nav-list{
   margin-block-start: 1.5vh;
-  height: 100%;
+  margin-inline-start: 0vw;
+  height: 100%;  
 }
 
 .sidebar .nav-list li{
   position: relative;
-
-  margin-inline-start: 0.2vw;
-  margin-inline-end: 0.1vw;
-
-  margin-block-start: 0.5vh;
-  margin-block-end: 0.3vh;
 
   list-style: none;
 }
@@ -201,70 +196,95 @@
 
 /* itens de menu sidebar*/ 
 
-.sidebar .nav-list .portfolio{
+.sidebar .nav-list .li-portfolio{
   margin-block-start: 3.5vh;
 }
 
-.sidebar .nav-list li a{
+.sidebar .nav-list .menuitem{
   display: flex;
-  transition: all 0.4s ease;
+  transition: all 0.4s ease; 
 
   height: 100%;
-  width: 100%;  
+  max-height: 8vh;
 
+  width: 100%;
+  max-width: 14vw;
+
+  margin-inline-start: -0.2vw;
+  margin-block-end: 0.9vh;
+  
   align-items: center;
-  text-decoration: none;
-}
-
-.sidebar .nav-list li a:hover{ 
-  margin-inline-start: -0.6vw;
-
-  padding: 13px 29px 13px 29px;
   
   border-radius: 0.5vw;
-  background: var(--sidebar-light-green);
-}
-
-.sidebar.open .nav-list li a{
-  display: block;
-  position: relative;
-  padding: 15px 30px;
-  font-size: 16px;
-  color: var(--sidebar-text-color);
+  cursor: pointer; 
 } 
 
-.sidebar.open .nav-list li a:hover{ 
+.sidebar .nav-list .menuitem:hover{ 
   background: var(--sidebar-light-green); 
 }
 
-.sidebar .nav-list li a .links_name{
+
+.sidebar.open .nav-list .menuitem{
+  display: block;
+  position: relative; 
+
+  height: 100%;
+  max-height: 9vh;
+
+  width: 100%;
+  max-width: 18.5vw;
+
+  font-size: 1rem;
   color: var(--sidebar-text-color);
-  font-size: 18px;
+} 
+
+.sidebar.open .nav-list .menuitem:hover{ 
+  background: var(--sidebar-light-green); 
+}
+
+.sidebar .nav-list .menuitem a{
+  text-decoration: none;
+}
+
+.sidebar .nav-list .menuitem img{
+  height: 100%;
+  max-height: 6vh;
+
+  width: 100%;
+  max-width: 2vw;
+
+  object-fit: cover;
+  border-radius: 0.4vw;
+}
+ 
+.sidebar.open .nav-list .menuitem img{
+  height: 100%;
+  max-height: 5vh;
+
+  width: 100%;
+  max-width: 2.5vw; 
+}
+
+.sidebar .nav-list .menuitem .links_name{
+  color: var(--sidebar-text-color);
+  font-size: 1rem;
   font-weight: 400;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
   transition: 0.4s;
+  visibility: hidden;
 }
 
-.sidebar.open .nav-list li a .links_name{
+.sidebar.open .nav-list .menuitem .links_name{
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
 }
 
-.sidebar .nav-list li a:hover .links_name{
+.sidebar .nav-list .menuitem:hover .links_name{
   transition: all 0.5s ease;
   color: var(--sidebar-text-color);
-}
- 
-.sidebar .nav-list li img{
-  height: 100%;
-  max-height: 30px;
-  width: 100%;
-  max-width: 30px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-inline-end: 10px;
 }
 /* fim - itens menu  */
 
@@ -366,8 +386,8 @@
 }
 
 .sidebar.open .login .logout a {
-  margin-block-start: 0px;
-  margin-inline-start: 0px;
+  margin-block-start: 0vh;
+  margin-inline-start: 0vw;
   background: var(--sidebar-light-green);
 }
 
