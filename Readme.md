@@ -35,6 +35,7 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
 ### Web - v4.0: 
 
+Referências
 - [x] [mobile first](https://www.moblee.com.br/blog/mobile-first-principais-vantagens/): pesquisa 
 - [ ] [conteúdo de responsividade](https://web.dev/learn/design/):
 - [x] media queries
@@ -51,6 +52,8 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 - [ ] user interface patterns
 - [ ] media features
 - [ ] screen configuration
+
+Etapas
 - [x] portfólio: alterado as unidades de medidas de fixas para as fluídas: de px para %, vw, vh, rem, auto
 - [x] sidebar: alterado as unidades de medidas de fixas para as fluídas: de px para %, vw, vh, rem, auto
 - [x] verificar o comportamento em desktop
