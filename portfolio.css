@@ -6,12 +6,12 @@
     --portfolio-bg-techs: #CB92B1;
 }
 
-section .home-section{
+section .home-section {
     font-family: 'Merriweather Sans', sans-serif;
     color: var(--portfolio-text-color);
 }
 
-.container{ 
+.container {
     display: flex;
     gap: 0.30rem;
 
@@ -21,32 +21,32 @@ section .home-section{
 
 .cards,
 .cards-title,
-.cards-posts{ 
+.cards-posts {
     background-color: var(--portfolio-bg-cards);
     border-radius: 1em;
 }
 
 /* left */
 
-.left{
+.left {
     display: flex;
     justify-content: flex-start;
-    flex-direction: column;  
+    flex-direction: column;
 
     gap: 0.35rem;
 
     width: 100%;
-    max-width: 20vw;
-    
+    max-width: 18.5vw;
+
     margin-block-start: 1.1vh;
-    margin-inline-start: 0.5vw; 
+    margin-inline-start: 0.5vw;
 }
 
 /* profile */
 
-.profile{
+.profile {
     width: 100%;
-    max-width: 20vw;
+    max-width: 18.5vw;
     height: auto;
 }
 
@@ -54,40 +54,39 @@ section .home-section{
 .profile a:link,
 .profile a:visited,
 .profile a:hover,
-.profile a:active
-{
+.profile a:active {
     color: var(--portfolio-text-color);
     text-decoration: none;
 }
 
-.profile .avatar{
+.profile .avatar {
     margin-block-start: 2.5vh;
 }
 
-.profile .avatar img{
+.profile .avatar img {
     width: 100%;
     max-width: 8vw;
     height: auto;
     border-radius: 50%;
     display: block;
     margin-inline-start: auto;
-    margin-inline-end: auto; 
+    margin-inline-end: auto;
 }
 
-.profile .texts{
+.profile .texts {
     margin-block-end: 2vh;
 }
 
-.profile .texts .name{
+.profile .texts .name {
     margin-block-start: 2vh;
     font-size: 1.5rem;
     font-weight: bold;
-    text-align: center; 
+    text-align: center;
 }
 
-.profile .texts .job{
+.profile .texts .job {
     margin-block-start: 0.8vh;
-    text-align: center ;
+    text-align: center;
 }
 
 /* fim - profile */
@@ -96,16 +95,16 @@ section .home-section{
 
 .links {
     width: 100%;
-    max-width: 20vw;
+    max-width: 18.5vw;
     height: auto;
 }
 
-.links .social-medias{
+.links .social-medias {
     margin-inline-start: 2vw;
     margin-block-start: 2.5vh;
 }
 
-.links .social-media{
+.links .social-media {
     margin-block-end: 1.5vh;
     margin-inline-end: 2vw;
     display: flex;
@@ -115,21 +114,20 @@ section .home-section{
 .social-medias a:link,
 .social-medias a:visited,
 .social-medias a:hover,
-.social-medias a:active
-{
+.social-medias a:active {
     color: var(--portfolio-text-color);
     text-decoration: none;
 }
 
-.links .icons{
+.links .icons {
     margin-inline-end: 1vw;
     margin-inline-start: 1vw;
     align-self: center;
-} 
+}
 
-.links .social-media span:nth-child(2){
+.links .social-media span:nth-child(2) {
     align-self: center;
-}  
+}
 
 .links .icons-local {
     content: url(./portfolio/assets/map-pin.svg);
@@ -157,45 +155,45 @@ section .home-section{
 
 .links .icons-mail {
     content: url(./portfolio/assets/mail.svg);
-} 
+}
 
 /* fim - links social-medias */
 
 /* technologies */
 
-.technologies{
+.technologies {
     width: 100%;
-    max-width: 20vw;
+    max-width: 18.5vw;
     height: auto;
     color: var(--portfolio-text-color);
 }
 
-.technologies > h2{
+.technologies>h2 {
     margin-inline-start: 2.5vw;
     margin-block-start: 3.5vh;
 }
 
-.technologies .box-techs{
+.technologies .box-techs {
     margin-inline-start: 1.7vw;
     margin-inline-end: 2.5vw;
     margin-block-start: 4vh;
     margin-block-end: 1vw;
 }
- 
-.technologies .box-techs .techs{
-    display: flex;
-    gap: 0.35rem; 
-    margin-block-start: 1.9vh;
-} 
 
-.technologies .tooltip{
+.technologies .box-techs .techs {
+    display: flex;
+    gap: 0.35rem;
+    margin-block-start: 1.9vh;
+}
+
+.technologies .tooltip {
     background-color: var(--portfolio-bg-techs);
     color: var(--portfolio-text-color-black);
-    
+
     width: 100%;
     max-width: 25vw;
 
-    border-radius: 1em; 
+    border-radius: 1em;
     font-size: 0.7rem;
     font-weight: bold;
     text-align: center;
@@ -210,8 +208,7 @@ section .home-section{
 .box-techs a:link,
 .box-techs a:visited,
 .box-techs a:hover,
-.box-techs a:active
-{
+.box-techs a:active {
     color: var(--portfolio-text-color-black);
     text-decoration: none;
 }
@@ -219,34 +216,34 @@ section .home-section{
 /* fim - technologies */
 
 /* experiences */
- 
-.experiences{
+
+.experiences {
     width: 100%;
-    max-width: 20vw;
+    max-width: 18.5vw;
     height: auto;
     color: var(--portfolio-text-color);
 }
 
-.experiences > h2{ 
+.experiences>h2 {
     margin-inline-start: 2.5vw;
     margin-block-start: 3.5vh;
 }
 
-.experiences-list{
+.experiences-list {
     margin-block-start: 2.5vh;
     margin-block-end: 2vh;
     margin-inline-start: 2.5vw;
 }
 
-.experiences-list .experience{
+.experiences-list .experience {
     margin-block-end: 1.5vh;
 }
 
-.experiences-list .experience span{
+.experiences-list .experience span {
     font-weight: bold;
 }
 
-.experiences-list .experience ul{
+.experiences-list .experience ul {
     list-style: none;
     margin-inline-start: 1.2vw;
     font-size: 1rem;
@@ -256,33 +253,33 @@ section .home-section{
 
 /* education */
 
-.education{
+.education {
     width: 100%;
-    max-width: 20vw;
-    height: auto; 
+    max-width: 18.5vw;
+    height: auto;
     color: var(--portfolio-text-color);
 }
 
-.education > h2{
+.education>h2 {
     margin-inline-start: 2.5vw;
     margin-block-start: 3.5vh;
 }
 
-.education-list{
+.education-list {
     margin-block-start: 2.5vh;
     margin-block-end: 2vh;
     margin-inline-start: 2.5vw;
 }
 
-.education-list .certification{
+.education-list .certification {
     margin-block-end: 1.5vh;
 }
 
-.education-list .certification span{
+.education-list .certification span {
     font-weight: bold;
 }
 
-.education-list .certification ul{
+.education-list .certification ul {
     list-style: none;
     margin-inline-start: 1.2vw;
     font-size: 1rem;
@@ -294,37 +291,37 @@ section .home-section{
 
 /* right */
 
-.right{
-    display: flex; 
+.right {
+    display: flex;
     flex-direction: column;
 
     gap: 0.35rem;
 
     width: 100%;
     max-width: 80vw;
-    
-    margin-block-start: 1.1vh;
-    margin-inline-start: 0.5vw; 
 
-    
+    margin-block-start: 1.1vh;
+    margin-inline-start: 0.5vw;
+
     margin-inline-end: 1.5rem;
     margin-block-end: 0.5rem;
 }
 
-.my-projects{
-    position: relative;
-    height: auto; 
-} 
+/* my projects */
 
-.my-projects .title-project{
+.my-projects {
+    position: relative;
+    height: auto;
+}
+
+.my-projects .title-project {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     color: var(--portfolio-text-color);
 }
 
 .my-projects div:nth-child(1),
-.recent-posts div:nth-child(1)
-{
+.recent-posts div:nth-child(1) {
     margin-inline-start: 1.5vw;
     margin-inline-end: 1.5vw;
     margin-block-start: 1.5vh;
@@ -332,11 +329,11 @@ section .home-section{
 
     font-weight: bold;
 
-    font-size: 1.5rem; 
-} 
+    font-size: 1.5rem;
+}
 
 .my-projects div:nth-child(2),
-.recent-posts div:nth-child(2){
+.recent-posts div:nth-child(2) {
     margin-inline-start: 1.5vw;
     margin-inline-end: 1.5vw;
     margin-block-start: 1.5vh;
@@ -344,18 +341,20 @@ section .home-section{
 
     font-weight: lighter;
 
-    font-size: 1.3rem; 
-}   
+    font-size: 1.3rem;
+}
 
-/* box-projects - construido em js */
+/* the end - my projects */
 
-.box-projects{
+/* Box Projects - Construído no js */
+
+.box-projects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(19em, 1fr));    
+    grid-template-columns: repeat(auto-fill, minmax(19em, 1fr));
 }
 
 
-.box-projects .project{  
+.box-projects .project {
     margin-block-start: 0.5vh;
     margin-inline-end: 0.5vw;
 }
@@ -364,13 +363,12 @@ section .home-section{
 .project a:link,
 .project a:visited,
 .project a:hover,
-.project a:active
-{
+.project a:active {
     color: var(--portfolio-text-color);
     text-decoration: none;
 }
 
-.box-projects .project .fragment{
+.box-projects .project .fragment {
     margin-block-start: 2.5vh;
     margin-block-end: 1.5vh;
     margin-inline-start: 1.5vw;
@@ -381,162 +379,194 @@ section .home-section{
 
     flex-direction: column;
     align-content: space-between;
-    
+
     justify-content: space-between;
 }
 
-.box-projects .project .title-project{
+.box-projects .project .title-project {
     margin-block-end: 0.5vh;
 }
 
-.project .title-project span:nth-child(2){
+.project .title-project span:nth-child(2) {
     font-weight: bold;
-    font-size: 1.3rem;    
-} 
+    font-size: 1.3rem;
+}
 
 .project .title-project .icons-folder {
-    content: url(./portfolio/assets/folder.svg);    
+    content: url(./portfolio/assets/folder.svg);
     margin-inline-end: 0.9vw;
 }
 
-.project .description-project{
+.project .description-project {
     margin-block-start: 2.6vh;
     margin-block-end: 2.4vh;
 }
 
-.project .details-project{
+.project .details-project {
     display: flex;
     justify-content: space-between;
     margin-block-end: 0.5vh;
 }
 
-.project .details-project .stars-branches{
+.project .details-project .stars-branches {
     display: flex;
     justify-content: space-between;
 }
 
 .project .details-project .icons-star {
-    content: url(./portfolio/assets/star.svg);    
+    content: url(./portfolio/assets/star.svg);
     margin-inline-end: 0.5vw;
-}   
+}
 
 .project .details-project .icons-gitbranch {
-    content: url(./portfolio/assets/git-branch.svg); 
-    margin-inline-start: 1.5vw;   
+    content: url(./portfolio/assets/git-branch.svg);
+    margin-inline-start: 1.5vw;
     margin-inline-end: 0.5vw;
-} 
+}
 
 .project .details-project .icons-languages {
-    content: url(./portfolio/assets/ellipse.svg);   
+    content: url(./portfolio/assets/ellipse.svg);
     margin-inline-end: 0.5vw;
-} 
+}
 
-.project .details-project span:nth-child(2){
+.project .details-project span:nth-child(2) {
     font-weight: lighter;
-    font-size: 1.1rem;    
-}  
+    font-size: 1.1rem;
+}
 
-/* fim - box-projects */
+/* fim - Box Projects */
 
-.recent-posts{
+/* Recent Posts */
+
+.recent-posts {
     position: relative;
-    height: auto; 
-
+    height: auto;
     color: var(--portfolio-text-color);
-} 
+}
 
-.recent-posts .title-recent-posts{
+.recent-posts .title-recent-posts {
     display: flex;
     justify-content: space-between;
 }
 
-.box-posts{
+/* The end - Recent posts */
+
+/* Box Posts */
+
+.box-posts {
     display: flex;
-    flex-direction: column; 
-}  
- 
+    flex-direction: column;
+}
+
 .box-posts a,
 .box-posts a:link,
 .box-posts a:visited,
 .box-posts a:hover,
-.box-posts a:active
-{
+.box-posts a:active {
     color: var(--portfolio-text-color);
     text-decoration: none;
 }
- 
-.post{
-    display: flex; 
+
+.post {
+    display: flex;
     margin-block-end: 0.5rem;
 }
 
-.post .post-avatar{
+.post .post-avatar {
     margin-inline-start: 3.5vw;
     margin-inline-end: 3.5vw;
     margin-block-start: 3.5vh;
     margin-block-end: 3.5vh;
 }
 
-.post .post-avatar img{
+.post .post-avatar img {
     width: 100%;
     max-width: 8vw;
+
     height: auto;
+
     border-radius: 50%;
     display: block;
     margin-inline-start: auto;
-    margin-inline-end: auto; 
+    margin-inline-end: auto;
 }
 
-.post .box-post-right{
+.post .box-post-right {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: space-around;
     margin-block-end: 2vh;
 }
 
-.post .post-title{
+.post .post-title {
     margin-block-start: 2vh;
 }
 
-.post .post-title div:nth-child(1){
+.post .post-title div:nth-child(1) {
     font-weight: bold;
     font-size: 1.4rem;
 }
- 
-.post .post-title div:nth-child(2){
+
+.post .post-title div:nth-child(2) {
     margin-block-start: 0vh;
     font-size: 0.8rem;
 }
 
-.post .post-details{
+.post .post-details {
     margin-block-start: 1.8vh;
 }
 
-.post .post-details div:nth-child(1){
+.post .post-details div:nth-child(1) {
     font-size: 1.1rem;
-} 
+}
 
-.post .post-details div:nth-child(2){
+.post .post-details div:nth-child(2) {
     margin-block-start: 0vh;
     display: flex;
     justify-content: space-between;
     font-size: 0.8rem;
-} 
+}
 
-.post .post-details div:nth-child(2) span{
+.post .post-details div:nth-child(2) span {
     margin-inline-end: 0.6vw;
 }
 
-.footer{
+/* The end - Box Posts */
+
+/* The end - right */
+
+/* Footer */
+.footer {
     position: relative;
 
-    text-align: center; 
+    text-align: center;
 
-    height: auto; 
+    height: auto;
     width: auto;
 }
 
-.footer span{
+.footer span {
     position: absolute;
     top: 35%;
+}
+
+/* The end - Footer */
+
+/* Left vai para o topo com 3 colunas e 2 linhas */
+/* Left passa a se ajustar conforme o sidebar lateral */
+/* Right segue se ajustando */
+
+@media (max-width: 1277px) {
+    .container .left {
+        background-color: yellow;
+    }
+}
+
+/* Sidebar vai para o topo sempre open */
+/* Left passa a se ajustar*/
+/* Right segue se ajustando */
+@media (max-width: 640px) {
+    .container .left {
+        background-color: red;
+    }
 }

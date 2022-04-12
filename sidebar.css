@@ -11,7 +11,7 @@
 
 .sidebar.open{
   width: 100%;
-  max-width: 20vw;
+  max-width: 17vw;
 }
 
 .sidebar{
@@ -320,7 +320,7 @@
 
 .sidebar.open li.profile{
   width: 100%;
-  max-width: 20vw;
+  max-width: 17vw;
 }
 
 .sidebar .login{
@@ -410,8 +410,8 @@
 }
 
 .sidebar.open ~ .home-section{
-  left: 20vw;
-  width: calc(100% - 20vw);
+  left: 17vw;
+  width: calc(100% - 17vw);
 } 
 
 .home-section .text{
