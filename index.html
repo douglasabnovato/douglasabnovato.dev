@@ -8,8 +8,8 @@
 
     <link rel="shortcut icon" href="./sidebar/assets/dev.png">
 
-    <link rel="stylesheet" type="text/css" href="./styles.css">
-    <link rel="stylesheet" type="text/css" href="./sidebar.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css" media="screen" >
+    <link rel="stylesheet" type="text/css" href="./sidebar.css" media="screen" >
     <link rel="stylesheet" type="text/css" href="./portfolio.css" media="screen" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <div class="sidebar">
+    <nav class="sidebar">
         <div class="logo-details">
             <div class="icon">
                 <img id="logo" src="./sidebar/assets/dev.png" alt="profile_logo">
@@ -101,10 +101,11 @@
                 </div>
             </li>
         </ul>
-    </div>
-    <section class="home-section">
-        <div class="container">
-            <div class="left">
+    </nav>
+
+    <main class="home-section">
+        <section class="container">
+            <section class="left">
                 <div class="profile cards">
                     <a href="https://github.com/douglasabnovato" target="_blank" alt="profile card">
                         <div class="avatar">
@@ -288,23 +289,23 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div class="right">
-                <div class="my-projects cards-title">
+            </section>
+            <section class="right">
+                <header class="my-projects cards-title">
                     <div class="title-project">
                         <div>My Projects</div>
                         <div>do github</div>
                     </div>
-                </div>
-                <div class="box-projects" id="box-projects">
-                </div>
-                <div class="recent-posts cards-title">
+                </header>
+                <section class="box-projects" id="box-projects">
+                </section>
+                <header class="recent-posts cards-title">
                     <div class="title-recent-posts">
                         <div>Recent Posts</div>
                         <div>do github</div>
                     </div>
-                </div>
-                <div class="box-posts">
+                </header>
+                <section class="box-posts">
                     <a href="https://github.com/douglasabnovato/cracha-virtual" target="_blank" alt="github card">
                         <div class="post cards-posts">
                             <div class="box-post-left">
@@ -334,13 +335,15 @@
                             </div>
                         </div>
                     </a>
-                </div>
-            </div>
-        </div>
-    </section>
+                </section>
+            </section>
+        </section>
+    </main>
+
     <footer class="footer">
         <span>Feito com 💜 por @douglasabnovato</span>
     </footer>
+
     <script src="./main.js"></script>
     <script src="./sidebar.js"></script>
     <script src="./portfolio.js"></script>

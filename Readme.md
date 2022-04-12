@@ -59,6 +59,7 @@ Etapas
 - [x] verificar o comportamento em desktop
 - [x] verificar o comportamento em tablet
 - [ ] verificar o comportamento em mobile: montar o layout mobile com a sidebar no topo, sobreposição das colunas
+- [x] tags HTML semânticas
 
 ### Web - v3.5: 
 

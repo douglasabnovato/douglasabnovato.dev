@@ -6,7 +6,7 @@
     --portfolio-bg-techs: #CB92B1;
 }
 
-section .home-section {
+main .home-section {
     font-family: 'Merriweather Sans', sans-serif;
     color: var(--portfolio-text-color);
 }
@@ -556,16 +556,16 @@ section .home-section {
 /* Left passa a se ajustar conforme o sidebar lateral */
 /* Right segue se ajustando */
 
-@media (max-width: 1277px) {
+@media only screen and (max-device-width: 1277px) {
     .container .left {
         background-color: yellow;
     }
-}
+} 
 
 /* Sidebar vai para o topo sempre open */
 /* Left passa a se ajustar*/
 /* Right segue se ajustando */
-@media (max-width: 640px) {
+@media only screen and (max-device-width: 640px) {
     .container .left {
         background-color: red;
     }
