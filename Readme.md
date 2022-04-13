@@ -59,7 +59,10 @@ Etapas
 - [x] verificar o comportamento em desktop
 - [x] verificar o comportamento em tablet
 - [x] tags HTML semânticas
-- [ ] verificar o comportamento em mobile: montar o layout mobile com a sidebar no topo, sobreposição das colunas : fazendo
+- [x] sidebar no topo com movimento da home alinhado
+- [ ] home left vir logo abaixo da sidebar
+- [ ] home right vir logo abaixo da home left
+- [ ] logout vir logo abaixo da home right
 
 ### Web - v3.5: 
 
