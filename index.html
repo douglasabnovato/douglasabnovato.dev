@@ -8,8 +8,8 @@
 
     <link rel="shortcut icon" href="./sidebar/assets/dev.png">
 
-    <link rel="stylesheet" type="text/css" href="./styles.css" media="screen" >
-    <link rel="stylesheet" type="text/css" href="./sidebar.css" media="screen" >
+    <link rel="stylesheet" type="text/css" href="./styles.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="./sidebar.css" media="screen">
     <link rel="stylesheet" type="text/css" href="./portfolio.css" media="screen" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <nav class="sidebar" style="overflow:auto">
+    <nav class="sidebar">
         <div class="logo-details">
             <div class="icon">
                 <img id="logo" src="./sidebar/assets/dev.png" alt="profile_logo">
@@ -35,56 +35,58 @@
                 </a>
             </div>
         </div>
-        <ul class="nav-list">
-            <li class='li-search'>
-                <img class="search bx-search" src="./sidebar/assets/search.svg">
-                <input type="text" placeholder="Buscar">
-                <span class="tooltip">Buscar</span>
-            </li>
+        <div class="menu">
+            <ul class="nav-list" id="myMenu">
+                <li class='li-search'>
+                    <img class="search bx-search" src="./sidebar/assets/search.svg">
+                    <input type="text" placeholder="Buscar">
+                    <span class="tooltip">Buscar</span>
+                </li>
 
-            <li class="li-portfolio menuitem">
-                <a href="#portfolio">
-                    <img class="grid bx-grid-alt" src="./sidebar/assets/grid.svg">
-                    <span class="links_name">Portfólio</span>
-                </a>
-                <span class="tooltip">Meu Portfólio</span>
-            </li>
- 
-            <li class="menuitem">
-                <a href="#blog">
-                    <img class="grid bx-grid-alt" src="./sidebar/assets/grid.svg">
-                    <span class="links_name">Meu Blog</span>
-                </a>
-                <span class="tooltip">Meu Blog</span>
-            </li>
+                <li class="li-portfolio menuitem">
+                    <a href="#portfolio">
+                        <img class="grid bx-grid-alt" src="./sidebar/assets/grid.svg">
+                        <span class="links_name">Portfólio</span>
+                    </a>
+                    <span class="tooltip">Meu Portfólio</span>
+                </li>
 
-            <li class="menuitem">
-                <a href="#hackdev">
-                    <img class="grid bx-grid-alt" src="./sidebar/assets/grid.svg">
-                    <span class="links_name">Hack Ser Dev</span>
-                </a>
-                <span class="tooltip">Hack Ser Dev</span>
-            </li>
+                <li class="menuitem">
+                    <a href="#blog">
+                        <img class="grid bx-grid-alt" src="./sidebar/assets/grid.svg">
+                        <span class="links_name">Meu Blog</span>
+                    </a>
+                    <span class="tooltip">Meu Blog</span>
+                </li>
 
-            <li class="profile">
-                <div class="login">
-                    <div class="foto">
-                        <div class="imagem">
-                            <img src="./sidebar/assets/avatar-profile.jpeg" alt="foto">
+                <li class="menuitem">
+                    <a href="#hackdev">
+                        <img class="grid bx-grid-alt" src="./sidebar/assets/grid.svg">
+                        <span class="links_name">Hack Ser Dev</span>
+                    </a>
+                    <span class="tooltip">Hack Ser Dev</span>
+                </li>
+
+                <li class="profile">
+                    <div class="login">
+                        <div class="foto">
+                            <div class="imagem">
+                                <img src="./sidebar/assets/avatar-profile.jpeg" alt="foto">
+                            </div>
+                            <div class="nome_profissao">
+                                <div class="profissional">Douglas</div>
+                                <div class="carreira">Desenvolvedor</div>
+                            </div>
                         </div>
-                        <div class="nome_profissao">
-                            <div class="profissional">Douglas</div>
-                            <div class="carreira">Desenvolvedor</div>
+                        <div class="logout">
+                            <a href="#logout">
+                                <img src="./sidebar/assets/log-out.svg" alt="logout">
+                            </a>
                         </div>
                     </div>
-                    <div class="logout">
-                        <a href="#logout">
-                            <img src="./sidebar/assets/log-out.svg" alt="logout">
-                        </a>
-                    </div>
-                </div>
-            </li>
-        </ul>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <main class="home-section">
@@ -288,7 +290,7 @@
                         <div>do github</div>
                     </div>
                 </header>
-                
+
                 <section class="box-projects" id="box-projects">
                 </section>
 
