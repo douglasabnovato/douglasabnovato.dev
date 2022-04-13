@@ -1,16 +1,15 @@
-## Desafio: Portfolio
+## 💻 Portfolio
 
-![template.jpeg](./assets/template.png)
-
-### 💻 Sobre o desafio
-
----
-
-Neste desafio você poderá criar uma página web para que seja seu portfolio e currículo. Utilizando HTML e CSS.
+Neste desafio você poderá criar uma página web para que seja seu portfolio e currículo.
 
 ### 💡 Instruções para construir o Layout
 
-- Os ícones e imagens para construir o layout estão na pasta portfolio/assets.
+---
+
+![template.jpeg](./assets/template.png)
+
+
+- Os ícones e imagens para construir o layout estão na pasta `portfolio/assets`.
 - O layout proposto está no [Figma](https://www.figma.com/file/L6fCiWtOgXCfslQdezqQeF/DD-Portfolio/duplicate) 
  
 ### 🚀 Techs 
@@ -64,9 +63,6 @@ Este desafio é construir o próprio portfolio. A seguir, uma lista dos cursos q
 As fontes utilizadas serão do [Google Fonts](https://fonts.google.com/specimen/Merriweather+Sans?query=Merriweather+Sans) 
 - font-family: Merriweather Sans 
 - font-weight: 400, 500 e 700
-
-Você pode encontrar 
-
 
 ---  
 

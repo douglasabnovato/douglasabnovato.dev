@@ -1,14 +1,15 @@
 ## 💻 Sidebar
 
-utilizado o projeto sidebar que está no meu repositório fundamentos.
+Neste desafio você deve criar uma sidebar que ao clicar no ícone do menu isso deve fazer com que o estado da sidebar mude entre "aberto", mostrando ícones e texto e "fechado", mostrando apenas os ícones.
 
-### 💡 Detalhes do Layout 🚀 
+### 💡 Instruções para construir o Layout
 
-Neste desafio você deve criar uma sidebar como na imagem acima. 
-Quando o usuário clicar no ícone do menu isso deve fazer com que o estado da sidebar mude entre "aberto", mostrando ícones e texto e "fechado", mostrando apenas os ícones.
+---
 
 ![Animação.gif](../.github/animacao.gif)
-- Baixar os assets em `src/assets`
+
+- Os ícones e imagens para construir o layout estão na pasta `sidebar/assets`.
+- O layout proposto está no [Figma](https://www.figma.com/file/iOuqAlZvhAMkkfjCMFyc7Y/DD-%2F-Sidebar-Responsiva/duplicate) 
 - O layout dos dois estados: sidebar close e sidebar open
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;"> 
@@ -17,9 +18,34 @@ Quando o usuário clicar no ícone do menu isso deve fazer com que o estado da s
   <img alt="sidebar open" title="#sidebaropen" src="../.github/sidebar-open.png" width="400px"> 
 </p> 
 
+### 🚀 Techs 
+
+---
+
+- HTML
+- CSS
+- Javascript
+
+### ✅ Requisitos 
+
+---
+
+Este desafio é construir uma sidebar (menu lateral). A seguir, uma lista dos cursos que podem ajudar a resolver tarefas que serão encontradas.
+
+- [O guia estelar de JavaScript](https://app.rocketseat.com.br/node/o-guia-estelar-de-java-script)
+- [Pilotando com a DOM](https://app.rocketseat.com.br/node/pilotando-com-a-dom)
+- [Alinhando os planetas](https://app.rocketseat.com.br/node/flexbox)
+
+#### Requisitos para o desafio
+
+- Você deve criar uma sidebar que que altere o estado entre aberto e fechado conforme o clique do usuário. 
+
 ### 🎨 Style Guide
 
-- [x] Cores
+---
+
+#### Cores 
+
 ```css
 :root {
   --body-bg-color: #dce4e3;
@@ -29,8 +55,13 @@ Quando o usuário clicar no ícone do menu isso deve fazer com que o estado da s
   --text-color: #084236;
 }
 ```
-- [x] Tipo de fonte 
+
+#### Tipo de fonte
+
 - font-family: Poppins 
 - font-weight: 400 e 500
 - a fonte no [Google Fonts](https://fonts.google.com/)  
  
+---  
+
+Feito com ❤️ por Douglas A B Novato 👋🏽 [Entre em contato!](https://www.linkedin.com/in/douglasabnovato/)
