@@ -63,6 +63,7 @@ Etapas
 - [ ] home left vir logo abaixo da sidebar
 - [ ] home right vir logo abaixo da home left
 - [ ] logout vir logo abaixo da home right
+- [ ] footer vir logo abaixo da logout
 
 ### Web - v3.5: 
 
