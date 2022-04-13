@@ -58,8 +58,8 @@ Etapas
 - [x] sidebar: alterado as unidades de medidas de fixas para as fluídas: de px para %, vw, vh, rem, auto
 - [x] verificar o comportamento em desktop
 - [x] verificar o comportamento em tablet
-- [ ] verificar o comportamento em mobile: montar o layout mobile com a sidebar no topo, sobreposição das colunas
 - [x] tags HTML semânticas
+- [ ] verificar o comportamento em mobile: montar o layout mobile com a sidebar no topo, sobreposição das colunas : fazendo
 
 ### Web - v3.5: 
 

@@ -567,6 +567,6 @@ main .home-section {
 /* Right segue se ajustando */
 @media only screen and (max-device-width: 640px) {
     .container .left {
-        background-color: red;
+        background-color: green;
     }
 }
