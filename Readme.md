@@ -60,7 +60,7 @@ Etapas
 - [x] verificar o comportamento em tablet
 - [x] tags HTML semânticas
 - [x] sidebar no topo com movimento da home alinhado
-- [ ] home left vir logo abaixo da sidebar
+- [ ] home left vir logo abaixo da sidebar : fazendo
 - [ ] home right vir logo abaixo da home left
 - [ ] logout vir logo abaixo da home right
 - [ ] footer vir logo abaixo da logout
