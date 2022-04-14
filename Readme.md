@@ -21,9 +21,9 @@
 Uma página para demonstrar meus projeto de código e artigos.
 Também exibindo os links das minhas redes sociais.
 
-1. Github - meus repositórios
-2. Medium - meus artigos
-3. Redes Sociais
+1. Meu portfólio: com os repositórios do github
+2. Meu blog - com os artigos do medium
+3. Hack Ser Dev - uma timeline de conteúdo e rotina para dev
 
 ## 🎨 Versões Layout
 
@@ -31,7 +31,7 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
 ### Próximo Passo
 
-- [ ] acessibilidade
+- [ ] Acessibilidade
 
 ### Web - v4.0: 
 
@@ -52,6 +52,7 @@ Referências
 - [ ] user interface patterns
 - [ ] media features
 - [ ] screen configuration
+- [ ] [layout fluído com css](https://dev.to/kathryngrayson/you-probably-dont-need-media-queries-anymore-a4j?signin=true)
 
 Etapas
 - [x] portfólio: alterado as unidades de medidas de fixas para as fluídas: de px para %, vw, vh, rem, auto
@@ -59,6 +60,7 @@ Etapas
 - [x] verificar o comportamento em desktop
 - [x] verificar o comportamento em tablet
 - [x] tags HTML semânticas
+- [ ] usando media queries:
 - [x] sidebar no topo com movimento da home alinhado
 - [ ] home left vir logo abaixo da sidebar : fazendo
 - [ ] home right vir logo abaixo da home left
