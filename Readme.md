@@ -36,7 +36,7 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
 ### Próximo Passo
 
-- [ ] Acessibilidade
+- [ ] Acessibilidade: pesquisar elementos para mobile e desktop
 
 ### Web - v4.0: 
 
