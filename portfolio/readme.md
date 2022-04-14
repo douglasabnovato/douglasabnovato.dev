@@ -8,7 +8,6 @@ Neste desafio você poderá criar uma página web para que seja seu portfolio e 
 
 ![template.jpeg](./assets/template.png)
 
-
 - Os ícones e imagens para construir o layout estão na pasta `portfolio/assets`.
 - O layout proposto está no [Figma](https://www.figma.com/file/L6fCiWtOgXCfslQdezqQeF/DD-Portfolio/duplicate) 
  
