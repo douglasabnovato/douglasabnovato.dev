@@ -57,7 +57,7 @@ Referências
 - [ ] user interface patterns
 - [ ] media features
 - [ ] screen configuration
-- [ ] [layout fluído com css](https://dev.to/kathryngrayson/you-probably-dont-need-media-queries-anymore-a4j?signin=true)
+- [x] [layout fluído com css](https://dev.to/kathryngrayson/you-probably-dont-need-media-queries-anymore-a4j?signin=true)
 
 Etapas
 - [x] portfólio: alterado as unidades de medidas de fixas para as fluídas: de px para %, vw, vh, rem, auto
@@ -65,12 +65,10 @@ Etapas
 - [x] verificar o comportamento em desktop
 - [x] verificar o comportamento em tablet
 - [x] tags HTML semânticas
-- [ ] usando media queries:
+- [x] usando media queries: 420px para mobile
 - [x] sidebar no topo com movimento da home alinhado
-- [ ] home left vir logo abaixo da sidebar : fazendo
-- [ ] home right vir logo abaixo da home left
-- [ ] logout vir logo abaixo da home right
-- [ ] footer vir logo abaixo da logout
+- [x] home left vir logo abaixo da sidebar 
+- [x] home right vir logo abaixo da home left
 
 ### Web - v3.5: 
 
