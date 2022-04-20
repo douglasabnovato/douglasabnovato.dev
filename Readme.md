@@ -69,7 +69,7 @@ Referências
 
 Referências
 - [x] [mobile first](https://www.moblee.com.br/blog/mobile-first-principais-vantagens/): pesquisa 
-- [x] [conteúdo de responsividade](https://web.dev/learn/design/):
+- [conteúdo de responsividade](https://web.dev/learn/design/):
 - [x] media queries
 - [x] internationalization
 - [x] macro layouts: flexbox e grid
