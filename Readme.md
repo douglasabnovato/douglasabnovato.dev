@@ -44,7 +44,7 @@ Nessa versão, o objetivo é explorar ainda mais a Responsividade.
 Aperfeiçoar os pontos de transição e a usabilidade conforme o dispositivo que está sendo utilizado.
 
 Referências 
-- [ ] [web.dev / Learn Responsive Design](https://web.dev/learn/design/):
+- [web.dev / Learn Responsive Design](https://web.dev/learn/design/):
 - [ ] macro layouts
 - [ ] micro layouts
 - [ ] typography
