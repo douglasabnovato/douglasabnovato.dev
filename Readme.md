@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="versão lts do projeto" title="#douglasabnovato.dev" src="./.github/home-open.jpg" />
+    <img alt="versão lts do projeto" title="#douglasabnovato.dev" src="./.github/desktop-home-open.jpg" />
 </h1>
 
 <h4 align="center"> 
@@ -44,8 +44,8 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 - Versão com mais adaptabilidade na versão desktop e uma versão mobile.
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="versão 4.0 do projeto" title="#douglasabnovato.dev" src="./.github/mobile-1.jpg" height="400px">
-  <img alt="versão 4.0 do projeto" title="#douglasabnovato.dev" src="./.github/mobile-2.jpg" height="400px">
+  <img alt="versão 4.0 do projeto" title="#douglasabnovato.dev" src="./.github/mobile-home-close.jpg" height="400px">
+  <img alt="versão 4.0 do projeto" title="#douglasabnovato.dev" src="./.github/mobile-home-open.jpg" height="400px">
 </p> 
 
 Referências
@@ -83,8 +83,8 @@ Etapas
 Aperfeiçoar em forma de site com uma sidebar onde o primeiro item do menu sendo a home contendo o portfólio.
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="versão 3.5 do projeto" title="#douglasabnovato.dev" src="./.github/home-open.jpg" width="400px">
-  <img alt="versão 3.5 do projeto" title="#douglasabnovato.dev" src="./.github/home-close.jpg" width="400px">
+  <img alt="versão 3.5 do projeto" title="#douglasabnovato.dev" src="./.github/desktop-home-open.jpg" width="400px">
+  <img alt="versão 3.5 do projeto" title="#douglasabnovato.dev" src="./.github/desktop-home-close.jpg" width="400px">
 </p> 
 
 - [x] implementar o desafio portfólio como a página home com a estrutura do desafio sidebar.
