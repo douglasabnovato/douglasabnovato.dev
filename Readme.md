@@ -37,8 +37,16 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 ### Próximo Passo
 
 - [ ] Acessibilidade: pesquisar elementos para mobile e desktop
+- [ ] Responsividade: Aperfeiçoar os pontos de transição e a usabilidade
 
 ### Web - v4.0: 
+
+- Versão com mais adaptabilidade na versão desktop e uma versão mobile.
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="versão 4.0 do projeto" title="#douglasabnovato.dev" src="./.github/mobile-1.jpg" height="400px">
+  <img alt="versão 4.0 do projeto" title="#douglasabnovato.dev" src="./.github/mobile-2.jpg" height="400px">
+</p> 
 
 Referências
 - [x] [mobile first](https://www.moblee.com.br/blog/mobile-first-principais-vantagens/): pesquisa 
