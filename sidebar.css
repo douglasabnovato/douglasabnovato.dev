@@ -16,6 +16,8 @@
 
 .sidebar {
   font-family: 'Poppins', sans-serif;
+  color: var(--sidebar-text-color);
+
   position: fixed;
 
   left: 0;
@@ -225,7 +227,6 @@
 .sidebar .nav-list .menuitem:hover {
   background: var(--sidebar-light-green);
 }
-
 
 .sidebar.open .nav-list .menuitem {
   display: block;
@@ -523,11 +524,11 @@
 
   /* item de menu: search */
 
-  .sidebar .nav-list{
+  .sidebar .nav-list {
     visibility: hidden;
   }
 
-  .sidebar.open .nav-list{
+  .sidebar.open .nav-list {
     visibility: visible;
   }
 
@@ -539,8 +540,8 @@
     font-size: 1.5rem;
     border-radius: 3vw;
     padding-block-end: 2.6vh;
-    padding-block-start: 2.6vh; 
-    padding-inline-start: 8vw;   
+    padding-block-start: 2.6vh;
+    padding-inline-start: 8vw;
     align-items: center;
     transition: var(--sidebar-tran-05);
   }
@@ -565,6 +566,7 @@
     color: var(--sidebar-text-color);
     transition: all 0.8s ease;
   }
+
   /* fim - item de menu: search */
 
   /* itens de menu sidebar*/
@@ -603,7 +605,7 @@
     margin-block-start: 1.5vh;
     margin-block-end: 1.5vh;
   }
-  
+
   .sidebar.open .nav-list .menuitem:hover img {
     transition: all 0.8s ease;
   }
@@ -612,7 +614,7 @@
     color: var(--sidebar-text-color);
     font-size: 1.4rem;
     white-space: nowrap;
-    transition: 0.4s;   
+    transition: 0.4s;
   }
 
   .sidebar.open .nav-list .menuitem:hover .links_name {
@@ -734,12 +736,12 @@
     top: 13vh;
     left: 0vw;
     min-height: 13vh;
-    height: calc(100% -  13vh);
+    height: calc(100% - 13vh);
     transition: all 0.8s ease;
     z-index: 2;
   }
 
-  .sidebar.open~.home-section {    
+  .sidebar.open~.home-section {
     top: 50vh;
     left: 0vw;
     height: calc(100% - 50vh);
@@ -754,6 +756,7 @@
     display: flex;
     flex-direction: row;
   }
+
   /* fim - seções */
 
 }

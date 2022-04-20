@@ -224,7 +224,7 @@ main .home-section {
     color: var(--portfolio-text-color);
 }
 
-.experiences>h2 {
+.experiences > h2 {
     margin-inline-start: 2.5vw;
     margin-block-start: 3.5vh;
 }
@@ -560,7 +560,7 @@ main .home-section {
     .container .left {
         background-color: yellow;
     }
-} 
+}
 
 /* Sidebar vai para o topo sempre open */
 /* Left passa a se ajustar*/
