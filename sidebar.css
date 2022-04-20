@@ -403,7 +403,7 @@
   height: 100%;
   max-height: 1vh;
   background: var(--sidebar-light-green);
-  margin-inline-end: 8.5vw;
+  margin-inline-end: 2.5vw;
 }
 
 /* fim - profile */
@@ -704,7 +704,13 @@
   }
 
   /* logout */
-
+  .sidebar .login .logout {
+    display: flex;
+  }
+  
+  .sidebar.open .login .logout {
+    margin-inline-end: 8.5vw;
+  }
   /* fim - profile */
 
   /* seções */
