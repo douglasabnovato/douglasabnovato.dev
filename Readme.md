@@ -37,7 +37,26 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 ### Próximo Passo
 
 - [ ] Acessibilidade: pesquisar elementos para mobile e desktop
-- [ ] Responsividade: Aperfeiçoar os pontos de transição e a usabilidade
+
+### Web - v4.1: 
+
+Nessa versão, o objetivo é explorar ainda mais a Responsividade.
+Aperfeiçoar os pontos de transição e a usabilidade conforme o dispositivo que está sendo utilizado.
+
+Referências 
+- [ ] [web.dev / Learn Responsive Design](https://web.dev/learn/design/):
+- [ ] macro layouts
+- [ ] micro layouts
+- [ ] typography
+- [ ] images
+- [ ] picture
+- [ ] icon
+- [ ] theming
+- [ ] accessibility
+- [ ] interation
+- [ ] user interface patterns
+- [ ] media features
+- [ ] screen configuration
 
 ### Web - v4.0: 
 
@@ -50,21 +69,10 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
 Referências
 - [x] [mobile first](https://www.moblee.com.br/blog/mobile-first-principais-vantagens/): pesquisa 
-- [ ] [conteúdo de responsividade](https://web.dev/learn/design/):
+- [x] [conteúdo de responsividade](https://web.dev/learn/design/):
 - [x] media queries
 - [x] internationalization
 - [x] macro layouts: flexbox e grid
-- [ ] micro layouts
-- [ ] typography
-- [ ] images
-- [ ] picture
-- [ ] icon
-- [ ] theming
-- [ ] accessibility
-- [ ] interation
-- [ ] user interface patterns
-- [ ] media features
-- [ ] screen configuration
 - [x] [layout fluído com css](https://dev.to/kathryngrayson/you-probably-dont-need-media-queries-anymore-a4j?signin=true)
 
 Etapas
