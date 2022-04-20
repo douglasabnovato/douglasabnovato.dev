@@ -403,7 +403,7 @@
   height: 100%;
   max-height: 1vh;
   background: var(--sidebar-light-green);
-  margin-inline-end: 2.1vw;
+  margin-inline-end: 8.5vw;
 }
 
 /* fim - profile */
@@ -441,7 +441,7 @@
   * Sidebar vai para o topo
   * Home acompanha o movimento da sidebar 
  */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 420px) {
 
   .sidebar {
     display: block;
@@ -458,7 +458,7 @@
     width: 100%;
     max-width: 100vw;
     height: 100%;
-    max-height: 50vh;
+    max-height: 100vh;
   }
 
   /* Menu topo */
@@ -632,7 +632,7 @@
     max-height: 10vh;
 
     width: 100%;
-    max-width: 5vw;
+    max-width: 100vw;
 
     left: 0;
     bottom: -1vh;
@@ -647,7 +647,7 @@
 
   .sidebar.open li.profile {
     width: 100%;
-    max-width: 17vw;
+    max-width: 100vw;
   }
 
   .sidebar .login {
@@ -704,29 +704,6 @@
   }
 
   /* logout */
-  .sidebar .login .logout {
-    display: flex;
-    position: absolute;
-    align-items: center;
-    top: 50%;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    margin-inline-start: 0.8vw;
-    border-radius: 0px;
-    transform: translateY(-50%);
-    transition: all 0.8s ease;
-    background: var(--sidebar-light-green);
-  }
-
-  .sidebar.open .login .logout {
-    width: 100%;
-    max-width: 2vw;
-    height: 100%;
-    max-height: 1vh;
-    background: var(--sidebar-light-green);
-    margin-inline-end: 2.1vw;
-  }
 
   /* fim - profile */
 
@@ -742,9 +719,9 @@
   }
 
   .sidebar.open~.home-section {
-    top: 50vh;
+    top: 100vh;
     left: 0vw;
-    height: calc(100% - 50vh);
+    height: calc(100% - 80vh);
   }
 
   .home-section .text {
