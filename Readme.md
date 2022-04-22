@@ -34,14 +34,13 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 
 Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
-### Próximo Passo
-
-- [ ] Acessibilidade: pesquisar elementos para mobile e desktop
-
 ### Web - v4.1: 
 
-Nessa versão, o objetivo é explorar ainda mais a Responsividade.
-Aperfeiçoar os pontos de transição e a usabilidade conforme o dispositivo que está sendo utilizado.
+Nessa versão, o objetivo é explorar ainda mais a Responsividade, aperfeiçoar os pontos de transição e a usabilidade conforme o dispositivo, e garantir que a Acessibilidade está sendo aplicada.
+
+- Orientações:
+- [ ] analisar maneiras de reduzir os breakpoints
+- [ ] utilizar uma font serifada para títulos e uma sem serifa para o corpo
 
 Referências 
 - [web.dev / Learn Responsive Design](https://web.dev/learn/design/):
