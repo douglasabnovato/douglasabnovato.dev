@@ -6,9 +6,13 @@
     --portfolio-bg-techs: #CB92B1;
 }
 
-main .home-section {
+.home-section {
     font-family: 'Merriweather Sans', sans-serif;
     color: var(--portfolio-text-color);
+}
+
+.title-serif{
+    font-family: Courier, serif;    
 }
 
 .container {

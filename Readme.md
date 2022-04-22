@@ -39,8 +39,11 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 Nessa versão, o objetivo é explorar ainda mais a Responsividade, aperfeiçoar os pontos de transição e a usabilidade conforme o dispositivo, e garantir que a Acessibilidade está sendo aplicada.
 
 - Orientações:
-- [ ] analisar maneiras de reduzir os breakpoints
-- [ ] utilizar uma font serifada para títulos e uma sem serifa para o corpo
+- [x] analisar maneiras de reduzir os breakpoints
+- [x] utilizar uma font serifada para títulos e uma sem serifa para o corpo
+- portfólio: `font-family: 'Merriweather Sans', sans-serif;`
+- sidebar: `font-family: 'Poppins', sans-serif;`
+- títulos do portfólio: `font-family: Courier, serif;`
 
 Referências 
 - [web.dev / Learn Responsive Design](https://web.dev/learn/design/):

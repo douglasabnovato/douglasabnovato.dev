@@ -21,7 +21,7 @@ function createRepo(repository){
             div_fragment.setAttribute('class', 'fragment')
 
             const div_title_project = document.createElement('div')
-            div_title_project.setAttribute('class', 'title-project')
+            div_title_project.setAttribute('class', 'title-project title-serif')
 
             const span_icons_folder = document.createElement('span')
             span_icons_folder.setAttribute('class', 'icons-folder')
