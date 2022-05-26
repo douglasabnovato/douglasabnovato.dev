@@ -44,6 +44,23 @@ Nessa versão, o objetivo é explorar ainda mais a Responsividade, aperfeiçoar 
 - portfólio: `font-family: 'Merriweather Sans', sans-serif;`
 - sidebar: `font-family: 'Poppins', sans-serif;`
 - títulos do portfólio: `font-family: Courier, serif;`
+- [ ] Itens para correção
+- testar em um dispositivo real
+- scroll horizontal
+- dark mode / light mode
+- espaços entre os elementos
+- um filete branco do lado esquerdo
+- está grudado do lado direito
+* alinhamento entre ícone e texto do item menu
+* uma animação no campo de busca
+* a home está aparecendo por baixo do sidebar
+* não sendo um sistema, o botão sair não faz sentido
+* existe uma scroll horizontal
+* ao alternar horizontal e vertical, o zoom é alterado
++ unidades de medidas flexíveis
++ propriedades responsivas
++ media query somente em último caso
+
 
 Referências 
 - [web.dev / Learn Responsive Design](https://web.dev/learn/design/):
