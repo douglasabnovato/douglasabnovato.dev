@@ -10,7 +10,7 @@
     --color-mid-dark: #3c4043;
     --color-stroke: #dadce0;
     --metric-gutter: 1.5rem;
-    --metric-box-spacing: .8rem;
+    --metric-box-spacing: .5rem;
     --metric-radius: 1em;
     --generic-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3),
         0px 2px 6px 2px rgba(60, 64, 67, 0.15);
@@ -56,20 +56,17 @@ footer span {
 }
 
 main {
-    padding: var(--metric-box-spacing);
-    min-block-size: calc(100vh - 8em);
-}
-
-.home-section {
     font-family: 'Merriweather Sans', sans-serif;
     color: var(--portfolio-text-color);
+    min-block-size: calc(100vh - 8em);
+    padding: var(--metric-box-spacing);
 }
 
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(22em, 1fr));
     grid-gap: var(--metric-box-spacing); 
-    margin-block-end: var(--metric-box-spacing);   
+    margin-block-end: var(--metric-box-spacing);  
 }
 
 .card {

@@ -45,12 +45,11 @@ Nessa versão, o objetivo é explorar ainda mais a Responsividade, aperfeiçoar 
 - sidebar: `font-family: 'Poppins', sans-serif;`
 - títulos do portfólio: `font-family: Courier, serif;`
 - [ ] Itens para correção
-- testar em um dispositivo real
-- scroll horizontal
-- dark mode / light mode
-- espaços entre os elementos
-- um filete branco do lado esquerdo
-- está grudado do lado direito
+- testar em um dispositivo real: abrindo o link hospedado no browser do smartphone
+- scroll horizontal: corrigido com grid css
+- espaços entre os elementos: padronizado os espaços entre os elementos
+- um filete branco do lado esquerdo: corrigido
+- está grudado do lado direito: padding no main do repositório mas não funcionou
 * alinhamento entre ícone e texto do item menu
 * uma animação no campo de busca
 * a home está aparecendo por baixo do sidebar
