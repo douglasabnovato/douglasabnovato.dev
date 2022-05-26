@@ -10,7 +10,7 @@ function getApi(url_github){
 function createRepo(repository){
 
         const div_project_cards = document.createElement('div')
-        div_project_cards.setAttribute('class', 'project cards')
+        div_project_cards.setAttribute('class', 'project card')
 
         const a_repos = document.createElement('a')
         a_repos.setAttribute('href', repository.html_url)

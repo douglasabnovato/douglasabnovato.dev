@@ -441,6 +441,7 @@
   * Sidebar vai para o topo
   * Home acompanha o movimento da sidebar 
  */
+ /*
 @media only screen and (max-width: 768px) {
 
   .sidebar {
@@ -461,7 +462,6 @@
     max-height: 100vh;
   }
 
-  /* Menu topo */
   .sidebar .logo-details {
     width: 100%;
     max-width: 100vw;
@@ -514,15 +514,9 @@
     max-height: 8vh;
   }
 
-  /* FIM - Menu topo */
-
-  /* itens menu  */
-
   .sidebar li .tooltip {
     display: none;
   }
-
-  /* item de menu: search */
 
   .sidebar .nav-list {
     visibility: hidden;
@@ -567,9 +561,6 @@
     transition: all 0.8s ease;
   }
 
-  /* fim - item de menu: search */
-
-  /* itens de menu sidebar*/
   .sidebar.open .nav-list .li-portfolio {
     margin-block-start: 1vh;
   }
@@ -622,9 +613,6 @@
     color: var(--sidebar-text-color);
   }
 
-  /* fim - itens menu  */
-
-  /* profile */
   .sidebar li.profile {
     position: fixed;
 
@@ -663,12 +651,10 @@
     transition: all 0.8s ease;
   }
 
-  /* foto */
   .sidebar .login .foto {
     display: flex;
   }
 
-  /* imagem */
   .sidebar .login .foto .imagem {
     margin-inline-start: -0.5vw;
     margin-inline-end: 1.5vw;
@@ -688,7 +674,6 @@
     color: var(--sidebar-light-green);
   }
 
-  /* nome_profissao */
   .sidebar .login .foto .nome_profissao {
     align-items: center;
     margin-block-start: 1vh;
@@ -703,7 +688,6 @@
     font-size: 0.7rem;
   }
 
-  /* logout */
   .sidebar .login .logout {
     display: flex;
   }
@@ -711,9 +695,7 @@
   .sidebar.open .login .logout {
     margin-inline-end: 8.5vw;
   }
-  /* fim - profile */
 
-  /* seções */
   .home-section {
     position: relative;
     top: 13vh;
@@ -739,6 +721,5 @@
     display: flex;
     flex-direction: row;
   }
-
-  /* fim - seções */
 }
+*/
