@@ -35,7 +35,6 @@
   transition: all 0.8s ease;
 }
 
-/* Menu topo */
 .sidebar .logo-details {
   display: flex;
   position: relative;
@@ -90,9 +89,6 @@
   min-width: 3vw;
 }
 
-/* FIM - Menu topo */
-
-/* itens menu  */
 .sidebar .nav-list {
   margin-block-start: 1.5vh;
   margin-inline-start: 0vw;
@@ -105,7 +101,6 @@
   list-style: none;
 }
 
-/* tooltip dos itens menu e do buscar */
 .sidebar .nav-list li .tooltip {
   position: absolute;
   top: -1.5vw;
@@ -134,8 +129,6 @@
   top: 50%;
   transform: translateY(-50%);
 }
-
-/* item de menu: search */
 
 .sidebar .nav-list .li-search {
   background: var(--sidebar-light-grey);
@@ -196,10 +189,6 @@
   font-size: 1.2rem;
   color: var(--sidebar-text-color);
 }
-
-/* fim - item de menu: search */
-
-/* itens de menu sidebar*/
 
 .sidebar .nav-list .li-portfolio {
   margin-block-start: 3.5vh;
@@ -300,9 +289,6 @@
   color: var(--sidebar-text-color);
 }
 
-/* fim - itens menu  */
-
-/* profile */
 .sidebar li.profile {
   position: fixed;
 
@@ -341,12 +327,10 @@
   transition: all 0.8s ease;
 }
 
-/* foto */
 .sidebar .login .foto {
   display: flex;
 }
 
-/* imagem */
 .sidebar .login .foto .imagem {
   margin-inline-start: -0.5vw;
   margin-inline-end: 1.5vw;
@@ -366,7 +350,6 @@
   color: var(--sidebar-light-green);
 }
 
-/* nome_profissao */
 .sidebar .login .foto .nome_profissao {
   align-items: center;
   margin-block-start: 1vh;
@@ -381,7 +364,6 @@
   font-size: 0.7rem;
 }
 
-/* logout */
 .sidebar .login .logout {
   display: flex;
   position: absolute;
@@ -406,9 +388,6 @@
   margin-inline-end: 2.5vw;
 }
 
-/* fim - profile */
-
-/* seções */
 .home-section {
   position: relative;
   min-height: 100vh;
@@ -435,13 +414,6 @@
   flex-direction: column;
 }
 
-/* fim - seções */
-
-/* 
-  * Sidebar vai para o topo
-  * Home acompanha o movimento da sidebar 
- */
- /*
 @media only screen and (max-width: 768px) {
 
   .sidebar {
@@ -711,15 +683,4 @@
     left: 0vw;
     height: calc(100% - 80vh);
   }
-
-  .home-section .text {
-    display: inline-block;
-    color: var(--sidebar-text-color);
-  }
-
-  .home-section {
-    display: flex;
-    flex-direction: row;
-  }
 }
-*/
