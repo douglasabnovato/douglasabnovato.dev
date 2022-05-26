@@ -18,7 +18,6 @@
 .container {
     display: flex;
     gap: 0.30rem;
-
     width: 100%;
     max-width: 100vw;
 }
@@ -31,23 +30,18 @@
 }
 
 /* left */
-
 .left {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-
     gap: 0.35rem;
-
     width: 100%;
     max-width: 17.5vw;
-
     margin-block-start: 1.1vh;
     margin-inline-start: 0.5vw;
 }
 
 /* profile */
-
 .profile {
     width: 100%;
     max-width: 100vw;
@@ -78,7 +72,7 @@
 }
 
 .profile .texts {
-    margin-block-end: 2vh;
+    margin-block-end: 3vh;
 }
 
 .profile .texts .name {
@@ -554,25 +548,8 @@
     top: 35%;
 }
 
-/* The end - Footer */
 
-/* Left vai para o topo com 3 colunas e 2 linhas */
-/* Left passa a se ajustar conforme o sidebar lateral */
-/* Right segue se ajustando */
-
-@media only screen and (max-width: 1277px) {
-    
-}
-
-/* Sidebar vai para o topo sempre open */
-/* Left passa a se ajustar*/
-/* Right segue se ajustando */
-@media only screen and (max-width: 640px) {
-    
-}
-
-
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 768px) {
     
     main .container {
         display: grid;
