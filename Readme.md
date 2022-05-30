@@ -21,7 +21,7 @@
 Uma página para demonstrar meus projeto de código e artigos.
 Também uma sugestão de conteúdos da internet, organizados de forma progressiva.
 
-1. Meu portfólio: com os repositórios do github
+1. Meu portfólio - com os repositórios do github
 2. Meu blog - com os artigos do medium
 3. Hack Ser Dev - uma timeline de conteúdo e rotina para dev
 
@@ -52,6 +52,7 @@ Nessa versão, o objetivo é explorar ainda mais a Responsividade, aperfeiçoar 
 - está grudado do lado direito: padding no main do repositório mas não funcionou
 * alinhamento entre ícone e texto do item menu
 * uma animação no campo de busca
+* uma animação em cada item menu quando alterna de close e open
 * a home está aparecendo por baixo do sidebar
 * não sendo um sistema, o botão sair não faz sentido
 * existe uma scroll horizontal
@@ -63,7 +64,7 @@ Nessa versão, o objetivo é explorar ainda mais a Responsividade, aperfeiçoar 
 
 Referências 
 - [web.dev / Learn Responsive Design](https://web.dev/learn/design/):
-- [ ] macro layouts + 
+- [ ] macro layouts
 - [ ] micro layouts
 - [ ] typography
 - [ ] images
