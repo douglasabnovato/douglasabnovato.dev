@@ -36,6 +36,9 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
 ### Web - v4.2: Próximo passo
 
+- Tarefas
+- [ ] Item do menu Meu Blog
+
 Referências 
 - [web.dev / Learn Responsive Design](https://web.dev/learn/design/):
 - [ ] macro layouts
