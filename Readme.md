@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="versão lts do projeto" title="#douglasabnovato.dev" src="./.github/desktop-home-open.jpg" />
+    <img alt="versão lts do projeto" title="#douglasabnovato.dev" src="./.github/desktop-portfolio-desktop-dark.jpg" />
 </h1>
 
 <h4 align="center"> 
