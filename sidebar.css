@@ -44,7 +44,7 @@ body.dark{
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 100vh;
     width: 250px;
     background: var(--sidebar-color);
     transition: var(--tran-05);
