@@ -1,5 +1,6 @@
 /* Google Font Import - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -8,15 +9,12 @@
 }
 
 :root{
-    /* ===== Colors ===== */
     --body-color: #E4E9F7;
     --sidebar-color: #FFF;
     --primary-color: #695CFE;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #707070;
-
-    /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
     --tran-03: all 0.3s ease;
     --tran-04: all 0.3s ease;
@@ -24,7 +22,6 @@
 }
 
 body{
-    min-height: 100vh;
     background-color: var(--body-color);
     transition: var(--tran-05);
 }
@@ -43,23 +40,22 @@ body.dark{
     --text-color: #ccc;
 }
 
-/* ===== Sidebar ===== */
- .sidebar{
+.sidebar{
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 250px;
-    padding: 10px 14px;
     background: var(--sidebar-color);
     transition: var(--tran-05);
     z-index: 100;  
+    padding: 10px 14px;
 }
+
 .sidebar.close{
     width: 88px;
 }
 
-/* ===== Reusable code - Here ===== */
 .sidebar li{
     height: 50px;
     list-style: none;
@@ -99,7 +95,6 @@ body.dark{
 .sidebar.close .text{
     opacity: 0;
 }
-/* =========================== */
 
 .sidebar header{
     position: relative;
@@ -109,11 +104,13 @@ body.dark{
     display: flex;
     align-items: center;
 }
+
 .sidebar header .logo-text{
     display: flex;
     flex-direction: column;
     margin-inline-start: .5rem;
 }
+
 header .image-text .name {
     margin-top: 2px;
     font-size: 18px;
@@ -185,6 +182,7 @@ body.dark .sidebar header .toggle{
     font-weight: 500;
     transition: var(--tran-05);
 }
+
 .sidebar li a{
     list-style: none;
     height: 100%;
@@ -208,7 +206,7 @@ body.dark .sidebar header .toggle{
 body.dark .sidebar li a:hover .icon,
 body.dark .sidebar li a:hover .text{
     color: var(--text-color);
-}
+} 
 
 .sidebar .menu-bar{
     height: calc(100% - 55px);
@@ -217,9 +215,11 @@ body.dark .sidebar li a:hover .text{
     justify-content: space-between;
     overflow-y: scroll;
 }
+
 .menu-bar::-webkit-scrollbar{
     display: none;
 }
+
 .sidebar .menu-bar .mode{
     border-radius: 6px;
     background-color: var(--primary-color-light);
@@ -235,12 +235,15 @@ body.dark .sidebar li a:hover .text{
 .mode .sun-moon i{
     position: absolute;
 }
+
 .mode .sun-moon i.sun{
     opacity: 0;
 }
+
 body.dark .mode .sun-moon i.sun{
     opacity: 1;
 }
+
 body.dark .mode .sun-moon i.moon{
     opacity: 0;
 }
@@ -256,6 +259,7 @@ body.dark .mode .sun-moon i.moon{
     border-radius: 6px;
     cursor: pointer;
 }
+
 .toggle-switch .switch{
     position: relative;
     height: 22px;
@@ -287,11 +291,11 @@ body.dark .switch::before{
     top: 0;
     top: 0;
     left: 250px;
-    height: 100vh;
     width: calc(100% - 250px);
     background-color: var(--body-color);
     transition: var(--tran-05);
 }
+
 .home-page .text{
     font-size: 30px;
     font-weight: 500;
@@ -300,10 +304,11 @@ body.dark .switch::before{
 }
 
 .sidebar.close ~ .home-page{
-    left: 78px;
+    left: 87px;
     height: 100vh;
-    width: calc(100% - 78px);
+    width: calc(100% - 87px);
 }
+
 body.dark .home-page .text{
     color: var(--text-color);
 }

@@ -44,23 +44,26 @@ Nessa versão, o objetivo é explorar ainda mais a Responsividade, aperfeiçoar 
 - portfólio: `font-family: 'Merriweather Sans', sans-serif;`
 - sidebar: `font-family: 'Poppins', sans-serif;`
 - títulos do portfólio: `font-family: Courier, serif;`
-- [ ] Itens para correção
-- testar em um dispositivo real: abrindo o link hospedado no browser do smartphone
-- scroll horizontal: corrigido com grid css
-- espaços entre os elementos: padronizado os espaços entre os elementos
-- um filete branco do lado esquerdo: corrigido
-- está grudado do lado direito: padding no main do repositório mas não funcionou
-* alinhamento entre ícone e texto do item menu
-* uma animação no campo de busca
-* uma animação em cada item menu quando alterna de close e open
-* a home está aparecendo por baixo do sidebar
-* não sendo um sistema, o botão sair não faz sentido
-* existe uma scroll horizontal
-* ao alternar horizontal e vertical, o zoom é alterado
+
+- Itens para correção em desktop
+- [x] testar em um dispositivo real: abrindo o link hospedado no browser do smartphone
+- [x] alinhamento entre ícone e texto do item menu
+- [x] scroll horizontal: corrigido com grid css
+- [x] espaços entre os elementos: padronizado os espaços entre os elementos
+- [x] um filete branco do lado esquerdo: corrigido
+- [x] está grudado do lado direito: padding no main do repositório
+- [x] não sendo um sistema, o botão sair não faz sentido 
+
+- Itens para correção em mobile
+- [ ] uma animação no campo de busca com naturalidade
+- [ ] uma animação em cada item menu quando alterna de close e open 
+- [ ] a home está aparecendo por baixo do sidebar
+- [ ]existe uma scroll horizontal 
+- [ ]ao alternar horizontal e vertical, o zoom é alterado 
+
 + unidades de medidas flexíveis
 + propriedades responsivas
 + media query somente em último caso
-
 
 Referências 
 - [web.dev / Learn Responsive Design](https://web.dev/learn/design/):
