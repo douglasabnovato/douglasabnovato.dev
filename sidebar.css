@@ -15,6 +15,10 @@
   --primary-color-light: #F6F5FF;
   --toggle-color: #DDD;
   --text-color: #707070;
+
+  --portfolio-bg-cards: #DDD;
+  --portfolio-bg-techs: #fa0b8f;
+
   --tran-03: all 0.2s ease;
   --tran-03: all 0.3s ease;
   --tran-04: all 0.3s ease;
@@ -38,6 +42,9 @@ body.dark {
   --primary-color-light: #3a3b3c;
   --toggle-color: #fff;
   --text-color: #ccc;
+
+  --portfolio-bg-cards: #302F3D;
+  --portfolio-bg-techs: #CB92B1;
 }
 
 .sidebar {

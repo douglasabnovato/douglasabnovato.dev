@@ -41,11 +41,12 @@ Nessa versão, o objetivo é explorar ainda mais a Responsividade, aperfeiçoar 
 - Orientações
 - [x] analisar maneiras de reduzir os breakpoints
 - [x] utilizar uma font serifada para títulos e uma sem serifa para o corpo
-- portfólio: `font-family: 'Merriweather Sans', sans-serif;`
-- sidebar: `font-family: 'Poppins', sans-serif;`
-- títulos do portfólio: `font-family: Courier, serif;`
+- [x] portfólio: `font-family: 'Merriweather Sans', sans-serif;`
+- [x] sidebar: `font-family: 'Poppins', sans-serif;`
+- [x] títulos do portfólio: `font-family: Courier, serif;`
+- [x] modo light e dark
 
-- Itens para correção em DESKTOP/TABLE - [>1024 / 768-1024]
+- Itens para correção em DESKTOP/TABLE - [>1024 / 768 - 1024]
 - [x] testar em um dispositivo real: abrindo o link hospedado no browser do smartphone
 - [x] alinhamento entre ícone e texto do item menu
 - [x] scroll horizontal: corrigido com grid css
@@ -54,13 +55,13 @@ Nessa versão, o objetivo é explorar ainda mais a Responsividade, aperfeiçoar 
 - [x] está grudado do lado direito: padding no main do repositório
 - [x] não sendo um sistema, o botão sair não faz sentido 
 
-- Itens para correção em MOBILE - [375-768]
+- Itens para correção em MOBILE - [375 - 768]
 - [x] em mobile na orientação paisagem, está ok
-- [ ] uma animação no campo de busca com naturalidade
-- [ ] uma animação em cada item menu quando alterna de close e open 
-- [ ] a home está aparecendo por baixo do sidebar
-- [ ] existe uma scroll horizontal 
-- [ ] ao alternar horizontal e vertical, o zoom é alterado 
+- [x] uma animação no campo de busca com naturalidade
+- [x] uma animação em cada item menu quando alterna de close e open 
+- [x] a home está aparecendo por baixo do sidebar
+- [x] existe uma scroll horizontal 
+- [x] ao alternar horizontal e vertical, o zoom é alterado 
 
 + unidades de medidas flexíveis
 + propriedades responsivas
