@@ -28,7 +28,6 @@ body {
     padding: 0;
 }
 
-header,
 footer {
     background-color: var(--color-off-white);
     position: relative;
@@ -37,12 +36,6 @@ footer {
 
     height: auto;
     width: auto;
-}
-
-header {
-    padding: var(--metric-box-spacing);
-    background-color: hsl(140deg 70% 95%);
-    font-size: 1.4em;
 }
 
 footer {
@@ -372,14 +365,14 @@ main {
 
 @media only screen and (max-width: 768px) {
     
-    main .home-section{
+    main .home-page{
         display: grid;
         position:relative;
         width: 100%;
         max-width: 100vw;
     }
 
-    main .home-section .cards{
+    main .home-page .cards{
         width: 100%;
         max-width: 100vw;
     }
