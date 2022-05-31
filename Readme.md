@@ -58,8 +58,8 @@ Nessa versão, o objetivo é explorar ainda mais a Responsividade, aperfeiçoar 
 - [ ] uma animação no campo de busca com naturalidade
 - [ ] uma animação em cada item menu quando alterna de close e open 
 - [ ] a home está aparecendo por baixo do sidebar
-- [ ]existe uma scroll horizontal 
-- [ ]ao alternar horizontal e vertical, o zoom é alterado 
+- [ ] existe uma scroll horizontal 
+- [ ] ao alternar horizontal e vertical, o zoom é alterado 
 
 + unidades de medidas flexíveis
 + propriedades responsivas
