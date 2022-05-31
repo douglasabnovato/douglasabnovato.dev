@@ -24,13 +24,13 @@
 main {
     font-family: 'Merriweather Sans', sans-serif;
     color: var(--portfolio-text-color);
-    min-block-size: calc(100vh - 8em);
+    min-block-size: calc(100vh - 8rem);
     padding: var(--metric-box-spacing);
 }
 
 .cards-grids {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
     grid-gap: var(--metric-box-spacing);
     margin-block-end: var(--metric-box-spacing);
 }
@@ -51,7 +51,7 @@ main {
 }
 
 .cards-flex .card-flex {
-    flex-basis: 15em;
+    flex-basis: 15rem;
     flex-grow: 1;
 }
 
@@ -118,11 +118,11 @@ main {
 }
 
 .social-medias .social-media a span:nth-child(2) {
-    margin-left: 4.5%;
+    margin-inline-start: 4.5%;
 }
 
 .social-medias .icons {
-    margin-left: 5%;
+    margin-inline-start: 5%;
 }
 
 .social-medias .icons-local {

@@ -63,9 +63,10 @@ Nessa versão, o objetivo é explorar ainda mais a Responsividade, aperfeiçoar 
 - [x] existe uma scroll horizontal 
 - [x] ao alternar horizontal e vertical, o zoom é alterado 
 
-+ unidades de medidas flexíveis
-+ propriedades responsivas
-+ media query somente em último caso
++ unidades de medidas flexíveis: rem, %, vw, vh
++ internacionalização
++ propriedades responsivas: usando grid e flexbox em diferentes situações
++ media query somente em último caso: recurso após explorar ao máximo o css
 
 Referências 
 - [web.dev / Learn Responsive Design](https://web.dev/learn/design/):
