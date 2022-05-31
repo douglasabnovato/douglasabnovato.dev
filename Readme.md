@@ -61,8 +61,8 @@ Referências
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   <img alt="versão 4.0 do projeto" title="#douglasabnovato.dev" src="./.github/desktop-portfolio-desktop-dark.jpg" width="400px">
   <img alt="versão 4.0 do projeto" title="#douglasabnovato.dev" src="./.github/desktop-portfolio-mobile-dark.jpg" height="400px">
-  <img alt="versão 4.0 do projeto" title="#douglasabnovato.dev" src="./.github/desktop-portfolio-desktop-open.jpg" height="400px">
-  <img alt="versão 4.0 do projeto" title="#douglasabnovato.dev" src="./.github/desktop-portfolio-mobile-light.jpg" width="400px">
+  <img alt="versão 4.0 do projeto" title="#douglasabnovato.dev" src="./.github/desktop-portfolio-desktop-open.jpg" width="400px">
+  <img alt="versão 4.0 do projeto" title="#douglasabnovato.dev" src="./.github/desktop-portfolio-mobile-light.jpg" height="400px">
 </p> 
 
 Nessa versão, o objetivo é explorar ainda mais a Responsividade, aperfeiçoar os pontos de transição e a usabilidade conforme o dispositivo, e garantir que a Acessibilidade está sendo aplicada.
