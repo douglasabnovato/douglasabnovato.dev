@@ -34,6 +34,23 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 
 Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
+### Web - v4.2: Próximo passo
+
+Referências 
+- [web.dev / Learn Responsive Design](https://web.dev/learn/design/):
+- [ ] macro layouts
+- [ ] micro layouts
+- [ ] typography
+- [ ] images
+- [ ] picture
+- [ ] icon
+- [ ] theming
+- [ ] accessibility
+- [ ] interation
+- [ ] user interface patterns
+- [ ] media features
+- [ ] screen configuration
+
 ### Web - v4.1: 
 
 Nessa versão, o objetivo é explorar ainda mais a Responsividade, aperfeiçoar os pontos de transição e a usabilidade conforme o dispositivo, e garantir que a Acessibilidade está sendo aplicada.
@@ -67,21 +84,6 @@ Nessa versão, o objetivo é explorar ainda mais a Responsividade, aperfeiçoar 
 + internacionalização
 + propriedades responsivas: usando grid e flexbox em diferentes situações
 + media query somente em último caso: recurso após explorar ao máximo o css
-
-Referências 
-- [web.dev / Learn Responsive Design](https://web.dev/learn/design/):
-- [ ] macro layouts
-- [ ] micro layouts
-- [ ] typography
-- [ ] images
-- [ ] picture
-- [ ] icon
-- [ ] theming
-- [ ] accessibility
-- [ ] interation
-- [ ] user interface patterns
-- [ ] media features
-- [ ] screen configuration
 
 ### Web - v4.0: 
 
