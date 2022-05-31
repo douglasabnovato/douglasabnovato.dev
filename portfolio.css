@@ -104,6 +104,10 @@ main {
     height: auto;
 }
 
+.social-medias .social-media{ 
+    margin-block-start: 0.8vh;
+}
+
 .social-medias .social-media a,
 .social-medias .social-media a:link,
 .social-medias .social-media a:visited,
@@ -114,7 +118,7 @@ main {
 }
 
 .social-medias .social-media a span:nth-child(2) {
-    margin-left: 3%;
+    margin-left: 4.5%;
 }
 
 .social-medias .icons {
