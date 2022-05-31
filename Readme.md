@@ -38,14 +38,14 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
 Nessa versão, o objetivo é explorar ainda mais a Responsividade, aperfeiçoar os pontos de transição e a usabilidade conforme o dispositivo, e garantir que a Acessibilidade está sendo aplicada.
 
-- Orientações:
+- Orientações
 - [x] analisar maneiras de reduzir os breakpoints
 - [x] utilizar uma font serifada para títulos e uma sem serifa para o corpo
 - portfólio: `font-family: 'Merriweather Sans', sans-serif;`
 - sidebar: `font-family: 'Poppins', sans-serif;`
 - títulos do portfólio: `font-family: Courier, serif;`
 
-- Itens para correção em desktop
+- Itens para correção em DESKTOP/TABLE - [>1024 / 768-1024]
 - [x] testar em um dispositivo real: abrindo o link hospedado no browser do smartphone
 - [x] alinhamento entre ícone e texto do item menu
 - [x] scroll horizontal: corrigido com grid css
@@ -54,7 +54,7 @@ Nessa versão, o objetivo é explorar ainda mais a Responsividade, aperfeiçoar 
 - [x] está grudado do lado direito: padding no main do repositório
 - [x] não sendo um sistema, o botão sair não faz sentido 
 
-- Itens para correção em mobile
+- Itens para correção em MOBILE - [375-768]
 - [ ] uma animação no campo de busca com naturalidade
 - [ ] uma animação em cada item menu quando alterna de close e open 
 - [ ] a home está aparecendo por baixo do sidebar
