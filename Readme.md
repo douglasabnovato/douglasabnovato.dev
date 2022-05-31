@@ -55,6 +55,7 @@ Nessa versão, o objetivo é explorar ainda mais a Responsividade, aperfeiçoar 
 - [x] não sendo um sistema, o botão sair não faz sentido 
 
 - Itens para correção em MOBILE - [375-768]
+- [x] em mobile na orientação paisagem, está ok
 - [ ] uma animação no campo de busca com naturalidade
 - [ ] uma animação em cada item menu quando alterna de close e open 
 - [ ] a home está aparecendo por baixo do sidebar
