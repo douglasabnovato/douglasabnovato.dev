@@ -1,4 +1,4 @@
-## 💻 Sidebar
+## 💻 Sidebar - Done no principal
 
 Neste desafio você deve criar uma sidebar que ao clicar no ícone do menu isso deve fazer com que o estado da sidebar mude entre "aberto", mostrando ícones e texto e "fechado", mostrando apenas os ícones.
 
@@ -38,7 +38,7 @@ Este desafio é construir uma sidebar (menu lateral). A seguir, uma lista dos cu
 
 #### Requisitos para o desafio
 
-- Você deve criar uma sidebar que que altere o estado entre aberto e fechado conforme o clique do usuário. 
+- Você deve criar uma sidebar que altere o estado entre aberto e fechado conforme o clique do usuário. 
 
 ### 🎨 Style Guide
 
