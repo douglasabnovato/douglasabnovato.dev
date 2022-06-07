@@ -1,4 +1,4 @@
-## 💻 Home
+## 💻 Hack Dev
 
 Nesse desafio você deverá criar uma página web de um hack para treino de ser dev com título, imagem, lista de ingredientes e modo de preparo.
 
