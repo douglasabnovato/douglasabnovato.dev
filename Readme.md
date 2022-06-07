@@ -39,6 +39,8 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 - [ ] Item do menu Meu portfólio - com os repositórios do github
 - [ ] Item do menu Meu blog - com os artigos do medium
 - [ ] Item do menu Hack Ser Dev - uma timeline de conteúdo e rotina para dev
+- [ ] fazer a rota "/" como uma home com um design
+- [ ] fazer um estado off e logado a partir de um login com design
 
 Referências 
 - [web.dev / Learn Responsive Design](https://web.dev/learn/design/)
