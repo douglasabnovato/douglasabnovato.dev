@@ -1,4 +1,4 @@
-## 💻 Home
+## 💻 Home - adaptar para o hack dev [ ]
 
 Neste desafio você deverá desenvolver uma homepage para uma marca pessoal que servirá como home do site.
 
