@@ -34,25 +34,21 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 
 Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 
-### Web - v4.2: Próximo passo
+### Próximo passo
 
-- Tarefas
-- [ ] Item do menu Meu Blog
+- [ ] Item do menu Meu portfólio - com os repositórios do github
+- [ ] Item do menu Meu blog - com os artigos do medium
+- [ ] Item do menu Hack Ser Dev - uma timeline de conteúdo e rotina para dev
 
 Referências 
-- [web.dev / Learn Responsive Design](https://web.dev/learn/design/):
-- [ ] macro layouts
-- [ ] micro layouts
-- [ ] typography
-- [ ] images
-- [ ] picture
-- [ ] icon
-- [ ] theming
-- [ ] accessibility
-- [ ] interation
-- [ ] user interface patterns
-- [ ] media features
-- [ ] screen configuration
+- [web.dev / Learn Responsive Design](https://web.dev/learn/design/)
+- [web.dev / Learn Css](https://web.dev/learn/css/)
+- [web.dev / Learn Forms](https://web.dev/learn/forms/)
+- [web.dev / Learn pwa](https://web.dev/learn/pwa/)
+
+### Web Responsive - v4.2
+
+- [ ] Persistência do modo dark e light com localstorage
 
 ### Web - v4.1: 
 
