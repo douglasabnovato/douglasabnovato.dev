@@ -1,4 +1,4 @@
-## 💻 Switcher
+## 💻 Switcher - Done no principal
 
 Nesse desafio você deverá desenvolver uma página que contenha um toggle para alternar entre o tema dark e light.
 
@@ -31,13 +31,13 @@ Este desafio é construir uma página que contenha um theme switcher. A seguir, 
 
 #### Requisitos para o desafio
 
-- Alterar o tema da página ao clicar no toggle;
-- Ter uma transição entre um ícone e outro;
+- [x] Alterar o tema da página ao clicar no toggle;
+- [x] Ter uma transição entre um ícone e outro;
 
 #### Se desafie também
 
-- Salvando o tema no Local Storage;
-- Adicionar textos e alterar a cor conforme o tema alterne entre ligth e dark;
+- [ ] Salvando o tema no Local Storage;
+- [ ] Adicionar textos e alterar a cor conforme o tema alterne entre ligth e dark;
 
 ### 🎨 Style Guide
 
