@@ -168,7 +168,7 @@ body.dark .sidebar header .toggle {
 }
 
 .sidebar .menu {
-  margin-top: 40px;
+  margin-top: 7px;
 }
 
 .sidebar li.search-box {
@@ -325,12 +325,12 @@ body.dark .home-page .text {
 
 @media (max-width: 420px) {
 
-  .sidebar {
+  .sidebar{
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
-    height: calc(100vh - 44vh);
+    height: calc(100vh - 29vh);
   }
 
   .sidebar header i.toggle {
@@ -338,7 +338,7 @@ body.dark .home-page .text {
   }
 
   .home-page {
-    top: 56vh;
+    top: 72vh;
     left: 0;
     width: 100vw;
   }
