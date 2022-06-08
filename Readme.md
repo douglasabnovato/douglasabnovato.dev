@@ -50,7 +50,7 @@ Referências
 
 ### Web Responsive - v4.2
 
-- [ ] Persistência da preferência do modo dark e light com localstorage.
+- [x] Persistência da preferência do modo dark e light com localstorage.
 
 ### Web - v4.1: 
 
