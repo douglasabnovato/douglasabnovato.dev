@@ -126,31 +126,31 @@ main {
 }
 
 .social-medias .icons-local {
-    content: url(./assets/map-pin.svg);
+    content: url(../assets/map-pin.svg);
 }
 
 .social-medias .icons-sa {
-    content: url(./assets/briefcase.svg);
+    content: url(../assets/briefcase.svg);
 }
 
 .social-medias .icons-github {
-    content: url(./assets/github.svg);
+    content: url(../assets/github.svg);
 }
 
 .social-medias .icons-linkedin {
-    content: url(./assets/linkedin.svg);
+    content: url(../assets/linkedin.svg);
 }
 
 .social-medias .icons-twitter {
-    content: url(./assets/twitter.svg);
+    content: url(../assets/twitter.svg);
 }
 
 .social-medias .icons-globe {
-    content: url(./assets/globe.svg);
+    content: url(../assets/globe.svg);
 }
 
 .social-medias .icons-mail {
-    content: url(./assets/mail.svg);
+    content: url(../assets/mail.svg);
 }
 
 .technologies {
@@ -300,7 +300,7 @@ main {
 }
 
 .box-projects .project .title-project .icons-folder {
-    content: url(./assets/folder.svg);
+    content: url(../assets/folder.svg);
     margin-inline-end: 0.9vw;
 }
 
@@ -321,18 +321,18 @@ main {
 }
 
 .box-projects .project .details-project .icons-star {
-    content: url(./assets/star.svg);
+    content: url(../assets/star.svg);
     margin-inline-end: 0.5vw;
 }
 
 .box-projects .project .details-project .icons-gitbranch {
-    content: url(./assets/git-branch.svg);
+    content: url(../assets/git-branch.svg);
     margin-inline-start: 1.5vw;
     margin-inline-end: 0.5vw;
 }
 
 .box-projects .project .details-project .icons-languages {
-    content: url(./assets/ellipse.svg);
+    content: url(../assets/ellipse.svg);
     margin-inline-end: 0.5vw;
 }
 
