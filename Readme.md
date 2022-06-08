@@ -51,6 +51,7 @@ Referências
 ### Web Responsive - v4.2
 
 - [x] Persistência do modo dark conforme preferências do usuário com localstorage.
+- [x] Navegação do menu sidebar com âncoras internas  
 
 ### Web - v4.1: 
 
