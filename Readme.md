@@ -1,10 +1,10 @@
-<h1 align="center">
-    <img alt="versão lts do projeto" title="#douglasabnovato.dev" src="./.github/desktop-portfolio-desktop-dark.jpg" />
-</h1>
-
 <h4 align="center"> 
 	🚧 douglasabnovato.dev 🚀
 </h4> 
+
+<h1 align="center">
+    <img alt="versão lts do projeto" title="#douglasabnovato.dev" src="./.github/desktop-portfolio-desktop-dark.jpg" />
+</h1>
 
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/douglasabnovato/douglasabnovato.dev?color=%2304D361">
