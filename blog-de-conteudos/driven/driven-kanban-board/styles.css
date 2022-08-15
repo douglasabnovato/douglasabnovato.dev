@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+* {
+    margin: 0;
+}
+
+body{
+    background: rgb(255, 212, 123);
+    background: radial-gradient(
+        circle,
+        rgba(255, 212, 123, 1) 0%,
+        rgba(255, 71, 145, 1) 100%
+    );
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+header{
+    margin-top: 10px;
+}
+
+header h1{
+    background-color: rgb(221, 76, 76);
+    color: rgb(39, 9, 9);
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 12px;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.board{
+    background-color: rgba(255,255,255,0.8);
+    width: 320px;
+    margin: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.board .title{
+    background-color: lightcoral;
+    color: white;
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.board ul{
+    list-style-type: none;
+    min-height: 330px;
+    padding: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.board li{
+    background-color: white;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    min-width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 10px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.board li:hover{
+    cursor: move;
+    background-color: rgba(200,200,200,0.5);
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.board .todo-list .remove{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    color: #c3c3c3;
+}
+
+.board .todo-list .remove:hover{
+    cursor: pointer;
+    background-color: lightcoral;
+}
+
+.board .add-card{
+    background-color: rgba(200,200,200,0.8);
+    border-radius: 2px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    margin: 4px 4px;
+}
+
+.board .add-card:hover{
+    background-color: rgba(192, 182, 182, 0.95);
+    cursor: pointer;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.board .add-card p{
+    font-size: 16px;
+    padding: 15px 10px;
+    font-weight: 100;
+}

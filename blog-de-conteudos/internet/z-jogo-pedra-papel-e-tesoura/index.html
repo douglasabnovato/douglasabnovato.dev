@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Game RPS</title>
+    <style>
+      * {
+        font-family: Helvetica;
+        font-weight: 400;
+      }
+
+      #titulo {
+        color: #0984e3;
+        text-align: center;
+      }
+
+      #placar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #jogador,
+      #computador {
+        position: relative;
+        flex-grow: 1;
+        border-radius: 5px;
+        width: 200px;
+        padding: 20px;
+        color: #fff;
+      }
+
+      #jogador {
+        background-color: #ff7675;
+      }
+
+      #computador {
+        background-color: #74b9ff;
+      }
+
+      #versus {
+        font-size: 40px;
+        width: 70px;
+        text-align: center;
+      }
+
+      #jogador-nome,
+      #computador-nome {
+        margin: 0;
+        padding: 0;
+      }
+
+      #jogador-nome {
+        text-align: left;
+      }
+
+      #computador-nome {
+        text-align: right;
+      }
+
+      #jogador-pontos,
+      #computador-pontos {
+        position: absolute;
+        top: 8px;
+        font-size: 32px;
+      }
+
+      #jogador-pontos {
+        right: 20px;
+      }
+
+      ul#jogador-escolha,
+      ul#computador-escolha {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      ul#jogador-escolha li,
+      ul#computador-escolha li {
+        display: inline;
+      }
+
+      ul#jogador-escolha li a,
+      ul#computador-escolha li a {
+        opacity: 0.2;
+      }
+
+      ul#jogador-escolha li a:hover,
+      ul#jogador-escolha li a.selecionado,
+      ul#computador-escolha li a.selecionado {
+        opacity: 1;
+      }
+
+      ul#jogador-escolha li a img,
+      ul#computador-escolha li a img {
+        max-width: 80px;
+      }
+
+      #mensagens {
+        background-color: #b2bec3;
+        font-size: 32px;
+        border-radius: 5px;
+        margin: 20px 0;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="principal">
+      <h1 id="titulo">Pedra Papel Tesoura</h1>
+      <div id="placar">
+        <div id="jogador">
+          <h2 id="jogador-nome">Jogador</h2>
+          <span id="jogador-pontos">0</span>
+          <ul id="jogador-escolha">
+            <li>
+              <a id="jogador-escolha-1" onclick="jogar(1)"
+                ><img src="images/pedra.png" alt="pedra"
+              /></a>
+            </li>
+            <li>
+              <a id="jogador-escolha-2" onclick="jogar(2)"
+                ><img src="images/papel.png" alt="papel"
+              /></a>
+            </li>
+            <li>
+              <a id="jogador-escolha-3" onclick="jogar(3)"
+                ><img src="images/tesoura.png" alt="tesoura"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <!-- the end jogador -->
+
+        <div id="versus">vs</div>
+
+        <div id="computador">
+          <h2 id="computador-nome">Computador</h2>
+          <span id="computador-pontos">0</span>
+          <ul id="computador-escolha">
+            <li>
+              <a id="computador-escolha-1"
+                ><img src="images/pedra.png" alt="pedra"
+              /></a>
+            </li>
+            <li>
+              <a id="computador-escolha-2"
+                ><img src="images/papel.png" alt="papel"
+              /></a>
+            </li>
+            <li>
+              <a id="computador-escolha-3"
+                ><img src="images/tesoura.png" alt="tesoura"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <!-- the end computador -->
+      </div>
+      <!-- the end placar -->
+      <div id="mensagens">&nbsp;</div>
+    </div>
+    <!-- the end principal -->
+    <script>
+      var jogadorEscolha = 0;
+      var jogadorPontuacao = 0;
+      var computadorEscolha = 0;
+      var computadorPontuacao = 0;
+      var ganhador = -1;
+      var repeticaoJogada = 0;
+      var computadorEscolhaAnterior = 0;
+
+      function jogar(escolha) {
+        jogadorEscolha = escolha;
+        computadorEscolhaAnterior = computadorEscolha;
+
+        //lógico do funcionamento das jogadas do computador
+        computadorEscolha = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+
+        if (computadorEscolhaAnterior == computadorEscolha) {
+          repeticaoJogada++;
+          if (repeticaoJogada > 2) {
+            if (computadorEscolha == 1 || computadorEscolha == 2)
+              computadorEscolha = computadorEscolha + 1;
+            if (computadorEscolha == 3)
+              computadorEscolha = computadorEscolha - 2;
+          }
+        } //final da lógica
+
+        //1 - pedra //2 - papel //3 - tesoura
+
+        if (jogadorEscolha == 1 && computadorEscolha == 1) {
+          ganhador = 0; //empate
+        } else if (jogadorEscolha == 1 && computadorEscolha == 2) {
+          ganhador = 2; //computador
+        } else if (jogadorEscolha == 1 && computadorEscolha == 3) {
+          ganhador = 1; //jogador
+        }
+
+        if (jogadorEscolha == 2 && computadorEscolha == 1) {
+          ganhador = 1; //jogador
+        } else if (jogadorEscolha == 2 && computadorEscolha == 2) {
+          ganhador = 0; //empate
+        } else if (jogadorEscolha == 2 && computadorEscolha == 3) {
+          ganhador = 2; //computador
+        }
+
+        if (jogadorEscolha == 3 && computadorEscolha == 1) {
+          ganhador = 2; //computador
+          computadorPontuacao++;
+        } else if (jogadorEscolha == 3 && computadorEscolha == 2) {
+          ganhador = 1; //jogador
+        } else if (jogadorEscolha == 3 && computadorEscolha == 3) {
+          ganhador = 0; //empate
+        }
+
+        document
+          .getElementById("jogador-escolha-1")
+          .classList.remove("selecionado");
+        document
+          .getElementById("jogador-escolha-2")
+          .classList.remove("selecionado");
+        document
+          .getElementById("jogador-escolha-3")
+          .classList.remove("selecionado");
+        document
+          .getElementById("computador-escolha-1")
+          .classList.remove("selecionado");
+        document
+          .getElementById("computador-escolha-2")
+          .classList.remove("selecionado");
+        document
+          .getElementById("computador-escolha-3")
+          .classList.remove("selecionado");
+
+        //exibir ação dos jogadores
+        document
+          .getElementById("jogador-escolha-" + jogadorEscolha)
+          .classList.add("selecionado");
+        document
+          .getElementById("computador-escolha-" + computadorEscolha)
+          .classList.add("selecionado");
+
+        if (ganhador == 0) {
+          document.getElementById("mensagens").innerHTML = "Empate";
+        } else if (ganhador == 1) {
+          document.getElementById("mensagens").innerHTML = "Jogador Ganhou";
+          jogadorPontuacao++;
+        } else if (ganhador == 2) {
+          document.getElementById("mensagens").innerHTML = "Computador Ganhou";
+          computadorPontuacao++;
+        }
+
+        document.getElementById("jogador-pontos").innerHTML = jogadorPontuacao;
+        document.getElementById("computador-pontos").innerHTML =
+          computadorPontuacao;
+      }
+    </script>
+  </body>
+</html>

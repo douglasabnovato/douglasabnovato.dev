@@ -40,13 +40,15 @@ Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
 - [ ] Item do menu Meu blog - com os artigos do medium
 - [ ] Item do menu Hack Ser Dev - uma timeline de conteúdo e rotina para dev
 - [ ] fazer a rota "/" como uma home com um design
-- [ ] fazer um estado off e logado a partir de um login com design
 
 Referências 
 - [web.dev / Learn Responsive Design](https://web.dev/learn/design/)
 - [web.dev / Learn Css](https://web.dev/learn/css/)
 - [web.dev / Learn Forms](https://web.dev/learn/forms/)
 - [web.dev / Learn pwa](https://web.dev/learn/pwa/)
+
+Inspiração 
+- [marc.dev](https://marc.dev/blog/page/2/)
 
 ### Web Responsive - v4.2
 
