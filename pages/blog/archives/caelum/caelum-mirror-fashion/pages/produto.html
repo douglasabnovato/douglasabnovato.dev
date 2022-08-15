@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Mirror Fashion</title>
+    <link rel="stylesheet" href="../css/produto.css">
+</head>
+
+<body>
+    <header class="container-header">
+        <!--INÍCIO - header -->
+
+        <img src="../img/logo.png" alt="Logo da Mirror Fashion">
+
+        <p class="sacola">
+            Nenhum item na sacola de compras
+        </p>
+
+        <nav class="menu-opcoes">
+            <ul>
+                <li><a href="#">Sua Conta</a></li>
+                <li><a href="#">Lista de Desejos</a></li>
+                <li><a href="#">Cartão Fidelidade</a></li>
+                <li><a href="pages/about.html">Sobre</a></li>
+                <li><a href="#">Ajuda</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <!--FIM - header -->
+    <div class="produto-back">
+        <div class="container">
+
+            <div class="produto">
+                <!--Selecionar Produto -->
+                <h1>Fuzzy Cardigan</h1>
+                <p>por apenas R$ 129,90</p>
+                <div class="fb-like" data-href="http://www.mirrorfashion.net" data-send="false" data-layout="box_count"
+                    data-width="58" data-show-faces="false">
+                </div>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical">Tweet</a>
+                <div id="fb-root"></div>
+                <form>
+                    <fieldset class="cores">
+                        <legend>Escolha a cor:</legend>
+                        <input type="radio" name="cor" value="verde" id="verde" checked>
+                        <label for="verde">
+                            <img src="../img/produtos/foto1-verde.png" alt="Produto	na	cor	verde">
+                        </label>
+                        <input type="radio" name="cor" value="rosa" id="rosa">
+                        <label for="rosa">
+                            <img src="../img/produtos/foto1-rosa.png" alt="Produto	na	cor	rosa">
+                        </label>
+                        <input type="radio" name="cor" value="azul" id="azul">
+                        <label for="azul">
+                            <img src="../img/produtos/foto1-azul.png" alt="Produto	na	cor	azul">
+                        </label>
+                    </fieldset>
+                    <fieldset class="cores">
+                        <legend>Escolha o tamanho:</legend>
+                        <input type="range" min="36" max="46" value="42" step="2" name="tamanho" id="tamanho">
+                        <output class="tamanhos" for="tamanho" name="valortamanho">42</output>
+                    </fieldset>
+                    <button class="comprar">Comprar</button>
+                </form>
+            </div><!-- FIM - Selecionar Produto -->
+            <div class="detalhes">
+                <!-- Detalhes de Produto -->
+                <h2>Detalhes de Produto</h2>
+                <p>
+                    Esse é o melhor casaco de Cardigã que você já viu. Excelente
+                    material italiano com estampa desenhada pelos artesãos da
+                    comunidade de Krotor nas ilhas gregas. Compre já e receba hoje
+                    mesmo pela nossa entrega a jato.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Detalhe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Modelo</td>
+                            <td>Cardigã 7845</td>
+                        </tr>
+                        <tr>
+                            <td>Material</td>
+                            <td>Algodão</td>
+                        </tr>
+                        <tr>
+                            <td>Material</td>
+                            <td>Algodão e Poliester</td>
+                        </tr>
+                        <tr>
+                            <td>Cores</td>
+                            <td>Azul, Rosa e verde</td>
+                        </tr>
+                        <tr>
+                            <td>Lavagem</td>
+                            <td>Lavar a mão</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><!-- FIM - Detalhes de Produto -->
+
+        </div>
+    </div>
+    <footer>
+        <!--INÍCIO - rodapé -->
+        <div class="container-rodape">
+
+            <div class="image-copy">
+                <img src="../img/logo-rodape.png" alt="Logo da Mirror Fashion">
+            </div>
+            <ul class="social">
+                <li><a href="https://www.github.com/douglasabnovato/">Github</a></li>
+                <li><a href="https://medium.com/@douglasabnovato">Medium</a></li>
+                <li><a href="https://www.instagram.com/douglasabnovato/">Instagram</a></li>
+                <li><a href="https://www.facebook.com/douglasabnovato/">Facebook</a></li>
+                <li><a href="https://www.twitter.com/douglasabnovato/">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!--FIM - rodapé -->    
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "http://connect.facebook.net/pt_BR/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    <script type="text/javascript" src="../js/produto.js"></script>
+    <script>
+        !function(d,s,id){var	js,fjs=d.getElementsByTagName(s)[0];
+        if(!d.getElementById(id)){js=d.createElement(s);js.id=id;
+        js.src="http://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+        </script>
+</body>
+
+</html>

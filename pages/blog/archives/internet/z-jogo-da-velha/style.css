@@ -1,0 +1,43 @@
+#mostrador{
+    margin: auto;
+    margin-top: 40px;
+    width: 252px;
+    height: 80px;
+}
+
+#mostrador p{
+    float: left; 
+    margin-right:10px;
+}
+
+#mostrador img{
+    height:50px;
+    border: 0px;
+}
+
+.espaco{
+    width: 80px;
+    height: 60px;
+    border: 2px solid #000;
+    float: left;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.tabuleiro{
+    width: 252px;
+    height: 252px;
+    margin: auto;
+}
+
+.footer{
+    margin: auto;
+    margin-top: 40px;
+    width: 252px;
+    height: 80px;
+}
+
+.mostrador p{
+    float: left; 
+    margin-right:10px;
+}

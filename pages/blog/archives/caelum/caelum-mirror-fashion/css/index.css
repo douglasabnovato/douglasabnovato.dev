@@ -1,0 +1,576 @@
+/* INÍCIO - Elementos gerais */
+
+/* fontes personalizadas - não em uso */
+body {
+    font-family: 'PT	Sans', sans-serif;
+}
+
+.painel h2 {
+    font-family: 'Bad	Script', sans-serif;
+}
+/* FIM - fontes personalizadas - não em uso */
+
+
+body {
+    color: #333333;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 940px;
+}
+
+h3 {
+    background-color: #F2EDED;
+}
+
+/*"container" no container, no painéis flutuantes*/
+
+.container {
+    margin: 0 auto;
+    width: 940px;
+}
+
+/* FIM - Elementos gerais */
+
+/* INÍCIO - Header */
+
+header {
+    position: relative;
+}
+
+/*"container-header" no header*/
+
+.container-header {
+    margin: 0 auto;
+    width: 940px;
+}
+
+.sacola {
+    background-image: url(../img/sacola.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    font-size: 14px;
+    padding-right: 30px;
+    text-align: right;
+    width: 140px;
+    /* sacola deve estar posicionada a direita e no topo */
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* sacola deve estar posicionada a direita e no topo */
+}
+
+.menu-opcoes {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.menu-opcoes ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.menu-opcoes ul {
+    font-size: 15px;
+}
+
+.menu-opcoes a {
+    color: #003366;
+    text-decoration: none;
+}
+
+.menu-opcoes a:hover {
+    color: #007dc6;
+}
+
+.menu-opcoes a:active {
+    color: #867dc6;
+}
+
+/* FIM - Header */
+
+/* INÍCIO - Container */
+
+.destaque {
+    margin-top: 10px;
+}
+
+/* INÍCIO - Busca de Produtos */
+
+.busca {
+    background-color: #dcdcdc;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 10px;
+    width: 230px;
+    float: left;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.busca h2, .busca form {
+    margin: 10px;
+}
+
+.busca input[type=search] {
+    width: 145px;
+}
+
+.busca button {
+    /*adicionar imagem*/
+    background-image: url(../img/busca.png);
+    background-repeat: no-repeat;
+    border: none;
+    /*tamanho da imagem*/
+    width: 20px;
+    height: 20px;
+    /*imagem replacement*/
+    text-indent: -9999px;
+}
+
+/* FIM - Busca de Produtos */
+
+/* INÍCIO - menu-departamentos */
+
+.menu-departamentos {
+    background-color: #dcdcdc;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 10px;
+    margin-left: 0px;
+    width: 230px;
+    float: left;
+    clear: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.menu-departamentos h2 {
+    margin: 10px;
+}
+
+.menu-departamentos nav {
+    margin-left: 0px;
+    padding-bottom: 39px;
+}
+
+.menu-departamentos ul {
+    margin-left: 0px;
+}
+
+.menu-departamentos li {
+    background-color: white;
+    margin-bottom: 3px;
+    margin-left: -40px;
+    padding: 5px 3px 3px 3px;
+    list-style-type: none;
+}
+
+.menu-departamentos a {
+    color: #333333;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.menu-departamentos li ul {
+    display: none;
+}
+
+.menu-departamentos li:hover ul {
+    display: block;
+}
+
+.menu-departamentos ul ul li {
+    background-color: #dcdcdc;
+}
+
+.menu-departamentos li li a:before {
+    /*content: '- ';*/
+    content: '\272A';
+    padding-right: 3px;
+}
+
+.painel h2:before {
+    content: '\2756';
+    padding-right: 5px;
+    opacity: 0.4;
+}
+
+.menu-departamentos li li a:hover {
+    color: #007dc6;
+}
+
+.menu-departamentos li li a:active {
+    color: #867dc6;
+}
+
+/* FIM - menu-departamentos */
+
+/*INÍCIO - banner-destaque */
+
+.banner-destaque {
+    margin-top: 10px;
+}
+
+#foto-banner-destaque-home {
+    width: 370px;
+    margin-left: 240px;
+}
+
+/*FIM - banner-destaque */
+
+/* INÍCIO - Paineis Flutuantes */
+
+.painel {
+    margin: 10px 0;
+    padding: 10px;
+    width: 445px;
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 4px #999;
+}
+
+.novidades {
+    float: left;
+    background-color: #f5dcdc;
+    background: linear-gradient(#F5DCDC, #BEBEF4);
+}
+
+.mais-vendidos {
+    float: right;
+    background-color: #dcdcf5;
+    background: linear-gradient(#DCDCF5, #F4BEBE);
+}
+
+.painel li {
+    display: inline-block;
+    vertical-align: top;
+    width: 150px;
+    margin: 2px;
+    padding-bottom: 10px;
+    transition: 0.7s;
+}
+
+.painel li:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 5px #333;
+    transition: box-shadow 0.7s ease-in;
+    transform: scale(1.2) rotate(-5deg);
+}
+
+.painel li:nth-child(2n):hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.painel h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 2px #FFF rgba(255, 255, 255, 0.8);
+}
+
+.painel a {
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+
+figure {
+    margin: 10px;
+    padding-right: 30px;
+}
+
+/* FIM - Paineis Flutuantes */
+
+/* INÍCIO - produto-destaque */
+
+h1#topo-da-pagina {
+    /* título H1 */
+    background-image: url(../img/sobre-background.jpg);
+    padding: 10px;
+}
+
+div.textos-bloco {
+    padding: 0 45px;
+    margin: 30px;
+    text-indent: 15px;
+    height: auto;
+    width: auto;
+    text-align: left;
+    background-color: #fffcfc
+}
+
+#produto-1 {
+    /* estilização dessa foto */
+    margin: 0 10px 20px 30px;
+}
+
+figure#produto-1 {
+    /* box de todas as figuras */
+    background-color: #F2EDED;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 15px;
+}
+
+figure#produto-1 figcaption {
+    /* legenda de todas as figuras */
+    font-style: italic;
+    padding: 3px;
+    margin: 1px;
+}
+
+h2#titulo-produto {
+    /* Subtítulo H2 */
+    border-bottom: 2px solid #333333;
+    margin-top: 30px;
+}
+
+p.textos {
+    padding: 0 45px;
+    margin: 30px;
+    text-indent: 15px;
+    height: auto;
+    width: auto;
+    text-align: left;
+    background-color: #fffcfc
+}
+
+/* FIM - produto-destaque */
+
+/* FIM - Container */
+
+/* INÍCIO - mapa da pagina */
+
+.mapadapagina {
+    padding-left: 15px;
+}
+
+/* FIM - mapa da pagina */
+
+/* INÍCIO - rodapé */
+
+footer {
+    background-image: url(../img/fundo-rodape.png);
+    clear: both;
+    padding: 15px 0;
+}
+
+/* "container-rodape" no footer */
+
+footer .container-rodape {
+    position: relative;
+}
+
+.container-rodape .image-copy {
+    color: white;
+}
+
+footer img {
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.social {
+    position: absolute;
+    top: 2px;
+    right: 15px;
+}
+
+.social li {
+    float: left;
+    margin-left: 25px;
+}
+
+.social a {
+    /* tamanho da imagem */
+    height: 32px;
+    width: 32px;
+    /* image replacement */
+    display: block;
+    text-indent: -9999px;
+}
+
+.social a[href*="github.com"] {
+    background-image: url(../img/github.png);
+}
+
+.social a[href*="medium.com"] {
+    background-image: url(../img/medium.png);
+}
+
+.social a[href*="instagram.com"] {
+    background-image: url(../img/instagram.png);
+}
+
+.social a[href*="facebook.com"] {
+    background-image: url(../img/facebook.png);
+}
+
+.social a[href*="twitter.com"] {
+    background-image: url(../img/twitter.png);
+}
+
+/* FIM - rodapé */
+
+/* Smartphone - resolução 320px */
+
+@media (max-width: 939px) {
+    .container {
+        width: 96%;
+    }
+    header h1 {
+        text-align: center;
+    }
+    header h1 img {
+        max-width: 50%;
+    }
+    .sacola {
+        display: none;
+    }
+    .menu-opcoes {
+        position: static;
+        text-align: center;
+    }
+    .menu-opcoes ul li {
+        display: inline-block;
+        margin: 5px;
+    }
+    .busca, .menu-departamentos, .banner-destaque img {
+        margin-right: 0;
+        width: 100%;
+    }
+    .painel {
+        width: auto;
+    }
+    .painel li {
+        width: 30%;
+    }
+    .painel img {
+        width: 100%;
+    }
+    @media (min-width: 480px) {
+        header h1 {
+            margin: 5px 0;
+        }
+        .menu-departamentos {
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        .menu-departamentos nav>ul {
+            column-count: 2;
+        }
+    }
+    @media (min-width: 720px) {
+        header h1 {
+            text-align: left;
+        }
+        .menu-opcoes {
+            position: absolute;
+        }
+        .sacola {
+            display: block;
+        }
+        .painel li {
+            width: 15%;
+        }
+        .busca, .menu-departamentos {
+            margin-right: 1%;
+            width: 30%;
+        }
+        .menu-departamentos nav>ul {
+            column-count: 1;
+        }
+        .banner-destaque img {
+            width: 69%;
+        }
+    }
+}
+
+.destaque {
+    position: relative;
+}
+
+.pause, .play {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.pause {
+    border-left: 10px solid #900;
+    border-right: 10px solid #900;
+    height: 30px;
+    width: 5px;
+}
+
+.play {
+    border-left: 25px solid #900;
+    border-bottom: 15px solid transparent;
+    border-top: 15px solid transparent;
+}
+
+.painel li:nth-child(n+7) {
+    display: none;
+}
+
+.painel-aberto li:nth-child(n+7) {
+    display: inline-block;
+}
+
+.painel button {
+    /*	posicionamento	*/
+    float: right;
+    margin-right: 10px;
+    padding: 10px;
+    /*	estilo	*/
+    background-color: #333;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px rgba(30, 30, 30, 0.5);
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    text-shadow: 1px 0 1px black;
+    /*	animação	*/
+    transition: 0.3s;
+}
+
+.painel button:hover {
+    background-color: #393939;
+    box-shadow: 1px 0 20px rgba(200, 200, 120, 0.9);
+    cursor: pointer;
+}
+
+.painel button {
+    /*	posicionamento	*/
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.painel button::after {
+    /*	elemento	vazio	*/
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    /*	triângulo	*/
+    border-top: 10px solid #333;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    /*	posicionamento	*/
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    /*	animação	*/
+    transition: 0.3s;
+}
+
+.painel button:hover::after {
+    border-top-color: #393939;
+}

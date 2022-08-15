@@ -1,0 +1,385 @@
+/* INÍCIO - Elementos gerais */ 
+body{
+    color: #333333;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 940px;
+}
+
+h3{
+    background-color: #F2EDED;
+}
+
+/*"container" no container, no painéis flutuantes*/
+.container	{ 
+    margin: 0	auto;
+    width: 940px;
+}
+
+/* FIM - Elementos gerais */
+
+/* INÍCIO - Header */
+
+header {
+    position: relative;
+}
+
+/*"container-header" no header*/
+.container-header	{
+    margin: 0	auto;
+    width: 940px;
+}
+
+.sacola{
+    background-image: url(../img/sacola.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    font-size: 14px;
+    padding-right: 30px;
+    text-align: right;
+    width: 140px;
+    /* sacola deve estar posicionada a direita e no topo */
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* sacola deve estar posicionada a direita e no topo */
+} 
+
+.menu-opcoes{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.menu-opcoes ul li	{
+    display:	inline;
+    margin-left: 20px;    
+}
+
+.menu-opcoes ul{
+    font-size: 15px;
+}
+
+.menu-opcoes a{
+    color: #003366;    
+    text-decoration: none;
+} 
+
+.menu-opcoes a:hover{
+    color: #007dc6;
+}
+
+.menu-opcoes a:active { 
+    color: #867dc6;
+}
+
+.cores label img{
+    display: block;
+    max-width: 100%;
+}
+
+.produto	{
+    color: #333;
+    line-height: 1.3;
+    margin-top: 2em;
+}
+
+.produto h1{
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.produto p{
+    font-size: 1.2em;
+    font-style: italic;
+    margin-bottom: 1em;
+}
+
+.produto legend {
+    display: block;
+    font: bold 0.9em/2.5 Arial;
+    text-transform: uppercase;
+}
+
+.comprar	{
+    background: #91BD3C;
+    border:	none;
+    color: #333;
+    font-size: 1.4em;
+    text-transform:	uppercase;
+    box-shadow: 0 1px 3px #777;
+    display:	block;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+}
+
+/* FIM - Header */
+
+/* Main */
+
+.cores label::after	{
+    border: 6px	solid rgba(0,0,0,0);
+    transition: 1s;
+    content: '';		
+    display:	block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.cores label:hover::after{
+    border: 6px	solid rgba(0,0,0,0.1);
+}
+
+label[for=verde]::after	{
+    background-color: #33CC66;
+}
+
+label[for=rosa]::after	{
+    background-color: #FF6666;
+}
+
+label[for=azul]::after	{
+    background-color: #6666FF;
+}
+
+label[for=verde]::after	{
+    left: 0;
+}
+label[for=rosa]::after	{
+    left: 60px;
+}
+label[for=azul]::after	{
+    left: 120px;
+}
+
+.cores input:checked + label::after	{
+    border: 6px	solid rgba(0,0,0,0.3);
+}
+
+.cores label::after	{
+    box-sizing:	border-box;
+}
+
+.cores input[type=radio]{
+    display: none;
+}
+
+.cores input:not(:checked) + label img {
+    display: none;
+}
+
+.cores label::after{
+    position: absolute;
+    top: 30px;
+}
+
+.cores{
+    position: relative;
+    padding-top: 90px;
+}
+
+/* FIM - Main */
+
+/* INÍCIO - rodapé */
+
+footer{
+    background-image: url(../img/fundo-rodape.png);
+    clear: both;
+    padding: 15px 0;
+}
+
+/* "container-rodape" no footer */
+footer .container-rodape {
+    position: relative; 
+}
+
+.container-rodape .image-copy{
+    color: white;  
+}
+
+footer img{
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.social {
+    position: absolute;
+    top: 2px;
+    right: 15px;
+}
+
+.social li { 
+    float: left;
+    margin-left: 25px;
+}
+
+.social a {
+    /* tamanho da imagem */
+    height: 32px;
+    width: 32px;
+    /* image replacement */
+    display: block;
+    text-indent: -9999px;
+}
+
+.social a[href*="github.com"]{
+    background-image: url(../img/github.png);
+}
+
+.social a[href*="medium.com"]{
+    background-image: url(../img/medium.png);
+}
+
+.social a[href*="instagram.com"]{
+    background-image: url(../img/instagram.png);
+}
+
+.social a[href*="facebook.com"]{
+    background-image: url(../img/facebook.png);
+}
+
+.social a[href*="twitter.com"]{
+    background-image: url(../img/twitter.png);
+}
+
+/* FIM - rodapé */ 
+
+/* Medias Queries - min-width: 630px */
+
+@media (min-width: 630px){
+
+    .produto	{
+        /*	
+            a	foto	vai	se	posicionar	absolutamente	
+            com	relação	a	esse	elemento,
+            por	isso	preciso	estar	posicionado	
+        */
+        position:	relative;
+        /*	deixar	40%	de	espaço	em	branco	na	esquerda	
+            para	foto	ocupar	
+        */
+        padding-left: 40%;
+        font-size: 1.2em;
+    }
+
+    .cores	{
+        /*	estava	relative	antes;	reinicio	para	static	para	evitar	que	a	foto	se	posicione	com	relaçã
+        o	a	mim	*/
+        position:	static;
+        /*	zerando	o	padding-top	que	tinha	antes	e	não	preciso	mais	*/
+        padding: 0;
+    }
+    .cores legend	{
+        /*	estava	absolute	antes,	para	ter	o	mesmo	comportamento	no	Chrome	e	no	Firefox;
+                            agora	podemos	voltar	ao	fluxo	da	página	*/
+        position:	static;
+    }
+    .cores label img	{
+        /*	
+            imagem	se	posiciona	absolutamente	à	esquerda	
+            com	relação	ao	.produto	*/
+        max-width: 35%;
+        max-height: 100%;
+        position:	absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .cores label::after	{
+        /*	
+            as	bolinhas	coloridas	tinham	posição	absoluta	
+            e	não	precisamos	mais,
+            basta	flutuar	uma	do	lado	da	outra	*/
+        position:	static;
+        float:	left;
+        margin-right: 10px;
+    }
+
+    fieldset {
+        display: inline-block;
+        vertical-align: top;
+        margin: 1em 0;
+        min-width: 240px;
+        width: 45%;
+    }
+
+}
+
+/* FIM - Media Queries */
+
+.detalhes {
+    padding: 2em 0;
+}
+
+.detalhes h2{    
+    font-size: 1.5em;
+    line-height: 2;
+}
+
+.detalhes p{
+    margin: 1em 0;
+    font-size: 1em;
+    line-height: 1.5;
+    max-width: 36em;
+}
+
+@media (min-width: 500px) {
+    .detalhes {
+        font-size: 1.2em;
+    }
+}
+
+table {
+    border-spacing: 01.2em;
+    border-collapse: separate;
+}
+
+thead {
+    background-color: #999;
+}
+
+thead th {
+    font-weight: bold;
+    padding: 0.3em 1em;
+    text-align: center;
+}
+
+td {
+    padding: 0.3em;
+}
+
+tr:nth-child(2n) {
+    background-color: #ccc;
+}
+
+td:first-child {
+    font-style:italic;
+}
+
+.produto-back {
+    background-color: #f2f2f2;
+    margin-top: 1em;
+    border-top: 2px solid #ccc;
+}
+
+.cores label img{
+    border: 2px solid #ccc;
+}
+
+.form-control:invalid {
+    border: 1px	solid #CC0000;
+}
+
+.tamanhos {
+    display: inline-block;
+    height: 44px;
+    width: 44px;
+    line-height: 44px;
+    text-align:	center;
+    border: 3px	solid	#666;
+    border-radius: 50%;
+    color: #555;
+}

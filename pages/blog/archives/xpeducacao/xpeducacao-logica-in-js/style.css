@@ -1,0 +1,14 @@
+body {
+    font-family: sans-serif;
+    background: rgb(133, 92, 92);
+    color: azure;
+  }
+  
+  .container{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin: 20px auto 20px;
+  }
+  

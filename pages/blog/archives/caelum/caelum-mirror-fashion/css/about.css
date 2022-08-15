@@ -1,0 +1,219 @@
+/* INÍCIO - Elementos gerais */
+
+body{ 
+    color: #333333;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 940px;
+}
+
+h2{ /* Subtítulo H2 */
+    border-bottom: 2px solid #333333;
+    margin-top: 30px;
+}
+
+h3{
+    background-color: #F2EDED;
+}
+/* FIM - Elementos gerais */
+
+/* INÍCIO - Header */
+
+header {
+    position: relative;
+}
+
+p::first-letter{
+    font-weight: bold;
+}
+
+h1 + p {
+    text-indent: 0;
+}
+
+:not(p) + p::first-line{
+    font-variant: small-caps;
+}
+
+.container	{
+    margin: 0	auto;
+    width: 940px;
+}
+
+.sacola{
+    background-image: url(../img/sacola.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    font-size: 14px;
+    padding-right: 30px;
+    text-align: right;
+    width: 140px;
+    /* sacola deve estar posicionada a direita e no topo */
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* sacola deve estar posicionada a direita e no topo */
+} 
+
+.menu-opcoes{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.menu-opcoes ul li	{
+    display:	inline;
+    margin-left: 20px;
+}
+
+.menu-opcoes ul{
+    font-size: 15px;
+    
+}
+
+.menu-opcoes a{
+    color: #003366;
+    text-decoration: none;
+} 
+
+/* FIM - Header */
+
+/* INÍCIO - Introdução */
+
+#topo-da-pagina  { /* título H1 */
+    background-image: url(../img/sobre-background.jpg);
+    padding: 10px;
+}
+
+#centro-distribuicao{/* estilização dessa foto */
+    margin-left: auto;
+    margin-right: auto;
+    width: 542px;
+}
+
+p.textos{    
+    padding: 0 45px;
+    margin: 30px;
+    text-indent: 15px;
+    height: auto;
+    width: auto;
+    text-align: left;
+    background-color: #fffcfc
+}
+
+.loja-mirror{/* box de todas as figuras */
+    background-color: #F2EDED;
+    border: 1px	solid #ccc;
+    text-align:	center;
+    padding: 15px;
+    margin-bottom: 12px;
+}
+
+.loja-mirror span{
+    font-style: italic;
+    padding: 3px;
+    margin: 1px;
+}
+/* FIM - Introdução */
+
+/* INÍCIO - História */
+
+#familia-pelho{ /* estilização dessa foto */
+    float: right;
+    margin: 0 10px 20px 30px;
+}
+
+
+figcaption{/* legenda de todas as figuras */
+    font-style: italic;
+    padding: 3px;
+    margin: 1px;
+} 
+
+/* FIM - História */
+
+/* INÍCIO - Diferenciais */
+
+div.textos-bloco{
+    padding: 0 45px;
+    margin: 30px;
+    text-indent: 15px;
+    height: auto;
+    width: auto;
+    text-align: left;
+    background-color: #fffcfc
+}
+
+/* FIM - Diferenciais */
+
+/* INÍCIO - mapa da pagina */
+
+.mapadapagina{/* mapa de site */
+    padding-left: 15px;
+}
+
+/* FIM - mapa da pagina */
+
+/* INÍCIO - rodapé */
+
+footer{
+    background-image: url(../img/fundo-rodape.png);
+    clear: both;
+    padding: 15px 0;
+}
+
+footer .container-rodape {
+    position: relative; 
+}
+
+.container-rodape .image-copy{
+    color: white;  
+}
+
+footer img{
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.social {
+    position: absolute;
+    top: 2px;
+    right: 15px;
+}
+
+.social li { 
+    float: left;
+    margin-left: 25px;
+}
+
+.social a {
+    /* tamanho da imagem */
+    height: 32px;
+    width: 32px;
+    /* image replacement */
+    display: block;
+    text-indent: -9999px;
+}
+
+.social a[href*="github.com"]{
+    background-image: url(../img/github.png);
+}
+
+.social a[href*="medium.com"]{
+    background-image: url(../img/medium.png);
+}
+
+.social a[href*="instagram.com"]{
+    background-image: url(../img/instagram.png);
+}
+
+.social a[href*="facebook.com"]{
+    background-image: url(../img/facebook.png);
+}
+
+.social a[href*="twitter.com"]{
+    background-image: url(../img/twitter.png);
+}
+
+/* FIM - rodapé */ 
