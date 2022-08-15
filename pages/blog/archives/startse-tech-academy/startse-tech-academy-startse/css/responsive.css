@@ -1,0 +1,141 @@
+@media (max-width: 1000px) {
+    main .container-main div {
+        margin: auto;
+    }
+
+    main .container-main img {
+        display: none;
+    }
+
+    h2 {
+        margin-left: 50px;
+    }
+
+    div h3 {
+        margin-left: 50px;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding-top: 30px;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    input {
+        margin: 12px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        padding: 0px 20px;
+    }
+}
+
+@media (max-width: 630px) {
+
+    .menu-button-container {
+        display: flex
+    }
+
+    .menu {
+        position: absolute;
+        margin-top: 30px;
+        flex-direction: column;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        left: 100%;
+        transform: translateX(100vw);
+        transition: 0.5s ease transform;
+    }
+
+    .menu>li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0px;
+        width: 100%;
+        color: white;
+        background-color: #0080ed;
+        border-radius: 5px;
+    }
+
+    .menu>li:not(:last-child) {
+        border-bottom: 1px solid white;
+    }
+
+    .menu li a {
+        flex: 1;
+        text-align: center;
+    }
+
+    main .container-menu img {
+        display: none;
+    }
+
+    label {
+        cursor: pointer;
+        position: relative;
+        display: block;
+        height: 22px;
+        width: 30px;
+    }
+
+    label span {
+        position: absolute;
+        display: block;
+        height: 5px;
+        width: 100%;
+        background: white;
+        border-radius: 30px;
+        transition: 0.25s ease-in-out;
+    }
+
+    label span:nth-child(1) {
+        top: 0;
+    }
+
+    label span:nth-child(2) {
+        top: 8px;
+    }
+
+    label span:nth-child(3) {
+        top: 16px;
+    }
+
+    #checkbox-menu:checked+label span:nth-child(1) {
+        transform: rotate(-45deg);
+        top: 8px
+    }
+
+    #checkbox-menu:checked+label span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #checkbox-menu:checked+label span:nth-child(3) {
+        transform: rotate(45deg);
+        top: 8px
+    }
+
+    nav.menu {
+        width: 100%;
+    }
+
+    #checkbox-menu:checked~nav .menu {
+        transform: translateX(-100vw);
+        transition: 0.5s ease transform;
+    }
+
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .desafio .column, .desafio input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}

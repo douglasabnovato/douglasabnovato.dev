@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev JS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="toLoad()">
+    <header>
+      <h1>Calcular Tabuada</h1>
+    </header>
+    <section>
+      <div class="calculando">
+        <p>
+          Número:
+          <input type="number" name="intabuada" id="intabuada" />
+          <input type="button" value="Gerar Tabuada" onclick="toCalculate()" />
+        </p>
+      </div>
+      <div class="calculado" id="selectcalcular">
+        <select name="tabuada" id="tabuada" size="11">
+          <option>Digite a tabuada que quer vez.</option>
+        </select>
+      </div>
+    </section>
+    <header>
+      <h1>Vamos contar</h1>
+    </header>
+    <section class="contar">
+      <div class="contando" id="dados">
+        <p>
+          Início:
+          <input type="number" name="start" id="start" min="0" />
+        </p>
+        <p>
+          Fim:
+          <input type="number" name="end" id="end" min="0" />
+        </p>
+        <p>
+          Passo:
+          <input type="number" name="step" id="step" min="0" />
+        </p>
+        <p>
+          <input type="button" value="Contar" onclick="toCount()" />
+        </p>
+      </div>
+      <div class="contado" id="contar-dados">Preparando contagem...</div>
+    </section>
+    <header>
+      <h1>Verificador de Idade</h1>
+    </header>
+    <section class="age">
+      <div class="data">
+        <p>
+          Ano de Nascimento:
+          <input type="number" name="txtyear" id="txtyear" min="0" />
+        </p>
+        <p>
+          Sexo:
+          <input type="radio" name="radsex" id="mas" checked />
+          <label for="mas">Masculino</label>
+          <input type="radio" name="radsex" id="fem" />
+          <label for="fem">Feminino</label>
+        </p>
+        <p>
+          <input type="button" value="Verificar" onclick="toCheck()" />
+        </p>
+      </div>
+      <div id="response">Preencha os dados acima para ver o resultado.</div>
+    </section>
+    <header>
+      <h1>Hora do dia</h1>
+    </header>
+    <section class="day">
+      <div id="message">Aqui é a mensagem</div>
+      <div id="photo">
+        <img
+          id="image"
+          class="image"
+          src="./assets/manha-1.jpeg"
+          alt="paisagem da manhã"
+        />
+      </div>
+    </section>
+    <footer>
+      <p>&copy; douglasabnovato</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
