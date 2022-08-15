@@ -28,16 +28,16 @@ Onde tem a descrição de tudo o que esse projeto se propõe a ter quando termin
 
 O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atualizada está na master, versões anteriores possuem suas respectivas versões em branches nomeadas.
 
-## 🎨 Versões Layout
+## 🎨 Layout - Web Responsive - v5.0
 
-- [ ] 1. Meu portfólio - com os repositórios do github
-- [ ] 2. Meu blog - com os artigos do medium
-- [ ] 3. Hack Ser Dev - uma timeline de conteúdo e rotina para dev
-
-- [ ] Item do menu Meu portfólio - com os repositórios do github
-- [ ] Item do menu Meu blog - com os artigos do medium
-- [ ] Item do menu Hack Ser Dev - uma timeline de conteúdo e rotina para dev
-- [ ] fazer a rota "/" como uma home com um design
+- [ ] 1. / - a home com design da inspiração
+- [ ] 2. Blog - os artigos do medium
+- [ ] 3. Códigos - os repositórios do github
+- [ ] 4. Projetos - as aplicações hospedadas
+- [ ] 5. Hack Developer - uma trilha ordena de conteúdo e rotina
+- [ ] 6. Sobre Mim - apresentação e habilidades
+- [ ] 7. Uses - o setup que utilizei, utilizo e estou construindo
+- [ ] 8. Updates - treinamentos, experiências, certificações e eventos
 
 Referências 
 - [web.dev / Learn Responsive Design](https://web.dev/learn/design/)
