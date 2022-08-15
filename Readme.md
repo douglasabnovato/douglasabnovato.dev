@@ -18,12 +18,10 @@
 
 ♻️ douglasabnovato.dev
 
+Uma página para demonstrar minha experiência teórica e prática centralizando o que gosto de fazer.
+
 Uma página para demonstrar meus projeto de código e artigos.
 Também uma sugestão de conteúdos da internet, organizados de forma progressiva.
-
-1. Meu portfólio - com os repositórios do github
-2. Meu blog - com os artigos do medium
-3. Hack Ser Dev - uma timeline de conteúdo e rotina para dev
 
 A gestão das tarefas para completar esse projeto está no "Project Board" desse repositório.
 Onde tem a descrição de tudo o que esse projeto se propõe a ter quando terminado.
@@ -32,9 +30,9 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 
 ## 🎨 Versões Layout
 
-Criar uma aplicação com a url igual ao do perfil para ser meu portfólio.
-
-### Próximo passo
+- [ ] 1. Meu portfólio - com os repositórios do github
+- [ ] 2. Meu blog - com os artigos do medium
+- [ ] 3. Hack Ser Dev - uma timeline de conteúdo e rotina para dev
 
 - [ ] Item do menu Meu portfólio - com os repositórios do github
 - [ ] Item do menu Meu blog - com os artigos do medium
