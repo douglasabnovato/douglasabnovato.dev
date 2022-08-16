@@ -28,7 +28,7 @@ Onde tem a descrição de tudo o que esse projeto se propõe a ter quando termin
 
 O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atualizada está na master, versões anteriores possuem suas respectivas versões em branches nomeadas.
 
-## 🎨 Layout - Web Responsive - v5.0
+## 🎨 Layout - v5.0 - Site
 
 - [ ] 1. / - a home com design da inspiração
 - [ ] 2. Blog - os artigos do medium
@@ -39,6 +39,7 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 - [ ] 7. Uses - o setup que utilizei, utilizo e estou construindo
 - [ ] 8. Updates - treinamentos, experiências, certificações e eventos
 - [x] 9. Navegação do menu sidebar com rotas para os itens e logo 
+- [ ] 10. Uma tela de em construção para as páginas conforme o item do sidebar não terminadas
 
 Referências 
 - [web.dev / Learn Responsive Design](https://web.dev/learn/design/)
