@@ -100,6 +100,14 @@ fieldset {
     padding: .35em .75em .625em
 }
 
+.text-p {
+    margin-bottom: 15px;
+}
+
+.text-p-1 {
+    margin-top: 25px;
+}
+
 legend {
     box-sizing: border-box;
     color: inherit;

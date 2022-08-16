@@ -30,7 +30,7 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 
 ## 🎨 Layout - v5.0 - Site
 
-- [ ] 1. / - a home será um resumo do que teremos em todo o portfólio com dois tópicos em cada
+- [ ] 1. / - a home será um resumo do que teremos em todo o portfólio com dois tópicos em cada: breve apresentação, melhores códigos de repositórios no github, melhores textos de artigos no medium,
 - [ ] 2. Blog - os artigos do medium
 - [x] 3. Códigos - os repositórios do github
 - [ ] 4. Projetos - as aplicações hospedadas
