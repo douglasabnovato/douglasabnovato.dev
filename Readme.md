@@ -41,6 +41,7 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 - [x] 10. Uma tela de em manutenção para as páginas conforme o item do sidebar não terminadas
 - [ ] 11. Loader nas páginas com requisição: codigos, blog
 - [ ] 12. Footer com status da sidebar close ou open
+- [ ] 13. Navegação piscando entre páginas
 
 ## 🎨 Versões Layout
 
