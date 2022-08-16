@@ -32,7 +32,7 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 
 - [ ] 1. / - a home com design da inspiração
 - [ ] 2. Blog - os artigos do medium
-- [ ] 3. Códigos - os repositórios do github
+- [x] 3. Códigos - os repositórios do github
 - [ ] 4. Projetos - as aplicações hospedadas
 - [ ] 5. Hack Developer - uma trilha ordena de conteúdo e rotina
 - [ ] 6. Sobre Mim - apresentação e habilidades
