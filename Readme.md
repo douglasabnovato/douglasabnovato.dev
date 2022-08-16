@@ -26,9 +26,7 @@ Também uma sugestão de conteúdos da internet, organizados de forma progressiv
 A gestão das tarefas para completar esse projeto está no "Project Board" desse repositório.
 Onde tem a descrição de tudo o que esse projeto se propõe a ter quando terminado.
 
-O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atualizada está na master, versões anteriores possuem suas respectivas versões em branches nomeadas.
-
-<<<<<<< HEAD
+O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atualizada está na master, versões anteriores possuem suas respectivas versões em branches nomeadas. 
 ## 🎨 Layout - v5.0 - Site
 
 - [ ] 1. / - a home será um resumo do que teremos em todo o portfólio com dois tópicos em cada: breve apresentação, melhores códigos de repositórios no github, melhores textos de artigos no medium,
@@ -42,7 +40,8 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 - [x] 9. Navegação do menu sidebar com rotas para os itens e logo 
 - [x] 10. Uma tela de em manutenção para as páginas conforme o item do sidebar não terminadas
 - [ ] 11. Loader nas páginas com requisição: codigos, blog
-=======
+- [ ] 12. Footer com status da sidebar close ou open
+
 ## 🎨 Versões Layout
 
 - [ ] 1. Meu portfólio - com os repositórios do github
@@ -52,7 +51,6 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 
 Estrutura
 - git flow: master, developer, nomesDasVersoes
->>>>>>> developer
 
 Referências 
 - [web.dev / Learn Responsive Design](https://web.dev/learn/design/)
