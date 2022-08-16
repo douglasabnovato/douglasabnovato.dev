@@ -28,6 +28,7 @@ Onde tem a descrição de tudo o que esse projeto se propõe a ter quando termin
 
 O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atualizada está na master, versões anteriores possuem suas respectivas versões em branches nomeadas.
 
+<<<<<<< HEAD
 ## 🎨 Layout - v5.0 - Site
 
 - [ ] 1. / - a home será um resumo do que teremos em todo o portfólio com dois tópicos em cada: breve apresentação, melhores códigos de repositórios no github, melhores textos de artigos no medium,
@@ -41,6 +42,17 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 - [x] 9. Navegação do menu sidebar com rotas para os itens e logo 
 - [x] 10. Uma tela de em manutenção para as páginas conforme o item do sidebar não terminadas
 - [ ] 11. Loader nas páginas com requisição: codigos, blog
+=======
+## 🎨 Versões Layout
+
+- [ ] 1. Meu portfólio - com os repositórios do github
+- [ ] 2. Meu blog - com os artigos do medium
+- [ ] 3. Hack Ser Dev - uma timeline de conteúdo e rotina para dev
+- [ ] 4. fazer a rota "/" como uma home com um design
+
+Estrutura
+- git flow: master, developer, nomesDasVersoes
+>>>>>>> developer
 
 Referências 
 - [web.dev / Learn Responsive Design](https://web.dev/learn/design/)
