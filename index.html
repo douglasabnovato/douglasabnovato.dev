@@ -32,9 +32,42 @@
       href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
       rel="stylesheet"
     />
+    
     <title>douglasabnovato.dev</title>
+    <style type="text/css">
+      @font-face {
+        font-weight: 400;
+        font-style:  normal;
+        font-family: 'Circular-Loom';
+      
+        src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2') format('woff2');
+      }
+      
+      @font-face {
+        font-weight: 500;
+        font-style:  normal;
+        font-family: 'Circular-Loom';
+      
+        src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Medium-d74eac43c78bd5852478998ce63dceb3.woff2') format('woff2');
+      }
+      
+      @font-face {
+        font-weight: 700;
+        font-style:  normal;
+        font-family: 'Circular-Loom';
+      
+        src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Bold-83b8ceaf77f49c7cffa44107561909e4.woff2') format('woff2');
+      }
+      
+      @font-face {
+        font-weight: 900;
+        font-style:  normal;
+        font-family: 'Circular-Loom';
+      
+        src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Black-bf067ecb8aa777ceb6df7d72226febca.woff2') format('woff2');
+      }</style>
   </head>
-  <body>
+  <body class="bg-theme-black font-copy white page-width center">
     <nav class="sidebar">
       <header>
         <div id="home" class="image-text">
@@ -117,8 +150,385 @@
       </div>
     </nav>
     <main class="home-page">
-      <h1 style="color: white;">Home</h1>
+      <section
+        style="color: white"
+        class="pb5 relative bg-theme-dark-red"
+        id="about"
+      >
+        <div class="h025 bg-theme-orange-to-red"></div>
+        <div class="mw9 ph3 center">
+          <h2 class="font-heading fw4 f2 mb0">Olá, eu sou o Douglas. </h2>
+          <div class="flex justify-between flex-column flex-row-l items-start">
+            <div class="order-1 order-0-l prose w-40-l">
+              <p>
+                Estou desenvolvendo soluções ...
+              </p>
+              <p>
+                Sendo feliz muitas vezes, outras nem tanto, desenvolvendo códigos.
+              </p>
+              <p>
+                Ganhei meu primeiro computador em 2001, com doze anos. Na época, fica super feliz com textos no word, apresentações em power point e jogar Doom, Tibia e Aladdin. 
+              </p>
+              <p>
+                Hoje, com objetivos para carreira e para rotinas que vão sendo realizados graças ao <a
+                href="https://github.com/douglasabnovato"
+                target="_blank"
+                title="O meu perfil no Github"
+                rel="noopener"
+                >Javascript</a
+              >.
+              </p>
+            </div>
+            <img
+              class="order-0 order-1-l ml0 ml4-l w-80 w-50-ns"
+              src="./assets/programming.svg"
+              alt="Programming at a desk"
+            />
+          </div>
+        </div>
+        <div class="absolute left-0 bottom-1 w-100 tc lh-icon">
+          <a
+            class="pa2 f2 theme-dark-grey hover-text-gradient hover-theme-grey-to-green no-underline"
+            href="#projects"
+            title="My Projects"
+            aria-label="Next Section: My Projects"
+            ><span class="fal fa-angle-double-down"></span
+          ></a>
+        </div>
+      </section>
+      <section class="pb5 relative bg-theme-dark-purple" id="projects">
+        <div class="h025 bg-theme-peach-to-purple"></div>
+        <div class="mw9 ph3 center">
+          <h2 class="font-heading fw4 f2 mb0">Meus Códigos</h2>
+          <p class="mw7">
+            Os melhores dos meus repositórios de código aberto em que estou aperfeiçoando.
+          </p>
+          <div class="flex flex-wrap">
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                class="card hover-pop theme-light-grey hover-theme-peach hover-gradient hover-theme-grey-to-peach-purple pa1 no-underline flex w-100"
+                target="_blank"
+                href="https://www.mongoframework.com/"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-purple-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      douglasabnovato.dev
+                    </h3>
+                    <p class="mv0">
+                      An "Entity Framework"-like interface for the MongoDB .NET
+                      Driver. What started as an internal project for my
+                      business, it has become one of my larger open source
+                      libraries.
+                    </p>
+                  </div>
+                  <span class="mt3">Ver o Repositório</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                class="card hover-pop theme-light-grey hover-theme-peach hover-gradient hover-theme-grey-to-peach-purple pa1 no-underline flex w-100"
+                target="_blank"
+                href="https://www.infinitycrawler.com/"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-purple-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      Coffee
+                    </h3>
+                    <p class="mv0">
+                      A simple but powerful "polite" web crawler library for
+                      .NET developers. Doesn't have dashboards or require a
+                      database - it keeps it simple.
+                    </p>
+                  </div>
+                  <span class="mt3">Ver o Repositório</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                class="card hover-pop theme-light-grey hover-theme-peach hover-gradient hover-theme-grey-to-peach-purple pa1 no-underline flex w-100"
+                target="_blank"
+                href="https://www.cachetower.com/"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-purple-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      Crachá Virtual
+                    </h3>
+                    <p class="mv0">
+                      An efficient multi-layered caching system for .NET
+                      projects. Inspired from a blog post, this has become a
+                      popular caching tool.
+                    </p>
+                  </div>
+                  <span class="mt3">Ver o Repositório</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                class="card hover-pop theme-light-grey hover-theme-peach hover-gradient hover-theme-grey-to-peach-purple pa1 no-underline flex w-100"
+                target="_blank"
+                href="https://github.com/Turnerj/Quickenshtein#quickenshtein"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-purple-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      Dev Finances
+                    </h3>
+                    <p class="mv0">
+                      An extremely optimized .NET Levenshtein Distance
+                      calculator. Uses the various techniques I cover in my
+                      Levenshtein Distance blog posts and then some.
+                    </p>
+                  </div>
+                  <span class="mt3">Ver o Repositório</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                class="card hover-pop theme-light-grey hover-theme-peach hover-gradient hover-theme-grey-to-peach-purple pa1 no-underline flex w-100"
+                target="_blank"
+                href="https://github.com/TurnerSoftware/RobotsExclusionTools"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-purple-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      Meu Salão
+                    </h3>
+                    <p class="mv0">
+                      A .NET library to parse "robots.txt" - used by Infinity
+                      Crawler and my Sitemap Tools libraries. It makes it easy
+                      to check whether a URL is allowed to be crawled or not.
+                    </p>
+                  </div>
+                  <span class="mt3">Ver o Repositório</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                class="card hover-pop theme-light-grey hover-theme-peach hover-gradient hover-theme-grey-to-peach-purple pa1 no-underline flex w-100"
+                target="_blank"
+                href="https://github.com/TurnerSoftware/SitemapTools"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-purple-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      Feedback Widget
+                    </h3>
+                    <p class="mv0">
+                      A sitemap (sitemap.xml) parsing and querying library for
+                      .NET projects. I needed a simple tool for a simple task -
+                      processing sitemaps - and this fits it nicely.
+                    </p>
+                  </div>
+                  <span class="mt3">Ver o Repositório</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="tc mt3">
+          <a
+            href="/projects"
+            class="dib br2 hover-gradient hover-theme-grey-to-light-purple-blue pa1 no-underline"
+          >
+            <div class="dib ph3 pv2 bg-black-80 white">Ver todos os meus códigos do Github</div>
+          </a>
+        </div>
+        <div class="absolute left-0 bottom-1 w-100 tc lh-icon">
+          <a
+            class="pa2 f2 theme-dark-grey hover-text-gradient hover-theme-grey-to-green no-underline"
+            href="#posts"
+            title="My Posts"
+            aria-label="Next Section: My Posts"
+            ><span class="fal fa-angle-double-down"></span
+          ></a>
+        </div>
+      </section>
+      <section class="pb5 relative bg-theme-dark-blue" id="posts">
+        <div class="h025 bg-theme-light-purple-to-blue"></div>
+        <div class="mw9 ph3 center">
+          <h2 class="font-heading fw4 f2 mb0">Posts</h2>
+          <p class="prose mw7">
+            While not as important to me as my open source work, I do like
+            writing blog posts about a variety of different topics. From
+            <a href="/blog/levenshtein-distance-part-1-what-is-it"
+              >Levenshtein Distance</a
+            >
+            to the pitfalls of
+            <a href="/blog/when-you-diy-a-time-zone-library"
+              >designing your own Timezone Library</a
+            >, I try to share a little bit of knowledge or information that
+            might help someone. Here are some of the recent posts I have done:
+          </p>
+          <div class="flex flex-wrap">
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                href="/blog/csharp-source-generator-pain-points-february-2022-update"
+                class="card hover-pop theme-light-grey hover-theme-light-purple hover-gradient hover-theme-grey-to-light-purple-blue pa1 no-underline flex w-100"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-blue-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      The pain points of C# source generators: February 2022
+                      Update
+                    </h3>
+                    <p class="mv0 measure-narrow">
+                      Ten months on from my original post, a quick update on
+                      things.
+                    </p>
+                  </div>
+                  <span class="mt3">Read Post</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                href="/blog/fixing-bf1942-with-win32"
+                class="card hover-pop theme-light-grey hover-theme-light-purple hover-gradient hover-theme-grey-to-light-purple-blue pa1 no-underline flex w-100"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-blue-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      Fixing my BF1942 woes with Win32 APIs
+                    </h3>
+                    <p class="mv0 measure-narrow">
+                      Fullscreen didn't work and window mode was bugged. Thought
+                      I'd try programming a solution - mix things up a little.
+                    </p>
+                  </div>
+                  <span class="mt3">Read Post</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                href="/blog/fun-with-flags-enums-and-bit-shifting"
+                class="card hover-pop theme-light-grey hover-theme-light-purple hover-gradient hover-theme-grey-to-light-purple-blue pa1 no-underline flex w-100"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-blue-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      Fun with Flags, Enums and Bit Shifting
+                    </h3>
+                    <p class="mv0 measure-narrow">
+                      Vexillology and bit shifting are not talked about together
+                      - until now.
+                    </p>
+                  </div>
+                  <span class="mt3">Read Post</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                href="/blog/remote-desktop-experience-part-1-planning"
+                class="card hover-pop theme-light-grey hover-theme-light-purple hover-gradient hover-theme-grey-to-light-purple-blue pa1 no-underline flex w-100"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-blue-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      My Ideal Desktop Experience via a Remote Machine
+                    </h3>
+                    <p class="mv0 measure-narrow">
+                      Planning my desktop experience to run on a remote server.
+                    </p>
+                  </div>
+                  <span class="mt3">Read Post</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                href="/blog/the-pain-points-of-csharp-source-generators"
+                class="card hover-pop theme-light-grey hover-theme-light-purple hover-gradient hover-theme-grey-to-light-purple-blue pa1 no-underline flex w-100"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-blue-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      The pain points of C# source generators
+                    </h3>
+                    <p class="mv0 measure-narrow">
+                      With great power can come great pain points...
+                    </p>
+                  </div>
+                  <span class="mt3">Read Post</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                href="/blog/a-better-mousetrap"
+                class="card hover-pop theme-light-grey hover-theme-light-purple hover-gradient hover-theme-grey-to-light-purple-blue pa1 no-underline flex w-100"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-blue-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      A Better Mousetrap
+                    </h3>
+                    <p class="mv0 measure-narrow">
+                      My journey to launch a product and take the next steps in
+                      my career
+                    </p>
+                  </div>
+                  <span class="mt3">Read Post</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="tc mt3">
+            <a
+              href="/blog"
+              class="dib br2 hover-gradient hover-theme-grey-to-light-purple-blue pa1 no-underline"
+            >
+              <div class="dib ph3 pv2 bg-black-80 white">View All Posts</div>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer>
+      <div class="h025 bg-theme-orange-to-red"></div>
+      <div class="pv2 tc f6">Copyright 2022 - James Turner</div>
+    </footer>
+    <a
+      class="js-scrolltop fixed bottom-1 right-1 bg-theme-dark-grey white pa1 f4 z-1 scroll-fade-in o-50 hover-o-100"
+      title="Scroll to Top"
+      aria-label="Scroll to Top"
+      href="#top"
+    >
+      <span class="fal fa-fw fa-arrow-to-top"></span>
+    </a>
     <script src="./javascript/main.js"></script>
     <script src="./javascript/home.js"></script>
     <script src="./javascript/sidebar.js"></script>

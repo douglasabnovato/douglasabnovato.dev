@@ -49,7 +49,8 @@ Referências
 - [web.dev / Learn pwa](https://web.dev/learn/pwa/)
 
 Inspiração 
-- [marc.dev](https://marc.dev/blog/page/2/)
+- [marc.dev](https://marc.dev/)
+- [turnerj](https://turnerj.com/)
 
 ### Web Responsive - v4.2
 
