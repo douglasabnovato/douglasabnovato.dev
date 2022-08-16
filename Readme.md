@@ -37,7 +37,7 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 - [ ] 5. Hack Developer - uma trilha ordena de conteúdo e rotina
 - [ ] 6. Sobre Mim - apresentação e habilidades
 - [ ] 7. Uses - o setup que utilizei, utilizo e estou construindo
-- [ ] 8. Updates - treinamentos, experiências, certificações e eventos
+- [x] 8. Updates - treinamentos, experiências, certificações e eventos
 - [x] 9. Navegação do menu sidebar com rotas para os itens e logo 
 - [x] 10. Uma tela de em manutenção para as páginas conforme o item do sidebar não terminadas
 
