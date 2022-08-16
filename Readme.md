@@ -38,6 +38,7 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 - [ ] 6. Sobre Mim - apresentação e habilidades
 - [ ] 7. Uses - o setup que utilizei, utilizo e estou construindo
 - [ ] 8. Updates - treinamentos, experiências, certificações e eventos
+- [x] 9. Navegação do menu sidebar com rotas para os itens e logo 
 
 Referências 
 - [web.dev / Learn Responsive Design](https://web.dev/learn/design/)
