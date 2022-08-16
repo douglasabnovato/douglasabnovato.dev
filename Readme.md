@@ -35,6 +35,9 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 - [ ] 3. Hack Ser Dev - uma timeline de conteúdo e rotina para dev
 - [ ] 4. fazer a rota "/" como uma home com um design
 
+Estrutura
+- git flow: master, developer, nomesDasVersoes
+
 Referências 
 - [web.dev / Learn Responsive Design](https://web.dev/learn/design/)
 - [web.dev / Learn Css](https://web.dev/learn/css/)
