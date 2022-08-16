@@ -31,9 +31,9 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 ## 🎨 Layout - v5.0 - Site
 
 - [ ] 1. / - a home será um resumo do que teremos em todo o portfólio com dois tópicos em cada: breve apresentação, melhores códigos de repositórios no github, melhores textos de artigos no medium,
-- [ ] 2. Blog - os artigos do medium
-- [x] 3. Códigos - os repositórios do github
-- [ ] 4. Projetos - as aplicações hospedadas
+- [ ] 2. Blog - os artigos do medium com API e estilização de cards
+- [x] 3. Códigos - os repositórios do github com API e estilização de cards
+- [ ] 4. Projetos - as aplicações hospedadas 
 - [ ] 5. Hack Developer - uma trilha ordena de conteúdo e rotina
 - [ ] 6. Sobre Mim - apresentação e habilidades
 - [ ] 7. Uses - o setup que utilizei, utilizo e estou construindo
