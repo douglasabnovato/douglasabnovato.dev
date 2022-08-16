@@ -113,6 +113,12 @@ body.dark {
   align-items: center;
 }
 
+.sidebar header .image-text a {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
 .sidebar header .logo-text {
   display: flex;
   flex-direction: column;
