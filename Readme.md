@@ -33,11 +33,7 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 - [ ] 1. Meu portfólio - com os repositórios do github
 - [ ] 2. Meu blog - com os artigos do medium
 - [ ] 3. Hack Ser Dev - uma timeline de conteúdo e rotina para dev
-
-- [ ] Item do menu Meu portfólio - com os repositórios do github
-- [ ] Item do menu Meu blog - com os artigos do medium
-- [ ] Item do menu Hack Ser Dev - uma timeline de conteúdo e rotina para dev
-- [ ] fazer a rota "/" como uma home com um design
+- [ ] 4. fazer a rota "/" como uma home com um design
 
 Referências 
 - [web.dev / Learn Responsive Design](https://web.dev/learn/design/)
