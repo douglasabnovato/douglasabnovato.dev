@@ -1,0 +1,135 @@
+:root {
+  --color-primary: #3740ff;
+  --color-primary-dark: #272eb5;
+  --color-primary-light: #3740ff;
+  --color-primary-x-light: #e8f0fe;
+  --color-light: #ffffff;
+  --color-dark: #202124;
+  --color-off-white: #f3f4f4;
+  --color-mid: #5f6368;
+  --color-mid-dark: #3c4043;
+  --color-stroke: #dadce0;
+  --metric-gutter: 1.5rem;
+  --metric-box-spacing: 1rem;
+  --metric-radius: 1em;
+  --generic-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3),
+      0px 2px 6px 2px rgba(60, 64, 67, 0.15);
+  --font-mono: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+
+  --portfolio-body-bg-color: #22212C;
+  --portfolio-text-color: #837E9F;
+  --portfolio-text-color-black: #000000;
+}
+
+main {
+  font-family: 'Merriweather Sans', sans-serif;
+  color: var(--portfolio-text-color);
+  min-block-size: calc(100vh - 8rem);
+  padding: var(--metric-box-spacing);
+}
+
+.cards-grids {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  grid-gap: var(--metric-box-spacing);
+  margin-block-end: var(--metric-box-spacing);
+}
+
+.card {
+  padding: var(--metric-box-spacing);
+  border-radius: var(--metric-radius);
+  box-shadow: var(--generic-shadow);
+  background-color: var(--portfolio-bg-cards);
+}
+
+.cards-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--metric-box-spacing);
+  margin-block-end: var(--metric-box-spacing);
+}
+
+.cards-flex .card-flex {
+  flex-basis: 15rem;
+  flex-grow: 1;
+}
+
+.title-serif {
+  font-family: Courier, serif;
+}
+
+.box-projects .project a,
+.box-projects .project a:link,
+.box-projects .project a:visited,
+.box-projects .project a:hover,
+.box-projects .project a:active {
+  color: var(--portfolio-text-color);
+  text-decoration: none;
+}
+
+.box-projects .project .fragment {
+  margin-block-start: 2.5vh;
+  margin-block-end: 1.5vh;
+  margin-inline-start: 1.5vw;
+  margin-inline-end: 2.5vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-between;
+}
+
+.box-projects .project .title-project {
+  margin-block-end: 0.5vh;
+}
+
+.box-projects .project .title-project span:nth-child(2) {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.box-projects .project .title-project .icons-folder {
+  content: url(./assets/folder.svg);
+  margin-inline-end: 0.9vw;
+}
+
+.box-projects .project .description-project {
+  margin-block-start: 2.6vh;
+  margin-block-end: 2.4vh;
+}
+
+.box-projects .project .details-project {
+  display: flex;
+  justify-content: space-between;
+  margin-block-end: 0.5vh;
+}
+
+.box-projects .project .details-project .stars-branches {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-projects .project .details-project .icons-star {
+  content: url(./assets/star.svg);
+  margin-inline-end: 0.5vw;
+}
+
+.box-projects .project .details-project .icons-gitbranch {
+  content: url(./assets/git-branch.svg);
+  margin-inline-start: 1.5vw;
+  margin-inline-end: 0.5vw;
+}
+
+.box-projects .project .details-project .icons-languages {
+  content: url(./assets/ellipse.svg);
+  margin-inline-end: 0.5vw;
+}
+
+.box-projects .project .details-project span:nth-child(2) {
+  font-weight: lighter;
+  font-size: 1.1rem;
+}
+
+
+

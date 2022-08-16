@@ -28,6 +28,21 @@ Onde tem a descrição de tudo o que esse projeto se propõe a ter quando termin
 
 O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atualizada está na master, versões anteriores possuem suas respectivas versões em branches nomeadas.
 
+<<<<<<< HEAD
+## 🎨 Layout - v5.0 - Site
+
+- [ ] 1. / - a home será um resumo do que teremos em todo o portfólio com dois tópicos em cada: breve apresentação, melhores códigos de repositórios no github, melhores textos de artigos no medium,
+- [ ] 2. Blog - os artigos do medium com API e estilização de cards
+- [x] 3. Códigos - os repositórios do github com API e estilização de cards
+- [ ] 4. Projetos - as aplicações hospedadas 
+- [ ] 5. Hack Developer - uma trilha ordena de conteúdo e rotina
+- [ ] 6. Sobre Mim - apresentação e habilidades
+- [ ] 7. Uses - o setup que utilizei, utilizo e estou construindo
+- [x] 8. Updates - treinamentos, experiências, certificações e eventos
+- [x] 9. Navegação do menu sidebar com rotas para os itens e logo 
+- [x] 10. Uma tela de em manutenção para as páginas conforme o item do sidebar não terminadas
+- [ ] 11. Loader nas páginas com requisição: codigos, blog
+=======
 ## 🎨 Versões Layout
 
 - [ ] 1. Meu portfólio - com os repositórios do github
@@ -37,6 +52,7 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 
 Estrutura
 - git flow: master, developer, nomesDasVersoes
+>>>>>>> developer
 
 Referências 
 - [web.dev / Learn Responsive Design](https://web.dev/learn/design/)
@@ -45,7 +61,8 @@ Referências
 - [web.dev / Learn pwa](https://web.dev/learn/pwa/)
 
 Inspiração 
-- [marc.dev](https://marc.dev/blog/page/2/)
+- [marc.dev](https://marc.dev/)
+- [turnerj](https://turnerj.com/)
 
 ### Web Responsive - v4.2
 

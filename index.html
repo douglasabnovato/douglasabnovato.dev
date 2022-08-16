@@ -2,9 +2,14 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="./assets/dev.png" />
-    <link rel="stylesheet" type="text/css" href="./styles/styles.css" media="screen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="./assets/support.svg" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./styles/styles.css"
+      media="screen"
+    />
     <link
       rel="stylesheet"
       type="text/css"
@@ -14,7 +19,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="./styles/portfolio.css"
+      href="./styles/home.css"
       media="screen"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,304 +32,508 @@
       href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <title>douglasabnovato dev</title>
+    <title>douglasabnovato.dev</title>
+    <style type="text/css">
+      @font-face {
+        font-weight: 400;
+        font-style: normal;
+        font-family: "Circular-Loom";
+
+        src: url("https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2")
+          format("woff2");
+      }
+
+      @font-face {
+        font-weight: 500;
+        font-style: normal;
+        font-family: "Circular-Loom";
+
+        src: url("https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Medium-d74eac43c78bd5852478998ce63dceb3.woff2")
+          format("woff2");
+      }
+
+      @font-face {
+        font-weight: 700;
+        font-style: normal;
+        font-family: "Circular-Loom";
+
+        src: url("https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Bold-83b8ceaf77f49c7cffa44107561909e4.woff2")
+          format("woff2");
+      }
+
+      @font-face {
+        font-weight: 900;
+        font-style: normal;
+        font-family: "Circular-Loom";
+
+        src: url("https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Black-bf067ecb8aa777ceb6df7d72226febca.woff2")
+          format("woff2");
+      }
+    </style>
   </head>
-  <body>
-    <nav class="sidebar close">
+  <body class="bg-theme-black font-copy white page-width center">
+    <nav class="sidebar">
       <header>
-          <div class="image-text">
-              <span class="image">   
-                <div class="sun-moon">
-                  <i class='bx bx-laptop icon moon'></i>
-                </div>            
-              </span>
-              <div class="text logo-text">
-                  <span class="name">douglasabnovato</span>
-                  <span class="profession">Frontend Developer</span>
+        <div id="home" class="image-text">
+          <a href="#home">
+            <span class="image">
+              <div class="sun-moon">
+                <i class="bx bx-laptop icon moon"></i>
               </div>
-          </div>
-          <i class='bx bx-chevron-right toggle'></i>
-      </header>
-      <div class="menu-bar">
-          <div class="menu">
-              <li class="search-box">
-                  <i class='bx bx-search icon'></i>
-                  <input type="text" placeholder="Search...">
-              </li>
-              <ul class="menu-links">
-                <li class="nav-link">
-                    <a href="#profile">
-                        <i class='bx bx-headphone icon' ></i>
-                        <span class="text nav-text">Profile</span>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <a href="#social-medias">
-                        <i class='bx bx-joystick icon' ></i>
-                        <span class="text nav-text">Social Medias</span>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <a href="#technologies">
-                        <i class='bx bx-brain icon' ></i>
-                        <span class="text nav-text">Technologies</span>
-                    </a>
-                </li> 
-              <li class="nav-link">
-                  <a href="#education">
-                      <i class='bx bx-bar-chart-alt-2 icon' ></i>
-                      <span class="text nav-text">Education</span>
-                  </a>
-              </li>
-              <li class="nav-link">
-                  <a href="#experiences">
-                      <i class='bx bx-pie-chart-alt icon' ></i>
-                      <span class="text nav-text">Experiences</span>
-                  </a>
-              </li>      
-              <li class="nav-link">
-                <a href="#box-projects">
-                    <i class='bx bx-heart icon' ></i>
-                    <span class="text nav-text">Projects</span>
-                </a>
-            </li>          
-              </ul>
-          </div>
-          <div class="bottom-content">
-              <li class="mode">
-                  <div class="sun-moon">
-                      <i class='bx bx-moon icon moon'></i>
-                      <i class='bx bx-sun icon sun'></i>
-                  </div>
-                  <div class="toggle-switch">
-                      <span class="switch"></span>
-                  </div>
-              </li>              
-          </div>
-      </div>
-  </nav>
-    <main class="home-page">
-      <div class="cards-flex">
-        <article id="profile" class="profile card card-flex title-serif">
-          <a
-            href="https://github.com/douglasabnovato"
-            target="_blank"
-            alt="profile card"
-          >
-            <div class="avatar">
-              <img src="./assets/avatar-profile.jpeg" alt="Avatar" />
-            </div>
-            <div class="texts">
-              <div class="name">Douglas A. B. Novato</div>
-              <div class="job">
-                Desenvolvedor Frontend <br />
-                em <span>Javascript</span> | <span>ReactJS</span>
-              </div>
+            </span>
+            <div class="text logo-text">
+              <span class="name">douglasabnovato</span>
+              <span class="profession">Frontend Developer</span>
             </div>
           </a>
-        </article>
-        <article id="social-medias" class="social-medias card card-flex title-serif">
-          <div class="social-media">
-            <a
-              href="https://goo.gl/maps/AKj5eek8tst6fM3YA"
-              target="_blank"
-              alt="localização card"
-            >
-              <span class="icons-local icons">Juiz de Fora - MG</span>
-              <span>Juiz de Fora - MG</span>
-            </a>
-          </div>
-          <div class="social-media">
-            <a
-              href="https://goo.gl/maps/AKj5eek8tst6fM3YA"
-              target="_blank"
-              alt="empresa card"
-            >
-              <span class="icons-sa icons"></span>
-              <span>My Job</span>
-            </a>
-          </div>
-          <div class="social-media">
-            <a
-              href="https://github.com/douglasabnovato"
-              target="_blank"
-              alt="github card"
-            >
-              <span class="icons-github icons"></span>
-              <span>Meus repositórios</span>
-            </a>
-          </div>
-          <div class="social-media">
-            <a
-              href="https://www.linkedin.com/in/douglasabnovato/"
-              target="_blank"
-              alt="linkedin card"
-            >
-              <span class="icons-linkedin icons"></span>
-              <span>Minhas Experiências</span>
-            </a>
-          </div>
-          <div class="social-media">
-            <a
-              href="https://twitter.com/douglasabnovato"
-              target="_blank"
-              alt="twitter card"
-            >
-              <span class="icons-twitter icons"></span>
-              <span>Rede Social</span>
-            </a>
-          </div>
-          <div class="social-media">
-            <a
-              href="https://linktr.ee/douglasabnovato"
-              target="_blank"
-              alt="meu portfólio card"
-            >
-              <span class="icons-globe icons"></span>
-              <span>Meu Currículo</span>
-            </a>
-          </div>
-          <div class="social-media">
-            <a
-              href="https://douglasabnovato@gmail.com"
-              target="_blank"
-              alt="e-mail card"
-            >
-              <span class="icons-mail icons"></span>
-              <span>Meu E-mail</span>
-            </a>
-          </div>
-        </article>
+        </div>
+        <i class="bx bx-chevron-right toggle"></i>
+      </header>
+      <div class="menu-bar"> 
+        <div class="menu">
+          <li class="search-box">
+            <i class="bx bx-search icon"></i>
+            <input type="text" placeholder="Search..." />
+          </li>
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="./pages/blog/index.html">
+                <i class="bx bx-layer icon"></i>
+                <span class="text nav-text">Blog</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="./pages/codigos/index.html">
+                <i class="bx bx-code icon"></i>
+                <span class="text nav-text">Códigos</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="./pages/projetos/index.html">
+                <i class="bx bx-layout icon"></i>
+                <span class="text nav-text">Projetos</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="./pages/hackdev/index.html">
+                <i class="bx bx-joystick icon"></i>
+                <span class="text nav-text">Hack Developer</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="./pages/sobremim/index.html">
+                <i class="bx bx-heart icon"></i>
+                <span class="text nav-text">Sobre Mim</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="./pages/uses/index.html">
+                <i class="bx bx-laptop icon"></i>
+                <span class="text nav-text">Uses</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="./pages/updates/index.html">
+                <i class="bx bx-dumbbell icon"></i>
+                <span class="text nav-text">Updates</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="bottom-content">
+          <li class="mode">
+            <div class="sun-moon">
+              <i class="bx bx-moon icon moon"></i>
+              <i class="bx bx-sun icon sun"></i>
+            </div>
+            <div class="toggle-switch">
+              <span class="switch"></span>
+            </div>
+          </li>
+        </div>
       </div>
-      <div class="cards-flex ">
-        <article id="technologies" class="technologies card card-flex">
-                <h2 class="title-serif"> Technologies </h2>
-                <div class="box-techs">
-                    <div class="techs">
-                        <div class="tech tooltip">
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
-                                alt="javascript card">
-                                <span>JAVASCRIPT</span>
-                            </a>
-                        </div>
-                        <div class="tech tooltip">
-                            <a href="https://reactjs.org/docs/getting-started.html" target="_blank"
-                                alt="reactjs card">
-                                <span>REACTJS</span>
-                            </a>
-                        </div>
-                        <div class="tech tooltip">
-                            <a href="https://nodejs.org/en/docs/" target="_blank" alt="nodejs card">
-                                <span>NODEJS</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="techs">
-                        <div class="tech tooltip">
-                            <a href="https://git-scm.com/docs" target="_blank" alt="git card">
-                                <span>GIT</span>
-                            </a>
-                        </div>
-                        <div class="tech tooltip">
-                            <a href="https://docs.github.com/en" target="_blank" alt="github card">
-                                <span>GITHUB</span>
-                            </a>
-                        </div>
-                        <div class="tech tooltip">
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"
-                                alt="html card">
-                                <span>HTML</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="techs">
-                        <div class="tech tooltip">
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"
-                                alt="css card">
-                                <span>CSS</span>
-                            </a>
-                        </div>
-                        <div class="tech tooltip">
-                            <a href="https://docs.microsoft.com/en-us/sql/?view=sql-server-ver15" target="_blank"
-                                alt="sql card">
-                                <span>SQL</span>
-                            </a>
-                        </div>
-                        <div class="tech tooltip">
-                            <a href="https://www.sqlite.org/docs.html" target="_blank" alt="sqlite card">
-                                <span>SQLite</span>
-                            </a>
-                        </div>
-                    </div>
-        </article>
-        <article id="education" class="education card card-flex">
-                <h2 class="title-serif">
-                    Education
-                </h2>
-                <ul class="education-list">
-                    <li class="certification"><span>Cod3r</span>
-                        <ul>
-                            <li>2020 - 2021</li>
-                            <li>Treinamento React + Redux</li>
-                        </ul>
-                    </li>
-                    <li class="certification"><span>Rocketseat</span>
-                        <ul>
-                            <li>2018 - 2019</li>
-                            <li>Starter + LaunchBase + GoStack</li>
-                        </ul>
-                    </li>
-                    <li class="certification"><span>IF Sudeste MG-JF</span>
-                        <ul>
-                            <li>2016 - 2017</li>
-                            <li>Técnico em Informática</li>
-                        </ul>
-                    </li>
-                    <li class="certification"><span>UFJF</span>
-                        <ul>
-                            <li>2008 - 2015</li>
-                            <li>Ciência da Computação</li>
-                        </ul>
-                    </li>
-                </ul>
-        </article>
-        <article id="experiences" class="experiences card card-flex">
-                <h2 class="title-serif">
-                    Experiences
-                </h2>
-                <ul class="experiences-list">
-                    <li class="experience"><span>Rocketseat</span>
-                        <ul>
-                            <li>2022 - Atualmente</li>
-                            <li>Desafios</li>
-                        </ul>
-                    </li>
-                    <li class="experience"><span>Rocketseat</span>
-                        <ul>
-                            <li>2021 - Concluído</li>
-                            <li>Bootcamp NLW</li>
-                        </ul>
-                    </li>
-                    <li class="experience"><span>Rocketseat</span>
-                        <ul>
-                            <li>2020 - Concluído</li>
-                            <li>Bootcamp Omnistack</li>
-                        </ul>
-                    </li>
-                    <li class="experience"><span>Rocketseat</span>
-                        <ul>
-                            <li>2019 - Concluído</li>
-                            <li>Bootcamp Maratona Dev</li>
-                        </ul>
-                    </li>
-                </ul>
-        </article>
-      </div>
-      <div id="box-projects" class="box-projects cards-grids">          
-      </div>
+    </nav>
+    <main class="home-page">
+      <section
+        style="color: white"
+        class="pb5 relative bg-theme-dark-red"
+        id="about"
+      >
+        <div class="h025 bg-theme-orange-to-red"></div>
+        <div class="mw9 ph3 center">
+          <h2 class="font-heading fw4 f2 mb0">Olá, eu sou o Douglas.</h2>
+          <div class="flex justify-between flex-column flex-row-l items-start">
+            <div class="order-1 order-0-l prose w-40-l">
+              <p class="text-p text-p-1">Estou desenvolvendo soluções ...</p>
+              <p class="text-p">
+                Sendo feliz muitas vezes, outras nem tanto, desenvolvendo
+                códigos.
+              </p>
+              <p class="text-p">
+                Ganhei meu primeiro computador em 2001, com doze anos. Na época,
+                fica super feliz com textos no word, apresentações em power
+                point e jogar Doom, Tibia e Aladdin.
+              </p>
+              <p class="text-p">
+                Hoje, com objetivos para carreira e para rotinas que vão sendo
+                realizados graças ao
+                <a
+                  href="https://github.com/douglasabnovato"
+                  target="_blank"
+                  title="O meu perfil no Github"
+                  rel="noopener"
+                  >Javascript</a
+                >.
+              </p>
+            </div>
+            <img
+              class="order-0 order-1-l ml0 ml4-l w-80 w-50-ns"
+              src="./assets/programming.svg"
+              alt="Programming at a desk"
+            />
+          
+        </div>
+      </section>
+      <section class="pb5 relative bg-theme-dark-purple" id="projects">
+        <div class="h025 bg-theme-peach-to-purple"></div>
+        <div class="mw9 ph3 center">
+          <h2 class="font-heading fw4 f2 mb0">Meus Códigos</h2>
+          <p class="mw7 prose text-p text-p-1">
+            Os seis dos meus melhores dos meus repositórios de código aberto em
+            que estou aperfeiçoando no meu perfil no
+            <a
+              href="https://github.com/"
+              target="_blank"
+              title="O meu perfil no Github"
+              rel="noopener"
+              >Github</a
+            >.
+          </p>
+          <div class="flex flex-wrap">
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                class="card hover-pop theme-light-grey hover-theme-peach hover-gradient hover-theme-grey-to-peach-purple pa1 no-underline flex w-100"
+                target="_blank"
+                href="https://github.com/douglasabnovato/douglasabnovato.dev"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-purple-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      douglasabnovato.dev
+                    </h3>
+                    <p class="mv0">
+                      Minha página com as minhas experiências e registro da
+                      minha jornada. Gerindo as features com o projects board do
+                      github.
+                    </p>
+                  </div>
+                  <span class="mt3">Ver o Repositório</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                class="card hover-pop theme-light-grey hover-theme-peach hover-gradient hover-theme-grey-to-peach-purple pa1 no-underline flex w-100"
+                target="_blank"
+                href="https://www.infinitycrawler.com/"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-purple-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">Coffee</h3>
+                    <p class="mv0">
+                      Uma SPA responsivo para exibir um cardápio de café
+                      modulado para personalizar para outros temas.
+                    </p>
+                  </div>
+                  <span class="mt3">Ver o Repositório</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                class="card hover-pop theme-light-grey hover-theme-peach hover-gradient hover-theme-grey-to-peach-purple pa1 no-underline flex w-100"
+                target="_blank"
+                href="https://github.com/douglasabnovato/cracha-virtual"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-purple-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      Crachá Virtual
+                    </h3>
+                    <p class="mv0">
+                      Um crachá digital pensado mobile first com links para
+                      redes sociais.
+                    </p>
+                  </div>
+                  <span class="mt3">Ver o Repositório</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                class="card hover-pop theme-light-grey hover-theme-peach hover-gradient hover-theme-grey-to-peach-purple pa1 no-underline flex w-100"
+                target="_blank"
+                href="https://github.com/douglasabnovato/dev-finances"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-purple-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      Dev Finances
+                    </h3>
+                    <p class="mv0">
+                      Uma aplicação web responsiva para colaborar com a gestão
+                      das finanças pessoais com registros de entradas, saídas e
+                      saldo.
+                    </p>
+                  </div>
+                  <span class="mt3">Ver o Repositório</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                class="card hover-pop theme-light-grey hover-theme-peach hover-gradient hover-theme-grey-to-peach-purple pa1 no-underline flex w-100"
+                target="_blank"
+                href="https://github.com/douglasabnovato/meu-salao"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-purple-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">Meu Salão</h3>
+                    <p class="mv0">
+                      Uma SPA responsivo para exibir os serviços de um salão de
+                      beleza modulado para personalizar para outros temas.
+                    </p>
+                  </div>
+                  <span class="mt3">Ver o Repositório</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                class="card hover-pop theme-light-grey hover-theme-peach hover-gradient hover-theme-grey-to-peach-purple pa1 no-underline flex w-100"
+                target="_blank"
+                href="https://github.com/douglasabnovato/feedback-widget"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-purple-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      Feedback Widget
+                    </h3>
+                    <p class="mv0">
+                      Um widget que pode ser usado em aplicações web e mobile
+                      para receber feedback de usuários.
+                    </p>
+                  </div>
+                  <span class="mt3">Ver o Repositório</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="tc mt3">
+          <a
+            href="https://github.com/douglasabnovato"
+            class="dib br2 hover-gradient hover-theme-grey-to-light-purple-blue pa1 no-underline"
+            target="_blank"
+          >
+            <div class="dib ph3 pv2 bg-black-80 white">
+              Ver todos os meus códigos do Github
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="pb5 relative bg-theme-dark-blue" id="posts">
+        <div class="h025 bg-theme-light-purple-to-blue"></div>
+        <div class="mw9 ph3 center">
+          <h2 class="font-heading fw4 f2 mb0">Meus Artigos</h2>
+          <p class="prose mw7 text-p text-p-1">
+            Gosto de escrever sobre as rotinas dos meus estudos e a forma que organizo minha rotina de trabalho. Tento compartilhar um pouco dos conhecimentos da forma que estou aprendendo e também sobre alguns erros que cometi na jornada que acredito que possa ajudar alguém. Aqui estão os meus seis melhores publicações no meu perfil no <a
+            href="https://douglasabnovato.medium.com/"
+            target="_blank"
+            title="O meu perfil no Medium"
+            rel="noopener"
+            >Medium</a
+          >.
+          </p>
+          <div class="flex flex-wrap">
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                href="https://douglasabnovato.medium.com/aprender-flexbox-e-css-grid-62af22d22a42"
+                class="card hover-pop theme-light-grey hover-theme-light-purple hover-gradient hover-theme-grey-to-light-purple-blue pa1 no-underline flex w-100"
+                target="_blank"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-blue-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      Aprender flexbox e css grid
+                    </h3>
+                    <p class="mv0 measure-narrow text-p">
+                      Aprender flexbox e css grid com conteúdos somente teóricos pode dificultar para quem está no início. 
+                    </p>
+                  </div>
+                  <span class="mt3">Ler esse artigo</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                href="https://douglasabnovato.medium.com/dominar-html-sem%C3%A2ntico-e8a32eb9c425"
+                class="card hover-pop theme-light-grey hover-theme-light-purple hover-gradient hover-theme-grey-to-light-purple-blue pa1 no-underline flex w-100"
+                target="_blank"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-blue-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      Dominar html semântico
+                    </h3>
+                    <p class="mv0 measure-narrow">
+                      Conhecer as principais tags semânticas da HTML5, marcações que agregam mais significado ao HTML ao prover uma ligação entre o conteúdo e a estrutura de documentos desse tipo.
+                    </p>
+                  </div>
+                  <span class="mt3">Ler esse artigo</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                href="https://douglasabnovato.medium.com/acessibilidade-na-aplica%C3%A7%C3%A3o-web-1d9f9f1a59d3"
+                class="card hover-pop theme-light-grey hover-theme-light-purple hover-gradient hover-theme-grey-to-light-purple-blue pa1 no-underline flex w-100"
+                target="_blank"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-blue-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      Acessibilidade na aplicação web
+                    </h3>
+                    <p class="mv0 measure-narrow">
+                      Preciso revisar minhas aplicações para torná-las mais acessíveis com html, css e javascript. Meu objetivo é iniciar por estratégicas mais puras.
+                    </p>
+                  </div>
+                  <span class="mt3">Ler esse artigo</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                href="https://douglasabnovato.medium.com/prefer%C3%AAncias-de-light-e-dark-do-usu%C3%A1rio-cec3d37811d4"
+                class="card hover-pop theme-light-grey hover-theme-light-purple hover-gradient hover-theme-grey-to-light-purple-blue pa1 no-underline flex w-100"
+                target="_blank"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-blue-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      preferências de light e dark do usuário
+                    </h3>
+                    <p class="mv0 measure-narrow">
+                      Quero aplicar o estilo padrão de modo escuro de forma eficiente na minha aplicação. Pesquisar maneira de persistir as preferências do usuário, consultar o sistema usado e qualquer outra maneira de tornar a usabilidade ainda mais satisfatória.
+                    </p>
+                  </div>
+                  <span class="mt3">Ler esse artigo</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                href="https://douglasabnovato.medium.com/entender-e-usar-regex-com-javascript-2ce48901afc6"
+                class="card hover-pop theme-light-grey hover-theme-light-purple hover-gradient hover-theme-grey-to-light-purple-blue pa1 no-underline flex w-100"
+                target="_blank"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-blue-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      Entender e usar regex com javascript
+                    </h3>
+                    <p class="mv0 measure-narrow">
+                      Utilizar regex em aplicações frontend para tratar strings em formulários e entender como usar e como criar para atender nossas necessidades específicas.
+                    </p>
+                  </div>
+                  <span class="mt3">Ler esse artigo</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                href="https://douglasabnovato.medium.com/como-aprender-a-programar-do-zero-ddb7e37cd2be"
+                class="card hover-pop theme-light-grey hover-theme-light-purple hover-gradient hover-theme-grey-to-light-purple-blue pa1 no-underline flex w-100"
+                target="_blank"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-blue-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      Como aprender a programar do zero?
+                    </h3>
+                    <p class="mv0 measure-narrow">
+                      Vamos organizar as tarefas e construir uma rotina de aprender a aprender. Nesse artigo iremos abordar assuntos para quem vai iniciar como desenvolvedor frontend com html css e javascript mas pode ser adaptado a qualquer outro ecossistema.
+                    </p>
+                  </div>
+                  <span class="mt3">Ler esse artigo</span>
+                </div>
+              </a>
+            </div>
+            <div class="w-100 w-50-m w-third-l pa2 flex">
+              <a
+                href="https://douglasabnovato.medium.com/rel-noopener-para-performance-e-seguran%C3%A7a-3e01f8df2af3"
+                class="card hover-pop theme-light-grey hover-theme-light-purple hover-gradient hover-theme-grey-to-light-purple-blue pa1 no-underline flex w-100"
+                target="_blank"
+              >
+                <div
+                  class="flex flex-column justify-between pa3 bg-theme-dark-blue-tint w-100"
+                >
+                  <div class="white">
+                    <h3 class="font-heading fw4 f3-l f4 mt0 mb2">
+                      rel=noopener para performance e segurança
+                    </h3>
+                    <p class="mv0 measure-narrow">
+                      O cuidado com a performance da aplicação e a segurança podem ser melhoradas com o uso do rel=noopener.
+                    </p>
+                  </div>
+                  <span class="mt3">Ler esse artigo</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="tc mt3">
+            <a
+              href="https://douglasabnovato.medium.com/"
+              class="dib br2 hover-gradient hover-theme-grey-to-light-purple-blue pa1 no-underline"
+              target="_blank"
+            >
+              <div class="dib ph3 pv2 bg-black-80 white">Ver todos os meus textos do Medium</div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="h025 bg-theme-orange-to-red"></div>
+        <div class="pv2 tc f6">Copyright 2022 - @douglasabnovato</div>
+      </footer>
     </main>
     <script src="./javascript/main.js"></script>
-    <script src="./javascript/portfolio.js"></script>
+    <script src="./javascript/home.js"></script>
     <script src="./javascript/sidebar.js"></script>
   </body>
 </html>
