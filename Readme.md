@@ -30,7 +30,7 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 
 ## 🎨 Layout - v5.0 - Site
 
-- [ ] 1. / - a home com design da inspiração
+- [ ] 1. / - a home será um resumo do que teremos em todo o portfólio com dois tópicos em cada
 - [ ] 2. Blog - os artigos do medium
 - [x] 3. Códigos - os repositórios do github
 - [ ] 4. Projetos - as aplicações hospedadas
@@ -40,6 +40,7 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 - [x] 8. Updates - treinamentos, experiências, certificações e eventos
 - [x] 9. Navegação do menu sidebar com rotas para os itens e logo 
 - [x] 10. Uma tela de em manutenção para as páginas conforme o item do sidebar não terminadas
+- [ ] 11. Loader nas páginas com requisição: codigos, blog
 
 Referências 
 - [web.dev / Learn Responsive Design](https://web.dev/learn/design/)
