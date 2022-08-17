@@ -44,9 +44,11 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 - [ ] 12. Footer com status da sidebar close ou open
 - [ ] 13. Navegação piscando entre páginas
 
-
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="versão 5.0 do projeto" title="#douglasabnovato.dev" src="./.github/site-home-1.jpg" width="400px">
+  <img alt="versão 5.0 do projeto - Home" title="#douglasabnovato.dev" src="./.github/site-home-1.jpg" width="400px">
+  <img alt="versão 5.0 do projeto - Em Manutenção" title="#douglasabnovato.dev" src="./.github/site-emmanutencao-1.jpg" width="400px">
+  <img alt="versão 5.0 do projeto - Códigos" title="#douglasabnovato.dev" src="./.github/site-codigos-1.jpg" width="400px">
+  <img alt="versão 5.0 do projeto - Updates" title="#douglasabnovato.dev" src="./.github/site-updates-1.jpg" width="400px">  
 </p> 
 
 Estrutura
