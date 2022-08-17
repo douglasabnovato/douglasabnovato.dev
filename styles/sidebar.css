@@ -331,7 +331,7 @@ body.dark .home-page .text {
 
 @media (max-width: 420px) {
 
-  .sidebar{
+  .sidebar {
     position: absolute;
     top: 0;
     left: 0;
@@ -348,9 +348,9 @@ body.dark .home-page .text {
     left: 0;
     width: 100vw;
   }
-
+   
   .home-page::-webkit-scrollbar {
-      display: none;
+    display: none;
   }
 
 }
