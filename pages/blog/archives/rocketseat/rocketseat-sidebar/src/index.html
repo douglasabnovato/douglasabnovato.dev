@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">                
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="./style.css" media="screen" />
+    <title>Sidebar Menu</title>
+  </head>
+  <body>
+    <div class="sidebar open">
+      <div class="logo-details">
+        <div class="icon">
+            <img id="logo" src="./assets/logo.svg" alt="profile_logo">
+        </div> 
+        <div id="btn">
+            <a href="#">
+                <img id="menu" src="./assets/menu.svg" alt="profile_menu">
+            </a>
+        </div>
+      </div> 
+      <ul class="nav-list">
+        <li class='li-search'>
+          <img class="search bx-search" src="./assets/search.svg">
+          <input type="text" placeholder="Buscar">
+          <span class="tooltip">Buscar</span>
+        </li>
+        <li>
+          <a href="#dashboard">
+            <img class="grid bx-grid-alt" src="./assets/grid.svg">
+            <span class="links_name">Dashboard</span>
+          </a>
+          <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+          <a href="#pets">
+            <img class="pet bx-user" src="./assets/pet.svg">
+            <span class="links_name">Pets</span>
+          </a>
+          <span class="tooltip">Pets</span>
+        </li>
+        <li>
+          <a href="#clientes">
+            <img class="user bx-chat" src="./assets/user.svg">
+            <span class="links_name">Clientes</span>
+          </a>
+          <span class="tooltip">Clientes</span>
+        </li>
+        <li>
+          <a href="#vets">
+            <img class="vet bx-pie-chart-alt-2" src="./assets/vet.svg">
+            <span class="links_name">Vets</span>
+          </a>
+          <span class="tooltip">Vets</span>
+        </li>
+        <li>
+          <a href="#ajustes">
+            <img class="settings bx-folder" src="./assets/settings.svg">
+            <span class="links_name">Ajustes</span>
+          </a>
+          <span class="tooltip">Ajustes</span>
+        </li>   
+        <li class="profile">
+          <div class="login">
+            <div class="foto">
+                <div class="imagem">
+                    <img src="./assets/avatar-profile.jpeg" alt="foto">
+                </div>
+                <div class="nome_profissao">
+                    <div class="profissional">Douglas Musk</div>
+                    <div class="carreira">Médico Veterinário</div>
+                </div>
+            </div>
+            <div class="logout">
+                <a href="#logout">
+                    <img src="./assets/log-out.svg" alt="logout">
+                </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+        <div class="main">
+            <div class="title">
+                <h1 id="dashboard">Dashboard</h1>
+                <hr>
+            </div>
+            <div class="text-section">
+                <div id="pets" class="text">
+                  <h2>Pets</h2>  
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>   
+                <div id="clientes" class="text">
+                  <h3>Clientes</h3>  
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>  
+                <div id="vets" class="text">
+                  <h3>Vets</h3>  
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div> 
+                <div id="ajustes" class="text">
+                  <h3>Ajustes</h3>  
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>  
+                <div id="contos" class="text">
+                  <h3>Contos</h3>  
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                  </div>              
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do list</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap");
+
+      * {
+        font-family: "Open Sans", sans-serif;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      button {
+        border: 1px solid rgb(105, 197, 255);
+        border-radius: 5px;
+        background-color: rgb(227, 248, 255);
+        color: rgb(105, 197, 255);
+        text-align: center;
+        padding: 5px;
+      }
+
+      input[type="text"] {
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid black;
+      }
+
+      #tasks {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+      }
+
+      .task-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      :checked + label {
+        text-decoration: line-through;
+        color: grey;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>To-do list</h1>
+      <div id="list">
+        <form id="task-form">
+          <input
+            id="task-input"
+            name="tarefa"
+            type="text"
+            placeholder="Digite aqui sua tarefa"
+          />
+          <button type="submit">Adicionar</button>
+        </form>
+        <div id="tasks"></div>
+      </div>
+    </div>
+    <script>
+        
+      const form = document.getElementById("task-form");
+      const taskList = document.getElementById("tasks");
+
+      form.onsubmit = function (e) {
+        e.preventDefault();
+
+        const inputField = document.getElementById("task-input");
+
+        addTask(inputField.value);
+        form.reset();
+      };
+
+      function addTask(description) {
+        const taskContainer = document.createElement("div");
+        const newTask = document.createElement("input");
+        const taskLabel = document.createElement("label");
+        const taskDescriptionNode = document.createTextNode(description);
+
+        newTask.setAttribute("type", "checkbox");
+        newTask.setAttribute("name", description);
+        newTask.setAttribute("id", description);
+
+        taskLabel.setAttribute("for", description);
+        taskLabel.appendChild(taskDescriptionNode);
+
+        taskContainer.classList.add("task-item");
+        taskContainer.appendChild(newTask);
+        taskContainer.appendChild(taskLabel);
+
+        taskList.appendChild(taskContainer);
+      }
+
+    </script>
+  </body>
+</html>
