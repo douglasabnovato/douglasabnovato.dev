@@ -3,7 +3,7 @@
 </h4> 
 
 <h1 align="center">
-    <img alt="versão lts do projeto" title="#douglasabnovato.dev" src="./.github/desktop-portfolio-desktop-dark.jpg" />
+    <img alt="versão lts do projeto" title="#douglasabnovato.dev" src="./.github/site-home-1.jpg" />
 </h1>
 
 <p align="center">
@@ -27,6 +27,7 @@ A gestão das tarefas para completar esse projeto está no "Project Board" desse
 Onde tem a descrição de tudo o que esse projeto se propõe a ter quando terminado.
 
 O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atualizada está na master, versões anteriores possuem suas respectivas versões em branches nomeadas. 
+
 ## 🎨 Layout - v5.0 - Site
 
 - [ ] 1. / - a home será um resumo do que teremos em todo o portfólio com dois tópicos em cada: breve apresentação, melhores códigos de repositórios no github, melhores textos de artigos no medium,
@@ -43,12 +44,10 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 - [ ] 12. Footer com status da sidebar close ou open
 - [ ] 13. Navegação piscando entre páginas
 
-## 🎨 Versões Layout
 
-- [ ] 1. Meu portfólio - com os repositórios do github
-- [ ] 2. Meu blog - com os artigos do medium
-- [ ] 3. Hack Ser Dev - uma timeline de conteúdo e rotina para dev
-- [ ] 4. fazer a rota "/" como uma home com um design
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="versão 5.0 do projeto" title="#douglasabnovato.dev" src="./.github/site-home-1.jpg" width="400px">
+</p> 
 
 Estrutura
 - git flow: master, developer, nomesDasVersoes
