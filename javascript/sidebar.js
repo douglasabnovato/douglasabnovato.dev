@@ -4,12 +4,11 @@ const body = document.querySelector("body"),
   searchBtn = body.querySelector(".search-box"),
   modeSwitch = body.querySelector(".toggle-switch");
 
-let modeDarkTheme = localStorage.getItem('mode-dark-theme');
+let modeDarkTheme = localStorage.getItem("mode-dark-theme");
 
 if (modeDarkTheme) {
-    body.classList.toggle("dark");
-  }
-
+  body.classList.toggle("dark");
+}
 
 toggle.addEventListener("click", () => {
   sidebar.classList.toggle("close");
@@ -23,9 +22,8 @@ modeSwitch.addEventListener("click", () => {
   body.classList.toggle("dark");
 
   if (body.classList.contains("dark")) {
-    localStorage.setItem('mode-dark-theme', true);
+    localStorage.setItem("mode-dark-theme", true);
   } else {
-    localStorage.removeItem('mode-dark-theme');
+    localStorage.removeItem("mode-dark-theme");
   }
-
 });

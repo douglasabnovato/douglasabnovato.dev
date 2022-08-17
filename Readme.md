@@ -3,7 +3,7 @@
 </h4> 
 
 <h1 align="center">
-    <img alt="versão lts do projeto" title="#douglasabnovato.dev" src="./.github/desktop-portfolio-desktop-dark.jpg" />
+    <img alt="versão lts do projeto" title="#douglasabnovato.dev" src="./.github/site-home-1.jpg" />
 </h1>
 
 <p align="center">
@@ -26,12 +26,11 @@ Também uma sugestão de conteúdos da internet, organizados de forma progressiv
 A gestão das tarefas para completar esse projeto está no "Project Board" desse repositório.
 Onde tem a descrição de tudo o que esse projeto se propõe a ter quando terminado.
 
-O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atualizada está na master, versões anteriores possuem suas respectivas versões em branches nomeadas.
+O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atualizada está na master, versões anteriores possuem suas respectivas versões em branches nomeadas. 
 
-<<<<<<< HEAD
 ## 🎨 Layout - v5.0 - Site
 
-- [ ] 1. / - a home será um resumo do que teremos em todo o portfólio com dois tópicos em cada: breve apresentação, melhores códigos de repositórios no github, melhores textos de artigos no medium,
+- [x] 1. / - a home será um resumo do que teremos em todo o portfólio com dois tópicos em cada: breve apresentação, melhores códigos de repositórios no github, melhores textos de artigos no medium,
 - [ ] 2. Blog - os artigos do medium com API e estilização de cards
 - [x] 3. Códigos - os repositórios do github com API e estilização de cards
 - [ ] 4. Projetos - as aplicações hospedadas 
@@ -42,17 +41,18 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 - [x] 9. Navegação do menu sidebar com rotas para os itens e logo 
 - [x] 10. Uma tela de em manutenção para as páginas conforme o item do sidebar não terminadas
 - [ ] 11. Loader nas páginas com requisição: codigos, blog
-=======
-## 🎨 Versões Layout
+- [x] 12. Background do Footer com modo da sidebar close ou open
+- [ ] 13. Navegação piscando entre páginas
 
-- [ ] 1. Meu portfólio - com os repositórios do github
-- [ ] 2. Meu blog - com os artigos do medium
-- [ ] 3. Hack Ser Dev - uma timeline de conteúdo e rotina para dev
-- [ ] 4. fazer a rota "/" como uma home com um design
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="versão 5.0 do projeto - Home" title="#douglasabnovato.dev" src="./.github/site-home-1.jpg" width="400px">
+  <img alt="versão 5.0 do projeto - Em Manutenção" title="#douglasabnovato.dev" src="./.github/site-emmanutencao-1.jpg" width="400px">
+  <img alt="versão 5.0 do projeto - Códigos" title="#douglasabnovato.dev" src="./.github/site-codigos-1.jpg" width="400px">
+  <img alt="versão 5.0 do projeto - Updates" title="#douglasabnovato.dev" src="./.github/site-updates-1.jpg" width="400px">  
+</p> 
 
 Estrutura
 - git flow: master, developer, nomesDasVersoes
->>>>>>> developer
 
 Referências 
 - [web.dev / Learn Responsive Design](https://web.dev/learn/design/)
