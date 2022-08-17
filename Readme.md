@@ -166,7 +166,7 @@ Aperfeiçoar a aplicação acrescentando dinamismo.
 
 - [x] estudar as referências indicadas
 
-### 🛠 Buscas no Google
+#### 🛠 Buscas no Google
 
 - [como modificar atributos, classes e styles na DOM](https://www.digitalocean.com/community/tutorials/how-to-modify-attributes-classes-and-styles-in-the-dom)
 - [como consumir os repositorios da api github ](https://api.github.com/users/douglasabnovato/repos)
@@ -280,7 +280,7 @@ Segue os links correspondentes para colaborar na construção do desafio.
 - [Alinhando os planetas](https://app.rocketseat.com.br/node/flexbox)
 - [App bonito, até nos textos](https://app.rocketseat.com.br/node/flexbox)
 
-## 🚀 Como executar o projeto
+### 🚀 Como executar o projeto
 
 Podemos considerar este projeto como sendo com uma parte:
 1. Front End (pasta web)  
@@ -302,7 +302,7 @@ Open Live Server
 # A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 ```
 
-## 😯 Como contribuir para o projeto
+### 😯 Como contribuir para o projeto
 
 1. Faça um **fork** do projeto.
 2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
@@ -310,7 +310,7 @@ Open Live Server
 4. Envie as suas alterações: `git push origin my-feature`
 > Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](https://github.com/firstcontributions/first-contributions)
 
-## :memo: Licença
+### :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](.github/LICENSE.md) para mais detalhes.
 
