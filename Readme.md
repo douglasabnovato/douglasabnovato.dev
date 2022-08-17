@@ -38,11 +38,12 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 - [ ] 6. Sobre Mim - apresentação e habilidades
 - [ ] 7. Uses - o setup que utilizei, utilizo e estou construindo
 - [x] 8. Updates - treinamentos, experiências, certificações e eventos
-- [x] 9. Navegação do menu sidebar com rotas para os itens e logo 
-- [x] 10. Uma tela de em manutenção para as páginas conforme o item do sidebar não terminadas
-- [ ] 11. Loader nas páginas com requisição: codigos, blog
-- [x] 12. Background do Footer com modo da sidebar close ou open
-- [ ] 13. Navegação piscando entre páginas
+
+Comportamentos
+- [x] 1. Navegação do menu sidebar com rotas para os itens e logo 
+- [x] 2. Uma tela de em manutenção para as páginas conforme o item do sidebar não terminadas
+- [ ] 3. Loader nas páginas com requisição: codigos, blog
+
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   <img alt="versão 5.0 do projeto - Home" title="#douglasabnovato.dev" src="./.github/site-home-1.jpg" width="400px">
@@ -50,6 +51,10 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
   <img alt="versão 5.0 do projeto - Códigos" title="#douglasabnovato.dev" src="./.github/site-codigos-1.jpg" width="400px">
   <img alt="versão 5.0 do projeto - Updates" title="#douglasabnovato.dev" src="./.github/site-updates-1.jpg" width="400px">  
 </p> 
+
+Correções
+- [x] 1. Background do Footer com modo da sidebar close ou open
+- [ ] 2. Navegação piscando entre páginas
 
 Estrutura
 - git flow: master, developer, nomesDasVersoes
