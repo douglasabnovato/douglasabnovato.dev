@@ -56,6 +56,13 @@ Correções
 - [x] 1. Background do Footer com modo da sidebar close ou open
 - [ ] 2. Navegação piscando entre páginas
 
+Requisitos
+- duas cores
+- mood dark e light 
+- idioma pt e en 
+- responsividade e mobile first  
+- acessibilidade
+
 Estrutura
 - git flow: master, developer, nomesDasVersoes
 
