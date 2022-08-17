@@ -64,6 +64,8 @@ Inspiração
 - [marc.dev](https://marc.dev/)
 - [turnerj](https://turnerj.com/)
 
+## 🛠 Versões
+
 ### Web Responsive - v4.2
 
 - [x] Persistência do modo dark conforme preferências do usuário com localstorage.
@@ -164,7 +166,7 @@ Aperfeiçoar a aplicação acrescentando dinamismo.
 
 - [x] estudar as referências indicadas
 
-## 🛠 Buscas no Google
+### 🛠 Buscas no Google
 
 - [como modificar atributos, classes e styles na DOM](https://www.digitalocean.com/community/tutorials/how-to-modify-attributes-classes-and-styles-in-the-dom)
 - [como consumir os repositorios da api github ](https://api.github.com/users/douglasabnovato/repos)
