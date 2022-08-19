@@ -44,7 +44,6 @@ Comportamentos
 - [x] 2. Uma tela de em manutenção para as páginas conforme o item do sidebar não terminadas
 - [ ] 3. Loader nas páginas com requisição: codigos, blog
 
-
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   <img alt="versão 5.0 do projeto - Home" title="#douglasabnovato.dev" src="./.github/site-home-1.jpg" width="400px">
   <img alt="versão 5.0 do projeto - Em Manutenção" title="#douglasabnovato.dev" src="./.github/site-emmanutencao-1.jpg" width="400px">
