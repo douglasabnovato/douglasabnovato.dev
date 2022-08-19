@@ -32,7 +32,7 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 
 Funcionalidades
 - [x] 2. Blog - os artigos do medium com API e estilização de cards
-- [ ] 4. Projetos - as aplicações hospedadas 
+- [x] 4. Projetos - as aplicações hospedadas 
 - [ ] 5. Hack Developer - uma trilha ordena de conteúdo e rotina
 - [ ] 6. Sobre Mim - apresentação e habilidades
 - [ ] 7. Uses - o setup que utilizei, utilizo e estou construindo
@@ -44,7 +44,8 @@ Correções
 - [ ] 2. Navegação piscando entre páginas
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="versão 5.1 do projeto - Blog" title="#douglasabnovato.dev" src="./.github/site-blog-1.jpg" width="400px"> 
+  <img alt="versão 5.1 do projeto - Blog" title="#douglasabnovato.dev" src="./.github/site-blog-1.jpg" width="400px">
+  <img alt="versão 5.1 do projeto - Projetos" title="#douglasabnovato.dev" src="./.github/site-projetos-1.jpg" width="400px"> 
 </p> 
 
 Anotações
