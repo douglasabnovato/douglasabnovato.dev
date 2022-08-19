@@ -1,83 +1,75 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    min-height: 100vh;
-    background: #9b59b6;
-    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
-  }
-  
-  .container {
-    min-height: 100vh;
-    padding: 0;
-    margin: 0;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .item {
-    margin: 15px;
-    text-align: center;
-  }
-  
-  img {
-    margin: 15px;
-    max-width: 200px;
-  }
-  
-  h1, h2 {
-    text-shadow: 1px 1px #000000;
-  }
-  
-  h1, h2, p {
-    text-align: center;
-    max-width: 600px;
-    margin: 15px;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  h1 {
-    color: #FFFFFF;
-  }
-  
-  h2 {
-    color: #FFFFFF;
-  }
-  
-  p {
-    color: #FFFFFF;
-  }
-  
-  .social {
-    padding: 0;
-    margin: 15px;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    justify-content: center;
-    list-style: none;
-  }
-  
-  .social li {
-    margin: 15px;
-  }
-  
-  .social li a {
-    display: block;
-    color: #FFFFFF;
-    font-size: 30px;
-  }
-  
-  .social li a:hover {
-    text-shadow: 1px 1px #000000;
-  }
+#blog-section {
+   color: aliceblue;
+}
+
+a {
+   color: inherit;
+   text-decoration: none;
+}
+
+.blog {
+   margin: 3rem 1rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.blog__header {
+   text-align: center;
+}
+
+
+.blog__slider {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: .5rem;
+   justify-content: space-around;
+}
+
+.blog__post {
+   list-style: none;
+   border-radius: 1em;
+   box-shadow: 9px 9px 20px 0px rgba(0, 0, 0, .4);
+   -webkit-box-shadow: 9px 9px 20px 0px rgba(0, 0, 0, .4);
+   -moz-box-shadow: 9px 9px 20px 0px rgba(0, 0, 0, .4);
+
+   width: 30%;
+
+}
+
+.blog__topImg {
+   max-width: 100%;
+}
+
+.blog__content {
+   padding: .8rem;
+}
+
+.blog__preview {
+   font-size: .95rem;
+   font-weight: 300;
+}
+
+.blog__title {
+   margin-top: 0;
+   font-size: 1.4rem;
+}
+
+.blog__intro {
+   line-height: 1.5;
+}
+
+.blog__info {
+   font-weight: 300;
+}
+
+.blog__author {
+   font-size: .9rem;
+}
+
+.blog__date {
+   font-size: .85rem;
+}

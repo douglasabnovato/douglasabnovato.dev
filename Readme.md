@@ -43,6 +43,9 @@ Comportamentos
 Correções
 - [ ] 2. Navegação piscando entre páginas
 
+Anotações
+- url para dados do medium: https://mediumpostapi.herokuapp.com/?usermedium=douglasabnovato
+
 ### v5.0 - Site
 
 - [x] 1. / - a home será um resumo do que teremos em todo o portfólio com dois tópicos em cada: breve apresentação, melhores códigos de repositórios no github, melhores textos de artigos no medium
