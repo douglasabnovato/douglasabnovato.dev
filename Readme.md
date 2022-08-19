@@ -28,21 +28,30 @@ Onde tem a descrição de tudo o que esse projeto se propõe a ter quando termin
 
 O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atualizada está na master, versões anteriores possuem suas respectivas versões em branches nomeadas. 
 
-## 🎨 Layout - v5.0 - Site
+## 🎨 Layout - v5.1 - Site
 
-- [x] 1. / - a home será um resumo do que teremos em todo o portfólio com dois tópicos em cada: breve apresentação, melhores códigos de repositórios no github, melhores textos de artigos no medium,
+Funcionalidades
 - [ ] 2. Blog - os artigos do medium com API e estilização de cards
-- [x] 3. Códigos - os repositórios do github com API e estilização de cards
 - [ ] 4. Projetos - as aplicações hospedadas 
 - [ ] 5. Hack Developer - uma trilha ordena de conteúdo e rotina
 - [ ] 6. Sobre Mim - apresentação e habilidades
 - [ ] 7. Uses - o setup que utilizei, utilizo e estou construindo
+
+Comportamentos
+- [ ] 3. Loader nas páginas com requisição: codigos, blog
+
+Correções
+- [ ] 2. Navegação piscando entre páginas
+
+### v5.0 - Site
+
+- [x] 1. / - a home será um resumo do que teremos em todo o portfólio com dois tópicos em cada: breve apresentação, melhores códigos de repositórios no github, melhores textos de artigos no medium
+- [x] 3. Códigos - os repositórios do github com API e estilização de cards
 - [x] 8. Updates - treinamentos, experiências, certificações e eventos
 
 Comportamentos
 - [x] 1. Navegação do menu sidebar com rotas para os itens e logo 
 - [x] 2. Uma tela de em manutenção para as páginas conforme o item do sidebar não terminadas
-- [ ] 3. Loader nas páginas com requisição: codigos, blog
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   <img alt="versão 5.0 do projeto - Home" title="#douglasabnovato.dev" src="./.github/site-home-1.jpg" width="400px">
@@ -53,7 +62,6 @@ Comportamentos
 
 Correções
 - [x] 1. Background do Footer com modo da sidebar close ou open
-- [ ] 2. Navegação piscando entre páginas
 
 Requisitos
 - duas cores
