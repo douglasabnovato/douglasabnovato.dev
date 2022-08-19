@@ -31,7 +31,7 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 ## 🎨 Layout - v5.1 - Site
 
 Funcionalidades
-- [ ] 2. Blog - os artigos do medium com API e estilização de cards
+- [x] 2. Blog - os artigos do medium com API e estilização de cards
 - [ ] 4. Projetos - as aplicações hospedadas 
 - [ ] 5. Hack Developer - uma trilha ordena de conteúdo e rotina
 - [ ] 6. Sobre Mim - apresentação e habilidades
