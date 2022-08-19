@@ -43,10 +43,14 @@ Comportamentos
 Correções
 - [ ] 2. Navegação piscando entre páginas
 
-Anotações
-- url para dados do medium: https://mediumpostapi.herokuapp.com/?usermedium=douglasabnovato
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="versão 5.1 do projeto - Blog" title="#douglasabnovato.dev" src="./.github/site-blog-1.jpg" width="400px"> 
+</p> 
 
-- https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@douglasabnovato
+Anotações
+- url secundária para dados do medium: `https://mediumpostapi.herokuapp.com/?usermedium=douglasabnovato`
+
+- url usada para dados do medium: `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@douglasabnovato`
 
 ### v5.0 - Site
 
