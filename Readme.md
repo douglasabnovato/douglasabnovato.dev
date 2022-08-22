@@ -32,21 +32,29 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 
 Funcionalidades
 - [x] 2. Blog - os artigos do medium com API e estilização de cards
-- [ ] 4. Projetos - as aplicações hospedadas 
-- [ ] 5. Hack Developer - uma trilha ordena de conteúdo e rotina
-- [ ] 6. Sobre Mim - apresentação e habilidades
-- [ ] 7. Uses - o setup que utilizei, utilizo e estou construindo
+- [x] 4. Projetos - as aplicações hospedadas 
+- [x] 5. Hack Developer - uma trilha ordenada de conteúdo e rotina para ser dev
+- [x] 6. Sobre Mim - objetivo, apresentação e habilidades
+- [x] 7. Uses - o setup que utilizei, utilizo e estou construindo
 
 Comportamentos
 - [ ] 3. Loader nas páginas com requisição: codigos, blog
+- [x] 4. Evoluir a página updates com uma timeline
 
 Correções
 - [ ] 2. Navegação piscando entre páginas
+- [ ] 3. Funcionamento correto do modo dark e light
+- [ ] 4. Funcionamento correto da responsividade 
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="versão 5.1 do projeto - Blog" title="#douglasabnovato.dev" src="./.github/site-blog-1.jpg" width="400px">
+  <img alt="versão 5.1 do projeto - Projetos" title="#douglasabnovato.dev" src="./.github/site-projetos-1.jpg" width="400px"> 
+</p> 
 
 Anotações
-- url para dados do medium: https://mediumpostapi.herokuapp.com/?usermedium=douglasabnovato
+- url secundária para dados do medium: `https://mediumpostapi.herokuapp.com/?usermedium=douglasabnovato`
 
-- https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@douglasabnovato
+- url usada para dados do medium: `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@douglasabnovato`
 
 ### v5.0 - Site
 
@@ -87,6 +95,7 @@ Referências
 Inspiração 
 - [marc.dev](https://marc.dev/)
 - [turnerj](https://turnerj.com/)
+- [dejan](https://www.dejan.works/)
 
 ## 🛠 Versões
 

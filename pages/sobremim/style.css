@@ -1,83 +1,53 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+.container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 2vw;
+  color: aliceblue;
+}
+
+h2 {
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+h3 {
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+}
+
+span {
   
-  html, body {
-    min-height: 100vh;
-    background: #9b59b6;
-    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
-  }
-  
-  .container {
-    min-height: 100vh;
-    padding: 0;
-    margin: 0;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .item {
-    margin: 15px;
-    text-align: center;
-  }
-  
-  img {
-    margin: 15px;
-    max-width: 200px;
-  }
-  
-  h1, h2 {
-    text-shadow: 1px 1px #000000;
-  }
-  
-  h1, h2, p {
-    text-align: center;
-    max-width: 600px;
-    margin: 15px;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  h1 {
-    color: #FFFFFF;
-  }
-  
-  h2 {
-    color: #FFFFFF;
-  }
-  
-  p {
-    color: #FFFFFF;
-  }
-  
-  .social {
-    padding: 0;
-    margin: 15px;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    justify-content: center;
-    list-style: none;
-  }
-  
-  .social li {
-    margin: 15px;
-  }
-  
-  .social li a {
-    display: block;
-    color: #FFFFFF;
-    font-size: 30px;
-  }
-  
-  .social li a:hover {
-    text-shadow: 1px 1px #000000;
-  }
+  font-weight: lighter
+}
+
+.max-width-70 {
+  max-width: 70%;
+  margin: 2vh auto;
+}
+
+.text-color-white {
+  color: #ffffff;
+}
+
+.size-large {
+  line-height: 160%;
+  font-size: 24px;
+  margin-bottom: 4vh;
+}
+
+p {
+  line-height: 170%;
+  font-family: 'Regular';
+  font-size: 18px;
+  margin-bottom: 3vh;
+}
