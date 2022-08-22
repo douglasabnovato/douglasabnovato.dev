@@ -37,6 +37,7 @@ Correções
 - [ ] 2. Navegação piscando entre páginas
 - [ ] 3. Funcionamento correto do modo dark e light
 - [ ] 4. Funcionamento correto da responsividade 
+- [ ] 5. Revisar código de css comuns entre páginas para reduzir repetição
 
 ### v5.1 - Site
 
