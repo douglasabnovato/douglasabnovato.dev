@@ -40,6 +40,10 @@ img {
   height: 20vw;
 }
 
+.image-info{
+  width: 60%;
+}
+
 .infos{
   display: flex;
   margin-block-start: .5rem;
@@ -47,4 +51,8 @@ img {
 
 .infos-1 {
   margin-inline-end: 4rem;
+}
+
+.infos li{
+  margin-block-end: .5rem;
 }
