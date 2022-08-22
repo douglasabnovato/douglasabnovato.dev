@@ -28,7 +28,17 @@ Onde tem a descrição de tudo o que esse projeto se propõe a ter quando termin
 
 O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atualizada está na master, versões anteriores possuem suas respectivas versões em branches nomeadas. 
 
-## 🎨 Layout - v5.1 - Site
+## 🎨 Layout - v5.2 - Site
+
+Comportamentos
+- [ ] 4. Loader nas páginas com requisição: codigos, blog
+
+Correções
+- [ ] 2. Navegação piscando entre páginas
+- [ ] 3. Funcionamento correto do modo dark e light
+- [ ] 4. Funcionamento correto da responsividade 
+
+### v5.1 - Site
 
 Funcionalidades
 - [x] 2. Blog - os artigos do medium com API e estilização de cards
@@ -38,17 +48,14 @@ Funcionalidades
 - [x] 7. Uses - o setup que utilizei, utilizo e estou construindo
 
 Comportamentos
-- [ ] 3. Loader nas páginas com requisição: codigos, blog
-- [x] 4. Evoluir a página updates com uma timeline
-
-Correções
-- [ ] 2. Navegação piscando entre páginas
-- [ ] 3. Funcionamento correto do modo dark e light
-- [ ] 4. Funcionamento correto da responsividade 
+- [x] 3. Evoluir a página updates com uma timeline
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   <img alt="versão 5.1 do projeto - Blog" title="#douglasabnovato.dev" src="./.github/site-blog-1.jpg" width="400px">
-  <img alt="versão 5.1 do projeto - Projetos" title="#douglasabnovato.dev" src="./.github/site-projetos-1.jpg" width="400px"> 
+  <img alt="versão 5.1 do projeto - Projetos" title="#douglasabnovato.dev" src="./.github/site-projetos-2.jpg" width="400px"> 
+  <img alt="versão 5.1 do projeto - Hack Dev" title="#douglasabnovato.dev" src="./.github/site-hackdev-1.jpg" width="400px">
+  <img alt="versão 5.1 do projeto - Sobre Mim" title="#douglasabnovato.dev" src="./.github/site-sobremim-1.jpg" width="400px">
+  <img alt="versão 5.1 do projeto - Uses" title="#douglasabnovato.dev" src="./.github/site-uses-1.jpg" width="400px">
 </p> 
 
 Anotações
