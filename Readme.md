@@ -41,7 +41,7 @@ Correções
 
 Conteúdos
 - [ ] Hack Developer: completar os conteúdos e links
-- [ ] Updates: completar a timeline
+- [ ] Updates: completar a timeline com meus registros
 
 ### v5.1 - Site
 
