@@ -35,10 +35,11 @@ Funcionalidades
 - [x] 4. Projetos - as aplicações hospedadas 
 - [ ] 5. Hack Developer - uma trilha ordena de conteúdo e rotina
 - [x] 6. Sobre Mim - objetivo, apresentação e habilidades
-- [ ] 7. Uses - o setup que utilizei, utilizo e estou construindo
+- [x] 7. Uses - o setup que utilizei, utilizo e estou construindo
 
 Comportamentos
 - [ ] 3. Loader nas páginas com requisição: codigos, blog
+- [ ] 4. Evoluir a página updates para timeline
 
 Correções
 - [ ] 2. Navegação piscando entre páginas
