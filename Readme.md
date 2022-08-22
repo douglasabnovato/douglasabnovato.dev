@@ -94,6 +94,7 @@ Referências
 Inspiração 
 - [marc.dev](https://marc.dev/)
 - [turnerj](https://turnerj.com/)
+- [dejan](https://www.dejan.works/)
 
 ## 🛠 Versões
 
