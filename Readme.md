@@ -33,13 +33,13 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 Funcionalidades
 - [x] 2. Blog - os artigos do medium com API e estilização de cards
 - [x] 4. Projetos - as aplicações hospedadas 
-- [ ] 5. Hack Developer - uma trilha ordena de conteúdo e rotina
+- [x] 5. Hack Developer - uma trilha ordenada de conteúdo e rotina para ser dev
 - [x] 6. Sobre Mim - objetivo, apresentação e habilidades
 - [x] 7. Uses - o setup que utilizei, utilizo e estou construindo
 
 Comportamentos
 - [ ] 3. Loader nas páginas com requisição: codigos, blog
-- [ ] 4. Evoluir a página updates para timeline
+- [x] 4. Evoluir a página updates para timeline
 
 Correções
 - [ ] 2. Navegação piscando entre páginas

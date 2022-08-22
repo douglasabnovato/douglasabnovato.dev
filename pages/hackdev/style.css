@@ -25,6 +25,7 @@
   
   h2 {
     text-shadow: 1px 1px #000000;
+    color: #FFFFFF;
   }
   
   h2, p {
@@ -32,11 +33,7 @@
     max-width: 600px;
     margin: 15px;
     font-family: 'Roboto', sans-serif;
-  }
-  
-  h2 {
-    color: #FFFFFF;
-  }
+  } 
   
   p {
     color: #FFFFFF;
