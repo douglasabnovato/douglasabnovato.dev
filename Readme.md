@@ -30,6 +30,10 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 
 ## 🎨 Layout - v5.2 - Site
 
+Conteúdos
+- [ ] Hack Developer: completar os conteúdos e links
+- [ ] Updates: completar a timeline
+
 Comportamentos
 - [ ] 4. Loader nas páginas com requisição: codigos, blog
 
