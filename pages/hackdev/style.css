@@ -23,29 +23,15 @@
     justify-content: center;
   }
   
-  .item {
-    margin: 15px;
-    text-align: center;
-  }
-  
-  img {
-    margin: 15px;
-    max-width: 200px;
-  }
-  
-  h1, h2 {
+  h2 {
     text-shadow: 1px 1px #000000;
   }
   
-  h1, h2, p {
+  h2, p {
     text-align: center;
     max-width: 600px;
     margin: 15px;
     font-family: 'Roboto', sans-serif;
-  }
-  
-  h1 {
-    color: #FFFFFF;
   }
   
   h2 {
@@ -56,28 +42,3 @@
     color: #FFFFFF;
   }
   
-  .social {
-    padding: 0;
-    margin: 15px;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    justify-content: center;
-    list-style: none;
-  }
-  
-  .social li {
-    margin: 15px;
-  }
-  
-  .social li a {
-    display: block;
-    color: #FFFFFF;
-    font-size: 30px;
-  }
-  
-  .social li a:hover {
-    text-shadow: 1px 1px #000000;
-  }
