@@ -30,10 +30,6 @@ O desenvolvimento foi organizado em branches. Dessa forma, a versão mais atuali
 
 ## 🎨 Layout - v5.2 - Site
 
-Conteúdos
-- [ ] Hack Developer: completar os conteúdos e links
-- [ ] Updates: completar a timeline
-
 Comportamentos
 - [ ] 4. Loader nas páginas com requisição: codigos, blog
 
@@ -42,6 +38,10 @@ Correções
 - [ ] 3. Funcionamento correto do modo dark e light
 - [ ] 4. Funcionamento correto da responsividade 
 - [ ] 5. Revisar código de css comuns entre páginas para reduzir repetição
+
+Conteúdos
+- [ ] Hack Developer: completar os conteúdos e links
+- [ ] Updates: completar a timeline
 
 ### v5.1 - Site
 
