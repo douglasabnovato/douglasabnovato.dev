@@ -34,7 +34,7 @@ Funcionalidades
 - [x] 2. Blog - os artigos do medium com API e estilização de cards
 - [x] 4. Projetos - as aplicações hospedadas 
 - [ ] 5. Hack Developer - uma trilha ordena de conteúdo e rotina
-- [ ] 6. Sobre Mim - apresentação e habilidades
+- [x] 6. Sobre Mim - objetivo, apresentação e habilidades
 - [ ] 7. Uses - o setup que utilizei, utilizo e estou construindo
 
 Comportamentos

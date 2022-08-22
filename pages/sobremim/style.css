@@ -20,6 +20,16 @@ h2 {
   font-weight: bold;
 }
 
+h3 {
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+}
+
+span {
+  
+  font-weight: lighter
+}
+
 .max-width-70 {
   max-width: 70%;
   margin: 2vh auto;
