@@ -43,6 +43,7 @@ Comportamentos
 Correções
 - [ ] 2. Navegação piscando entre páginas
 - [ ] 3. Funcionamento correto do modo dark e light
+- [ ] 4. Funcionamento correto da responsividade 
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   <img alt="versão 5.1 do projeto - Blog" title="#douglasabnovato.dev" src="./.github/site-blog-1.jpg" width="400px">
