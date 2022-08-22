@@ -39,7 +39,7 @@ Funcionalidades
 
 Comportamentos
 - [ ] 3. Loader nas páginas com requisição: codigos, blog
-- [x] 4. Evoluir a página updates para timeline
+- [x] 4. Evoluir a página updates com uma timeline
 
 Correções
 - [ ] 2. Navegação piscando entre páginas
