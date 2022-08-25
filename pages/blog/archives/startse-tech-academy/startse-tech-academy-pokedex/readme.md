@@ -16,3 +16,6 @@
 #### Inspiração
 
 - [pokemon api](https://github.com/tbone849/pokemon-guide)
+- [pokedex - JavaScript puro](https://www.youtube.com/watch?v=Uptu3NrBFBM&list=PLs_UfelOxGL25jmkIJ4pU16Ku-jfdFGC4&index=6)
+- [search pokemon - html css js](https://www.youtube.com/watch?v=vdytGGKyJKE&list=PLs_UfelOxGL25jmkIJ4pU16Ku-jfdFGC4&index=7)
+- [pokemon - react](https://www.youtube.com/watch?v=YIzwXNLB53Q&list=PLs_UfelOxGL25jmkIJ4pU16Ku-jfdFGC4&index=7&t=412s)
