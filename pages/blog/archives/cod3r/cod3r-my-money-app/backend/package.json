@@ -17,7 +17,7 @@
     "express-query-int": "3.0.0",
     "jsonwebtoken": "8.3.0",
     "lodash": "4.17.21",
-    "mongoose": "6.1.7",
+    "mongoose": "6.4.6",
     "mongoose-paginate": "5.0.3",
     "node-restful": "0.2.6",
     "pm2": "5.1.2"
