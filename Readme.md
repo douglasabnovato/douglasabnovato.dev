@@ -103,6 +103,7 @@ Inspiração
 - [marc.dev](https://marc.dev/)
 - [turnerj](https://turnerj.com/)
 - [dejan](https://www.dejan.works/)
+- [pedropaulo](https://portfolio.pedropaulo.dev/)
 
 ## 🛠 Versões
 
