@@ -104,6 +104,8 @@ Inspiração
 - [turnerj](https://turnerj.com/)
 - [dejan](https://www.dejan.works/)
 - [pedropaulo](https://portfolio.pedropaulo.dev/)
+- [startbootstrap](https://startbootstrap.com/previews/resume)
+- [pokemaobr](https://pokemaobr.dev/#page-top)
 
 ## 🛠 Versões
 
