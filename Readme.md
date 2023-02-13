@@ -46,6 +46,7 @@ Funcionalidades
 - [x] 5. Hack Developer - uma trilha ordenada de conteúdo e rotina para ser dev
 - [x] 6. Sobre Mim - objetivo, apresentação e habilidades
 - [x] 7. Uses - o setup que utilizei, utilizo e estou construindo
+- [x] Um [Ecommercer](https://www.promobit.com.br/) de aplicações
 
 Comportamentos
 - [x] 3. Evoluir a página updates com uma timeline
