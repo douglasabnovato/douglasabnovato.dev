@@ -14,6 +14,14 @@
   </a>
 </p>
 
+
+## 💻 Workflow de projeto
+
+- master
+- developer
+- mvp-versao-1
+- demais branches históricas
+
 ## 💻 Sobre o projeto
 
 ♻️ douglasabnovato.dev
