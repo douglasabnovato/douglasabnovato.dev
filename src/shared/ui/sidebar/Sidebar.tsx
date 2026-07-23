@@ -4,10 +4,10 @@ import { ThemeToggle } from '../themeToggle/ThemeToggle'
 
 const navItems = [
   { to: '/', label: 'Home', icon: Home, end: true },
-  { to: '/curriculo', label: 'Currículo', icon: FileText, end: false },
   { to: '/projetos', label: 'Projetos', icon: LayoutGrid, end: false },
   { to: '/codigos', label: 'Códigos', icon: Code2, end: false },
   { to: '/blog', label: 'Blog', icon: Newspaper, end: false },
+  { to: '/curriculo', label: 'Currículo', icon: FileText, end: false },
   { to: '/redes-sociais', label: 'Redes sociais', icon: Share2, end: false },
 ]
 
