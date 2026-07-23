@@ -1,1 +1,51 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+    --color-page: #09090b;
+    --color-surface: rgb(39 39 42 / 0.4);
+    --color-surface-solid: #18181b;
+    --color-border: #27272a;
+    --color-text-primary: #f4f4f5;
+    --color-text-secondary: #a1a1aa;
+    --color-text-muted: #71717a;
+}
+
+[data-theme="light"] {
+    --color-page: #ffffff;
+    --color-surface: rgb(244 244 245 / 0.6);
+    --color-surface-solid: #f4f4f5;
+    --color-border: #e4e4e7;
+    --color-text-primary: #18181b;
+    --color-text-secondary: #52525b;
+    --color-text-muted: #71717a;
+}
+
+@utility bg-page {
+    background-color: var(--color-page);
+}
+
+@utility bg-surface {
+    background-color: var(--color-surface);
+}
+
+@utility bg-surface-solid {
+    background-color: var(--color-surface-solid);
+}
+
+@utility border-default {
+    border-color: var(--color-border);
+}
+
+@utility text-primary {
+    color: var(--color-text-primary);
+}
+
+@utility text-secondary {
+    color: var(--color-text-secondary);
+}
+
+@utility text-muted {
+    color: var(--color-text-muted);
+}
