@@ -1,19 +1,22 @@
+export type ProjectCategory =
+  | "especial"
+  | "destaque"
+  | "projetos-originais"
+  | "formacao-projetos"
+  | "formacao-conteudos"
+  | "templates-institucionais";
+
+export interface ProjectLink {
+  label: string;
+  url: string;
+}
+
 export interface CuratedProject {
   id: string;
   title: string;
   description: string;
-  url: string;
-  featured: boolean;
+  category: ProjectCategory;
+  links: ProjectLink[];
   accentColor?: string;
-}
-
-export interface GithubRepo {
-  id: number;
-  name: string;
-  description: string | null;
-  html_url: string;
-  homepage: string | null;
-  language: string | null;
-  stargazers_count: number;
-  updated_at: string;
+  placeholder?: boolean;
 }
