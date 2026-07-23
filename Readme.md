@@ -23,19 +23,24 @@ Esse repositório tem história: nasceu em 2022 como um desafio de portfólio da
 | 🏠 Home | ✅ Pronta | O que estou fazendo agora, com destaque pro ecossistema learnTECH |
 | 📄 Currículo | ✅ Pronta | Trajetória profissional real, com exportação em PDF (layout de duas colunas) |
 | 🗂️ Projetos | ✅ Pronta | Curadoria própria: Especiais, Destaques e categorias — só o que está hospedado e passa no meu padrão de qualidade |
-| 💻 Códigos | ✅ Pronta | Tudo consumido ao vivo da API do GitHub: repositórios, issues em progresso, gists e a comunidade [learnTECH Community](https://github.com/learnTECH-community) |
-| 📝 Blog | 🚧 Em construção | Artigos que escrevo, via [Medium](https://douglasabnovato.medium.com) |
-| 🔗 Redes sociais | 🚧 Em construção | Todos os meus links, num lugar só |
+| 💻 Códigos | ✅ Pronta | Tudo consumido ao vivo da API do GitHub: repositórios, issues em progresso, gists e a comunidade [learnTECH Community](https://github.com/learnTECH-community) — com cache local de 1h para respeitar o limite de requisições |
+| 📝 Blog | ✅ Pronta | Artigos que escrevo, via [Medium](https://douglasabnovato.medium.com) |
+| 🔗 Redes sociais | ✅ Pronta | Todos os meus links, num lugar só |
+
+## 🎨 Tema e responsividade
+
+- **Dark/light** — alternância manual com persistência em `localStorage`; dark é o padrão, consistente com o resto do ecossistema (não é limitação, é escolha deliberada)
+- **Responsivo** — sidebar vira menu mobile (drawer com overlay) abaixo do breakpoint `md`
 
 ## 🛠 Tecnologias
 
 - [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vite.dev/) como build tool
-- [Tailwind CSS 4](https://tailwindcss.com/) para estilização
+- [Tailwind CSS 4](https://tailwindcss.com/) para estilização, com variáveis CSS para o tema dark/light
 - [React Router](https://reactrouter.com/) para navegação
 - [react-to-print](https://github.com/MatthewHerbst/react-to-print) para exportação de currículo em PDF
-- [Lucide React](https://lucide.dev/) para ícones
-- API pública do GitHub, sem autenticação (repositórios, issues, gists, organizações)
+- [Lucide React](https://lucide.dev/) para ícones gerais + [react-icons](https://react-icons.github.io/react-icons/) (Font Awesome 6) para ícones de marca (GitHub, LinkedIn, Instagram, X) — o Lucide removeu esses ícones nas versões recentes
+- API pública do GitHub, sem autenticação (repositórios, issues, gists, organizações), com cache local para respeitar o limite de requisições
 
 ## 📁 Estrutura do projeto
 
@@ -53,13 +58,13 @@ src/
 │       └── main.css
 │
 ├── entities/
-│   ├── article/              # Blog — em construção
+│   ├── article/
 │   │   ├── model/
 │   │   │   ├── types.ts
 │   │   │   └── useMediumPosts.ts
 │   │   └── ui/
 │   │       └── ArticleCard.tsx
-│   ├── github/                # dados ao vivo da API do GitHub
+│   ├── github/                 # dados ao vivo da API do GitHub
 │   │   ├── api/
 │   │   │   └── githubApi.ts
 │   │   └── model/
@@ -92,12 +97,14 @@ src/
 │
 └── shared/
     ├── lib/
+    │   ├── localCache.ts       # cache com TTL em localStorage (usado pela página Códigos)
     │   ├── utils.ts
     │   └── hooks/
     │       └── useDocumentTitle.ts
     └── ui/
         ├── badge/Badge.tsx
         ├── layout/MainLayout.tsx
+        ├── mobileHeader/MobileHeader.tsx  # barra fixa mobile, só abaixo do breakpoint md
         ├── sidebar/Sidebar.tsx
         └── themeToggle/ThemeToggle.tsx
 ```
