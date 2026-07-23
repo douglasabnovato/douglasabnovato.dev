@@ -22,7 +22,7 @@ export const RedesSociais = () => {
   return (
     <div className="max-w-2xl">
       <h1 className="text-2xl font-bold mb-1">Redes sociais</h1>
-      <p className="text-zinc-400 text-sm mb-8">Onde mais me encontrar.</p>
+      <p className="text-secondary text-sm mb-8">Onde mais me encontrar.</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {socialLinks.map(({ label, url, icon: Icon }) => (
@@ -31,9 +31,9 @@ export const RedesSociais = () => {
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 bg-zinc-900/40 rounded-xl px-4 py-3 hover:bg-zinc-900/70 transition-colors"
+            className="flex items-center gap-3 bg-surface rounded-xl px-4 py-3 hover:bg-surface-solid transition-colors"
           >
-            <Icon size={18} className="text-zinc-400" />
+            <Icon size={18} className="text-secondary" />
             <span className="text-sm font-medium">{label}</span>
           </a>
         ))}

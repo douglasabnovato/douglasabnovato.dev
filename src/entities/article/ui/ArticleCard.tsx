@@ -16,11 +16,11 @@ export const ArticleCard = ({ article }: ArticleCardProps) => {
       href={article.link}
       target="_blank"
       rel="noopener noreferrer"
-      className="block bg-zinc-900/40 rounded-xl p-4 hover:bg-zinc-900/70 transition-colors"
+      className="block bg-surface rounded-xl p-4 hover:bg-surface-solid transition-colors"
     >
-      <p className="text-xs text-zinc-500 mb-1">{formattedDate}</p>
+      <p className="text-xs text-muted mb-1">{formattedDate}</p>
       <p className="text-sm font-medium mb-1">{article.title}</p>
-      <p className="text-xs text-zinc-400 line-clamp-2">{article.description}</p>
+      <p className="text-xs text-secondary line-clamp-2">{article.description}</p>
     </a>
   )
 }

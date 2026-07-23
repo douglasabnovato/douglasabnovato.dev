@@ -1,11 +1,11 @@
 import type { CuratedProject } from "../model/types";
 
 export const especiais: CuratedProject[] = [
-  { id: "learn-tech", title: "LearnTECH", description: "Plataforma principal do ecossistema — LXP e hub de engenharia da ByteClass.", category: "especial", links: [{ label: "Acessar", url: "https://learn-tech-pied.vercel.app" }], accentColor: "#6d63d8" },
-  { id: "bootcamps", title: "Bootcamps", description: "Retrospectiva e roteiro de bootcamps, formações e comunidades.", category: "especial", links: [{ label: "Acessar", url: "https://bootcamps-dun.vercel.app" }], accentColor: "#00c853" },
-  { id: "tools", title: "Tools", description: "Catálogo curado de ferramentas e hospedagens para devs.", category: "especial", links: [{ label: "Acessar", url: "https://douglasabnovato.github.io/tools" }], accentColor: "#0ad2ff" },
-  { id: "career", title: "Career", description: "Oportunidades, empresas e perfis de devs.", category: "especial", links: [{ label: "Acessar", url: "https://douglasabnovato.github.io/career" }], accentColor: "#f97316" },
-];
+  { id: "learn-tech", title: "LearnTECH", tag: "Ecossistema · LXP", description: "Plataforma principal do ecossistema — LXP e hub de engenharia da ByteClass.", category: "especial", links: [{ label: "Acessar", url: "https://learn-tech-pied.vercel.app" }], accentColor: "#6d63d8" },
+  { id: "bootcamps", title: "Bootcamps", tag: "Retrospectiva de eventos", description: "Retrospectiva e roteiro de bootcamps, formações e comunidades.", category: "especial", links: [{ label: "Acessar", url: "https://bootcamps-dun.vercel.app" }], accentColor: "#00c853" },
+  { id: "tools", title: "Tools", tag: "Catálogo de ferramentas", description: "Catálogo curado de ferramentas e hospedagens para devs.", category: "especial", links: [{ label: "Acessar", url: "https://douglasabnovato.github.io/tools" }], accentColor: "#0ad2ff" },
+  { id: "career", title: "Career", tag: "Vagas e empresas", description: "Oportunidades, empresas e perfis de devs.", category: "especial", links: [{ label: "Acessar", url: "https://douglasabnovato.github.io/career" }], accentColor: "#f97316" },
+]; 
 
 export const destaques: CuratedProject[] = [
   { id: "doctor-care", title: "DoctorCare", description: "Landing page institucional para profissionais autônomos da saúde.", category: "destaque", links: [{ label: "Repositório", url: "https://github.com/douglasabnovato/doctor-care" }] },

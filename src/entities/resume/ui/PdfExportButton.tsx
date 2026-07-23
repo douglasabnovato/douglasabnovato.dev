@@ -16,7 +16,7 @@ export const PdfExportButton = ({ targetRef, fileName }: PdfExportButtonProps) =
   return (
     <button
       onClick={handlePrint}
-      className="flex items-center gap-2 text-sm px-4 py-2 rounded-lg border border-zinc-700 hover:bg-zinc-800 transition-colors"
+      className="flex items-center gap-2 text-sm px-4 py-2 rounded-lg border border-default hover:bg-surface-solid transition-colors"
     >
       <Download size={16} />
       Exportar PDF

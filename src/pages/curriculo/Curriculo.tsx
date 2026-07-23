@@ -16,7 +16,7 @@ export const Curriculo = () => {
       <div className="flex items-center justify-between mb-8">
         <div>
           <h1 className="text-2xl font-bold">{resumeData.name}</h1>
-          <p className="text-zinc-400 text-sm">{resumeData.headline}</p>
+          <p className="text-secondary text-sm">{resumeData.headline}</p>
         </div>
         <PdfExportButton targetRef={printRef} fileName="douglas-novato-curriculo" />
       </div>
@@ -24,18 +24,18 @@ export const Curriculo = () => {
       <div ref={printRef} className="curriculo-print-area grid grid-cols-1 md:grid-cols-3 gap-10">
         <aside className="md:col-span-1 space-y-8">
           <section>
-            <h2 className="text-xs uppercase tracking-wide text-zinc-500 cv-muted mb-2">Resumo</h2>
-            <p className="text-sm text-zinc-300 leading-relaxed">{resumeData.summary}</p>
+            <h2 className="text-xs uppercase tracking-wide text-muted cv-muted mb-2">Resumo</h2>
+            <p className="text-sm text-secondary leading-relaxed">{resumeData.summary}</p>
           </section>
 
           <section>
-            <h2 className="text-xs uppercase tracking-wide text-zinc-500 cv-muted mb-3">Formação</h2>
+            <h2 className="text-xs uppercase tracking-wide text-muted cv-muted mb-3">Formação</h2>
             <ul className="space-y-3">
               {resumeData.education.map((edu) => (
                 <li key={edu.id} className="text-sm cv-entry">
                   <p className="font-medium">{edu.institution}</p>
-                  <p className="text-zinc-400 cv-muted">{edu.degree}</p>
-                  <p className="text-xs text-zinc-500 cv-muted">
+                  <p className="text-secondary cv-muted">{edu.degree}</p>
+                  <p className="text-xs text-muted cv-muted">
                     {edu.period}{!edu.completed ? ' · em andamento' : ''}
                   </p>
                 </li>
@@ -44,11 +44,11 @@ export const Curriculo = () => {
           </section>
 
           <section>
-            <h2 className="text-xs uppercase tracking-wide text-zinc-500 cv-muted mb-3">Trajetória</h2>
+            <h2 className="text-xs uppercase tracking-wide text-muted cv-muted mb-3">Trajetória</h2>
             <ul className="space-y-1">
               {condensado.map((exp) => (
-                <li key={exp.id} className="text-xs text-zinc-400 cv-muted cv-entry">
-                  <span className="text-zinc-300">{exp.period}</span> — {exp.role}, {exp.company}
+                <li key={exp.id} className="text-xs text-secondary cv-muted cv-entry">
+                  <span className="text-primary">{exp.period}</span> — {exp.role}, {exp.company}
                 </li>
               ))}
             </ul>

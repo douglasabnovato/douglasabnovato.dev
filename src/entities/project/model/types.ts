@@ -19,4 +19,5 @@ export interface CuratedProject {
   links: ProjectLink[];
   accentColor?: string;
   placeholder?: boolean;
+  tag?: string;
 }

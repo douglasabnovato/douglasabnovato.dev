@@ -2,24 +2,33 @@
 
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-:root {
-    --color-page: #09090b;
-    --color-surface: rgb(39 39 42 / 0.4);
-    --color-surface-solid: #18181b;
-    --color-border: #27272a;
-    --color-text-primary: #f4f4f5;
-    --color-text-secondary: #a1a1aa;
-    --color-text-muted: #71717a;
+:root,
+[data-theme="dark"] {
+  --color-page: #09090b;
+  --color-surface: rgb(39 39 42 / 0.4);
+  --color-surface-solid: #18181b;
+  --color-border: #27272a;
+  --color-text-primary: #f4f4f5;
+  --color-text-secondary: #a1a1aa;
+  --color-text-muted: #71717a;
 }
 
 [data-theme="light"] {
-    --color-page: #ffffff;
-    --color-surface: rgb(244 244 245 / 0.6);
-    --color-surface-solid: #f4f4f5;
-    --color-border: #e4e4e7;
-    --color-text-primary: #18181b;
-    --color-text-secondary: #52525b;
-    --color-text-muted: #71717a;
+  --color-page: #ffffff;
+  --color-surface: rgb(244 244 245 / 0.6);
+  --color-surface-solid: #f4f4f5;
+  --color-border: #e4e4e7;
+  --color-text-primary: #18181b;
+  --color-text-secondary: #52525b;
+  --color-text-muted: #71717a;
+}
+
+body {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 @utility bg-page {

@@ -14,14 +14,14 @@ export const Projetos = () => {
     <div className="max-w-4xl space-y-12">
       <section>
         <h1 className="text-2xl font-bold mb-1">Projetos</h1>
-        <p className="text-zinc-400 text-sm mb-6">O ecossistema e os projetos que venho construindo.</p>
+        <p className="text-secondary text-sm mb-6">O ecossistema e os projetos que venho construindo.</p>
 
-        <h2 className="text-xs uppercase tracking-wide text-zinc-500 mb-3">Especiais</h2>
+        <h2 className="text-xs uppercase tracking-wide text-muted mb-3">Especiais</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
           {especiais.map((p) => <ProjectCard key={p.id} project={p} />)}
         </div>
 
-        <h2 className="text-xs uppercase tracking-wide text-zinc-500 mb-3">Destaques</h2>
+        <h2 className="text-xs uppercase tracking-wide text-muted mb-3">Destaques</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {destaques.map((p) => <ProjectCard key={p.id} project={p} />)}
         </div>
@@ -31,7 +31,7 @@ export const Projetos = () => {
         const items = demaisProjetos.filter((p) => p.category === key)
         return (
           <section key={key}>
-            <h2 className="text-xs uppercase tracking-wide text-zinc-500 mb-3">{label}</h2>
+            <h2 className="text-xs uppercase tracking-wide text-muted mb-3">{label}</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {items.map((p) => <ProjectCard key={p.id} project={p} />)}
             </div>
