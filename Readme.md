@@ -1,75 +1,146 @@
-# React + TypeScript + Vite
+<h1 align="center">🌐 douglasabnovato.dev</h1>
+<p align="center">Meu site pessoal — currículo, projetos e conteúdo, num só lugar.</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img alt="React" src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black">
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-6.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white">
+  <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white">
+</p>
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 💻 Sobre o projeto
 
-## React Compiler
+Site pessoal que centraliza minha trajetória, meu currículo e os projetos que venho construindo — incluindo o [ecossistema learnTECH](https://learn-tech-pied.vercel.app), do qual esse site é a origem.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Esse repositório tem história: nasceu em 2022 como um desafio de portfólio da Rocketseat, evoluiu por 5 versões em HTML/CSS/JS puro (320 commits), ficou parado por mais de 3 anos, e está sendo **reconstruído do zero** com uma stack moderna — não como remendo do código antigo, mas como reflexo de onde estou hoje. O histórico de versões anteriores continua preservado nas branches do repositório.
 
-## Expanding the ESLint configuration
+## ✨ Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Página | Status | O que faz |
+|---|---|---|
+| 🏠 Home | ✅ Pronta | O que estou fazendo agora, com destaque pro ecossistema learnTECH |
+| 📄 Currículo | ✅ Pronta | Trajetória profissional real, com exportação em PDF (layout de duas colunas) |
+| 🗂️ Projetos | ✅ Pronta | Curadoria própria: Especiais, Destaques e categorias — só o que está hospedado e passa no meu padrão de qualidade |
+| 💻 Códigos | ✅ Pronta | Tudo consumido ao vivo da API do GitHub: repositórios, issues em progresso, gists e a comunidade [learnTECH Community](https://github.com/learnTECH-community) |
+| 📝 Blog | 🚧 Em construção | Artigos que escrevo, via [Medium](https://douglasabnovato.medium.com) |
+| 🔗 Redes sociais | 🚧 Em construção | Todos os meus links, num lugar só |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠 Tecnologias
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vite.dev/) como build tool
+- [Tailwind CSS 4](https://tailwindcss.com/) para estilização
+- [React Router](https://reactrouter.com/) para navegação
+- [react-to-print](https://github.com/MatthewHerbst/react-to-print) para exportação de currículo em PDF
+- [Lucide React](https://lucide.dev/) para ícones
+- API pública do GitHub, sem autenticação (repositórios, issues, gists, organizações)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📁 Estrutura do projeto
 
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Arquitetura inspirada em Feature-Sliced Design — mesmo padrão usado no [bootcamps](https://bootcamps-dun.vercel.app): separação por `app` (orquestração), `entities` (dado e regra de negócio), `pages` (telas) e `shared` (reutilizável).
 
 ```
+src/
+├── app/
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── router/
+│   │   └── AppRouter.tsx
+│   └── styles/
+│       ├── App.css
+│       └── main.css
+│
+├── entities/
+│   ├── article/              # Blog — em construção
+│   │   ├── model/
+│   │   │   ├── types.ts
+│   │   │   └── useMediumPosts.ts
+│   │   └── ui/
+│   │       └── ArticleCard.tsx
+│   ├── github/                # dados ao vivo da API do GitHub
+│   │   ├── api/
+│   │   │   └── githubApi.ts
+│   │   └── model/
+│   │       └── types.ts
+│   ├── project/                # curadoria de projetos (Especiais/Destaques/categorias)
+│   │   ├── api/
+│   │   │   └── projects.data.ts
+│   │   ├── model/
+│   │   │   ├── types.ts
+│   │   │   └── useProjects.ts
+│   │   └── ui/
+│   │       └── ProjectCard.tsx
+│   └── resume/                 # currículo, com exportação em PDF
+│       ├── model/
+│       │   ├── resume.data.ts
+│       │   └── types.ts
+│       └── ui/
+│           ├── curriculo-print.css
+│           ├── ExperienceBlock.tsx
+│           └── PdfExportButton.tsx
+│
+├── pages/
+│   ├── blog/Blog.tsx
+│   ├── codigos/Codigos.tsx
+│   ├── curriculo/Curriculo.tsx
+│   ├── home/Home.tsx
+│   ├── notFound/NotFound.tsx
+│   ├── projetos/Projetos.tsx
+│   └── redesSociais/RedesSociais.tsx
+│
+└── shared/
+    ├── lib/
+    │   ├── utils.ts
+    │   └── hooks/
+    │       └── useDocumentTitle.ts
+    └── ui/
+        ├── badge/Badge.tsx
+        ├── layout/MainLayout.tsx
+        ├── sidebar/Sidebar.tsx
+        └── themeToggle/ThemeToggle.tsx
+```
+
+## 🚀 Como rodar localmente
+
+```bash
+git clone https://github.com/douglasabnovato/douglasabnovato.dev.git
+cd douglasabnovato.dev
+git checkout mvp-versao-1
+npm install
+npm run dev
+```
+
+Acesse `http://localhost:5173`.
+
+## 🌳 Workflow de branches
+
+```
+master              → produção
+developer            → integração/staging
+mvp-versao-1         → desenvolvimento ativo desta reconstrução
+demais branches      → histórico preservado das versões anteriores (v1.0 a v5.2)
+```
+
+## 🌐 Ecossistema
+
+Esse site é a origem de um conjunto maior de projetos:
+
+| Projeto | Descrição |
+|---|---|
+| [learnTECH](https://learn-tech-pied.vercel.app) | Plataforma principal — LXP e hub de engenharia da ByteClass |
+| [Bootcamps](https://bootcamps-dun.vercel.app) | Retrospectiva e roteiro de formações e eventos |
+| [Tools](https://douglasabnovato.github.io/tools) | Catálogo curado de ferramentas para devs |
+| [Career](https://douglasabnovato.github.io/career) | Oportunidades, empresas e perfis de devs |
+
+E dois projetos de portfólio avulso, provas de capacidade técnica em contextos reais:
+
+| Projeto | Descrição |
+|---|---|
+| [DoctorCare](https://douglasabnovato.github.io/doctor-care) | Landing page institucional para profissionais autônomos da saúde |
+| [Crachá Virtual](https://douglasabnovato.github.io/cracha-virtual) | Gerador de crachá digital mobile-first com links sociais |
+
+---
+
+Feito por [Douglas A. B. Novato](https://www.linkedin.com/in/douglasabnovato/) 👋🏽
