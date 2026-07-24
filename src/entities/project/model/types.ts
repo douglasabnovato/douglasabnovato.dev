@@ -9,11 +9,12 @@ export type ProjectCategory =
 export interface ProjectLink {
   label: string;
   url: string;
+  hospedado?: boolean;
 }
 
 export type ProjectStatus = "em-desenvolvimento" | "mvp"; 
-
-export type ProjectType = "educacional" | "site-institucional" | "lp-de-produto" | "financeiro" | "utilitario";
+ 
+export type ProjectType = "educacional" | "site-institucional" | "lp-de-produto" | "financeiro" | "utilitario" | "projeto";
 
 export interface CuratedProject {
   id: string;
