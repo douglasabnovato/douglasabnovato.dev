@@ -11,6 +11,10 @@ export interface ProjectLink {
   url: string;
 }
 
+export type ProjectStatus = "em-desenvolvimento" | "mvp"; 
+
+export type ProjectType = "educacional" | "site-institucional" | "lp-de-produto" | "financeiro" | "utilitario";
+
 export interface CuratedProject {
   id: string;
   title: string;
@@ -20,4 +24,6 @@ export interface CuratedProject {
   accentColor?: string;
   placeholder?: boolean;
   tag?: string;
+  status?: ProjectStatus;
+  tipo?: ProjectType;
 }
