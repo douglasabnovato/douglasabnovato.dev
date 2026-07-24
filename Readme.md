@@ -2,6 +2,10 @@
 <p align="center">Meu site pessoal — currículo, projetos e conteúdo, num só lugar.</p>
 
 <p align="center">
+  <a href="https://douglasabnovato-dev.vercel.app/"><img alt="Live" src="https://img.shields.io/badge/live-douglasabnovato--dev.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white"></a>
+</p>
+
+<p align="center">
   <img alt="React" src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-6.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
   <img alt="Vite" src="https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white">
@@ -16,16 +20,42 @@ Site pessoal que centraliza minha trajetória, meu currículo e os projetos que 
 
 Esse repositório tem história: nasceu em 2022 como um desafio de portfólio da Rocketseat, evoluiu por 5 versões em HTML/CSS/JS puro (320 commits), ficou parado por mais de 3 anos, e está sendo **reconstruído do zero** com uma stack moderna — não como remendo do código antigo, mas como reflexo de onde estou hoje. O histórico de versões anteriores continua preservado nas branches do repositório.
 
+## 📊 Projetos em números
+
+| Métrica | Valor |
+|---|---|
+| Repositórios públicos catalogados | **126** |
+| Categorias de organização | **6** — Especiais, Destaques, Projetos Originais, Formação Projetos, Formação Conteúdos, Templates Institucionais |
+| Tipos de classificação | **6** — educacional, site institucional, LP de produto, financeiro, utilitário, projeto |
+| Status possíveis | **2** — MVP, Em desenvolvimento |
+
 ## ✨ Funcionalidades
 
 | Página | Status | O que faz |
 |---|---|---|
 | 🏠 Home | ✅ Pronta | O que estou fazendo agora, com destaque pro ecossistema learnTECH |
 | 📄 Currículo | ✅ Pronta | Trajetória profissional real, com exportação em PDF (layout de duas colunas) |
-| 🗂️ Projetos | ✅ Pronta | Curadoria própria: Especiais, Destaques e categorias — só o que está hospedado e passa no meu padrão de qualidade |
+| 🗂️ Projetos | ✅ Pronta | 126 repositórios catalogados em 6 categorias, cada um com status, tipo e imagem real do próprio repositório |
 | 💻 Códigos | ✅ Pronta | Tudo consumido ao vivo da API do GitHub: repositórios, issues em progresso, gists e a comunidade [learnTECH Community](https://github.com/learnTECH-community) — com cache local de 1h para respeitar o limite de requisições |
 | 📝 Blog | ✅ Pronta | Artigos que escrevo, via [Medium](https://douglasabnovato.medium.com) |
 | 🔗 Redes sociais | ✅ Pronta | Todos os meus links, num lugar só |
+
+## 🗂️ Como os projetos são organizados
+
+Cada repositório recebe duas classificações independentes, não uma mistura confusa:
+
+- **Status** — em que estágio está: `MVP` (entregue) ou `Em desenvolvimento`
+- **Tipo** — que espécie de projeto é: educacional, site institucional, LP de produto, financeiro, utilitário ou projeto
+
+Um projeto pode ser, por exemplo, MVP + Financeiro, ou Em desenvolvimento + Educacional — os dois eixos são independentes, sem forçar uma categoria única que não capture a realidade.
+
+## 🎴 Design dos cards
+
+Inspirado no padrão de card do Airbnb — imagem no topo, badges discretos e translúcidos sobrepostos, informação organizada em texto simples embaixo:
+
+- **Imagem real** de cada repositório, obtida automaticamente via `opengraph.githubassets.com` — a mesma imagem que aparece quando o link do repo é compartilhado no WhatsApp ou Twitter
+- **Fallback** silencioso para um placeholder neutro quando o repositório não tem imagem própria configurada
+- **Link de produção**, quando existe, destacado visualmente do link de repositório — badge verde versus sublinhado simples
 
 ## 🎨 Tema e responsividade
 
@@ -40,7 +70,7 @@ Esse repositório tem história: nasceu em 2022 como um desafio de portfólio da
 - [React Router](https://reactrouter.com/) para navegação
 - [react-to-print](https://github.com/MatthewHerbst/react-to-print) para exportação de currículo em PDF
 - [Lucide React](https://lucide.dev/) para ícones gerais + [react-icons](https://react-icons.github.io/react-icons/) (Font Awesome 6) para ícones de marca (GitHub, LinkedIn, Instagram, X) — o Lucide removeu esses ícones nas versões recentes
-- API pública do GitHub, sem autenticação (repositórios, issues, gists, organizações), com cache local para respeitar o limite de requisições
+- API pública do GitHub, sem autenticação (repositórios, issues, gists, organizações, imagens de OpenGraph), com cache local para respeitar o limite de requisições
 
 ## 📁 Estrutura do projeto
 
@@ -119,7 +149,7 @@ npm install
 npm run dev
 ```
 
-Acesse `http://localhost:5173`.
+Acesse `http://localhost:5173`, ou veja a versão publicada em [douglasabnovato-dev.vercel.app](https://douglasabnovato-dev.vercel.app/).
 
 ## 🌳 Workflow de branches
 
