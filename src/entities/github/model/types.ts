@@ -38,7 +38,7 @@ export interface GithubOrg {
   location: string | null;
   public_repos: number;
 }
-
+  
 export interface ManagementBoard {
   id: string;
   nome: string;
