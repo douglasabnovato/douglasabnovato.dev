@@ -61,12 +61,8 @@ export const ProjectCard = ({ project, numero }: ProjectCardProps) => {
         {project.tipo && <p className="text-xs text-muted mt-0.5">{tipoLabels[project.tipo]}</p>}
         {project.tag && <p className="text-xs text-muted">{project.tag}</p>}
         <p className="text-xs text-secondary mt-1 mb-3">{project.description}</p>
-        {project.issuesAbertas !== undefined && (
-          <p className="text-xs text-muted mb-2">
-            {project.issuesAbertas} {project.issuesAbertas === 1 ? 'issue aberta' : 'issues abertas'}
-          </p>
-        )}
-        <div className="flex flex-wrap gap-2">
+
+        <div className="flex flex-wrap items-center gap-2">
           {project.links.map((link) =>
             link.hospedado ? (
               <a
@@ -89,6 +85,11 @@ export const ProjectCard = ({ project, numero }: ProjectCardProps) => {
                 {link.label}
               </a>
             )
+          )}
+          {project.issuesAbertas !== undefined && (
+            <span className="text-[10px] text-muted font-mono ml-auto" title="Issues abertas">
+              {project.issuesAbertas}
+            </span>
           )}
         </div>
       </div>

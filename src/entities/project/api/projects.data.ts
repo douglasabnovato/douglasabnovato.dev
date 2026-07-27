@@ -1,12 +1,14 @@
 // src/entities/project/api/project.data.ts
-import type { CuratedProject, ManagementBoard } from "../model/types";
+import type { CuratedProject, ManagementBoard } from "../model/types"; 
+import boardEcossistemaImg from "@/assets/engenheiro-de-software.jpg";
+import boardMoviesImg from "@/assets/movies-app.jpg";
 
 // Especiais
 export const especiais: CuratedProject[] = [
-  { id: "learn-tech", title: "LearnTECH", tag: "Ecossistema · LXP", description: "Plataforma principal do ecossistema — LXP e hub de engenharia da ByteClass.", category: "especial", links: [{ label: "Acessar", url: "https://learn-tech-pied.vercel.app" }], accentColor: "#6d63d8" },
-  { id: "bootcamps", title: "Bootcamps", tag: "Retrospectiva de eventos", description: "Retrospectiva e roteiro de bootcamps, formações e comunidades.", category: "especial", links: [{ label: "Acessar", url: "https://bootcamps-dun.vercel.app" }], accentColor: "#00c853" },
-  { id: "tools", title: "Tools", tag: "Catálogo de ferramentas", description: "Catálogo curado de ferramentas e hospedagens para devs.", category: "especial", links: [{ label: "Acessar", url: "https://douglasabnovato.github.io/tools" }], accentColor: "#0ad2ff" },
-  { id: "career", title: "Career", tag: "Vagas e empresas", description: "Oportunidades, empresas e perfis de devs.", category: "especial", links: [{ label: "Acessar", url: "https://douglasabnovato.github.io/career" }], accentColor: "#f97316" },
+  { id: "learn-tech", title: "LearnTECH", tag: "Ecossistema · LXP", description: "Plataforma principal do ecossistema — LXP e hub de engenharia da ByteClass.", category: "especial", links: [{ label: "Acessar", url: "https://learn-tech-pied.vercel.app", hospedado: true }, { label: "Repositório", url: "https://github.com/douglasabnovato/learn-tech" }], accentColor: "#6d63d8" },
+  { id: "bootcamps", title: "Bootcamps", tag: "Retrospectiva de eventos", description: "Retrospectiva e roteiro de bootcamps, formações e comunidades.", category: "especial", links: [{ label: "Acessar", url: "https://bootcamps-dun.vercel.app", hospedado: true }, { label: "Repositório", url: "https://github.com/douglasabnovato/bootcamps" }], accentColor: "#00c853" },
+  { id: "tools", title: "Tools", tag: "Catálogo de ferramentas", description: "Catálogo curado de ferramentas e hospedagens para devs.", category: "especial", links: [{ label: "Acessar", url: "https://douglasabnovato.github.io/tools", hospedado: true }, { label: "Repositório", url: "https://github.com/douglasabnovato/tools" }], accentColor: "#0ad2ff" },
+  { id: "career", title: "Career", tag: "Vagas e empresas", description: "Oportunidades, empresas e perfis de devs.", category: "especial", links: [{ label: "Acessar", url: "https://douglasabnovato.github.io/career", hospedado: true }, { label: "Repositório", url: "https://github.com/douglasabnovato/career" }], accentColor: "#f97316" },
 ];
 
 // Destaques
@@ -21,7 +23,7 @@ export const destaques: CuratedProject[] = [
   { id: "oxe-online", title: "Oxe Online", description: "Processo seletivo digital.", status: "em-desenvolvimento", tipo: "utilitario", category: "destaque", links: [{ label: "Repositório", url: "https://github.com/douglasabnovato/oxe-online" }] },
   { id: "trybe", title: "Trybe", description: "Carteira de controle de gastos com conversor de moedas.", status: "em-desenvolvimento", tipo: "financeiro", category: "destaque", links: [{ label: "Repositório", url: "https://github.com/douglasabnovato/trybe" }] },
   { id: "facil-admin", title: "Fácil Admin", description: "Sistema de administração com CRUD.", status: "em-desenvolvimento", tipo: "utilitario", category: "destaque", links: [{ label: "Repositório", url: "https://github.com/douglasabnovato/facil-admin" }] },
-  { id: "volta-express", title: "Volta Express", description: "Site institucional da Volta Express Brasil.", status: "em-desenvolvimento", tipo: "site-institucional", category: "destaque", links: [{ label: "Site", url: "https://voltaexpress.com.br/" }] },
+  { id: "volta-express", title: "Volta Express", description: "Site institucional da Volta Express Brasil.", status: "em-desenvolvimento", tipo: "site-institucional", category: "destaque", links: [{ label: "Acessar", url: "https://voltaexpress.com.br/", hospedado: true }] },
   { id: "rocket-card", title: "Rocket Card", description: "Crachá digital com consulta de API.", status: "mvp", tipo: "utilitario", category: "destaque", links: [{ label: "Repositório", url: "https://github.com/douglasabnovato/rocket-card" }] },
 ];
 
@@ -163,6 +165,7 @@ export const managementBoards: ManagementBoard[] = [
     quantidadeRepositorios: 0,
     quantidadeIssues: 330,
     url: "https://github.com/users/douglasabnovato/projects/2",
+    imagem: boardEcossistemaImg,
   },
   {
     id: "movies-board",
@@ -173,5 +176,6 @@ export const managementBoards: ManagementBoard[] = [
     quantidadeRepositorios: 1,
     quantidadeIssues: 24,
     url: "https://github.com/users/douglasabnovato/projects/1",
+    imagem: boardMoviesImg,
   },
 ];
