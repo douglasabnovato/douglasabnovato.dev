@@ -27,6 +27,7 @@ export interface CuratedProject {
   tag?: string;
   status?: ProjectStatus;
   tipo?: ProjectType;
+  issuesAbertas?: number;
 }
 
 export interface ManagementBoard {
