@@ -1,5 +1,6 @@
-import { especiais, destaques, projetosOriginais, formacaoProjetos, formacaoConteudos, templatesInstitucionais } from '@/entities/project/api/projects.data'
+import { especiais, destaques, projetosOriginais, formacaoProjetos, formacaoConteudos, templatesInstitucionais, managementBoards } from '@/entities/project/api/projects.data'
 import { ProjectCard } from '@/entities/project/ui/ProjectCard'
+import { ManagementBoardCard } from '@/entities/project/ui/ManagementBoardCard'
 
 const secoes = [
   { id: 'especiais', label: 'Especiais', items: especiais },
@@ -30,6 +31,15 @@ export const Projetos = () => {
         <p className="text-secondary text-sm">O ecossistema e os projetos que venho construindo.</p>
         <p className="text-xs text-muted mt-1">{totalProjetos} projetos exibidos</p>
       </div>
+
+      <section id="gestao-de-projetos">
+        <h2 className="text-xs uppercase tracking-wide text-muted mb-3">Gestão de Projetos</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {managementBoards.map((board) => (
+            <ManagementBoardCard key={board.id} board={board} />
+          ))}
+        </div>
+      </section>
 
       {secoesNumeradas.map((secao) => (
         <section key={secao.id} id={secao.id}>

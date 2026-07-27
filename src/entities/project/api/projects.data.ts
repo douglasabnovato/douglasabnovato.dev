@@ -1,5 +1,5 @@
 // src/entities/project/api/project.data.ts
-import type { CuratedProject } from "../model/types";
+import type { CuratedProject, ManagementBoard } from "../model/types";
 
 // Especiais
 export const especiais: CuratedProject[] = [
@@ -112,6 +112,7 @@ export const formacaoProjetos: CuratedProject[] = [
 
 // Formação Conteúdos
 export const formacaoConteudos: CuratedProject[] = [
+  { id: "perfil-github", title: "Perfil GitHub", description: "Profile com as minhas hard skills e soft skills.", status: "mvp", tipo: "educacional", category: "formacao-conteudos", links: [{ label: "Repositório", url: "https://github.com/douglasabnovato/douglasabnovato" }] },
   { id: "c-42-sp", title: "C 42 SP", description: "Exercícios em linguagem C da seleção da 42 São Paulo.", status: "mvp", tipo: "educacional", category: "formacao-conteudos", links: [{ label: "Repositório", url: "https://github.com/douglasabnovato/c-42-sp" }] },
   { id: "dev-em-dobro", title: "Dev em Dobro", description: "Conteúdo de estudos acompanhando o programa Dev em Dobro.", status: "mvp", tipo: "educacional", category: "formacao-conteudos", links: [{ label: "Repositório", url: "https://github.com/douglasabnovato/dev-em-dobro" }] },
   { id: "ads-digital", title: "ADS Digital", description: "Conteúdo de estudos do curso de Análise e Desenvolvimento de Sistemas.", status: "mvp", tipo: "educacional", category: "formacao-conteudos", links: [{ label: "Repositório", url: "https://github.com/douglasabnovato/ads-digital" }] },
@@ -150,4 +151,27 @@ export const templatesInstitucionais: CuratedProject[] = [
   { id: "rocket-nfts", title: "Rocket NFTs", description: "Ainda não iniciado (repositório vazio).", status: "em-desenvolvimento", tipo: "educacional", category: "templates-institucionais", links: [{ label: "Repositório", url: "https://github.com/douglasabnovato/rocket-nfts" }] },
   { id: "rocket-shoes", title: "Rocket Shoes", description: "Ainda não iniciado (repositório vazio).", status: "em-desenvolvimento", tipo: "educacional", category: "templates-institucionais", links: [{ label: "Repositório", url: "https://github.com/douglasabnovato/rocket-shoes" }] },
   { id: "marvel", title: "Marvel", description: "Site institucional temático.", status: "mvp", tipo: "educacional", category: "templates-institucionais", links: [{ label: "Repositório", url: "https://github.com/douglasabnovato/marvel" }] },
+];
+
+export const managementBoards: ManagementBoard[] = [
+  {
+    id: "ecossistema-learntech",
+    nome: "Ecossistema-LearnTECH",
+    objetivo: "Gestão de tarefas entre as verticais WRITER, DEV e SPEAKER, e frentes de trabalho com clientes.",
+    descricao: "Board de gestão pessoal cruzando múltiplas iniciativas, incluindo trabalho para MedTrem e Volta Express Brasil.",
+    privado: true,
+    quantidadeRepositorios: 0,
+    quantidadeIssues: 330,
+    url: "https://github.com/users/douglasabnovato/projects/2",
+  },
+  {
+    id: "movies-board",
+    nome: "movies",
+    objetivo: "Aplicação para visualizar filmes conforme regras de negócio.",
+    descricao: "Board de gestão do repositório movies — 3 tarefas concluídas (base de UI: favicon, navbar, top) e 8 tarefas em aberto cobrindo arquitetura, funcionalidades de busca/filtro e performance.",
+    privado: false,
+    quantidadeRepositorios: 1,
+    quantidadeIssues: 24,
+    url: "https://github.com/users/douglasabnovato/projects/1",
+  },
 ];

@@ -28,3 +28,14 @@ export interface CuratedProject {
   status?: ProjectStatus;
   tipo?: ProjectType;
 }
+
+export interface ManagementBoard {
+  id: string;
+  nome: string;
+  objetivo: string;
+  descricao: string;
+  privado: boolean;
+  quantidadeRepositorios: number;
+  quantidadeIssues: number;
+  url: string;
+}
