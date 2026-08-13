@@ -48,8 +48,8 @@ export const Home = () => {
   const [activeModal, setActiveModal] = useState<EcosystemItem | null>(null)
   const currentRoles = resumeData.experiences.filter((e) => e.tier === 'atual')
 
-  // Perfil é o primeiro item (id: 'profile')
-  const profile = ecosystemData[0]
+  // Perfil é o primeiro item (id: 'profile') const profile = ecosystemData[0]
+  
   // Ecossistema são os itens restantes
   const ecosystemItems = ecosystemData.slice(1)
 
