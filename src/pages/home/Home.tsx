@@ -155,19 +155,34 @@ export const Home = () => {
                 <p className="text-xs text-secondary leading-relaxed mb-4">{item.description}</p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 pt-4 border-t border-default/50">
-                  {item.subItems?.map(sub => (
-                    <div key={sub.title} className="p-3 rounded bg-surface-solid/50 border border-default/60 flex flex-col">
+
+                  {item.subItems?.map((sub) => (
+                    <a
+                      key={sub.title}
+                      href={sub.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 border border-default rounded bg-surface-solid/50 flex flex-col hover:border-accent transition-colors group"
+                    >
                       {sub.image && (
                         <div className="w-full h-28 mb-3 overflow-hidden rounded border border-default">
-                          <img src={sub.image} alt={sub.title} className="w-full h-full object-cover" />
+                          <img
+                            src={sub.image}
+                            alt={sub.title}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
                         </div>
                       )}
                       <div>
-                        <p className="text-xs font-semibold text-primary">{sub.title}</p>
+                        <p className="text-sm font-semibold text-primary group-hover:text-accent transition-colors flex items-center justify-between">
+                          {sub.title}
+                          <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </p>
                         <p className="text-[11px] text-muted mt-0.5">{sub.description}</p>
                       </div>
-                    </div>
+                    </a>
                   ))}
+
                 </div>
               </div>
             )}

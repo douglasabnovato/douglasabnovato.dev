@@ -1,27 +1,27 @@
 @media print {
-  @page {
-    size: A4;
-    margin: 18mm 15mm;
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
   }
 
+  /* Oculta elementos que não devem aparecer na impressão, como botões de navegação */
+  nav, header, footer, button, .no-print {
+    display: none !important;
+  }
+
+  /* Ajusta a área do currículo para ocupar a folha limpa */
   .curriculo-print-area {
-    grid-template-columns: 1fr 2fr !important;
-    color: #18181b;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 10px !important;
   }
 
-  .curriculo-print-area h1,
-  .curriculo-print-area h2,
-  .curriculo-print-area p,
-  .curriculo-print-area li,
-  .curriculo-print-area span {
-    color: #18181b !important;
+  .cv-muted {
+    color: #4b5563 !important;
   }
 
-  .curriculo-print-area .cv-muted {
-    color: #52525b !important;
-  }
-
-  .curriculo-print-area .cv-entry {
+  .cv-entry {
     break-inside: avoid;
+    page-break-inside: avoid;
   }
 }

@@ -12,53 +12,67 @@ export const Curriculo = () => {
   const condensado = resumeData.experiences.filter((e) => e.tier === 'condensado')
 
   return (
-    <div className="max-w-4xl">
-      <div className="flex items-center justify-between mb-8">
+    <div className="max-w-4xl pb-16">
+      {/* HEADER RESPONSIVO (Nome, Headline e Botão Organizados) */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8 pb-6 border-b border-default">
         <div>
-          <h1 className="text-2xl font-bold">{resumeData.name}</h1>
-          <p className="text-secondary text-sm">{resumeData.headline}</p>
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-primary">{resumeData.name}</h1>
+          <p className="text-secondary text-xs sm:text-sm mt-1 leading-relaxed">{resumeData.headline}</p>
         </div>
-        <PdfExportButton targetRef={printRef} fileName="douglas-novato-curriculo" />
+        <div className="self-start sm:self-auto">
+          <PdfExportButton targetRef={printRef} fileName="douglas-novato-curriculo" />
+        </div>
       </div>
 
-      <div ref={printRef} className="curriculo-print-area grid grid-cols-1 md:grid-cols-3 gap-10">
-        <aside className="md:col-span-1 space-y-8">
-          <section>
-            <h2 className="text-xs uppercase tracking-wide text-muted cv-muted mb-2">Resumo</h2>
-            <p className="text-sm text-secondary leading-relaxed">{resumeData.summary}</p>
-          </section>
+      {/* ÁREA DO CURRÍCULO (Grid Otimizado) */}
+      <div ref={printRef} className="curriculo-print-area grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        {/* ASIDE / COLUNA LATERAL */}
+        <aside className="md:col-span-1 space-y-6">
+          <div className="p-4 rounded-lg bg-surface border border-default">
+            <h2 className="text-[11px] uppercase tracking-widest font-mono text-accent mb-2">Resumo</h2>
+            <p className="text-xs text-secondary leading-relaxed">{resumeData.summary}</p>
+          </div>
 
-          <section>
-            <h2 className="text-xs uppercase tracking-wide text-muted cv-muted mb-3">Formação</h2>
+          <div className="p-4 rounded-lg bg-surface border border-default">
+            <h2 className="text-[11px] uppercase tracking-widest font-mono text-accent mb-3">Formação</h2>
             <ul className="space-y-3">
               {resumeData.education.map((edu) => (
-                <li key={edu.id} className="text-sm cv-entry">
-                  <p className="font-medium">{edu.institution}</p>
-                  <p className="text-secondary cv-muted">{edu.degree}</p>
-                  <p className="text-xs text-muted cv-muted">
+                <li key={edu.id} className="text-xs cv-entry border-b border-default/40 pb-2.5 last:border-0 last:pb-0">
+                  <p className="font-semibold text-primary">{edu.institution}</p>
+                  <p className="text-secondary cv-muted mt-0.5">{edu.degree}</p>
+                  <p className="text-[11px] font-mono text-muted cv-muted mt-1">
                     {edu.period}{!edu.completed ? ' · em andamento' : ''}
                   </p>
                 </li>
               ))}
             </ul>
-          </section>
+          </div>
 
-          <section>
-            <h2 className="text-xs uppercase tracking-wide text-muted cv-muted mb-3">Trajetória</h2>
-            <ul className="space-y-1">
+          <div className="p-4 rounded-lg bg-surface border border-default">
+            <h2 className="text-[11px] uppercase tracking-widest font-mono text-accent mb-3">Trajetória</h2>
+            <ul className="space-y-2.5">
               {condensado.map((exp) => (
-                <li key={exp.id} className="text-xs text-secondary cv-muted cv-entry">
-                  <span className="text-primary">{exp.period}</span> — {exp.role}, {exp.company}
+                <li key={exp.id} className="text-xs text-secondary cv-muted cv-entry leading-relaxed">
+                  <span className="font-mono text-[10px] text-accent block">{exp.period}</span>
+                  <span className="text-primary font-medium">{exp.role}</span>
+                  <span className="text-muted"> — {exp.company}</span>
                 </li>
               ))}
             </ul>
-          </section>
+          </div>
         </aside>
 
-        <div className="md:col-span-2 space-y-10">
-          <ExperienceBlock title="Atual" experiences={atual} />
-          <ExperienceBlock title="Experiência recente" experiences={recente} />
+        {/* CONTEÚDO PRINCIPAL (Experiências Atuais e Recentes) */}
+        <div className="md:col-span-2 space-y-8">
+          <div className="p-4 sm:p-6 rounded-lg bg-surface border border-default">
+            <ExperienceBlock title="Atual" experiences={atual} />
+          </div>
+          <div className="p-4 sm:p-6 rounded-lg bg-surface border border-default">
+            <ExperienceBlock title="Experiência recente" experiences={recente} />
+          </div>
         </div>
+
       </div>
     </div>
   )

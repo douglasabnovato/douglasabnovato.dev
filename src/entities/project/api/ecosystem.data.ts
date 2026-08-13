@@ -53,10 +53,10 @@ export const ecosystemData: EcosystemItem[] = [
     type: 'grid',
     links: [],
     subItems: [
-      { title: 'LearnTECH Core', description: 'Plataforma principal.', image: learnCore, url: '#' },
-      { title: 'Bootcamps', description: 'Diário de imersões.', image: learnBoot, url: '#' },
-      { title: 'Tools', description: 'Catálogo de ferramentas.', image: learnTools, url: '#' },
-      { title: 'Career', description: 'Mapeamento de vagas.', image: learnCareer, url: '#' }
+      { title: 'LearnTECH Core', description: 'Plataforma principal.', image: learnCore, url: 'https://learn-tech-pied.vercel.app/' },
+      { title: 'Bootcamps', description: 'Diário de imersões.', image: learnBoot, url: 'https://bootcamps-dun.vercel.app/' },
+      { title: 'Tools', description: 'Catálogo de ferramentas.', image: learnTools, url: 'https://douglasabnovato.github.io/tools/' },
+      { title: 'Career', description: 'Mapeamento de vagas.', image: learnCareer, url: 'https://douglasabnovato.github.io/career/' }
     ]
   },
   {
@@ -67,8 +67,8 @@ export const ecosystemData: EcosystemItem[] = [
     type: 'card',
     images: [voltaExp1, voltaExp2],
     links: [
-      { label: 'Landing Page', url: 'https://voltaexpress.com.br', external: true },
-      { label: 'Plataforma', url: '#', external: false }
+      { label: 'Vem para o Volta', url: 'https://voltaexpress.com.br', external: true },
+      { label: 'Anunciar Agora', url: 'https://voltaexpress.com.br', external: false }
     ]
   },
   {
@@ -78,7 +78,7 @@ export const ecosystemData: EcosystemItem[] = [
     description: 'Coordenação pedagógica, liderança técnica, desenvolvimento da plataforma e estratégia de marketing.',
     type: 'card',
     images: [byteclassImg],
-    links: [{ label: 'Conhecer ByteClass', url: '#', external: true }]
+    links: [{ label: 'Aprenda Programar', url: '#', external: true }]
   },
   {
     id: 'agendatech',
