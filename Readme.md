@@ -1,5 +1,5 @@
 <h1 align="center">🌐 douglasabnovato.dev</h1>
-<p align="center">Meu Ecossistema</p>
+<p align="center">Meu Ecossistema em Tech</p>
 
 <p align="center">
   <a href="https://douglasabnovato-dev.vercel.app/"><img alt="Live" src="https://img.shields.io/badge/live-douglasabnovato--dev.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white"></a>
