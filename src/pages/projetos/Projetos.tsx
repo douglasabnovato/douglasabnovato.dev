@@ -1,15 +1,14 @@
-import { especiais, destaques, projetosOriginais, formacaoProjetos, formacaoConteudos, templatesInstitucionais, managementBoards } from '@/entities/project/api/projects.data'
+import { profileRepo, especiais, destaques, mvpRepos, projetosOriginais, managementBoards } from '@/entities/project/api/projects.data'
 import { ProjectCard } from '@/entities/project/ui/ProjectCard'
 import { ManagementBoardCard } from '@/entities/project/ui/ManagementBoardCard'
 import { useGithubEnrichment, enrichProject } from '@/entities/project/model/useGithubEnrichment'
 
 const secoes = [
+  { id: 'profile', label: 'Profile', items: profileRepo },
   { id: 'especiais', label: 'Especiais', items: especiais },
-  { id: 'destaques', label: 'Destaques', items: destaques },
-  { id: 'projetos-originais', label: 'Projetos Originais', items: projetosOriginais },
-  { id: 'formacao-projetos', label: 'Formação Projetos', items: formacaoProjetos },
-  { id: 'formacao-conteudos', label: 'Formação Conteúdos', items: formacaoConteudos },
-  { id: 'templates-institucionais', label: 'Templates Institucionais', items: templatesInstitucionais },
+  { id: 'destaques', label: 'Top', items: destaques },
+  { id: 'mvp', label: 'MVP', items: mvpRepos },
+  { id: 'projetos', label: 'Projetos', items: projetosOriginais },
 ]
 
 export const Projetos = () => {
@@ -27,10 +26,31 @@ export const Projetos = () => {
 
   return (
     <div className="max-w-4xl space-y-12">
-      <div>
-        <h1 className="text-2xl font-bold mb-1">Projetos</h1>
-        <p className="text-secondary text-sm">O ecossistema e os projetos que venho construindo.</p>
-        <p className="text-xs text-muted mt-1">{totalProjetos} projetos exibidos</p>
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-default mb-8">
+        <div>
+          <div className="flex items-center gap-2 mb-1.5">
+            <span className="text-[10px] font-mono text-accent px-2 py-0.5 rounded border border-accent/20 bg-accent/5">
+              GitHub Ecosystem
+            </span>
+            <span className="text-[10px] font-mono text-muted">
+              v2.6
+            </span>
+          </div>
+          <h1 className="text-3xl font-bold tracking-tight text-primary">Projetos & Repositórios</h1>
+          <p className="text-secondary text-sm mt-1 max-w-xl leading-relaxed">
+            O ecossistema completo de soluções, MVPs e ferramentas estruturadas em frentes estratégicas de tecnologia.
+          </p>
+        </div>
+
+        <div className="flex items-center gap-3 bg-surface border border-default px-4 py-2.5 rounded-lg self-start md:self-auto">
+          <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+          <div>
+            <p className="text-xs font-mono text-muted uppercase tracking-wider">Métrica Oficial</p>
+            <p className="text-sm font-bold text-primary font-mono">
+              {totalProjetos} <span className="text-xs font-normal text-secondary">repositórios mapeados</span>
+            </p>
+          </div>
+        </div>
       </div>
 
       <section id="gestao-de-projetos">
