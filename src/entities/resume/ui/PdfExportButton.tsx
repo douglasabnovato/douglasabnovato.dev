@@ -1,25 +1,33 @@
-import { useReactToPrint } from 'react-to-print'
-import type { RefObject } from 'react'
-import { Download } from 'lucide-react'
+import { useState } from 'react'
+import { Download, Loader2 } from 'lucide-react'
 
 interface PdfExportButtonProps {
-  targetRef: RefObject<HTMLDivElement | null>
-  fileName: string
+  targetRef?: React.RefObject<HTMLDivElement | null>
+  fileName?: string
 }
 
-export const PdfExportButton = ({ targetRef, fileName }: PdfExportButtonProps) => {
-  const handlePrint = useReactToPrint({
-    contentRef: targetRef,
-    documentTitle: fileName,
-  })
+export const PdfExportButton = ({}: PdfExportButtonProps) => {
+  const [isExporting, setIsExporting] = useState(false)
+
+  const handlePrintPdf = () => {
+    setIsExporting(true)
+    
+    // Pequeno delay para o loader aparecer visualmente se desejado, 
+    // e dispara a janela de impressão nativa otimizada para PDF
+    setTimeout(() => {
+      window.print()
+      setIsExporting(false)
+    }, 300)
+  }
 
   return (
     <button
-      onClick={handlePrint}
-      className="flex items-center gap-2 text-sm px-4 py-2 rounded-lg border border-default hover:bg-surface-solid transition-colors"
+      onClick={handlePrintPdf}
+      disabled={isExporting}
+      className="inline-flex items-center gap-2 px-4 py-2 rounded border border-default bg-surface hover:border-accent hover:text-accent text-xs font-mono font-medium transition-all duration-300 cursor-pointer disabled:opacity-50"
     >
-      <Download size={16} />
-      Exportar PDF
+      {isExporting ? <Loader2 size={14} className="animate-spin" /> : <Download size={14} />}
+      {isExporting ? 'Preparando PDF...' : 'Exportar Currículo PDF'}
     </button>
   )
 }
