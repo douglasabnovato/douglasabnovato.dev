@@ -8,7 +8,7 @@ import {
 } from '@/entities/github/api/githubApi'
 import type { GithubRepo, GithubIssue, GithubGist, GithubOrg } from '@/entities/github/model/types'
 import { getCachedData, getStaleData, setCachedData } from '@/shared/lib/localCache'
-import { GitFork, Star, ExternalLink, GitBranch, Code2, AlertCircle, Clock, FileCode, CheckCircle2 } from 'lucide-react'
+import { GitFork, Star, ExternalLink, GitBranch, Code2, AlertCircle, Clock, FileCode } from 'lucide-react'
 
 const ESPECIAIS_REPOS = ['learn-tech', 'bootcamps', 'tools', 'career']
 const CACHE_KEY = 'codigos-github-data'

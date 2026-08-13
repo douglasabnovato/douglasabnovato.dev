@@ -6,6 +6,7 @@ export interface GithubRepo {
   homepage: string | null;
   language: string | null;
   stargazers_count: number;
+  forks_count?: number; // Adicionado aqui
   open_issues_count: number;
   updated_at: string;
 }
@@ -38,7 +39,7 @@ export interface GithubOrg {
   location: string | null;
   public_repos: number;
 }
-  
+
 export interface ManagementBoard {
   id: string;
   nome: string;
