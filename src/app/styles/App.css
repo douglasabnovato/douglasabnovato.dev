@@ -1,164 +1,151 @@
+/* ==========================================================================
+   DOUGLAS A. B. NOVATO // DESIGN SYSTEM & APP STYLES
+   Estética: Quiet Luxury & Engineering High-End
+   ========================================================================== */
+
+:root {
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base de Layout & Performance Visual */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-dark, #07090e);
+  color: var(--text-main, #eae6df);
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Modificação sutil de componentes de contagem/status */
 .counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: var(--accent, #c5a880);
+  background: var(--accent-bg, rgba(197, 168, 128, 0.05));
+  border: 1px solid rgba(197, 168, 128, 0.2);
+  transition: var(--transition-smooth);
   margin-bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 
   &:hover {
-    border-color: var(--accent-border);
+    border-color: var(--accent, #c5a880);
+    background: var(--accent-bg-hover, rgba(197, 168, 128, 0.1));
   }
+  
   &:focus-visible {
-    outline: 2px solid var(--accent);
+    outline: 1px solid var(--accent, #c5a880);
     outline-offset: 2px;
   }
 }
 
-.hero {
-  position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
-}
-
+/* Container Central de Autoridade */
 #center {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 32px;
   place-content: center;
-  place-items: center;
   flex-grow: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 24px;
 
   @media (max-width: 1024px) {
     padding: 32px 20px 24px;
-    gap: 18px;
+    gap: 20px;
   }
 }
 
-#next-steps {
-  display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
+/* Cartões de Ecossistema / Ações Rápidas */
+.ecosystem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
 
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
+.ecosystem-card {
+  background: var(--surface, #1a1d23);
+  border: 1px solid var(--border, #262b35);
+  border-radius: 8px;
+  padding: 24px;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--accent, #c5a880);
+    opacity: 0;
+    transition: var(--transition-smooth);
+  }
+
+  &:hover {
+    border-color: var(--accent, #c5a880);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+
+    &::before {
+      opacity: 1;
     }
   }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
 }
 
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-}
-
-#next-steps ul {
+/* Links de Navegação Secundária e Rodapés de Bloco */
+.tech-links {
   list-style: none;
   padding: 0;
   display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
+  gap: 12px;
+  margin: 24px 0 0;
+  flex-wrap: wrap;
 
   a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
+    color: var(--text-h, #fff);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    background: var(--social-bg, rgba(255, 255, 255, 0.03));
+    border: 1px solid var(--border, #262b35);
     display: flex;
-    padding: 6px 12px;
+    padding: 8px 14px;
     align-items: center;
     gap: 8px;
     text-decoration: none;
-    transition: box-shadow 0.3s;
+    transition: var(--transition-smooth);
 
     &:hover {
-      box-shadow: var(--shadow);
+      border-color: var(--accent, #c5a880);
+      color: var(--accent, #c5a880);
+      background: rgba(197, 168, 128, 0.05);
     }
+    
     .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
+      height: 14px;
+      width: 14px;
     }
   }
 }
 
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
+/* Divisores e Separadores de Precisão (Hairlines) */
+.technical-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, var(--border, #262b35), transparent);
+  margin: 40px 0;
 }
 
 .ticks {
@@ -170,15 +157,15 @@
     content: '';
     position: absolute;
     top: -4.5px;
-    border: 5px solid transparent;
+    border: 4px solid transparent;
   }
 
   &::before {
     left: 0;
-    border-left-color: var(--border);
+    border-left-color: var(--border, #262b35);
   }
   &::after {
     right: 0;
-    border-right-color: var(--border);
+    border-right-color: var(--border, #262b35);
   }
 }
