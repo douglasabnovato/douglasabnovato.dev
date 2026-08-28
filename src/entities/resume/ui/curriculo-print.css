@@ -1,27 +1,246 @@
-@media print {
-  body {
-    background-color: #ffffff !important;
-    color: #000000 !important;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap");
 
-  /* Oculta elementos que não devem aparecer na impressão, como botões de navegação */
-  nav, header, footer, button, .no-print {
+@media screen {
+  .cv-print-wrapper {
     display: none !important;
   }
+}
 
-  /* Ajusta a área do currículo para ocupar a folha limpa */
-  .curriculo-print-area {
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm 10mm;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .cv-print-wrapper,
+  .cv-print-wrapper * {
+    visibility: visible !important;
+  }
+
+  .cv-print-wrapper {
+    display: block !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
     width: 100% !important;
     margin: 0 !important;
-    padding: 10px !important;
+    padding: 0 !important;
+    background: #ffffff !important;
   }
 
-  .cv-muted {
-    color: #4b5563 !important;
+  .no-print,
+  nav,
+  header:not(.cv-exec-header),
+  footer {
+    display: none !important;
   }
+}
 
-  .cv-entry {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
+.cv-exec-document {
+  width: 100%;
+  max-width: 210mm;
+  margin: 0 auto;
+  background: #ffffff;
+  color: #0f172a;
+  padding: 0;
+  font-family:
+    "Plus Jakarta Sans",
+    -apple-system,
+    sans-serif;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Header */
+.cv-exec-header {
+  display: block !important;
+  border-bottom: 2px solid #0284c7;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+}
+
+.cv-exec-header h1 {
+  font-size: 16pt !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  text-transform: uppercase;
+  letter-spacing: -0.3px;
+  line-height: 1.1;
+  margin: 0 0 3px 0 !important;
+}
+
+.cv-exec-contacts {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 2px 12px !important;
+  font-size: 8pt !important;
+  color: #334155 !important;
+  font-weight: 600 !important;
+  align-items: center !important;
+}
+
+.cv-exec-contacts a {
+  color: #0284c7 !important;
+  text-decoration: none !important;
+}
+
+/* Seções */
+.cv-exec-section {
+  margin-bottom: 7px;
+}
+
+.cv-exec-section-title {
+  font-size: 9.5pt;
+  font-weight: 800;
+  color: #0f172a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+.cv-exec-section-title::after {
+  content: "";
+  flex: 1;
+  height: 1.5px;
+  background: #0284c7;
+  margin-left: 8px;
+}
+
+.cv-exec-text {
+  font-size: 8.2pt;
+  color: #334155;
+  text-align: justify;
+  line-height: 1.35;
+}
+
+/* Competências */
+.cv-exec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px 12px;
+  background: #f8fafc;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+.cv-exec-grid-item {
+  font-size: 8pt;
+  color: #334155;
+  line-height: 1.3;
+}
+
+.cv-exec-grid-item strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* Experiência Profissional */
+.cv-exec-item {
+  margin-bottom: 6px;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.cv-exec-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1px;
+}
+
+.cv-exec-item-title-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.cv-exec-item-title {
+  font-size: 8.8pt;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.cv-exec-item-company {
+  font-size: 8.8pt;
+  color: #0284c7;
+  font-weight: 800;
+}
+
+.cv-exec-item-date {
+  font-size: 7.8pt;
+  font-weight: 600;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.cv-exec-bullets {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 1px;
+}
+
+.cv-exec-bullets li {
+  position: relative;
+  padding-left: 10px;
+  font-size: 8pt;
+  color: #334155;
+  margin-bottom: 1.5px;
+  text-align: justify;
+  line-height: 1.3;
+}
+
+.cv-exec-bullets li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #0284c7;
+  font-weight: bold;
+}
+
+/* Formação Acadêmica */
+.cv-exec-academic-item {
+  margin-bottom: 4px;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.cv-exec-academic-main {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.cv-exec-academic-course {
+  font-size: 8.8pt;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.cv-exec-academic-institution {
+  font-size: 8.8pt;
+  font-weight: 700;
+  color: #0284c7;
+}
+
+.cv-exec-academic-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1px;
+}
+
+.cv-exec-academic-focus {
+  font-size: 7.8pt;
+  color: #475569;
+  margin: 0;
 }

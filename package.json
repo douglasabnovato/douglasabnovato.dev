@@ -12,10 +12,12 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.109.0",
     "@tailwindcss/vite": "^4.3.3",
+    "chart.js": "^4.5.1",
     "html2canvas": "^1.4.1",
     "jspdf": "^4.2.1",
     "lucide-react": "^1.25.0",
     "react": "^19.2.7",
+    "react-chartjs-2": "^5.3.1",
     "react-dom": "^19.2.7",
     "react-icons": "^5.7.0",
     "react-router-dom": "^7.18.1",
@@ -24,6 +26,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@types/chart.js": "^2.9.41",
     "@types/node": "^24.13.2",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",

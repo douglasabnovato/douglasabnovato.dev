@@ -6,14 +6,12 @@ interface PdfExportButtonProps {
   fileName?: string
 }
 
-export const PdfExportButton = ({}: PdfExportButtonProps) => {
+export const PdfExportButton: React.FC<PdfExportButtonProps> = () => {
   const [isExporting, setIsExporting] = useState(false)
 
   const handlePrintPdf = () => {
     setIsExporting(true)
-    
-    // Pequeno delay para o loader aparecer visualmente se desejado, 
-    // e dispara a janela de impressão nativa otimizada para PDF
+
     setTimeout(() => {
       window.print()
       setIsExporting(false)

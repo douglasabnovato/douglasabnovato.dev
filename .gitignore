@@ -2,6 +2,10 @@
 # AMBIENTE E VARIÁVEIS DE SEGURANÇA
 # =========================
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 .env.*
 !.env.example
 
@@ -17,8 +21,7 @@ node_modules/
 # =========================
 dist/
 dist-ssr/
-docs/
-*.local
+# docs/ -> Removido para permitir deploy do GitHub Pages caso utilizado
 
 # =========================
 # LOGS E DIAGNÓSTICOS
@@ -30,8 +33,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-pnpm-lock.yaml
-package-lock.json # (Opcional: mantenha se quiser versionar o lockfile exato)
 
 # =========================
 # EDITOR / IDEs
