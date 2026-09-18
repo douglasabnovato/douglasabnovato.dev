@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom'
 import { ArrowUpRight, FileText, LayoutGrid, Code2, Newspaper, Share2, Sparkles, X } from 'lucide-react'
 import { resumeData } from '@/entities/resume/model/resume.data'
 import { ecosystemData } from '@/entities/project/api/ecosystem.data'
-import type { EcosystemItem } from '@/entities/project/api/ecosystem.data'
-
+import type { EcosystemItem } from '@/entities/project/api/ecosystem.data' 
 import profileImg from './../../assets/home/1-profile.jpg'
-
-// Componente para alternar imagens a cada 3 segundos
+ 
 const CarouselImage = ({ images }: { images: string[] }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -46,16 +44,11 @@ const navSections = [
 
 export const Home = () => {
   const [activeModal, setActiveModal] = useState<EcosystemItem | null>(null)
-  const currentRoles = resumeData.experiences.filter((e) => e.tier === 'atual')
-
-  // Perfil é o primeiro item (id: 'profile') const profile = ecosystemData[0]
-  
-  // Ecossistema são os itens restantes
+  const currentRoles = resumeData.experiences.filter((e) => e.tier === 'atual') 
   const ecosystemItems = ecosystemData.slice(1)
 
   return (
     <div className="max-w-4xl pb-16 relative">
-      {/* HEADER E PERFIL */}
       <div className="flex items-center justify-between mb-8 pb-4 border-b border-default">
         <span className="font-mono font-semibold text-sm tracking-tight text-primary">
           douglasabnovato<span className="text-muted">.dev</span>
@@ -82,18 +75,14 @@ export const Home = () => {
         <div className="lg:col-span-3 h-40">
           <img src={profileImg} alt="Douglas Novato" className="w-full h-full object-cover rounded border border-default" />
         </div>
-      </div>
-
-      {/* NAV SECTIONS */}
+      </div> 
       <div className="flex flex-wrap gap-2 mb-14">
         {navSections.map(({ to, label, icon: Icon }) => (
           <Link key={to} to={to} className="flex items-center gap-2 px-3.5 py-1.5 rounded border border-default bg-surface hover:border-accent hover:text-accent text-xs font-medium transition-all">
             <Icon size={14} /> {label}
           </Link>
         ))}
-      </div>
-
-      {/* ECOSSISTEMA */}
+      </div> 
       <div className="mb-6 flex items-center justify-between">
         <h2 className="text-xs uppercase tracking-widest font-mono text-muted">
           Ecossistema de Atuação & Projetos
@@ -188,9 +177,7 @@ export const Home = () => {
             )}
           </div>
         ))}
-      </div>
-
-      {/* MODAL */}
+      </div> 
       {activeModal && activeModal.modalContent && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
           <div className="relative w-full max-w-lg rounded-xl bg-surface-solid border border-default p-6 shadow-2xl">
