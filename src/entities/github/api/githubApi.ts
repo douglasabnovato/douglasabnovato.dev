@@ -4,14 +4,11 @@ const USERNAME = "douglasabnovato";
 const ORG = "learnTECH-community";
 
 export async function fetchGithubRepos(): Promise<GithubRepo[]> {
-  const [page1Res, page2Res] = await Promise.all([
-    fetch(`https://api.github.com/users/${USERNAME}/repos?sort=updated&per_page=100&page=1`),
-    fetch(`https://api.github.com/users/${USERNAME}/repos?sort=updated&per_page=100&page=2`),
-  ]);
-  if (!page1Res.ok) throw new Error(`Erro ao buscar repositórios: ${page1Res.status}`);
-  const page1: GithubRepo[] = await page1Res.json();
-  const page2: GithubRepo[] = page2Res.ok ? await page2Res.json() : [];
-  return [...page1, ...page2];
+  const res = await fetch(
+    `https://api.github.com/users/${USERNAME}/repos?sort=updated&per_page=100`
+  );
+  if (!res.ok) throw new Error(`Erro ao buscar repositórios: ${res.status}`);
+  return res.json();
 }
 
 export function hasProductionLink(repo: GithubRepo): boolean {

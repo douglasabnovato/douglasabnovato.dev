@@ -86,25 +86,34 @@ export const projetosOriginais: CuratedProject[] = [
 
 export const managementBoards: ManagementBoard[] = [
   {
-    id: "ecossistema-learntech",
-    nome: "Ecossistema-LearnTECH",
-    objetivo: "Gestão de tarefas entre as verticais WRITER, DEV e SPEAKER, e frentes de trabalho com clientes.",
-    descricao: "Board de gestão pessoal cruzando múltiplas iniciativas, incluindo trabalho para MedTrem e Volta Express Brasil.",
-    privado: true,
-    quantidadeRepositorios: 0,
-    quantidadeIssues: 330,
-    url: "https://github.com/users/douglasabnovato/projects/2",
-    imagem: boardEcossistemaImg,
+    id: "movies-board",
+    nome: "Product Manager para Movies",
+    publico: true,
+    kicker: "Gestão de produto · aberto para conferência",
+    resumo:
+      "Plataforma de catálogo e recomendação de filmes conduzida como case de produto, da descoberta ao deploy. Benchmark de Netflix e Prime Video, backlog estruturado no GitHub Projects, e entrega em React com camada de serviço isolando o consumo da API, Context API para o estado dos filtros e debounce na busca global.",
+    visoes: ["Kanban", "To Do List", "Gestão Entrega"],
+    metricas: [
+      { label: "itens no board", value: "24" },
+      { label: "concluídos", value: "16" },
+    ],
+    url: "https://github.com/users/douglasabnovato/projects/1",
+    repoUrl: "https://github.com/douglasabnovato/movies",
+    issuesUrl: "https://github.com/douglasabnovato/movies/issues",
+    imagem: boardMoviesImg,
   },
   {
-    id: "movies-board",
-    nome: "movies",
-    objetivo: "Aplicação para visualizar filmes conforme regras de negócio.",
-    descricao: "Board de gestão do repositório movies — 3 tarefas concluídas (base de UI: favicon, navbar, top) e 8 tarefas em aberto cobrindo arquitetura, funcionalidades de busca/filtro e performance.",
-    privado: false,
-    quantidadeRepositorios: 1,
-    quantidadeIssues: 24,
-    url: "https://github.com/users/douglasabnovato/projects/1",
-    imagem: boardMoviesImg,
+    id: "learntech-ecossistema",
+    nome: "LearnTECH Ecossistema",
+    publico: false,
+    kicker: "Gestão de portfólio · acesso restrito",
+    resumo:
+      "Board pessoal que orquestra as frentes de trabalho: o ecossistema learnTECH, a ByteClass, a MedTREM e a Volta Express Brasil.",
+    metodo:
+      "Ideias entram numa coluna própria e são triadas por papel — desenvolvimento, escrita, palestra, growth e bootcamp. Depois de priorizadas, vão para o To-Do da frente correspondente e seguem a esteira Em andamento → Revisão → Concluído. O que perde sentido vai para Arquivado. Sprints de 7 dias, com dois workflows automatizados.",
+    visoes: ["Tasks", "Progress", "Management"],
+    imagem: boardEcossistemaImg,
+    ponte:
+      "O mesmo método, aberto para conferência, no board público do Movies.",
   },
 ];

@@ -9,6 +9,11 @@ export interface GithubRepo {
   forks_count?: number; // Adicionado aqui
   open_issues_count: number;
   updated_at: string;
+  created_at: string;
+  pushed_at: string;
+  topics: string[];
+  fork: boolean;
+  archived: boolean;
 }
 
 export interface GithubIssue {
