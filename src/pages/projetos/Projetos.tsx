@@ -3,6 +3,10 @@ import { ManagementBoardCard } from '@/entities/project/ui/ManagementBoardCard'
 import { ProjectCard } from '@/entities/project/ui/ProjectCard'
 import { ProjectRow } from '@/entities/project/ui/ProjectRow'
 import { useProjectCatalog } from '@/entities/project/model/useProjectCatalog'
+import { useGithubExtras } from '@/entities/github/model/useGithubExtras'
+import { OrganizationCard } from '@/entities/github/ui/OrganizationCard'
+import { GistCard } from '@/entities/github/ui/GistCard'
+import { ArrowUpRight } from 'lucide-react'
 import type { ProjectSectionId } from '@/entities/project/model/types'
 
 /** Seções que usam card reduzido, por volume. */
@@ -24,6 +28,7 @@ const SectionHead = ({ title, total, nota }: { title: string; total: number; not
 
 export const Projetos = () => {
   const { sections, indicators, state } = useProjectCatalog()
+  const { gists, totalGists, org } = useGithubExtras()
 
   return (
     <div className="max-w-4xl pb-24">
@@ -77,6 +82,14 @@ export const Projetos = () => {
         </div>
       </section>
 
+      {/* ---------- ORGANIZAÇÃO ---------- */}
+      {/* Aparece sozinha assim que a organização tiver repositório público. */}
+      {org && (
+        <section className="mt-[var(--space-block)]">
+          <OrganizationCard org={org} />
+        </section>
+      )}
+
       {/* ---------- CATÁLOGO ---------- */}
       {sections.map((secao) => (
         <section key={secao.id} id={secao.id} className="mt-[var(--space-block)]">
@@ -97,6 +110,34 @@ export const Projetos = () => {
           )}
         </section>
       ))}
+
+      {/* ---------- GISTS ---------- */}
+      {gists.length > 0 && (
+        <section className="mt-[var(--space-block)]">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 pb-2 mb-5 border-b border-default">
+            <h2 className="text-[11px] font-mono uppercase tracking-[0.14em] text-secondary">
+              Gists{' '}
+              <span className="text-muted tabular-nums">
+                · {gists.length} de {totalGists}
+              </span>
+            </h2>
+            <a
+              href="https://gist.github.com/douglasabnovato"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-[10px] font-mono text-secondary hover:text-accent transition-colors"
+            >
+              Ver todos no GitHub <ArrowUpRight size={11} />
+            </a>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            {gists.map((gist) => (
+              <GistCard key={gist.id} gist={gist} />
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   )
 }

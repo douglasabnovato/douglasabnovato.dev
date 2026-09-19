@@ -1,4 +1,4 @@
-import type { GithubRepo, GithubIssue, GithubGist, GithubOrg } from "../model/types";
+import type { GithubRepo, GithubIssue, GithubGist, GithubOrg, GithubUser } from "../model/types"; 
 
 const USERNAME = "douglasabnovato";
 const ORG = "learnTECH-community";
@@ -34,8 +34,17 @@ export async function fetchOpenIssuesForRepo(repoName: string): Promise<GithubIs
 }
 
 export async function fetchGists(): Promise<GithubGist[]> {
-  const res = await fetch(`https://api.github.com/users/${USERNAME}/gists`);
+  // Primeira página apenas: 100 dos mais recentes. Varrer as 7 páginas do
+  // acervo custaria 7 das 60 requisições/hora e mais de 1 MB no localStorage.
+  const res = await fetch(`https://api.github.com/users/${USERNAME}/gists?per_page=100`);
   if (!res.ok) throw new Error(`Erro ao buscar gists: ${res.status}`);
+  return res.json();
+}
+
+/** Traz as contagens totais da conta — inclusive o número real de gists. */
+export async function fetchUserProfile(): Promise<GithubUser> {
+  const res = await fetch(`https://api.github.com/users/${USERNAME}`);
+  if (!res.ok) throw new Error(`Erro ao buscar perfil: ${res.status}`);
   return res.json();
 }
 

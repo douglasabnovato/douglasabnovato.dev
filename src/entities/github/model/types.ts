@@ -31,7 +31,17 @@ export interface GithubGist {
   id: string;
   description: string | null;
   html_url: string;
-  files: Record<string, { filename: string; language: string | null }>;
+  files: Record<string, { filename: string; language: string | null; size?: number }>;
+  created_at: string;
+  updated_at: string;
+  comments: number;
+}
+
+export interface GithubUser {
+  login: string;
+  name: string | null;
+  public_repos: number;
+  public_gists: number;
   created_at: string;
 }
 
