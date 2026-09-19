@@ -1,220 +1,315 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowUpRight, FileText, LayoutGrid, Code2, Newspaper, Share2, Sparkles, X } from 'lucide-react'
+import { ArrowUpRight, MessageCircle } from 'lucide-react'
+
 import { resumeData } from '@/entities/resume/model/resume.data'
-import { ecosystemData } from '@/entities/project/api/ecosystem.data'
-import type { EcosystemItem } from '@/entities/project/api/ecosystem.data' 
-import profileImg from './../../assets/home/1-profile.jpg'
- 
-const CarouselImage = ({ images }: { images: string[] }) => {
-  const [currentIndex, setCurrentIndex] = useState(0)
+import { ecosystemData, homeIntro } from '@/entities/project/api/ecosystem.data'
+import type { EcosystemItem } from '@/entities/project/api/ecosystem.data'
+import { fetchGithubRepos } from '@/entities/github/api/githubApi'
+import { getCachedData, getStaleData, setCachedData } from '@/shared/lib/localCache'
+import profileImg from '@/assets/home/1-profile.jpg'
+
+const WHATSAPP_URL =
+  'https://wa.me/5532988367667?text=' +
+  encodeURIComponent('Douglas. Quero conversar com você. Vi o seu site.')
+
+/* ------------------------------------------------------------------ */
+/* Sinal de atividade — vem da API do GitHub                           */
+/* ------------------------------------------------------------------ */
+
+type RepoDates = Record<string, string>
+
+const ACTIVITY_CACHE_KEY = 'home:github-activity'
+
+const useGithubActivity = () => {
+  const [dates, setDates] = useState<RepoDates | null>(null)
 
   useEffect(() => {
-    if (!images || images.length <= 1) return
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length)
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [images])
+    let active = true
 
-  if (!images || images.length === 0) return null
+    const cached = getCachedData<RepoDates>(ACTIVITY_CACHE_KEY)
+    if (cached) {
+      setDates(cached.data)
+      return
+    }
 
+    fetchGithubRepos()
+      .then((repos) => {
+        if (!active) return
+        const next: RepoDates = {}
+        repos.forEach((repo) => {
+          next[repo.name] = repo.updated_at
+        })
+        setCachedData(ACTIVITY_CACHE_KEY, next)
+        setDates(next)
+      })
+      .catch(() => {
+        if (!active) return
+        const stale = getStaleData<RepoDates>(ACTIVITY_CACHE_KEY)
+        if (stale) setDates(stale.data)
+      })
+
+    return () => {
+      active = false
+    }
+  }, [])
+
+  return dates
+}
+
+/** "hoje", "há 3 dias", "há 2 meses" — sem biblioteca. */
+const relativeTime = (iso: string) => {
+  const days = Math.floor((Date.now() - new Date(iso).getTime()) / 86_400_000)
+  if (days <= 0) return 'hoje'
+  if (days === 1) return 'ontem'
+  if (days < 30) return `há ${days} dias`
+  const months = Math.floor(days / 30)
+  return months === 1 ? 'há 1 mês' : `há ${months} meses`
+}
+
+const mostRecent = (dates: RepoDates | null) => {
+  if (!dates) return null
+  const all = Object.values(dates)
+  if (all.length === 0) return null
+  return all.reduce((a, b) => (new Date(a) > new Date(b) ? a : b))
+}
+
+/* ------------------------------------------------------------------ */
+/* Peças                                                               */
+/* ------------------------------------------------------------------ */
+
+const Kicker = ({ children }: { children: React.ReactNode }) => (
+  <span className="block text-[10px] font-mono uppercase tracking-[0.14em] text-muted">
+    {children}
+  </span>
+)
+
+const StatusTag = ({ children }: { children: React.ReactNode }) => (
+  <span className="inline-block text-[10px] font-mono px-2 py-0.5 rounded border border-default text-secondary">
+    {children}
+  </span>
+)
+
+const ItemLinks = ({ links }: { links: { label: string; url: string }[] }) => {
+  const usable = links.filter((l) => l.url.trim().length > 0)
+  if (usable.length === 0) return null
   return (
-    <div className="relative w-full h-full rounded overflow-hidden border border-default bg-surface-solid">
-      {images.map((img, idx) => (
-        <img
-          key={img}
-          src={img}
-          alt="Preview"
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${idx === currentIndex ? 'opacity-100' : 'opacity-0'
-            }`}
-        />
+    <div className="flex flex-wrap gap-x-4 gap-y-2">
+      {usable.map((link) => (
+        <a
+          key={link.url + link.label}
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 text-xs font-mono text-secondary hover:text-accent transition-colors"
+        >
+          {link.label}
+          <ArrowUpRight size={12} />
+        </a>
       ))}
     </div>
   )
 }
 
-const navSections = [
-  { to: '/curriculo', label: 'Currículo', icon: FileText },
-  { to: '/projetos', label: 'Projetos', icon: LayoutGrid },
-  { to: '/codigos', label: 'Códigos', icon: Code2 },
-  { to: '/blog', label: 'Blog', icon: Newspaper },
-  { to: '/redes-sociais', label: 'Redes sociais', icon: Share2 },
-]
+/* ------------------------------------------------------------------ */
+/* Página                                                              */
+/* ------------------------------------------------------------------ */
 
 export const Home = () => {
-  const [activeModal, setActiveModal] = useState<EcosystemItem | null>(null)
-  const currentRoles = resumeData.experiences.filter((e) => e.tier === 'atual') 
-  const ecosystemItems = ecosystemData.slice(1)
+  const dates = useGithubActivity()
+  const currentRoles = resumeData.experiences.filter((e) => e.tier === 'atual')
+
+  const destaque = ecosystemData.find((i) => i.level === 'destaque')
+  const grupos = ecosystemData.filter((i) => i.level === 'grupo')
+  const frentes = ecosystemData.filter((i) => i.level === 'frente')
+
+  const latest = mostRecent(dates)
+  const updatedFor = (item: { repo?: string }) =>
+    item.repo && dates?.[item.repo] ? relativeTime(dates[item.repo]) : null
 
   return (
-    <div className="max-w-4xl pb-16 relative">
-      <div className="flex items-center justify-between mb-8 pb-4 border-b border-default">
-        <span className="font-mono font-semibold text-sm tracking-tight text-primary">
-          douglasabnovato<span className="text-muted">.dev</span>
-        </span>
-        <a href="https://github.com/douglasabnovato" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded border border-default bg-surface flex items-center justify-center hover:border-accent hover:text-accent transition-all">
-          <ArrowUpRight size={14} />
-        </a>
-      </div>
+    <div className="max-w-4xl pb-24">
+      {/* ---------- BLOCO 1 — abertura ---------- */}
+      <header className="flex flex-col sm:flex-row sm:items-start gap-7">
+        <img
+          src={profileImg}
+          alt="Douglas Antonio Braga Novato"
+          width={112}
+          height={112}
+          className="w-28 h-28 rounded-full object-cover object-[center_30%] shrink-0"
+        />
 
-      <div className="grid grid-cols-1 lg:grid-cols-10 gap-8 mb-10 items-center">
-        <div className="lg:col-span-7">
-          <span className="text-xs font-mono text-muted uppercase tracking-wider block mb-2">
-            Arquiteto de Software & Produto
-          </span>
-          <h1 className="text-3xl font-bold mb-3 tracking-tight text-primary">Douglas A. B. Novato</h1>
-          <p className="text-secondary text-sm leading-relaxed mb-4">
-            Especializado em produtos digitais de alta performance, arquitetura de ecossistemas e liderança técnica.
-            Atuo no desenvolvimento de ponta a ponta, delegação estratégica para agências e acompanhamento rigoroso de entregas.
+        <div className="min-w-0">
+          <h1 className="text-[1.6rem] sm:text-[1.75rem] font-normal leading-snug tracking-tight text-primary">
+            {homeIntro}
+          </h1>
+
+          <p className="mt-5 text-xs font-mono text-muted leading-relaxed">
+            {currentRoles.map((role) => `${role.role} — ${role.company}`).join('  ·  ')}
           </p>
-          <div className="text-xs font-mono text-muted py-2 px-3 rounded bg-surface border border-default inline-block">
-            {currentRoles.map((role) => `${role.role} — ${role.company}`).join(' · ')}
+
+          <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-default bg-surface text-xs font-mono text-primary hover:border-accent hover:text-accent transition-colors"
+            >
+              <MessageCircle size={13} /> WhatsApp
+            </a>
+            <Link
+              to="/curriculo"
+              className="text-xs font-mono text-secondary hover:text-accent transition-colors"
+            >
+              Currículo
+            </Link>
+            <a
+              href="https://www.linkedin.com/in/douglasabnovato"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-mono text-secondary hover:text-accent transition-colors"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/douglasabnovato"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-mono text-secondary hover:text-accent transition-colors"
+            >
+              GitHub
+            </a>
           </div>
-        </div>
-        <div className="lg:col-span-3 h-40">
-          <img src={profileImg} alt="Douglas Novato" className="w-full h-full object-cover rounded border border-default" />
-        </div>
-      </div> 
-      <div className="flex flex-wrap gap-2 mb-14">
-        {navSections.map(({ to, label, icon: Icon }) => (
-          <Link key={to} to={to} className="flex items-center gap-2 px-3.5 py-1.5 rounded border border-default bg-surface hover:border-accent hover:text-accent text-xs font-medium transition-all">
-            <Icon size={14} /> {label}
-          </Link>
-        ))}
-      </div> 
-      <div className="mb-6 flex items-center justify-between">
-        <h2 className="text-xs uppercase tracking-widest font-mono text-muted">
-          Ecossistema de Atuação & Projetos
-        </h2>
-        <span className="text-[10px] font-mono text-muted">Visão Geral</span>
-      </div>
 
-      <div className="space-y-6">
-        {ecosystemItems.map((item, index) => (
-          <div key={item.id} className="group relative rounded-lg bg-surface border border-default p-6 transition-all hover:border-accent">
-            <div className="absolute top-0 left-0 w-[2px] h-full bg-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+          {latest && (
+            <p className="mt-4 text-[10px] font-mono text-muted">
+              Último commit público {relativeTime(latest)}
+            </p>
+          )}
+        </div>
+      </header>
 
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-[10px] font-mono text-accent px-2 py-0.5 rounded border border-accent/20 bg-accent/5">
-                {item.badge}
-              </span>
-              <span className="text-[10px] font-mono text-muted">#{String(index + 1).padStart(2, '0')}</span>
+      {/* ---------- BLOCO 2 — destaque ---------- */}
+      {destaque && (
+        <section className="mt-[var(--space-block)]">
+          <img
+            src={destaque.image}
+            alt={destaque.title}
+            loading="lazy"
+            decoding="async"
+            className="w-full aspect-video object-cover object-top rounded-xl border border-default img-emph-1"
+          />
+
+          <div className="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-4">
+            <div className="lg:col-span-7">
+              <Kicker>{destaque.kicker}</Kicker>
+              <h2 className="mt-2 text-xl font-medium text-primary">{destaque.title}</h2>
+              <p className="mt-3 text-sm text-secondary leading-relaxed">
+                {destaque.description}
+              </p>
             </div>
 
-            {item.type !== 'grid' ? (
-              <div className="grid grid-cols-1 lg:grid-cols-10 gap-6 items-center">
-                <div className="lg:col-span-7">
-                  <h3 className="font-bold text-base mb-2 group-hover:text-accent transition-colors">{item.title}</h3>
-                  <p className="text-xs text-secondary leading-relaxed mb-4">{item.description}</p>
+            <div className="lg:col-span-5 space-y-4">
+              {destaque.note && (
+                <p className="text-xs text-muted leading-relaxed border-l border-accent pl-3">
+                  {destaque.note}
+                </p>
+              )}
+              <div className="flex flex-wrap items-center gap-3">
+                {destaque.status && <StatusTag>{destaque.status}</StatusTag>}
+                {updatedFor(destaque) && (
+                  <span className="text-[10px] font-mono text-muted">
+                    atualizado {updatedFor(destaque)}
+                  </span>
+                )}
+              </div>
+              <ItemLinks links={destaque.links} />
+            </div>
+          </div>
+        </section>
+      )}
 
-                  <div className="flex flex-wrap items-center gap-3 pt-3 border-t border-default/50">
-                    {item.links.map(l => (
-                      l.external ? (
-                        <a
-                          key={l.url}
-                          href={l.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1 rounded bg-surface-solid text-primary border border-default hover:border-accent hover:text-accent transition-colors font-mono"
-                        >
-                          {l.label}
-                          <ArrowUpRight size={14} />
-                        </a>
-                      ) : (
-                        <button
-                          key={l.label}
-                          onClick={() => setActiveModal(item)}
-                          className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1 rounded bg-accent/10 text-accent border border-accent/20 hover:bg-accent/20 transition-colors font-mono cursor-pointer"
-                        >
-                          <Sparkles size={12} />
-                          {l.label}
-                        </button>
-                      )
-                    ))}
+      {/* ---------- BLOCO 3 — grupos (learnTECH) ---------- */}
+      {grupos.map((grupo: EcosystemItem) => (
+        <section key={grupo.id} className="mt-[var(--space-block)]">
+          <div className="flex flex-wrap items-baseline justify-between gap-3 pb-3 border-b border-default">
+            <div>
+              <Kicker>{grupo.kicker}</Kicker>
+              <h2 className="mt-1.5 text-base font-medium text-primary">{grupo.title}</h2>
+            </div>
+            {grupo.status && <StatusTag>{grupo.status}</StatusTag>}
+          </div>
+
+          <p className="mt-4 text-sm text-secondary leading-relaxed max-w-xl">
+            {grupo.description}
+          </p>
+
+          <div className="mt-[var(--space-group)] grid grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-8">
+            {grupo.children?.map((child) => (
+              <a
+                key={child.id}
+                href={child.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
+              >
+                <img
+                  src={child.image}
+                  alt={child.title}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full aspect-[3/2] object-cover object-top rounded-md border border-default img-emph-3 group-hover:img-emph-1"
+                />
+                <p className="mt-3 text-sm text-primary group-hover:text-accent transition-colors flex items-center gap-1">
+                  {child.title}
+                  <ArrowUpRight
+                    size={12}
+                    className="opacity-0 group-hover:opacity-100 transition-opacity"
+                  />
+                </p>
+                <p className="mt-0.5 text-[11px] text-muted leading-snug">{child.description}</p>
+                {updatedFor(child) && (
+                  <p className="mt-1 text-[10px] font-mono text-muted">
+                    atualizado {updatedFor(child)}
+                  </p>
+                )}
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      {/* ---------- BLOCO 4 — frentes ---------- */}
+      {frentes.length > 0 && (
+        <section className="mt-[var(--space-block)]">
+          <h2 className="text-[10px] font-mono uppercase tracking-[0.14em] text-muted pb-3 border-b border-default">
+            Outras frentes
+          </h2>
+
+          <div className="mt-[var(--space-group)] grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-10">
+            {frentes.map((item) => (
+              <article key={item.id} className="group">
+                {item.image && (
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full aspect-[4/3] object-cover object-top rounded-md border border-default img-emph-2 group-hover:img-emph-1"
+                  />
+                )}
+                <div className="mt-4">
+                  <Kicker>{item.kicker}</Kicker>
+                  <h3 className="mt-1.5 text-sm font-medium text-primary">{item.title}</h3>
+                  <p className="mt-2 text-xs text-muted leading-relaxed">{item.description}</p>
+                  <div className="mt-3">
+                    <ItemLinks links={item.links} />
                   </div>
                 </div>
-                <div className="lg:col-span-3 h-32">
-                  <CarouselImage images={item.images || []} />
-                </div>
-              </div>
-            ) : (
-              <div>
-                <h3 className="font-bold text-base mb-2 group-hover:text-accent transition-colors">{item.title}</h3>
-                <p className="text-xs text-secondary leading-relaxed mb-4">{item.description}</p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 pt-4 border-t border-default/50">
-
-                  {item.subItems?.map((sub) => (
-                    <a
-                      key={sub.title}
-                      href={sub.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 border border-default rounded bg-surface-solid/50 flex flex-col hover:border-accent transition-colors group"
-                    >
-                      {sub.image && (
-                        <div className="w-full h-28 mb-3 overflow-hidden rounded border border-default">
-                          <img
-                            src={sub.image}
-                            alt={sub.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                          />
-                        </div>
-                      )}
-                      <div>
-                        <p className="text-sm font-semibold text-primary group-hover:text-accent transition-colors flex items-center justify-between">
-                          {sub.title}
-                          <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                        </p>
-                        <p className="text-[11px] text-muted mt-0.5">{sub.description}</p>
-                      </div>
-                    </a>
-                  ))}
-
-                </div>
-              </div>
-            )}
+              </article>
+            ))}
           </div>
-        ))}
-      </div> 
-      {activeModal && activeModal.modalContent && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
-          <div className="relative w-full max-w-lg rounded-xl bg-surface-solid border border-default p-6 shadow-2xl">
-            <button onClick={() => setActiveModal(null)} className="absolute top-4 right-4 text-muted hover:text-primary transition-colors p-1 rounded cursor-pointer">
-              <X size={18} />
-            </button>
-            <span className="text-[10px] font-mono text-accent px-2 py-0.5 rounded border border-accent/20 bg-accent/5 inline-block mb-3">
-              {activeModal.badge}
-            </span>
-            <h3 className="text-xl font-bold text-primary mb-1">{activeModal.title}</h3>
-            <p className="text-xs font-mono text-muted mb-4">{activeModal.modalContent.subtitle}</p>
-
-            <div className="space-y-4 mb-6">
-              <div className="p-3 rounded bg-surface border border-default">
-                <p className="text-xs font-semibold text-primary mb-1">Objetivo Central</p>
-                <p className="text-xs text-secondary leading-relaxed">{activeModal.modalContent.objective}</p>
-              </div>
-
-              <div>
-                <p className="text-xs font-semibold text-primary mb-2">Destaques da Iniciativa</p>
-                <ul className="space-y-1.5">
-                  {activeModal.modalContent.highlights.map((item, idx) => (
-                    <li key={idx} className="text-xs text-secondary flex items-start gap-2">
-                      <span className="text-accent">▪</span> {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            <div className="flex justify-end pt-3 border-t border-default">
-              <button onClick={() => setActiveModal(null)} className="px-4 py-2 rounded bg-surface hover:border-accent text-xs font-mono text-primary border border-default transition-colors cursor-pointer">
-                Fechar Detalhes
-              </button>
-            </div>
-          </div>
-        </div>
+        </section>
       )}
     </div>
   )

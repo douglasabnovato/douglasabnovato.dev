@@ -4,55 +4,58 @@
 
 :root,
 [data-theme="dark"] {
-  --color-page: #09090b;
-  --color-surface: rgb(39 39 42 / 0.4);
-  --color-surface-solid: #18181b;
-  --color-border: #27272a;
-  --color-border-strong: #3f3f46;
-  --color-text-primary: #f4f4f5;
-  --color-text-secondary: #a1a1aa;
-  --color-text-muted: #71717a;
+    --color-page: #09090b;
+    --color-surface: rgb(39 39 42 / 0.4);
+    --color-surface-solid: #18181b;
+    --color-border: #27272a;
+    --color-border-strong: #3f3f46;
+    --color-text-primary: #f4f4f5;
+    --color-text-secondary: #a1a1aa;
+    --color-text-muted: #71717a;
 
-  /* Acento único de interação e estado ativo. */
-  --color-accent: #c5a880;
-  --color-accent-soft: rgb(197 168 128 / 0.14);
+    /* Acento único de interação e estado ativo. */
+    --color-accent: #c5a880;
+    --color-accent-soft: rgb(197 168 128 / 0.14);
 
-  /* Trilhas da faixa temporal. Uma cor por trilha, nunca decorativa. */
-  --track-desenvolvimento: #6b9bd1;
-  --track-produto: #c08a5e;
-  --track-dados: #5fa88a;
-  --track-operacao: #8d8da8;
-  --track-educacao: #b08bbd;
-  --track-transicao: #52525b;
+    /* Trilhas da faixa temporal. Uma cor por trilha, nunca decorativa. */
+    --track-desenvolvimento: #6b9bd1;
+    --track-produto: #c08a5e;
+    --track-dados: #5fa88a;
+    --track-operacao: #8d8da8;
+    --track-educacao: #b08bbd;
+    --track-transicao: #52525b;
+    --space-block: 6rem;
+    --space-group: 3.5rem;
+    --space-item: 1.25rem;
 }
 
 [data-theme="light"] {
-  --color-page: #ffffff;
-  --color-surface: rgb(244 244 245 / 0.6);
-  --color-surface-solid: #f4f4f5;
-  --color-border: #e4e4e7;
-  --color-border-strong: #d4d4d8;
-  --color-text-primary: #18181b;
-  --color-text-secondary: #52525b;
-  --color-text-muted: #71717a;
+    --color-page: #ffffff;
+    --color-surface: rgb(244 244 245 / 0.6);
+    --color-surface-solid: #f4f4f5;
+    --color-border: #e4e4e7;
+    --color-border-strong: #d4d4d8;
+    --color-text-primary: #18181b;
+    --color-text-secondary: #52525b;
+    --color-text-muted: #71717a;
 
-  --color-accent: #8a6a3d;
-  --color-accent-soft: rgb(138 106 61 / 0.12);
+    --color-accent: #8a6a3d;
+    --color-accent-soft: rgb(138 106 61 / 0.12);
 
-  --track-desenvolvimento: #3f6fa8;
-  --track-produto: #96603a;
-  --track-dados: #34785e;
-  --track-operacao: #5f5f7a;
-  --track-educacao: #7d5a8a;
-  --track-transicao: #a1a1aa;
+    --track-desenvolvimento: #3f6fa8;
+    --track-produto: #96603a;
+    --track-dados: #34785e;
+    --track-operacao: #5f5f7a;
+    --track-educacao: #7d5a8a;
+    --track-transicao: #a1a1aa;
 }
 
 body {
-  transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 * {
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 @utility bg-page {
@@ -101,4 +104,28 @@ body {
 
 @utility bg-accent-soft {
     background-color: var(--color-accent-soft);
+}
+
+@utility img-emph-1 {
+    filter: none;
+    transition: filter 220ms ease;
+}
+
+@utility img-emph-2 {
+    filter: grayscale(0.25) saturate(0.95);
+    transition: filter 220ms ease;
+}
+
+@utility img-emph-3 {
+    filter: grayscale(0.4) saturate(0.9);
+    transition: filter 220ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .img-emph-1,
+    .img-emph-2,
+    .img-emph-3 {
+        transition: none;
+    }
 }

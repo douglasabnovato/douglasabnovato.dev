@@ -58,8 +58,8 @@ export interface CommunityItem {
   id: string;
   title: string;
   role?: string;
-  period: string; 
-  detail?: string; 
+  period: string;
+  detail?: string;
   pdfDetail?: string;
 }
 
@@ -112,7 +112,7 @@ export interface ResumeData {
   contacts: ContactLink[];
   experiences: Experience[];
   education: Education[];
-    certifications: CertificationItem[];
+  certifications: CertificationItem[];
   community: CommunityItem[];
   publications: PublicationItem[];
   languages: LanguageItem[];
