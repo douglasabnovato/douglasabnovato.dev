@@ -8,9 +8,22 @@
   --color-surface: rgb(39 39 42 / 0.4);
   --color-surface-solid: #18181b;
   --color-border: #27272a;
+  --color-border-strong: #3f3f46;
   --color-text-primary: #f4f4f5;
   --color-text-secondary: #a1a1aa;
   --color-text-muted: #71717a;
+
+  /* Acento único de interação e estado ativo. */
+  --color-accent: #c5a880;
+  --color-accent-soft: rgb(197 168 128 / 0.14);
+
+  /* Trilhas da faixa temporal. Uma cor por trilha, nunca decorativa. */
+  --track-desenvolvimento: #6b9bd1;
+  --track-produto: #c08a5e;
+  --track-dados: #5fa88a;
+  --track-operacao: #8d8da8;
+  --track-educacao: #b08bbd;
+  --track-transicao: #52525b;
 }
 
 [data-theme="light"] {
@@ -18,9 +31,20 @@
   --color-surface: rgb(244 244 245 / 0.6);
   --color-surface-solid: #f4f4f5;
   --color-border: #e4e4e7;
+  --color-border-strong: #d4d4d8;
   --color-text-primary: #18181b;
   --color-text-secondary: #52525b;
   --color-text-muted: #71717a;
+
+  --color-accent: #8a6a3d;
+  --color-accent-soft: rgb(138 106 61 / 0.12);
+
+  --track-desenvolvimento: #3f6fa8;
+  --track-produto: #96603a;
+  --track-dados: #34785e;
+  --track-operacao: #5f5f7a;
+  --track-educacao: #7d5a8a;
+  --track-transicao: #a1a1aa;
 }
 
 body {
@@ -47,6 +71,10 @@ body {
     border-color: var(--color-border);
 }
 
+@utility border-strong {
+    border-color: var(--color-border-strong);
+}
+
 @utility text-primary {
     color: var(--color-text-primary);
 }
@@ -57,4 +85,20 @@ body {
 
 @utility text-muted {
     color: var(--color-text-muted);
+}
+
+@utility text-accent {
+    color: var(--color-accent);
+}
+
+@utility border-accent {
+    border-color: var(--color-accent);
+}
+
+@utility bg-accent {
+    background-color: var(--color-accent);
+}
+
+@utility bg-accent-soft {
+    background-color: var(--color-accent-soft);
 }
