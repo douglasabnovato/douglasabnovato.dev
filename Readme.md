@@ -1,5 +1,13 @@
-<h1 align="center">🌐 douglasabnovato.dev</h1>
-<p align="center">Meu Ecossistema em Tech</p>
+<h1 align="center">douglasabnovato.dev</h1>
+
+<p align="center">
+  Site pessoal — trajetória profissional, projetos em andamento e catálogo de<br>
+  repositórios lido ao vivo da API do GitHub.
+</p>
+
+<p align="center">
+  <strong>React 19 · TypeScript · Vite 8 · Tailwind CSS 4 · Feature-Sliced Design</strong>
+</p>
 
 <p align="center">
   <a href="https://douglasabnovato-dev.vercel.app/"><img alt="Live" src="https://img.shields.io/badge/live-douglasabnovato--dev.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white"></a>
@@ -14,170 +22,311 @@
 
 ---
 
-## 💻 Sobre o projeto
+## Sobre
 
-Site pessoal que centraliza minha trajetória, meu currículo e os projetos que venho construindo — incluindo o [ecossistema learnTECH](https://learn-tech-pied.vercel.app), do qual esse site é a origem.
+Site pessoal que reúne trajetória profissional, projetos em andamento e a forma como eu conduzo produto. É também a origem do [ecossistema learnTECH](https://learn-tech-pied.vercel.app).
 
-Esse repositório tem história: nasceu em 2022 como um desafio de portfólio da Rocketseat, evoluiu por 5 versões em HTML/CSS/JS puro (320 commits), ficou parado por mais de 3 anos, e está sendo **reconstruído do zero** com uma stack moderna — não como remendo do código antigo, mas como reflexo de onde estou hoje. O histórico de versões anteriores continua preservado nas branches do repositório.
+O repositório tem história: nasceu em 2022 como desafio de portfólio da Rocketseat, passou por cinco versões em HTML, CSS e JavaScript puro ao longo de 320 commits, ficou três anos parado, e está sendo **reconstruído do zero** — não como remendo do código antigo, mas como reflexo do trabalho atual. As versões anteriores seguem preservadas nas branches.
 
-## 📊 Projetos em números
+## Objetivo
 
-| Métrica | Valor |
-|---|---|
-| Repositórios públicos catalogados | **126** |
-| Categorias de organização | **6** — Especiais, Destaques, Projetos Originais, Formação Projetos, Formação Conteúdos, Templates Institucionais |
-| Tipos de classificação | **6** — educacional, site institucional, LP de produto, financeiro, utilitário, projeto |
-| Status possíveis | **2** — MVP, Em desenvolvimento |
+O site atende quatro públicos, nesta ordem de prioridade:
 
-## ✨ Funcionalidades
+1. **Empresas que contratam** — é o principal foco. A vaga-alvo é desenvolvedor de produto digital
+2. **Clientes** que queiram contratar um serviço
+3. **Alunos e entusiastas** de tecnologia
+4. **Eu mesmo**, como catálogo consultável de ferramentas, eventos e projetos
 
-| Página | Status | O que faz |
+## Princípios
+
+Quatro regras governam o que entra no site, e explicam a maior parte das decisões de código:
+
+**Nada de número autodeclarado.** Toda métrica exibida vem de uma fonte verificável — API do GitHub, estatísticas da plataforma onde o conteúdo está publicado, datas do próprio histórico, ou um link que o visitante pode conferir. Não há barra de proficiência, nota de habilidade nem percentual de domínio, porque nenhum deles pode ser checado por quem lê.
+
+**Uma fonte de verdade por assunto.** O currículo da tela e o PDF exportado leem do mesmo arquivo. O catálogo de projetos vem da API, não de uma lista mantida à mão. Onde há duas cópias, uma delas envelhece.
+
+**Dizer também o que o dado não permite concluir.** Onde um recorte seria enganoso, o site declara que ele ficou de fora e por quê — como a nota de método do painel do Blog, que explica por que visualizações por ano não são comparáveis entre si. Número exibido sem ressalva é afirmação; com ressalva, é análise.
+
+**Hierarquia por escala, não por cor.** A importância de um elemento é comunicada por espaço, tamanho e proporção. Cor é reservada para estado e para série de dados.
+
+## Páginas
+
+| Página | Estado | O que faz |
 |---|---|---|
-| 🏠 Home | ✅ Pronta | O que estou fazendo agora, com destaque pro ecossistema learnTECH |
-| 📄 Currículo | ✅ Pronta | Trajetória profissional real, com exportação em PDF (layout de duas colunas) |
-| 🗂️ Projetos | ✅ Pronta | 126 repositórios catalogados em 6 categorias, cada um com status, tipo e imagem real do próprio repositório |
-| 💻 Códigos | ✅ Pronta | Tudo consumido ao vivo da API do GitHub: repositórios, issues em progresso, gists e a comunidade [learnTECH Community](https://github.com/learnTECH-community) — com cache local de 1h para respeitar o limite de requisições |
-| 📝 Blog | ✅ Pronta | Artigos que escrevo, via [Medium](https://douglasabnovato.medium.com) |
-| 🔗 Redes sociais | ✅ Pronta | Todos os meus links, num lugar só |
+| **Home** | no ar | Abertura em primeira pessoa e o que está sendo construído agora. Um projeto em destaque, os satélites do learnTECH e as demais frentes, em três níveis de tamanho. Sinal de atividade vindo da API. Fecha com a faixa de canais públicos |
+| **Currículo** | no ar | Acesso mediante identificação, registrada no Supabase. Faixa temporal da carreira, quatro números verificáveis, experiência em três profundidades de leitura e exportação em PDF de uma página |
+| **Projetos** | no ar | Catálogo lido ao vivo do GitHub, classificado por topics do próprio repositório. Boards de gestão, indicadores agregados e recorte dos gists |
+| **Blog** | no ar | Painel analítico do acervo de 257 artigos — volume por ano, distribuição temática, mais lidos e nota de método. Abaixo, os artigos recentes lidos ao vivo do [Medium](https://douglasabnovato.medium.com) |
+| **Certificados** | a construir | Acervo da trajetória, em linha do tempo, com acesso registrado |
 
-## 🗂️ Como os projetos são organizados
+A antiga página **Redes sociais** foi removida. Os canais viraram uma faixa de oito blocos no fim da Home, alimentada por um arquivo único de configuração — ela repetia links que já existiam, em contexto melhor, nas outras páginas.
 
-Cada repositório recebe duas classificações independentes, não uma mistura confusa:
+## Como os projetos são classificados
 
-- **Status** — em que estágio está: `MVP` (entregue) ou `Em desenvolvimento`
-- **Tipo** — que espécie de projeto é: educacional, site institucional, LP de produto, financeiro, utilitário ou projeto
+A classificação mora **no próprio GitHub**, como topic do repositório — não num arquivo do site. Assim, reclassificar um projeto não exige abrir o editor.
 
-Um projeto pode ser, por exemplo, MVP + Financeiro, ou Em desenvolvimento + Educacional — os dois eixos são independentes, sem forçar uma categoria única que não capture a realidade.
+| Topic | Seção |
+|---|---|
+| `especial` | Especiais |
+| `destaque` | Top Destaques |
+| `mvp` | MVP & Aplicações |
+| `curso` | etiqueta "material de curso" no card, sem criar seção |
+| `oculto` | não aparece no site |
+| *(nenhum)* | Projetos — o destino padrão |
 
-## 🎴 Design dos cards
+Repositórios marcados como fork ou arquivado ganham seções próprias no fim da página. Qualquer topic fora dessa lista é tratado como **etiqueta de tecnologia** e exibido no card.
 
-Inspirado no padrão de card do Airbnb — imagem no topo, badges discretos e translúcidos sobrepostos, informação organizada em texto simples embaixo:
+A ordem de decisão é: `oculto` → `.github` → topic de categoria → categoria do arquivo local → arquivado → fork → padrão. O arquivo local funciona como segunda opção, o que permite migrar para topics sem nenhum momento de virada.
 
-- **Imagem real** de cada repositório, obtida automaticamente via `opengraph.githubassets.com` — a mesma imagem que aparece quando o link do repo é compartilhado no WhatsApp ou Twitter
-- **Fallback** silencioso para um placeholder neutro quando o repositório não tem imagem própria configurada
-- **Link de produção**, quando existe, destacado visualmente do link de repositório — badge verde versus sublinhado simples
+## Dados ao vivo
 
-## 🎨 Tema e responsividade
+Números vêm de API pública, sem autenticação, com cache em `localStorage`:
 
-- **Dark/light** — alternância manual com persistência em `localStorage`; dark é o padrão, consistente com o resto do ecossistema (não é limitação, é escolha deliberada)
-- **Responsivo** — sidebar vira menu mobile (drawer com overlay) abaixo do breakpoint `md`
+| Fonte | O que traz | Cache |
+|---|---|---|
+| `/users/{u}/repos` | catálogo, issues abertas, datas, linguagens, topics | 1 hora |
+| `/users/{u}` | totais da conta, inclusive o número real de gists | 24 horas |
+| `/users/{u}/gists` | os 100 mais recentes, dos quais 20 são exibidos | 24 horas |
+| `/orgs/{org}` | a organização — a seção só renderiza se houver repositório público | 24 horas |
+| `opengraph.githubassets.com` | capa de cada repositório | CDN do GitHub |
+| `rss2json` sobre o feed do Medium | os 10 artigos mais recentes, com o conteúdo completo | 6 horas |
 
-## 🛠 Tecnologias
+A capa de cada projeto é o **cartão OpenGraph do próprio GitHub**. Quando um repositório define uma imagem em Settings → Social preview, o card do site passa a exibi-la automaticamente, sem mudança de código. Quando a imagem falha, entra uma reserva escolhida de forma determinística pelo nome do repositório — o mesmo projeto sempre recebe a mesma capa.
 
-- [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
-- [Vite](https://vite.dev/) como build tool
-- [Tailwind CSS 4](https://tailwindcss.com/) para estilização, com variáveis CSS para o tema dark/light
-- [React Router](https://reactrouter.com/) para navegação
-- [react-to-print](https://github.com/MatthewHerbst/react-to-print) para exportação de currículo em PDF
-- [Lucide React](https://lucide.dev/) para ícones gerais + [react-icons](https://react-icons.github.io/react-icons/) (Font Awesome 6) para ícones de marca (GitHub, LinkedIn, Instagram, X) — o Lucide removeu esses ícones nas versões recentes
-- API pública do GitHub, sem autenticação (repositórios, issues, gists, organizações, imagens de OpenGraph), com cache local para respeitar o limite de requisições
+O limite do GitHub sem token é de 60 requisições por hora por IP. Cada página consome entre uma e três, e as respostas ficam em cache. Em caso de falha, o site exibe os dados anteriores e avisa.
 
-## 📁 Estrutura do projeto
+O RSS do Medium não é acessível direto do navegador por falta de CORS, por isso a ponte é o `rss2json`. O feed entrega no máximo dez artigos e não é paginável — limitação do formato, não do código.
 
-Arquitetura inspirada em Feature-Sliced Design — mesmo padrão usado no [bootcamps](https://bootcamps-dun.vercel.app): separação por `app` (orquestração), `entities` (dado e regra de negócio), `pages` (telas) e `shared` (reutilizável).
+## O acervo do Blog
+
+O painel do Blog usa números que **nenhuma API entrega**: o RSS conhece só os dez mais recentes. Os totais foram apurados na tela `Stats › Stories` do Medium, que lista todas as publicações com tempo de leitura, data, visualizações e leituras.
+
+| | |
+|---|---|
+| Artigos | 257 |
+| Período | 15/01/2014 – 19/07/2026 |
+| Tempo de leitura somado | 1.422 minutos · 23,7 horas |
+| Visualizações | 165.601 |
+| Leituras completas | 75.893 · 45,8% |
+
+Os 257 títulos foram classificados um a um em sete grupos temáticos e cruzados com alcance e taxa de leitura. Tudo isso mora em `entities/article/api/blog.data.ts`.
+
+**Para atualizar depois de publicar:** soma 1 em `mediumTotal`, soma 1 no ano corrente em `yearly`, e atualiza `totalViews` e `totalReads` na próxima revisão de estatísticas. Nenhum componente precisa ser tocado.
+
+Os artigos recentes exibidos abaixo do painel continuam vindo do feed, ao vivo, e se atualizam sozinhos a cada publicação.
+
+## Canais públicos
+
+Um identificador — `douglasabnovato` — em todos os endereços. A lista completa vive em `shared/config/channels.ts` e alimenta a faixa no fim da Home.
+
+Cada canal tem um campo `active`: em `false`, ele não renderiza. Serve para deixar preparado um canal que ainda não tem conteúdo que sustente o link. GitHub e Medium exibem número ao vivo; os demais, uma nota fixa do que existe de fato ali.
+
+## Design
+
+- **Tema** — dark e light por `data-theme` no elemento raiz, com variáveis CSS e persistência em `localStorage`. Dark é o padrão
+- **Acento único** — dourado `#c5a880` no escuro, `#8a6a3d` no claro, usado só em estado ativo, em link e nas barras do gráfico de volume do Blog
+- **Trilhas de cor** — seis variáveis, uma por frente de atuação. Usadas na faixa temporal do currículo, no painel de assuntos do Blog e na capa de reserva dos artigos
+- **Ritmo vertical** — três medidas fixas em variáveis: 96px entre blocos, 56px entre grupos, 20px entre itens
+- **Escada de ênfase nas imagens** — três níveis de saturação criam profundidade sem acrescentar cor, e respeitam `prefers-reduced-motion`
+- **Números** — sempre em fonte mono com `tabular-nums`, para não dançarem ao atualizar
+- **Gráficos sem biblioteca** — as barras do painel do Blog são divs com largura e altura proporcionais. Treze barras não justificam mais de cem kilobytes no bundle
+- Sem gradiente, sem glow, sem vidro fosco, sem emoji na interface
+- **Responsivo** — a barra lateral vira menu deslizante abaixo do breakpoint `md`
+
+## Tecnologias
+
+- [React 19](https://react.dev/) e [TypeScript](https://www.typescriptlang.org/)
+- [Vite 8](https://vite.dev/)
+- [Tailwind CSS 4](https://tailwindcss.com/) com `@utility` e variáveis CSS para o tema
+- [React Router 7](https://reactrouter.com/)
+- [Lucide React](https://lucide.dev/) para ícones de interface e [react-icons](https://react-icons.github.io/react-icons/) para ícones de marca
+- [Supabase](https://supabase.com/) para o registro de acesso ao currículo
+- Exportação de PDF com `window.print()` e uma folha `@media print` dedicada — sem biblioteca
+- Nenhuma biblioteca de gráfico
+
+## Estrutura
+
+Arquitetura inspirada em Feature-Sliced Design: `app` orquestra, `entities` guarda dado e regra, `pages` são as telas, `shared` é o reutilizável.
 
 ```
 src/
 ├── app/
 │   ├── App.tsx
 │   ├── main.tsx
-│   ├── router/
-│   │   └── AppRouter.tsx
-│   └── styles/
-│       ├── App.css
-│       └── main.css
+│   ├── router/AppRouter.tsx
+│   └── styles/main.css              # tokens, tema, utilitários
 │
 ├── entities/
-│   ├── article/
+│   ├── article/                     # artigos e acervo do Medium
+│   │   ├── api/blog.data.ts         # totais, série por ano, grupos, mais lidos
+│   │   ├── model/{types.ts,useMediumPosts.ts}
+│   │   └── ui/
+│   │       ├── ArticleCard.tsx      # card horizontal, numeração da série
+│   │       └── BlogDashboard.tsx    # painel do acervo
+│   │
+│   ├── github/                      # tudo que vem da API
+│   │   ├── api/
+│   │   │   ├── githubApi.ts
+│   │   │   └── gists.fixos.ts       # gists fixados à mão
 │   │   ├── model/
 │   │   │   ├── types.ts
-│   │   │   └── useMediumPosts.ts
-│   │   └── ui/
-│   │       └── ArticleCard.tsx
-│   ├── github/                 # dados ao vivo da API do GitHub
+│   │   │   └── useGithubExtras.ts   # gists e organização
+│   │   └── ui/{GistCard.tsx,OrganizationCard.tsx}
+│   │
+│   ├── project/
 │   │   ├── api/
-│   │   │   └── githubApi.ts
-│   │   └── model/
-│   │       └── types.ts
-│   ├── project/                # curadoria de projetos (Especiais/Destaques/categorias)
-│   │   ├── api/
-│   │   │   └── projects.data.ts
+│   │   │   ├── ecosystem.data.ts    # frentes exibidas na Home
+│   │   │   └── projects.data.ts     # enriquecimento e boards
 │   │   ├── model/
 │   │   │   ├── types.ts
-│   │   │   └── useProjects.ts
+│   │   │   ├── fallbackImage.ts
+│   │   │   └── useProjectCatalog.ts # catálogo, roteamento, indicadores
 │   │   └── ui/
-│   │       └── ProjectCard.tsx
-│   └── resume/                 # currículo, com exportação em PDF
-│       ├── model/
-│       │   ├── resume.data.ts
-│       │   └── types.ts
+│   │       ├── ProjectCard.tsx
+│   │       ├── ProjectRow.tsx       # card reduzido, para volume alto
+│   │       └── ManagementBoardCard.tsx
+│   │
+│   └── resume/                      # fonte única do currículo
+│       ├── model/{types.ts,resume.data.ts,useResumeAccess.ts}
 │       └── ui/
-│           ├── curriculo-print.css
-│           ├── ExperienceBlock.tsx
-│           └── PdfExportButton.tsx
+│           ├── CurriculumAccessModal.tsx
+│           ├── CurriculumPrintTemplate.tsx
+│           └── curriculo-print.css  # PDF de uma página, legível por ATS
 │
 ├── pages/
-│   ├── blog/Blog.tsx
-│   ├── codigos/Codigos.tsx
-│   ├── curriculo/Curriculo.tsx
 │   ├── home/Home.tsx
-│   ├── notFound/NotFound.tsx
+│   ├── curriculo/Curriculo.tsx
 │   ├── projetos/Projetos.tsx
-│   └── redesSociais/RedesSociais.tsx
+│   ├── blog/Blog.tsx
+│   └── notFound/NotFound.tsx
 │
 └── shared/
-    ├── lib/
-    │   ├── localCache.ts       # cache com TTL em localStorage (usado pela página Códigos)
-    │   ├── utils.ts
-    │   └── hooks/
-    │       └── useDocumentTitle.ts
+    ├── config/channels.ts           # canais públicos da faixa da Home
+    ├── lib/{localCache.ts,supabase.ts}
     └── ui/
-        ├── badge/Badge.tsx
         ├── layout/MainLayout.tsx
-        ├── mobileHeader/MobileHeader.tsx  # barra fixa mobile, só abaixo do breakpoint md
         ├── sidebar/Sidebar.tsx
+        ├── mobileHeader/MobileHeader.tsx
         └── themeToggle/ThemeToggle.tsx
 ```
 
-## 🚀 Como rodar localmente
+## Rodando localmente
 
 ```bash
 git clone https://github.com/douglasabnovato/douglasabnovato.dev.git
 cd douglasabnovato.dev
-git checkout mvp-versao-1
+git checkout feature/projetos
 npm install
 npm run dev
 ```
 
-Acesse `http://localhost:5173`, ou veja a versão publicada em [douglasabnovato-dev.vercel.app](https://douglasabnovato-dev.vercel.app/).
+Em `http://localhost:5173`. O build de produção é `npm run build`, que roda `tsc -b` antes do Vite — erro de tipo impede o deploy.
 
-## 🌳 Workflow de branches
+Para o registro de acesso ao currículo funcionar em desenvolvimento, crie um `.env.local`:
 
 ```
-master              → produção
-developer            → integração/staging
-mvp-versao-1         → desenvolvimento ativo desta reconstrução
-demais branches      → histórico preservado das versões anteriores (v1.0 a v5.2)
+VITE_SUPABASE_URL=...
+VITE_SUPABASE_ANON_KEY=...
 ```
 
-## 🌐 Ecossistema
+Sem essas variáveis o site roda normalmente; apenas o registro não é gravado.
 
-Esse site é a origem de um conjunto maior de projetos:
+## Branches
 
-| Projeto | Descrição |
+```
+master             → produção
+developer          → integração
+feature/projetos   → desenvolvimento ativo
+demais branches    → histórico das versões 1.0 a 5.2
+```
+
+## Ecossistema
+
+| Projeto | O que é |
 |---|---|
 | [learnTECH](https://learn-tech-pied.vercel.app) | Plataforma principal — LXP e hub de engenharia da ByteClass |
-| [Bootcamps](https://bootcamps-dun.vercel.app) | Retrospectiva e roteiro de formações e eventos |
-| [Tools](https://douglasabnovato.github.io/tools) | Catálogo curado de ferramentas para devs |
-| [Career](https://douglasabnovato.github.io/career) | Oportunidades, empresas e perfis de devs |
-
-E dois projetos de portfólio avulso, provas de capacidade técnica em contextos reais:
-
-| Projeto | Descrição |
-|---|---|
-| [DoctorCare](https://douglasabnovato.github.io/doctor-care) | Landing page institucional para profissionais autônomos da saúde |
-| [Crachá Virtual](https://douglasabnovato.github.io/cracha-virtual) | Gerador de crachá digital mobile-first com links sociais |
+| [Bootcamps](https://bootcamps-dun.vercel.app) | Retrospectiva de formações e eventos |
+| [Tools](https://douglasabnovato.github.io/tools) | Catálogo curado de ferramentas para desenvolvedores |
+| [Career](https://douglasabnovato.github.io/career) | Oportunidades, empresas e perfis |
 
 ---
 
-Feito por [Douglas A. B. Novato](https://www.linkedin.com/in/douglasabnovato/) 👋🏽
+## Feito
+
+**Currículo**
+- Fonte única de verdade: tela e PDF leem do mesmo arquivo
+- Faixa temporal da carreira, com barras sobrepostas e trilhas por área
+- Quatro números verificáveis, dois deles ao vivo
+- Experiência em três profundidades de leitura, por relevância e recência
+- Tecnologias apresentadas por evidência — cada uma com a empresa e o período em que foi usada
+- PDF de uma página, coluna única, alinhamento à esquerda e corpo em 9,5pt — legível por sistemas de triagem
+- Chart.js removido do projeto
+
+**Home**
+- Abertura em primeira pessoa, com foto e cargos atuais lidos do currículo
+- Hierarquia por escala: um destaque, quatro satélites, três frentes
+- Escada de ênfase por saturação, com guarda de movimento reduzido
+- Sinal de atividade vindo da API do GitHub
+- Faixa de canais em 2 × 4 no fim da página, com número ao vivo em GitHub e Medium
+- Cabeçalho aliviado: os links saíram para a faixa e a abertura voltou a ser só apresentação
+- Navegação duplicada removida — a barra lateral já cumpre o papel
+
+**Projetos**
+- Catálogo lido ao vivo, com roteamento por topics e o arquivo local como segunda opção
+- Todo repositório novo cai automaticamente na seção padrão
+- Contagens derivadas — nenhum número escrito à mão
+- Quatro indicadores agregados no topo
+- Capa vinda do OpenGraph do GitHub, com reserva determinística
+- Boards de gestão com nomes corretos; o board privado deixou de apontar para uma página inacessível
+- Seções de Forks e Arquivados
+- Gists: 20 exibidos, total real no cabeçalho, e um arquivo para fixar escolhas à mão
+- Organização com renderização condicional — aparece sozinha quando houver conteúdo público
+
+**Blog**
+- Painel do acervo: 257 artigos, 165.601 visualizações, 75.893 leituras, 23,7 horas de leitura somada
+- Volume por ano de 2014 a 2026, com os anos sem publicação exibidos em zero em vez de omitidos
+- Sete grupos temáticos, classificados título a título e cruzados com alcance e taxa de leitura
+- Os oito artigos mais lidos, com visualizações e proporção de leitura
+- Nota de método ao lado das conclusões, declarando o que ficou de fora e por quê
+- Feed do Medium com cache, reserva em dado antigo e estado tipado, no mesmo contrato do catálogo de projetos
+- Tempo de leitura calculado pela fórmula da própria plataforma; presença de código, capa e resumo extraídos do corpo com `DOMParser`, não com expressão regular
+- Data normalizada sem conversão de fuso, o que elimina o deslocamento de um dia
+- Card horizontal em duas colunas, com numeração da série (`#257`, `#256`, …) e capa tipográfica determinística quando o artigo não tem imagem
+- Entidade `article` reconstruída do zero — o `types.ts` anterior havia sido sobrescrito pelo do currículo e quebrava o build
+
+**Infraestrutura**
+- `--color-accent` criado: 48 referências a `accent` espalhadas por 8 arquivos nunca haviam funcionado
+- Variáveis de ritmo vertical e trilhas de cor
+- Chamada de repositórios reduzida de duas páginas para uma
+- Página Códigos removida, com o conteúdo migrado
+- Página Redes sociais removida, com os canais migrados para a faixa da Home
+
+## Próximos passos
+
+**Certificados** — acervo em linha do tempo por ano, com acesso registrado, imagens no Supabase Storage e visualizador sem download direto. É a última página que falta.
+
+**Função serverless na Vercel** — um endpoint com token de leitura resolve quatro coisas de uma vez: o limite de 60 requisições por hora, a contagem de commits por repositório, as colunas reais do board (Projects v2 só existe em GraphQL autenticado) e as issues fechadas. Atende as três páginas que leem a API.
+
+**Faxina** — sete arquivos sem importadores (`useProjects.ts`, `ExperienceBlock.tsx`, `Badge.tsx`, `utils.ts`, `useDocumentTitle.ts`, `PdfExportButton.tsx`, `App.css`) e três dependências que nunca foram usadas (`react-to-print`, `html2canvas`, `jspdf`).
+
+**Imagens da Home** — 2,1 MB em JPEG, exibidos a um terço do tamanho em que estão salvos. Convertidos para WebP e redimensionados por nível, devem ficar em torno de 300 KB.
+
+**Robustez** — o `ThemeToggle` lê `localStorage` dentro do inicializador do `useState` sem try/catch; é o único ponto capaz de derrubar a aplicação inteira em navegação anônima.
+
+**Contagem de repositórios unificada** — a faixa da Home conta o que a API devolve menos o `.github`; a página Projetos descarta também os marcados com `oculto`. Enquanto forem duas contas, os números podem divergir.
+
+**Link do currículo na Home** — com os links fora do cabeçalho, o destino mais procurado por quem contrata ficou acessível só pelo menu lateral. Falta uma chamada discreta no corpo da página.
+
+**WhatsApp** — botão flutuante em todas as páginas, hoje presente só na faixa da Home.
+
+**TypeScript** — `strict` não está habilitado. Ligar exige corrigir o que aparecer antes do próximo deploy, já que o build roda `tsc -b`.
+
+**learnTECH Community** — a organização não tem repositório público. Ou um repositório se torna público, ou os satélites do learnTECH migram para lá — o que exigiria somar a chamada `/orgs/{org}/repos` ao catálogo.
+
+### Fora do código
+
+**Números do acervo** — `blog.data.ts` guarda a apuração de setembro de 2026. A cada ciclo de revisão, atualizar total, ano corrente, visualizações e leituras.
+
+---
+
+Feito por [Douglas A. B. Novato](https://www.linkedin.com/in/douglasabnovato/)

@@ -1,116 +1,108 @@
-import { useMemo } from 'react'
-import { getRandomFallbackImage } from '../model/fallbackImage'
-import type { CuratedProject, ProjectStatus, ProjectType } from '../model/types'
+import { useState } from 'react'
 import { ArrowUpRight } from 'lucide-react'
+import { getFallbackImageFor } from '../model/fallbackImage'
+import { relativeTime } from '../model/useProjectCatalog'
+import type { CatalogProject } from '../model/types'
+
+/**
+ * Cartão OpenGraph do próprio GitHub: existe para todo repositório público e
+ * mostra nome, descrição e linguagem. Quando o repositório define uma imagem
+ * em Settings → Social preview, este mesmo endereço passa a devolvê-la — o
+ * card melhora sozinho, sem tocar no código.
+ */
+function ogImage(repo: string) {
+  return `https://opengraph.githubassets.com/1/douglasabnovato/${repo}`
+}
 
 interface ProjectCardProps {
-  project: CuratedProject
-  numero?: number
+  project: CatalogProject
+  compact?: boolean
 }
 
-const statusConfig: Record<ProjectStatus, { label: string; className: string }> = {
-  mvp: { label: 'MVP', className: 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' },
-  'em-desenvolvimento': { label: 'Em desenvolvimento', className: 'bg-amber-500/10 text-amber-400 border border-amber-500/20' },
-}
+export const ProjectCard = ({ project, compact = false }: ProjectCardProps) => {
+  const [src, setSrc] = useState(() => ogImage(project.name))
 
-const tipoLabels: Record<ProjectType, string> = {
-  educacional: 'Educacional',
-  'site-institucional': 'Site institucional',
-  'lp-de-produto': 'LP de produto',
-  financeiro: 'Financeiro',
-  utilitario: 'Utilitário',
-  projeto: 'Projeto',
-}
-
-export const ProjectCard = ({ project, numero }: ProjectCardProps) => {
-  const cardImage = useMemo(() => getRandomFallbackImage(), [])
-
-  if (project.placeholder) {
-    return (
-      <div className="rounded-lg p-5 border border-dashed border-default bg-surface/30 text-muted transition-all duration-300">
-        {numero !== undefined && (
-          <span className="text-[10px] font-mono text-muted/60">#{String(numero).padStart(2, '0')}</span>
-        )}
-        <p className="text-sm font-medium text-secondary mt-1">{project.title}</p>
-        <p className="text-xs text-muted/80 mt-0.5">Aguardando conteúdo real</p>
-      </div>
-    )
-  }
+  const alvo = project.homepage?.trim() ? project.homepage : project.repoUrl
 
   return (
-    <div className="group rounded-lg overflow-hidden bg-surface border border-default hover:border-accent transition-all duration-400 relative">
-      {/* Detalhe de precisão lateral no hover */}
-      <div className="absolute top-0 left-0 w-[2px] h-full bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-10" />
-
-      <div className="relative overflow-hidden aspect-video">
+    <article className="group flex flex-col rounded-lg border border-default bg-surface overflow-hidden transition-colors hover:border-accent">
+      <a href={alvo} target="_blank" rel="noopener noreferrer" className="block">
         <img
-          src={cardImage}
-          alt={project.title}
-          className="w-full h-full object-cover bg-surface-solid opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
+          src={src}
+          onError={() => setSrc(getFallbackImageFor(project.name))}
+          alt={`Cartão do repositório ${project.name}`}
+          loading="lazy"
+          decoding="async"
+          className="w-full aspect-[2/1] object-cover object-top bg-surface-solid"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-transparent to-transparent opacity-60" />
+      </a>
 
-        {numero !== undefined && (
-          <span className="absolute top-3 left-3 bg-[#09090b]/80 backdrop-blur-md text-[10px] font-mono text-secondary px-2.5 py-1 rounded border border-default">
-            #{String(numero).padStart(2, '0')}
-          </span>
-        )}
-        {project.status && (
-          <span className={`absolute top-3 right-3 text-[10px] font-mono px-2 py-0.5 rounded ${statusConfig[project.status].className}`}>
-            {statusConfig[project.status].label}
-          </span>
-        )}
-      </div>
+      <div className={compact ? 'p-3.5 flex-1 flex flex-col' : 'p-5 flex-1 flex flex-col'}>
+        {/* identidade */}
+        <p className="text-[10px] font-mono text-muted tabular-nums">
+          {project.createdYear} · {project.name}
+        </p>
 
-      <div className="p-5">
-        <div className="flex items-center justify-between gap-2 mb-1">
-          <p className="text-sm font-semibold text-primary tracking-tight">{project.title}</p>
-        </div>
+        <h3 className="mt-1 text-sm font-medium text-primary">
+<a
+          href={alvo}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group-hover:text-accent transition-colors"
+          >
+          {project.title}
+        </a>
+      </h3>
 
-        <div className="flex items-center gap-2 mb-3">
-          {project.tipo && <span className="text-[11px] font-mono text-muted">{tipoLabels[project.tipo]}</span>}
-          {project.tag && (
-            <>
-              <span className="text-muted">•</span>
-              <span className="text-[11px] font-mono text-muted">{project.tag}</span>
-            </>
-          )}
-        </div>
+      {project.tag && <p className="mt-0.5 text-[11px] font-mono text-muted">{project.tag}</p>}
 
-        <p className="text-xs text-secondary leading-relaxed mb-4 line-clamp-2">{project.description}</p>
+      {project.description && (
+        <p className="mt-2 text-xs text-secondary leading-relaxed line-clamp-3">
+          {project.description}
+        </p>
+      )}
 
-        <div className="flex flex-wrap items-center gap-2 pt-3 border-t border-default/50">
-          {project.links.map((link) =>
-            link.hospedado ? (
-              <a
-                key={link.url}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-[11px] font-medium px-3 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 hover:bg-emerald-500/20 transition-colors"
-              >
-                {link.label}
-                <ArrowUpRight size={12} />
-              </a>
-            ) : (
-              <a
-                key={link.url}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-[11px] text-secondary hover:text-primary transition-colors font-mono"
-              >
-                {link.label} <span className="text-muted">↗</span>
-              </a>
-            )
-          )}
-          {project.issuesAbertas !== undefined && (
-            <span className="text-[10px] text-muted font-mono ml-auto" title="Issues abertas">
-              is: {project.issuesAbertas}
+      {/* etiquetas de tecnologia, vindas dos topics do GitHub */}
+      {project.techTopics.length > 0 && (
+        <div className="mt-3 flex flex-wrap gap-x-2 gap-y-1">
+          {project.techTopics.slice(0, 4).map((topic) => (
+            <span key={topic} className="text-[10px] font-mono text-muted">
+              {topic}
             </span>
-          )}
+          ))}
         </div>
+      )}
+
+      {/* atividade */}
+      <div className="mt-auto pt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] font-mono text-muted tabular-nums">
+        {project.commits !== undefined && <span>{project.commits} commits</span>}
+        {project.openIssues > 0 && <span>{project.openIssues} issues abertas</span>}
+        <span>atualizado {relativeTime(project.pushedAt)}</span>
+        {project.isCourse && <span className="text-secondary">material de curso</span>}
       </div>
-    </div>
+
+      {/* ações */}
+      <div className="mt-3 pt-3 border-t border-default flex flex-wrap items-center gap-x-4 gap-y-2">
+        {project.homepage?.trim() && (
+<a
+          href = { project.homepage }
+              target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1 text-[11px] font-mono text-accent hover:underline"
+            >
+        No ar <ArrowUpRight size={11} />
+      </a>
+          )}
+<a
+      href={project.repoUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-1 text-[11px] font-mono text-secondary hover:text-accent transition-colors"
+          >
+      Código <ArrowUpRight size={11} />
+    </a>
+        </div >
+      </div >
+    </article >
   )
 }

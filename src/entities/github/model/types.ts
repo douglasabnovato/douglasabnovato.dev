@@ -9,24 +9,29 @@ export interface GithubRepo {
   forks_count?: number; // Adicionado aqui
   open_issues_count: number;
   updated_at: string;
-}
-
-export interface GithubIssue {
-  id: number;
-  number: number;
-  title: string;
-  html_url: string;
-  state: "open" | "closed";
-  repository: string;
-  labels: string[];
   created_at: string;
+  pushed_at: string;
+  topics: string[];
+  fork: boolean;
+  archived: boolean;
 }
+ 
 
 export interface GithubGist {
   id: string;
   description: string | null;
   html_url: string;
-  files: Record<string, { filename: string; language: string | null }>;
+  files: Record<string, { filename: string; language: string | null; size?: number }>;
+  created_at: string;
+  updated_at: string;
+  comments: number;
+}
+
+export interface GithubUser {
+  login: string;
+  name: string | null;
+  public_repos: number;
+  public_gists: number;
   created_at: string;
 }
 
