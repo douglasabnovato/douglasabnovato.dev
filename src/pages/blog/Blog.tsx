@@ -1,38 +1,23 @@
 /**
  * Página Blog.
  *
- * Mesma gramática de Projetos: número verificável no topo, amostra abaixo,
- * link para o conjunto completo. O feed do Medium entrega no máximo 10 itens,
- * e o total real vem de blog.data.ts.
+ * Três blocos: cabeçalho, painel do acervo e os artigos recentes.
  *
- * Indicadores e linhas editoriais só renderizam quando têm dado. Com o
- * arquivo de dados zerado, a página não exibe número algum.
+ * O painel usa números apurados uma vez, em blog.data.ts. Os artigos vêm
+ * vivos do feed do Medium, que entrega no máximo dez — não há paginação
+ * porque não há mais nada para paginar.
  */
 
 import { ArrowUpRight } from "lucide-react";
 import { useMediumPosts, relativeTime } from "@/entities/article/model/useMediumPosts";
 import { ArticleCard } from "@/entities/article/ui/ArticleCard";
-import { blogMeta, blogIntro, MEDIUM_PROFILE } from "@/entities/article/api/blog.data";
+import { BlogDashboard } from "@/entities/article/ui/BlogDashboard";
+import { blogIntro, blogMeta, MEDIUM_PROFILE } from "@/entities/article/api/blog.data";
 
 export const Blog = () => {
   const { articles, state } = useMediumPosts();
-  const linhas = blogMeta.editorial.filter((linha) => linha.active);
   const ultimo = articles[0];
-
-  const indicadores = [
-    blogMeta.mediumTotal > 0
-      ? { valor: String(blogMeta.mediumTotal), label: "artigos publicados" }
-      : null,
-    blogMeta.mediumSince > 0
-      ? { valor: String(blogMeta.mediumSince), label: "escrevendo desde" }
-      : null,
-    ultimo ? { valor: relativeTime(ultimo.isoDate), label: "última publicação" } : null,
-  ].filter(Boolean) as { valor: string; label: string }[];
-
-  const rotuloAmostra =
-    blogMeta.mediumTotal > 0
-      ? `${articles.length} de ${blogMeta.mediumTotal}`
-      : String(articles.length);
+  const publicadoEm = ultimo ? relativeTime(ultimo.isoDate) : undefined;
 
   return (
     <div className="max-w-4xl pb-24">
@@ -46,41 +31,15 @@ export const Blog = () => {
         <p className="mt-3 text-sm text-secondary leading-relaxed max-w-xl">{blogIntro}</p>
       </header>
 
-      {indicadores.length > 0 && (
-        <section className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-[color:var(--color-border)] border-b border-default">
-          {indicadores.map((item) => (
-            <div key={item.label} className="px-4 py-6 first:pl-0">
-              <span className="block text-3xl font-mono tabular-nums text-primary">
-                {item.valor}
-              </span>
-              <span className="block text-[11px] text-secondary mt-2 leading-snug">
-                {item.label}
-              </span>
-            </div>
-          ))}
-        </section>
-      )}
-
-      {linhas.length > 0 && (
-        <section className="mt-[var(--space-block)]">
-          <h2 className="text-[11px] font-mono uppercase tracking-[0.14em] text-secondary pb-2 border-b border-default">
-            Linhas editoriais
-          </h2>
-          <div className="mt-[var(--space-group)] grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-7">
-            {linhas.map((linha) => (
-              <div key={linha.id} className="border-l border-default pl-4">
-                <h3 className="text-sm font-medium text-primary">{linha.title}</h3>
-                <p className="mt-1.5 text-xs text-muted leading-relaxed">{linha.scope}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
+      <BlogDashboard lastPublished={publicadoEm} />
 
       <section className="mt-[var(--space-block)]">
         <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 pb-2 mb-5 border-b border-default">
           <h2 className="text-[11px] font-mono uppercase tracking-[0.14em] text-secondary">
-            Últimos artigos <span className="text-muted tabular-nums">· {rotuloAmostra}</span>
+            Publicados recentemente{" "}
+            <span className="text-muted tabular-nums">
+              · {articles.length} de {blogMeta.mediumTotal}
+            </span>
           </h2>
           <a
             href={MEDIUM_PROFILE}
@@ -125,11 +84,10 @@ export const Blog = () => {
       {blogMeta.priorOutlet && (
         <section className="mt-[var(--space-block)] pt-6 border-t border-default">
           <p className="text-xs text-muted leading-relaxed">
-            Antes do Medium:{" "}
-            {blogMeta.priorOutlet.count > 0
-              ? `${blogMeta.priorOutlet.count} artigos como colunista`
-              : "colunista"}{" "}
-            de tecnologia na {blogMeta.priorOutlet.outlet}, {blogMeta.priorOutlet.period}.
+            Os {blogMeta.priorOutlet.count} artigos mais antigos do acervo foram publicados
+            originalmente como coluna de tecnologia na {blogMeta.priorOutlet.outlet}, entre{" "}
+            {blogMeta.priorOutlet.period}, e depois importados para o Medium com as datas de
+            origem.
           </p>
         </section>
       )}
