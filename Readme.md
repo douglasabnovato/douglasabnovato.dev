@@ -1,12 +1,16 @@
 <h1 align="center">douglasabnovato.dev</h1>
-<p align="center">Site pessoal — trajetória profissional, projetos em andamento e catálogo de
-repositórios lido ao vivo da API do GitHub.
-
-**React 19 · TypeScript · Vite 8 · Tailwind CSS 4 · Feature-Sliced Design**
-[douglasabnovato.dev](https://douglasabnovato.dev)</p>
 
 <p align="center">
-  <a href="https://douglasabnovato-dev.vercel.app/"><img alt="Live" src="https://img.shields.io/badge/live-douglasabnovato--dev.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white"></a>
+  Site pessoal — trajetória profissional, projetos em andamento e catálogo de<br>
+  repositórios lido ao vivo da API do GitHub.
+</p>
+
+<p align="center">
+  <strong>React 19 · TypeScript · Vite 8 · Tailwind CSS 4 · Feature-Sliced Design</strong>
+</p>
+
+<p align="center">
+  <a href="https://douglasabnovato.dev"><img alt="Live" src="https://img.shields.io/badge/live-douglasabnovato.dev-000000?style=for-the-badge&logo=vercel&logoColor=white"></a>
 </p>
 
 <p align="center">
@@ -35,11 +39,13 @@ O site atende quatro públicos, nesta ordem de prioridade:
 
 ## Princípios
 
-Três regras governam o que entra no site, e explicam a maior parte das decisões de código:
+Quatro regras governam o que entra no site, e explicam a maior parte das decisões de código:
 
-**Nada de número autodeclarado.** Toda métrica exibida vem de uma fonte verificável — API do GitHub, datas do próprio histórico, ou um link que o visitante pode conferir. Não há barra de proficiência, nota de habilidade nem percentual de domínio, porque nenhum deles pode ser checado por quem lê.
+**Nada de número autodeclarado.** Toda métrica exibida vem de uma fonte verificável — API do GitHub, estatísticas da plataforma onde o conteúdo está publicado, datas do próprio histórico, ou um link que o visitante pode conferir. Não há barra de proficiência, nota de habilidade nem percentual de domínio, porque nenhum deles pode ser checado por quem lê.
 
 **Uma fonte de verdade por assunto.** O currículo da tela e o PDF exportado leem do mesmo arquivo. O catálogo de projetos vem da API, não de uma lista mantida à mão. Onde há duas cópias, uma delas envelhece.
+
+**Dizer também o que o dado não permite concluir.** Onde um recorte seria enganoso, o site declara que ele ficou de fora e por quê — como a nota de método do painel do Blog, que explica por que visualizações por ano não são comparáveis entre si. Número exibido sem ressalva é afirmação; com ressalva, é análise.
 
 **Hierarquia por escala, não por cor.** A importância de um elemento é comunicada por espaço, tamanho e proporção. Cor é reservada para estado e para série de dados.
 
@@ -47,12 +53,13 @@ Três regras governam o que entra no site, e explicam a maior parte das decisõe
 
 | Página | Estado | O que faz |
 |---|---|---|
-| **Home** | no ar | Abertura em primeira pessoa e o que está sendo construído agora. Um projeto em destaque, os satélites do learnTECH e as demais frentes, em três níveis de tamanho. Sinal de atividade vindo da API |
+| **Home** | no ar | Abertura em primeira pessoa e o que está sendo construído agora. Um projeto em destaque, os satélites do learnTECH e as demais frentes, em três níveis de tamanho. Sinal de atividade vindo da API. Fecha com a faixa de canais públicos |
 | **Currículo** | no ar | Acesso mediante identificação, registrada no Supabase. Faixa temporal da carreira, quatro números verificáveis, experiência em três profundidades de leitura e exportação em PDF de uma página |
 | **Projetos** | no ar | Catálogo lido ao vivo do GitHub, classificado por topics do próprio repositório. Boards de gestão, indicadores agregados e recorte dos gists |
-| **Blog** | no ar | Artigos publicados no [Medium](https://douglasabnovato.medium.com), via RSS |
-| **Redes sociais** | no ar | Links reunidos |
+| **Blog** | no ar | Painel analítico do acervo de 257 artigos — volume por ano, distribuição temática, mais lidos e nota de método. Abaixo, os artigos recentes lidos ao vivo do [Medium](https://douglasabnovato.medium.com) |
 | **Certificados** | a construir | Acervo da trajetória, em linha do tempo, com acesso registrado |
+
+A antiga página **Redes sociais** foi removida. Os canais viraram uma faixa de oito blocos no fim da Home, alimentada por um arquivo único de configuração — ela repetia links que já existiam, em contexto melhor, nas outras páginas.
 
 ## Como os projetos são classificados
 
@@ -73,7 +80,7 @@ A ordem de decisão é: `oculto` → `.github` → topic de categoria → catego
 
 ## Dados ao vivo
 
-Tudo que é número vem da API pública do GitHub, sem autenticação, com cache em `localStorage`:
+Números vêm de API pública, sem autenticação, com cache em `localStorage`:
 
 | Fonte | O que traz | Cache |
 |---|---|---|
@@ -82,19 +89,47 @@ Tudo que é número vem da API pública do GitHub, sem autenticação, com cache
 | `/users/{u}/gists` | os 100 mais recentes, dos quais 20 são exibidos | 24 horas |
 | `/orgs/{org}` | a organização — a seção só renderiza se houver repositório público | 24 horas |
 | `opengraph.githubassets.com` | capa de cada repositório | CDN do GitHub |
+| `rss2json` sobre o feed do Medium | os 10 artigos mais recentes, com o conteúdo completo | 6 horas |
 
 A capa de cada projeto é o **cartão OpenGraph do próprio GitHub**. Quando um repositório define uma imagem em Settings → Social preview, o card do site passa a exibi-la automaticamente, sem mudança de código. Quando a imagem falha, entra uma reserva escolhida de forma determinística pelo nome do repositório — o mesmo projeto sempre recebe a mesma capa.
 
-O limite sem token é de 60 requisições por hora por IP. Cada página consome entre uma e três, e as respostas ficam em cache. Em caso de falha, o site exibe os dados anteriores e avisa.
+O limite do GitHub sem token é de 60 requisições por hora por IP. Cada página consome entre uma e três, e as respostas ficam em cache. Em caso de falha, o site exibe os dados anteriores e avisa.
+
+O RSS do Medium não é acessível direto do navegador por falta de CORS, por isso a ponte é o `rss2json`. O feed entrega no máximo dez artigos e não é paginável — limitação do formato, não do código.
+
+## O acervo do Blog
+
+O painel do Blog usa números que **nenhuma API entrega**: o RSS conhece só os dez mais recentes. Os totais foram apurados na tela `Stats › Stories` do Medium, que lista todas as publicações com tempo de leitura, data, visualizações e leituras.
+
+| | |
+|---|---|
+| Artigos | 257 |
+| Período | 15/01/2014 – 19/07/2026 |
+| Tempo de leitura somado | 1.422 minutos · 23,7 horas |
+| Visualizações | 165.601 |
+| Leituras completas | 75.893 · 45,8% |
+
+Os 257 títulos foram classificados um a um em sete grupos temáticos e cruzados com alcance e taxa de leitura. Tudo isso mora em `entities/article/api/blog.data.ts`.
+
+**Para atualizar depois de publicar:** soma 1 em `mediumTotal`, soma 1 no ano corrente em `yearly`, e atualiza `totalViews` e `totalReads` na próxima revisão de estatísticas. Nenhum componente precisa ser tocado.
+
+Os artigos recentes exibidos abaixo do painel continuam vindo do feed, ao vivo, e se atualizam sozinhos a cada publicação.
+
+## Canais públicos
+
+Um identificador — `douglasabnovato` — em todos os endereços. A lista completa vive em `shared/config/channels.ts` e alimenta a faixa no fim da Home.
+
+Cada canal tem um campo `active`: em `false`, ele não renderiza. Serve para deixar preparado um canal que ainda não tem conteúdo que sustente o link. GitHub e Medium exibem número ao vivo; os demais, uma nota fixa do que existe de fato ali.
 
 ## Design
 
 - **Tema** — dark e light por `data-theme` no elemento raiz, com variáveis CSS e persistência em `localStorage`. Dark é o padrão
-- **Acento único** — dourado `#c5a880` no escuro, `#8a6a3d` no claro, usado só em estado ativo e em link
-- **Trilhas de cor** — seis variáveis, uma por frente de atuação, usadas exclusivamente na faixa temporal do currículo
+- **Acento único** — dourado `#c5a880` no escuro, `#8a6a3d` no claro, usado só em estado ativo, em link e nas barras do gráfico de volume do Blog
+- **Trilhas de cor** — seis variáveis, uma por frente de atuação. Usadas na faixa temporal do currículo, no painel de assuntos do Blog e na capa de reserva dos artigos
 - **Ritmo vertical** — três medidas fixas em variáveis: 96px entre blocos, 56px entre grupos, 20px entre itens
 - **Escada de ênfase nas imagens** — três níveis de saturação criam profundidade sem acrescentar cor, e respeitam `prefers-reduced-motion`
 - **Números** — sempre em fonte mono com `tabular-nums`, para não dançarem ao atualizar
+- **Gráficos sem biblioteca** — as barras do painel do Blog são divs com largura e altura proporcionais. Treze barras não justificam mais de cem kilobytes no bundle
 - Sem gradiente, sem glow, sem vidro fosco, sem emoji na interface
 - **Responsivo** — a barra lateral vira menu deslizante abaixo do breakpoint `md`
 
@@ -107,6 +142,7 @@ O limite sem token é de 60 requisições por hora por IP. Cada página consome 
 - [Lucide React](https://lucide.dev/) para ícones de interface e [react-icons](https://react-icons.github.io/react-icons/) para ícones de marca
 - [Supabase](https://supabase.com/) para o registro de acesso ao currículo
 - Exportação de PDF com `window.print()` e uma folha `@media print` dedicada — sem biblioteca
+- Nenhuma biblioteca de gráfico
 
 ## Estrutura
 
@@ -121,9 +157,12 @@ src/
 │   └── styles/main.css              # tokens, tema, utilitários
 │
 ├── entities/
-│   ├── article/                     # artigos do Medium
+│   ├── article/                     # artigos e acervo do Medium
+│   │   ├── api/blog.data.ts         # totais, série por ano, grupos, mais lidos
 │   │   ├── model/{types.ts,useMediumPosts.ts}
-│   │   └── ui/ArticleCard.tsx
+│   │   └── ui/
+│   │       ├── ArticleCard.tsx      # card horizontal, numeração da série
+│   │       └── BlogDashboard.tsx    # painel do acervo
 │   │
 │   ├── github/                      # tudo que vem da API
 │   │   ├── api/
@@ -159,10 +198,10 @@ src/
 │   ├── curriculo/Curriculo.tsx
 │   ├── projetos/Projetos.tsx
 │   ├── blog/Blog.tsx
-│   ├── redesSociais/RedesSociais.tsx
 │   └── notFound/NotFound.tsx
 │
 └── shared/
+    ├── config/channels.ts           # canais públicos da faixa da Home
     ├── lib/{localCache.ts,supabase.ts}
     └── ui/
         ├── layout/MainLayout.tsx
@@ -224,10 +263,12 @@ demais branches    → histórico das versões 1.0 a 5.2
 - Chart.js removido do projeto
 
 **Home**
-- Abertura em primeira pessoa, com foto, cargos atuais lidos do currículo e ações diretas
+- Abertura em primeira pessoa, com foto e cargos atuais lidos do currículo
 - Hierarquia por escala: um destaque, quatro satélites, três frentes
 - Escada de ênfase por saturação, com guarda de movimento reduzido
 - Sinal de atividade vindo da API do GitHub
+- Faixa de canais em 2 × 4 no fim da página, com número ao vivo em GitHub e Medium
+- Cabeçalho aliviado: os links saíram para a faixa e a abertura voltou a ser só apresentação
 - Navegação duplicada removida — a barra lateral já cumpre o papel
 
 **Projetos**
@@ -241,19 +282,30 @@ demais branches    → histórico das versões 1.0 a 5.2
 - Gists: 20 exibidos, total real no cabeçalho, e um arquivo para fixar escolhas à mão
 - Organização com renderização condicional — aparece sozinha quando houver conteúdo público
 
+**Blog**
+- Painel do acervo: 257 artigos, 165.601 visualizações, 75.893 leituras, 23,7 horas de leitura somada
+- Volume por ano de 2014 a 2026, com os anos sem publicação exibidos em zero em vez de omitidos
+- Sete grupos temáticos, classificados título a título e cruzados com alcance e taxa de leitura
+- Os oito artigos mais lidos, com visualizações e proporção de leitura
+- Nota de método ao lado das conclusões, declarando o que ficou de fora e por quê
+- Feed do Medium com cache, reserva em dado antigo e estado tipado, no mesmo contrato do catálogo de projetos
+- Tempo de leitura calculado pela fórmula da própria plataforma; presença de código, capa e resumo extraídos do corpo com `DOMParser`, não com expressão regular
+- Data normalizada sem conversão de fuso, o que elimina o deslocamento de um dia
+- Card horizontal em duas colunas, com numeração da série (`#257`, `#256`, …) e capa tipográfica determinística quando o artigo não tem imagem
+- Entidade `article` reconstruída do zero — o `types.ts` anterior havia sido sobrescrito pelo do currículo e quebrava o build
+
 **Infraestrutura**
 - `--color-accent` criado: 48 referências a `accent` espalhadas por 8 arquivos nunca haviam funcionado
 - Variáveis de ritmo vertical e trilhas de cor
 - Chamada de repositórios reduzida de duas páginas para uma
 - Página Códigos removida, com o conteúdo migrado
+- Página Redes sociais removida, com os canais migrados para a faixa da Home
 
 ## Próximos passos
 
-**Certificados** — acervo em linha do tempo por ano, com acesso registrado, imagens no Supabase Storage e visualizador sem download direto.
+**Certificados** — acervo em linha do tempo por ano, com acesso registrado, imagens no Supabase Storage e visualizador sem download direto. É a última página que falta.
 
-**Blog e Redes sociais** — as duas páginas ainda não passaram por revisão.
-
-**Função serverless na Vercel** — um endpoint com token de leitura resolve quatro coisas de uma vez: o limite de 60 requisições por hora, a contagem de commits por repositório, as colunas reais do board (Projects v2 só existe em GraphQL autenticado) e as issues fechadas. Atende as três páginas.
+**Função serverless na Vercel** — um endpoint com token de leitura resolve quatro coisas de uma vez: o limite de 60 requisições por hora, a contagem de commits por repositório, as colunas reais do board (Projects v2 só existe em GraphQL autenticado) e as issues fechadas. Atende as três páginas que leem a API.
 
 **Faxina** — sete arquivos sem importadores (`useProjects.ts`, `ExperienceBlock.tsx`, `Badge.tsx`, `utils.ts`, `useDocumentTitle.ts`, `PdfExportButton.tsx`, `App.css`) e três dependências que nunca foram usadas (`react-to-print`, `html2canvas`, `jspdf`).
 
@@ -261,11 +313,21 @@ demais branches    → histórico das versões 1.0 a 5.2
 
 **Robustez** — o `ThemeToggle` lê `localStorage` dentro do inicializador do `useState` sem try/catch; é o único ponto capaz de derrubar a aplicação inteira em navegação anônima.
 
-**WhatsApp** — botão flutuante em todas as páginas, hoje presente só no cabeçalho da Home.
+**Contagem de repositórios unificada** — a faixa da Home conta o que a API devolve menos o `.github`; a página Projetos descarta também os marcados com `oculto`. Enquanto forem duas contas, os números podem divergir.
+
+**Link do currículo na Home** — com os links fora do cabeçalho, o destino mais procurado por quem contrata ficou acessível só pelo menu lateral. Falta uma chamada discreta no corpo da página.
+
+**WhatsApp** — botão flutuante em todas as páginas, hoje presente só na faixa da Home.
 
 **TypeScript** — `strict` não está habilitado. Ligar exige corrigir o que aparecer antes do próximo deploy, já que o build roda `tsc -b`.
 
 **learnTECH Community** — a organização não tem repositório público. Ou um repositório se torna público, ou os satélites do learnTECH migram para lá — o que exigiria somar a chamada `/orgs/{org}/repos` ao catálogo.
+
+### Fora do código
+
+**Links de bio** — Instagram, Medium e X apontam para endereços que não são o domínio próprio. Trocar para `douglasabnovato.dev` e medir a variação nos toques de link externo na próxima revisão de estatísticas.
+
+**Números do acervo** — `blog.data.ts` guarda a apuração de setembro de 2026. A cada ciclo de revisão, atualizar total, ano corrente, visualizações e leituras.
 
 ---
 
