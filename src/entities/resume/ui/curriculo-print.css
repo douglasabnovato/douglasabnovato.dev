@@ -1,4 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap");
+/* Documento de impressão do currículo — alvo: uma página A4.
+   Coluna única, alinhamento à esquerda, sem cor de fundo e sem ícones.
+
+   AJUSTE FINO: se o PDF passar para duas páginas, reduza --cv-size para 9pt
+   e, se ainda precisar, --cv-gap para 7pt. Se sobrar espaço, aumente. */
+
+.cv-doc {
+  --cv-size: 9.5pt;
+  --cv-lead: 1.32;
+  --cv-gap: 8pt;
+}
 
 @media screen {
   .cv-print-wrapper {
@@ -9,7 +19,7 @@
 @media print {
   @page {
     size: A4 portrait;
-    margin: 8mm 10mm;
+    margin: 12mm 14mm;
   }
 
   body * {
@@ -34,213 +44,124 @@
 
   .no-print,
   nav,
-  header:not(.cv-exec-header),
   footer {
     display: none !important;
   }
 }
 
-.cv-exec-document {
+.cv-doc {
   width: 100%;
-  max-width: 210mm;
   margin: 0 auto;
   background: #ffffff;
-  color: #0f172a;
-  padding: 0;
-  font-family:
-    "Plus Jakarta Sans",
-    -apple-system,
-    sans-serif;
+  color: #111111;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: var(--cv-size);
+  line-height: var(--cv-lead);
+  text-align: left;
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
 }
 
-/* Header */
-.cv-exec-header {
-  display: block !important;
-  border-bottom: 2px solid #0284c7;
-  padding-bottom: 4px;
-  margin-bottom: 8px;
+/* Cabeçalho */
+
+.cv-header {
+  margin-bottom: var(--cv-gap);
+  padding-bottom: 4pt;
+  border-bottom: 0.75pt solid #111111;
 }
 
-.cv-exec-header h1 {
-  font-size: 16pt !important;
-  font-weight: 800 !important;
-  color: #0f172a !important;
-  text-transform: uppercase;
-  letter-spacing: -0.3px;
-  line-height: 1.1;
-  margin: 0 0 3px 0 !important;
+.cv-header h1 {
+  font-size: 15pt;
+  font-weight: 700;
+  margin: 0 0 1pt 0;
+  letter-spacing: 0.2pt;
 }
 
-.cv-exec-contacts {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 2px 12px !important;
-  font-size: 8pt !important;
-  color: #334155 !important;
-  font-weight: 600 !important;
-  align-items: center !important;
+.cv-role {
+  font-size: 10pt;
+  margin: 0 0 3pt 0;
+  color: #222222;
 }
 
-.cv-exec-contacts a {
-  color: #0284c7 !important;
-  text-decoration: none !important;
+.cv-contact {
+  font-size: 8.5pt;
+  margin: 0;
+  color: #333333;
+  line-height: 1.35;
 }
 
 /* Seções */
-.cv-exec-section {
-  margin-bottom: 7px;
+
+.cv-section {
+  margin-bottom: var(--cv-gap);
 }
 
-.cv-exec-section-title {
-  font-size: 9.5pt;
-  font-weight: 800;
-  color: #0f172a;
+.cv-section-last {
+  margin-bottom: 0;
+}
+
+.cv-section h2 {
+  font-size: 9pt;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 4px;
-  display: flex;
-  align-items: center;
+  letter-spacing: 0.7pt;
+  margin: 0 0 3pt 0;
+  padding-bottom: 1.5pt;
+  border-bottom: 0.5pt solid #999999;
   page-break-after: avoid;
   break-after: avoid;
 }
 
-.cv-exec-section-title::after {
-  content: "";
-  flex: 1;
-  height: 1.5px;
-  background: #0284c7;
-  margin-left: 8px;
-}
+/* Experiência detalhada */
 
-.cv-exec-text {
-  font-size: 8.2pt;
-  color: #334155;
-  text-align: justify;
-  line-height: 1.35;
-}
-
-/* Competências */
-.cv-exec-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4px 12px;
-  background: #f8fafc;
-  padding: 6px 10px;
-  border-radius: 4px;
-  border: 1px solid #e2e8f0;
-}
-
-.cv-exec-grid-item {
-  font-size: 8pt;
-  color: #334155;
-  line-height: 1.3;
-}
-
-.cv-exec-grid-item strong {
-  color: #0f172a;
-  font-weight: 700;
-}
-
-/* Experiência Profissional */
-.cv-exec-item {
-  margin-bottom: 6px;
+.cv-entry {
+  margin-bottom: 5pt;
   page-break-inside: avoid;
   break-inside: avoid;
 }
 
-.cv-exec-item-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1px;
+.cv-entry:last-child {
+  margin-bottom: 0;
 }
 
-.cv-exec-item-title-group {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-}
-
-.cv-exec-item-title {
-  font-size: 8.8pt;
-  font-weight: 800;
-  color: #0f172a;
-}
-
-.cv-exec-item-company {
-  font-size: 8.8pt;
-  color: #0284c7;
-  font-weight: 800;
-}
-
-.cv-exec-item-date {
-  font-size: 7.8pt;
-  font-weight: 600;
-  color: #64748b;
-  white-space: nowrap;
-}
-
-.cv-exec-bullets {
-  list-style-type: none;
-  padding-left: 0;
-  margin-top: 1px;
-}
-
-.cv-exec-bullets li {
-  position: relative;
-  padding-left: 10px;
-  font-size: 8pt;
-  color: #334155;
-  margin-bottom: 1.5px;
-  text-align: justify;
-  line-height: 1.3;
-}
-
-.cv-exec-bullets li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #0284c7;
-  font-weight: bold;
-}
-
-/* Formação Acadêmica */
-.cv-exec-academic-item {
-  margin-bottom: 4px;
-  page-break-inside: avoid;
-  break-inside: avoid;
-}
-
-.cv-exec-academic-main {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 2px;
-}
-
-.cv-exec-academic-course {
-  font-size: 8.8pt;
-  font-weight: 800;
-  color: #0f172a;
-}
-
-.cv-exec-academic-institution {
-  font-size: 8.8pt;
+.cv-entry-title {
+  font-size: var(--cv-size);
   font-weight: 700;
-  color: #0284c7;
-}
-
-.cv-exec-academic-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1px;
-}
-
-.cv-exec-academic-focus {
-  font-size: 7.8pt;
-  color: #475569;
   margin: 0;
+}
+
+.cv-entry-period {
+  float: right;
+  font-weight: 400;
+  font-size: 8.5pt;
+  color: #555555;
+}
+
+.cv-text {
+  margin: 0;
+  text-align: left;
+}
+
+.cv-compact {
+  font-size: 8.8pt;
+  color: #333333;
+}
+
+.cv-line {
+  margin: 0 0 1.5pt 0;
+  text-align: left;
+}
+
+.cv-line:last-child {
+  margin-bottom: 0;
+}
+
+.cv-list {
+  margin: 1pt 0 0 0;
+  padding-left: 12pt;
+  list-style-type: disc;
+}
+
+.cv-list li {
+  margin-bottom: 1pt;
+  text-align: left;
 }
