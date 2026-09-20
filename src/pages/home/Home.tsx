@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowUpRight, MessageCircle } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 
 import { resumeData } from '@/entities/resume/model/resume.data'
 import { ecosystemData, homeIntro } from '@/entities/project/api/ecosystem.data'
 import type { EcosystemItem } from '@/entities/project/api/ecosystem.data'
+import { blogMeta } from '@/entities/article/api/blog.data'
 import { fetchGithubRepos } from '@/entities/github/api/githubApi'
 import { getCachedData, getStaleData, setCachedData } from '@/shared/lib/localCache'
+import { channels, HANDLE } from '@/shared/config/channels'
 import profileImg from '@/assets/home/1-profile.jpg'
 
 const WHATSAPP_URL =
@@ -111,6 +112,56 @@ const ItemLinks = ({ links }: { links: { label: string; url: string }[] }) => {
   )
 }
 
+const ChannelBand = ({ repos, artigos }: { repos: number | null; artigos: number }) => (
+  <section className="mt-[var(--space-block)] pt-8 border-t border-default">
+    <p className="text-xs text-muted">
+      O mesmo identificador em todos:{' '}
+      <span className="font-mono text-secondary">{HANDLE}</span>
+    </p>
+
+    <div className="mt-5 grid grid-cols-2 lg:grid-cols-4 gap-3">
+      {channels
+        .filter((canal) => canal.active)
+        .map((canal) => {
+          const Icone = canal.icon
+          const nota =
+            canal.live === 'repos' && repos
+              ? `${repos} ${canal.note}`
+              : canal.live === 'artigos'
+                ? `${artigos} ${canal.note}`
+                : canal.note
+
+          return (
+            <a
+              key={canal.id}
+              href={canal.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-start gap-3 rounded-lg border border-default bg-surface px-4 py-3.5 hover:border-accent transition-colors"
+            >
+              <Icone
+                size={16}
+                className="mt-0.5 shrink-0 text-muted group-hover:text-primary transition-colors"
+              />
+              <span className="min-w-0 flex-1">
+                <span className="flex items-center gap-1 text-xs font-medium text-primary group-hover:text-accent transition-colors">
+                  {canal.label}
+                  <ArrowUpRight
+                    size={11}
+                    className="opacity-0 group-hover:opacity-100 transition-opacity"
+                  />
+                </span>
+                <span className="mt-0.5 block text-[10px] font-mono text-muted leading-snug break-words">
+                  {nota}
+                </span>
+              </span>
+            </a>
+          )
+        })}
+    </div>
+  </section>
+)
+
 /* ------------------------------------------------------------------ */
 /* Página                                                              */
 /* ------------------------------------------------------------------ */
@@ -124,6 +175,9 @@ export const Home = () => {
   const frentes = ecosystemData.filter((i) => i.level === 'frente')
 
   const latest = mostRecent(dates)
+  const totalRepos = dates
+    ? Object.keys(dates).filter((nome) => nome.toLowerCase() !== '.github').length
+    : null
   const updatedFor = (item: { repo?: string }) =>
     item.repo && dates?.[item.repo] ? relativeTime(dates[item.repo]) : null
 
@@ -147,39 +201,6 @@ export const Home = () => {
           <p className="mt-5 text-xs font-mono text-muted leading-relaxed">
             {currentRoles.map((role) => `${role.role} — ${role.company}`).join('  ·  ')}
           </p>
-
-          <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2">
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-default bg-surface text-xs font-mono text-primary hover:border-accent hover:text-accent transition-colors"
-            >
-              <MessageCircle size={13} /> WhatsApp
-            </a>
-            <Link
-              to="/curriculo"
-              className="text-xs font-mono text-secondary hover:text-accent transition-colors"
-            >
-              Currículo
-            </Link>
-            <a
-              href="https://www.linkedin.com/in/douglasabnovato"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs font-mono text-secondary hover:text-accent transition-colors"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://github.com/douglasabnovato"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs font-mono text-secondary hover:text-accent transition-colors"
-            >
-              GitHub
-            </a>
-          </div>
 
           {latest && (
             <p className="mt-4 text-[10px] font-mono text-muted">
@@ -311,6 +332,7 @@ export const Home = () => {
           </div>
         </section>
       )}
+      <ChannelBand repos={totalRepos} artigos={blogMeta.mediumTotal} />
     </div>
   )
 }
