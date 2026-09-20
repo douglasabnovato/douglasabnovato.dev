@@ -1,5 +1,9 @@
 <h1 align="center">douglasabnovato.dev</h1>
-<p align="center">Ecossistema pessoal em tecnologia — currículo, projetos e gestão de produto, com dados lidos ao vivo do GitHub.</p>
+<p align="center">Site pessoal — trajetória profissional, projetos em andamento e catálogo de
+repositórios lido ao vivo da API do GitHub.
+
+**React 19 · TypeScript · Vite 8 · Tailwind CSS 4 · Feature-Sliced Design**
+[douglasabnovato.dev](https://douglasabnovato.dev)</p>
 
 <p align="center">
   <a href="https://douglasabnovato-dev.vercel.app/"><img alt="Live" src="https://img.shields.io/badge/live-douglasabnovato--dev.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white"></a>
