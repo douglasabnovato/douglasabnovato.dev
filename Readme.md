@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://douglasabnovato.dev"><img alt="Live" src="https://img.shields.io/badge/live-douglasabnovato.dev-000000?style=for-the-badge&logo=vercel&logoColor=white"></a>
+  <a href="https://douglasabnovato-dev.vercel.app/"><img alt="Live" src="https://img.shields.io/badge/live-douglasabnovato--dev.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white"></a>
 </p>
 
 <p align="center">
@@ -324,8 +324,6 @@ demais branches    → histórico das versões 1.0 a 5.2
 **learnTECH Community** — a organização não tem repositório público. Ou um repositório se torna público, ou os satélites do learnTECH migram para lá — o que exigiria somar a chamada `/orgs/{org}/repos` ao catálogo.
 
 ### Fora do código
-
-**Links de bio** — Instagram, Medium e X apontam para endereços que não são o domínio próprio. Trocar para `douglasabnovato.dev` e medir a variação nos toques de link externo na próxima revisão de estatísticas.
 
 **Números do acervo** — `blog.data.ts` guarda a apuração de setembro de 2026. A cada ciclo de revisão, atualizar total, ano corrente, visualizações e leituras.
 

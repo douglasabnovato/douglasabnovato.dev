@@ -10,10 +10,6 @@ import { getCachedData, getStaleData, setCachedData } from '@/shared/lib/localCa
 import { channels, HANDLE } from '@/shared/config/channels'
 import profileImg from '@/assets/home/1-profile.jpg'
 
-const WHATSAPP_URL =
-  'https://wa.me/5532988367667?text=' +
-  encodeURIComponent('Douglas. Quero conversar com você. Vi o seu site.')
-
 /* ------------------------------------------------------------------ */
 /* Sinal de atividade — vem da API do GitHub                           */
 /* ------------------------------------------------------------------ */

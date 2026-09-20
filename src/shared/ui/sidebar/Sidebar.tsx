@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { Home, FileText, LayoutGrid, Newspaper, Share2, X } from 'lucide-react'
+import { Home, FileText, LayoutGrid, Newspaper, X } from 'lucide-react'
 import { ThemeToggle } from '../themeToggle/ThemeToggle'
 
 const navItems = [
