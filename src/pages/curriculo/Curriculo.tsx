@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Lock, Download, ExternalLink, ArrowUpRight } from 'lucide-react'
-
+import { Link } from 'react-router-dom'
 import { useResumeAccess } from '@/entities/resume/model/useResumeAccess'
 import { CurriculumAccessModal } from '@/entities/resume/ui/CurriculumAccessModal'
 import { CurriculumPrintTemplate } from '@/entities/resume/ui/CurriculumPrintTemplate'
@@ -505,6 +505,7 @@ export const Curriculo = () => {
                   </li>
                 ))}
               </ul>
+
               <div className="mt-6 pt-5 border-t border-default">
                 <Label>Certificações</Label>
                 <ul className="mt-3 space-y-3">
@@ -517,6 +518,13 @@ export const Curriculo = () => {
                     </li>
                   ))}
                 </ul>
+
+                <Link
+                  to="/certificados"
+                  className="mt-5 inline-flex w-fit items-center gap-1.5 font-mono text-[11px] text-secondary transition-colors hover:text-accent"
+                >
+                  Ver acervo completo <ArrowUpRight size={11} />
+                </Link>
               </div>
             </div>
 
