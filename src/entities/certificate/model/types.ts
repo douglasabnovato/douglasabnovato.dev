@@ -27,14 +27,13 @@ interface Base {
 export interface CertificadoArquivo extends Base {
   evidencia: "arquivo";
   emissor: string;
-  titulo: string;
-  /** Caminho relativo dentro de /public/arquivos. */
+  titulo: string; 
   arquivo: string;
   programa?: string;
-  tipo?: string;
-  /** Rótulo pronto para exibição: "9 h", "10 min". */
+  tipo?: string; 
   duracao?: string;
   horas?: number;
+  emissao?: string;
   papel?: string;
   evento?: string;
   codigo?: string;
@@ -63,10 +62,14 @@ export type Certificate = CertificadoArquivo | RegistroComprovacao;
 /** Ordem em que as seções aparecem na página. */
 export const ORDEM_SECOES: string[] = [
   "Formação e trajetória",
-  "Programas de longa duração",
+  "Produção pública",
+  "DIO — Bootcamp Spread Fullstack",
+  "Alura — Programa ONE",
+  "Rocketseat Discover",
+  "DIO — Bootcamp Santander",
+  "ABC — Programa GRC1",
   "Cursos",
   "Eventos",
-  "Produção pública",
 ];
 
 /** Rótulo curto que aparece na etiqueta do card de registro. */
