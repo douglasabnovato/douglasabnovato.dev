@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <strong>React 19 · TypeScript · Vite 8 · Tailwind CSS 4 · Feature-Sliced Design</strong>
+  <strong>· React 19 · TypeScript · Vite 8 · Tailwind CSS 4 · Feature-Sliced Design ·</strong>
 </p>
 
 <p align="center">
