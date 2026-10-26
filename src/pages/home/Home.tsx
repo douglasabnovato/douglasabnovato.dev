@@ -195,7 +195,13 @@ export const Home = () => {
           </h1>
 
           <p className="mt-5 text-xs font-mono text-muted leading-relaxed">
-            {currentRoles.map((role) => `${role.role} — ${role.company}`).join('  ·  ')}
+            {currentRoles
+              .map((role) =>
+                role.context
+                  ? `${role.role} — ${role.company}: ${role.context}`
+                  : `${role.role} — ${role.company}`,
+              )
+              .join('  ·  ')}
           </p>
 
           {latest && (
@@ -300,7 +306,7 @@ export const Home = () => {
       {frentes.length > 0 && (
         <section className="mt-[var(--space-block)]">
           <h2 className="text-[10px] font-mono uppercase tracking-[0.14em] text-muted pb-3 border-b border-default">
-            Outras frentes
+            Comunidade e Eventos
           </h2>
 
           <div className="mt-[var(--space-group)] grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-10">
