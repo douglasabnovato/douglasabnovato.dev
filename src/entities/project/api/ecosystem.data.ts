@@ -1,10 +1,10 @@
-import devFull1 from '../../../assets/home/2-dev-fullstack-1.jpg'
-import learnCore from '../../../assets/home/3-learnTECH-1.jpg'
-import learnBoot from '../../../assets/home/3-learnTECH-2.jpg'
-import learnTools from '../../../assets/home/3-learnTECH-3.jpg'
-import learnCareer from '../../../assets/home/3-learnTECH-4.jpg'
-import voltaExp1 from '../../../assets/home/4-volta-express-brasil-1.jpg' 
-import agendaTechImg from '../../../assets/home/6-bq-1.jpg'
+import devFull1 from "../../../assets/home/2-dev-fullstack-1.jpg";
+import learnCore from "../../../assets/home/3-learnTECH-1.jpg";
+import learnBoot from "../../../assets/home/3-learnTECH-2.jpg";
+import learnTools from "../../../assets/home/3-learnTECH-3.jpg";
+import learnCareer from "../../../assets/home/3-learnTECH-4.jpg";
+import voltaExp1 from "../../../assets/home/4-volta-express-brasil-1.jpg";
+import agendaTechImg from "../../../assets/home/6-bq-1.jpg";
 
 /**
  * Frentes de atuação exibidas na Home.
@@ -19,124 +19,132 @@ import agendaTechImg from '../../../assets/home/6-bq-1.jpg'
  * enquanto não souber — o item simplesmente não exibe a data.
  */
 
-export type EcosystemLevel = 'destaque' | 'grupo' | 'frente'
-export type ProjectStatus = 'MVP no ar' | 'Em desenvolvimento' | 'Material de curso'
+export type EcosystemLevel = "destaque" | "grupo" | "frente";
+export type ProjectStatus =
+  | "MVP no ar"
+  | "Em desenvolvimento"
+  | "Material de curso";
 
 export interface EcosystemLink {
-  label: string
-  url: string
+  label: string;
+  url: string;
 }
 
 export interface EcosystemChild {
-  id: string
-  title: string
-  description: string
-  image: string
-  url: string
-  repo?: string
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+  repo?: string;
 }
 
 export interface EcosystemItem {
-  id: string
-  level: EcosystemLevel
+  id: string;
+  level: EcosystemLevel;
   /** Rótulo curto, em português, acima do título. */
-  kicker: string
-  title: string
-  description: string
-  status?: ProjectStatus
+  kicker: string;
+  title: string;
+  description: string;
+  status?: ProjectStatus;
   /** Fato verificável de terceiro, quando houver. */
-  note?: string
-  image?: string
-  repo?: string
-  links: EcosystemLink[]
-  children?: EcosystemChild[]
+  note?: string;
+  image?: string;
+  repo?: string;
+  links: EcosystemLink[];
+  children?: EcosystemChild[];
 }
 
 /** Frase de abertura da Home. Primeira pessoa, sem saudação genérica. */
 export const homeIntro =
-    '"Desenvolvo produtos digitais que saem do papel e chegam ao usuário. Uso tecnologia para ampliar o alcance de um negócio — hoje, no setor financeiro."'
+  '"Desenvolvo produtos digitais que saem do papel e chegam ao usuário. Uso tecnologia para ampliar o alcance de um negócio — hoje, no setor financeiro."';
 
 export const ecosystemData: EcosystemItem[] = [
   {
-    id: 'voltaexpress',
-    level: 'destaque',
-    kicker: 'Startup · logística',
-    title: 'Volta Express Brasil',
+    id: "voltaexpress",
+    level: "destaque",
+    kicker: "Fundador · desenvolvedor · logística",
+    title: "Volta Express Brasil",
     description:
-      'Plataforma de logística que conduzo desde a ideação, hoje em validação. Passou por 13 versões e 3 pivotagens.',
-    status: 'MVP no ar',
-    note: 'Aprovada em setembro de 2026 na incubação do Critt — Centro Regional de Inovação e Transferência de Tecnologia da UFJF.',
+      "Plataforma que conecta motoristas a fretes de retorno, que desenvolvo e conduzo desde a ideação. Em validação, passou por 13 versões e 3 pivotagens.",
+    status: "MVP no ar",
+    note: "Aprovada em setembro de 2026 na incubação do Critt — Centro Regional de Inovação e Transferência de Tecnologia da UFJF.",
     image: voltaExp1,
     // repo: 'nome-do-repositorio',
-    links: [
-      { label: 'Site', url: 'https://voltaexpress.com.br' },
-      // Preencha a URL da plataforma. Enquanto vazia, o link não aparece.
-      { label: 'Plataforma', url: '' },
+        links: [
+      { label: 'Plataforma', url: 'https://voltaexpress.com.br' },
+      { label: 'Site institucional', url: 'https://voltaexpressbrasil.com.br' },
+      { label: 'Hub do produto', url: 'https://voltaexpress.github.io/voltaexpressbrasil-hub/' },
     ],
   },
   {
-    id: 'learntech',
-    level: 'grupo',
-    kicker: 'Projeto pessoal',
-    title: 'learnTECH',
+    id: "learntech",
+    level: "grupo",
+    kicker: "Projeto próprio · educação em tecnologia",
+    title: "learnTECH",
     description:
-      'Ecossistema próprio de educação em tecnologia, em quatro frentes. Recebe atualizações semanais.',
-    status: 'Em desenvolvimento',
+      "Ecossistema de educação em tecnologia em quatro pilares: plataforma de aprendizagem, eventos, ferramentas e carreira. Recebe atualizações semanais.",
+    status: "Em desenvolvimento",
     links: [],
     children: [
       {
-        id: 'lt-core',
-        title: 'Core',
-        description: 'Plataforma principal',
+        id: "lt-core",
+        title: "Core",
+        description: "Plataforma principal",
         image: learnCore,
-        url: 'https://learn-tech-pied.vercel.app/',
+        url: "https://learn-tech-pied.vercel.app/",
         // repo: 'learn-tech',
       },
       {
-        id: 'lt-bootcamps',
-        title: 'Bootcamps',
-        description: 'Retrospectiva de eventos',
+        id: "lt-bootcamps",
+        title: "Bootcamps",
+        description: "Retrospectiva de eventos",
         image: learnBoot,
-        url: 'https://bootcamps-dun.vercel.app/',
+        url: "https://bootcamps-dun.vercel.app/",
         // repo: 'bootcamps',
       },
       {
-        id: 'lt-tools',
-        title: 'Tools',
-        description: 'Catálogo de ferramentas',
+        id: "lt-tools",
+        title: "Tools",
+        description: "Catálogo de ferramentas",
         image: learnTools,
-        url: 'https://douglasabnovato.github.io/tools/',
+        url: "https://douglasabnovato.github.io/tools/",
         // repo: 'tools',
       },
       {
-        id: 'lt-career',
-        title: 'Career',
-        description: 'Mapeamento de vagas',
+        id: "lt-career",
+        title: "Career",
+        description: "Mapeamento de vagas",
         image: learnCareer,
-        url: 'https://douglasabnovato.github.io/career/',
+        url: "https://douglasabnovato.github.io/career/",
         // repo: 'career',
       },
     ],
-  }, 
+  },
   {
-    id: 'agendatech',
-    level: 'frente',
-    kicker: 'Evento de tecnologia',
-    title: '<bq>agendaTECH',
+    id: "agendatech",
+    level: "frente",
+    kicker: "Evento de tecnologia",
+    title: "<bq>agendaTECH",
     description:
-      'Evento que organizo em Juiz de Fora, aproximando quem estuda tecnologia de quem contrata.',
+      "Evento que organizo em Juiz de Fora, aproximando quem estuda tecnologia de quem contrata.",
     image: agendaTechImg,
     // Preencha a URL do Sympla. Enquanto vazia, o link não aparece.
-    links: [{ label: 'Inscrever-se no evento', url: '' }],
+    links: [{ label: "Inscrever-se no evento", url: "" }],
   },
   {
-    id: 'linkedin',
-    level: 'frente',
-    kicker: 'Trabalho CLT',
-    title: 'Histórico profissional',
+    id: "linkedin",
+    level: "frente",
+    kicker: "Trabalho CLT",
+    title: "Histórico profissional",
     description:
-      'Registro público dos vínculos e das empresas por onde passei, com as datas de cada cargo.',
+      "Registro público dos vínculos e das empresas por onde passei, com as datas de cada cargo.",
     image: devFull1,
-    links: [{ label: 'Ver no LinkedIn', url: 'https://www.linkedin.com/in/douglasabnovato' }],
+    links: [
+      {
+        label: "Ver no LinkedIn",
+        url: "https://www.linkedin.com/in/douglasabnovato",
+      },
+    ],
   },
-]
+];

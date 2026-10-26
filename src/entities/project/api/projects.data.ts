@@ -149,20 +149,21 @@ export const especiais: CuratedProject[] = [
   },
 ];
 
-// TOP (2)
+// TOP (3)
 export const destaques: CuratedProject[] = [
   {
-    id: "ux-design",
-    title: "UX Design",
+    id: "components",
+    title: "Components",
+    tag: "Monorepo · fullstack",
     description:
-      "Guia prático e catálogo de princípios e padrões de UX/UI Design.",
+      "Hub em React com 8 projetos e demonstrações ao vivo, num monorepo com API, testes e CI.",
     status: "mvp",
-    tipo: "educacional",
+    tipo: "projeto",
     category: "top",
     links: [
       {
         label: "Repositório",
-        url: "https://github.com/douglasabnovato/ux-design",
+        url: "https://github.com/douglasabnovato/components",
       },
     ],
   },
@@ -178,6 +179,21 @@ export const destaques: CuratedProject[] = [
       {
         label: "Repositório",
         url: "https://github.com/douglasabnovato/aula-de-programacao",
+      },
+    ],
+  },
+  {
+    id: "ux-design",
+    title: "UX Design",
+    description:
+      "Guia prático e catálogo de princípios e padrões de UX/UI Design.",
+    status: "mvp",
+    tipo: "educacional",
+    category: "top",
+    links: [
+      {
+        label: "Repositório",
+        url: "https://github.com/douglasabnovato/ux-design",
       },
     ],
   },
@@ -365,7 +381,7 @@ export const mvpRepos: CuratedProject[] = [
   },
 ];
 
-// PROJETOS (27)
+// PROJETOS (24)
 export const projetosOriginais: CuratedProject[] = [
   {
     id: "douglasabnovato",
@@ -626,22 +642,6 @@ export const projetosOriginais: CuratedProject[] = [
       {
         label: "Repositório",
         url: "https://github.com/douglasabnovato/doe-sangue-salve-vidas",
-      },
-    ],
-  },
-
-  {
-    id: "components",
-    title: "Components",
-    description:
-      "Layout para demonstrar os fundamentos do React Router na prática.",
-    status: "mvp",
-    tipo: "educacional",
-    category: "projetos",
-    links: [
-      {
-        label: "Repositório",
-        url: "https://github.com/douglasabnovato/components",
       },
     ],
   },
