@@ -38,14 +38,25 @@ export const resumeData: ResumeData = {
     ],
 
     experiences: [
-        {
+          {
+            id: "amplopay",
+            company: "AmploPay",
+            role: "Desenvolvedor Fullstack",
+            period: "out/2026 – presente",
+            start: "2026-10",
+            end: null,
+            tier: "atual",
+            depth: "medium",
+            track: "desenvolvimento",
+            context: "Empresa do setor financeiro.",
+        },{
             id: "volta-express",
             company: "Volta Express Brasil",
             role: "Fundador e Especialista em Tecnologia",
             period: "mar/2021 – presente",
             start: "2021-03",
             end: null,
-            tier: "atual",
+            tier: "recente",
             depth: "full",
             track: "produto",
             context:
@@ -59,10 +70,10 @@ export const resumeData: ResumeData = {
             id: "byteclass",
             company: "ByteClass",
             role: "Coordenador de Educação e Tecnologia",
-            period: "ago/2025 – presente",
+            period: "ago/2025 – out/2026",
             start: "2025-08",
-            end: null,
-            tier: "atual",
+            end: "2026-10",
+            tier: "recente",
             depth: "full",
             track: "educacao",
             context: "Escola de programação com aulas presenciais, em Juiz de Fora.",

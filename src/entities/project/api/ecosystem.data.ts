@@ -3,8 +3,7 @@ import learnCore from '../../../assets/home/3-learnTECH-1.jpg'
 import learnBoot from '../../../assets/home/3-learnTECH-2.jpg'
 import learnTools from '../../../assets/home/3-learnTECH-3.jpg'
 import learnCareer from '../../../assets/home/3-learnTECH-4.jpg'
-import voltaExp1 from '../../../assets/home/4-volta-express-brasil-1.jpg'
-import byteclassImg from '../../../assets/home/5-byteclass-1.jpg'
+import voltaExp1 from '../../../assets/home/4-volta-express-brasil-1.jpg' 
 import agendaTechImg from '../../../assets/home/6-bq-1.jpg'
 
 /**
@@ -55,7 +54,7 @@ export interface EcosystemItem {
 
 /** Frase de abertura da Home. Primeira pessoa, sem saudação genérica. */
 export const homeIntro =
-  '"Desenvolvo produtos digitais que saem do papel e chegam ao usuário. Uso tecnologia para ampliar o alcance de um negócio — hoje, em logística e em educação."'
+    '"Desenvolvo produtos digitais que saem do papel e chegam ao usuário. Uso tecnologia para ampliar o alcance de um negócio — hoje, no setor financeiro."'
 
 export const ecosystemData: EcosystemItem[] = [
   {
@@ -118,17 +117,7 @@ export const ecosystemData: EcosystemItem[] = [
         // repo: 'career',
       },
     ],
-  },
-  {
-    id: 'byteclass',
-    level: 'frente',
-    kicker: 'Escola de programação',
-    title: 'ByteClass',
-    description:
-      'Coordeno a área de educação e tecnologia: equipe de instrutores e conteudistas, produção de cursos e trilhas.',
-    image: byteclassImg,
-    links: [{ label: 'byteclass.dev', url: 'https://byteclass.dev' }],
-  },
+  }, 
   {
     id: 'agendatech',
     level: 'frente',
