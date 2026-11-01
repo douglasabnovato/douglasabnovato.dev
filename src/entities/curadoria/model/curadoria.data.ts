@@ -136,13 +136,33 @@ export const ideias: ItemCuradoria[] = [
 export interface CanalDesign {
   nome: string
   url: string
+  /** Tecnologia e quantas vezes ela aparece nos títulos dos 15 vídeos mais recentes. */
+  tecnologias: [string, number][]
 }
 
-/** Canais que responderam em 01/11/2026. As tecnologias de cada um não foram conferidas. */
+const canal = (nome: string, tecnologias: [string, number][]): CanalDesign => ({
+  nome,
+  url: `https://www.youtube.com/@${nome}`,
+  tecnologias,
+})
+
+/**
+ * Canais que responderam em 01/11/2026, com a contagem feita nos títulos do feed público.
+ * Os vídeos não foram assistidos; x.developerr e K2infocom responderam 404 e saíram da lista.
+ */
 export const canaisDesign: CanalDesign[] = [
-  'Bedimcode', 'CarpoolVenom', 'CodingNepal', 'CodingLabYT', 'MrWebDesignerAnas', 'GreatStackDev',
-  'gorkcoder', 'codewithsadee', 'FastCodeWeb', 'codehal', 'Tech2etc',
-].map((nome) => ({ nome, url: `https://www.youtube.com/@${nome}` }))
+  canal('Bedimcode', [['HTML', 15], ['CSS', 15], ['JavaScript', 15]]),
+  canal('CarpoolVenom', []),
+  canal('CodingNepal', [['TypeScript', 3], ['Figma', 1]]),
+  canal('CodingLabYT', [['React', 1]]),
+  canal('MrWebDesignerAnas', [['HTML', 7], ['CSS', 7], ['PHP', 4], ['GSAP', 1], ['Python', 1]]),
+  canal('GreatStackDev', [['CSS', 12], ['HTML', 10], ['JavaScript', 3], ['React', 1]]),
+  canal('gorkcoder', [['React', 10], ['CSS', 6], ['Tailwind', 5], ['Node', 3], ['HTML', 1], ['JavaScript', 1]]),
+  canal('codewithsadee', [['React', 6], ['TypeScript', 2], ['Node', 1]]),
+  canal('FastCodeWeb', [['Python', 10], ['React', 5]]),
+  canal('codehal', [['HTML', 8], ['CSS', 8], ['JavaScript', 5], ['PHP', 3], ['GSAP', 2]]),
+  canal('Tech2etc', [['CSS', 4], ['HTML', 3], ['JavaScript', 3]]),
+]
 
 /** Issue de origem da lista de canais. */
 export const ISSUE_CANAIS = 201

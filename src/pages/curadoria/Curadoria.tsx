@@ -3,6 +3,7 @@
  * página atende /curadoria e /ideias; o que muda é o conjunto de itens.
  */
 
+import { Link } from 'react-router-dom'
 import { useMemo, useState } from 'react'
 import { ArrowUpRight } from 'lucide-react'
 
@@ -141,6 +142,9 @@ export const Curadoria = ({ tipo }: { tipo: 'curadoria' | 'ideias' }) => {
               </li>
             ))}
           </ul>
+          <Link to="/curadoria/canais-de-web-design" className="mt-3 block text-xs text-accent hover:underline">
+            Ler o artigo sobre os canais
+          </Link>
           <a
             href={`${REPO_ISSUES}/${ISSUE_CANAIS}`}
             target="_blank"
