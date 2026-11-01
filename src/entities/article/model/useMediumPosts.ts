@@ -146,7 +146,7 @@ export function useMediumPosts() {
     return () => {
       active = false;
     };
-  }, []);
+  }, [cached]);
 
   const articles = useMemo(
     () => (items ?? []).map((raw, index) => toArticle(raw, index, blogMeta.mediumTotal)),

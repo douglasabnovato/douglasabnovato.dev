@@ -13,6 +13,9 @@ const Curriculo = lazy(() =>
 const Certificados = lazy(() =>
     import('@/pages/certificados/Certificados').then((m) => ({ default: m.Certificados })),
 )
+const Curadoria = lazy(() =>
+    import('@/pages/curadoria/Curadoria').then((m) => ({ default: m.Curadoria })),
+)
 const NotFound = lazy(() =>
     import('@/pages/notFound/NotFound').then((m) => ({ default: m.NotFound })),
 )
@@ -32,6 +35,8 @@ export const AppRouter = () => {
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/curriculo" element={<Curriculo />} />
                 <Route path="/certificados" element={<Certificados />} />
+                <Route path="/curadoria" element={<Curadoria tipo="curadoria" />} />
+                <Route path="/ideias" element={<Curadoria tipo="ideias" />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </Suspense>

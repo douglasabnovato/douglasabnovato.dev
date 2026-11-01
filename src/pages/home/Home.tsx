@@ -47,7 +47,7 @@ const useGithubActivity = () => {
     return () => {
       active = false
     }
-  }, [])
+  }, [cached])
 
   return dates
 }

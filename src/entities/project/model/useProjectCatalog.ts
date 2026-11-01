@@ -175,7 +175,7 @@ export function useProjectCatalog() {
         return () => {
             active = false
         }
-    }, [])
+    }, [cached])
 
     const { sections, indicators } = useMemo(() => {
         const curatedIndex = buildCuratedIndex()
