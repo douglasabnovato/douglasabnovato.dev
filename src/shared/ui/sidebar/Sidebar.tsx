@@ -1,11 +1,13 @@
 import { NavLink } from 'react-router-dom'
-import { Home, FileText, LayoutGrid, Newspaper, X } from 'lucide-react'
+import { BookOpen, Home, FileText, LayoutGrid, Lightbulb, Newspaper, X } from 'lucide-react'
 import { ThemeToggle } from '../themeToggle/ThemeToggle'
 
 const navItems = [
   { to: '/', label: 'Home', icon: Home, end: true },
   { to: '/projetos', label: 'Projetos', icon: LayoutGrid, end: false },
   { to: '/blog', label: 'Blog', icon: Newspaper, end: false }, 
+  { to: '/curadoria', label: 'Curadoria', icon: BookOpen, end: false },
+  { to: '/ideias', label: 'Ideias', icon: Lightbulb, end: false },
   { to: '/curriculo', label: 'Currículo', icon: FileText, end: false },
 ]
 

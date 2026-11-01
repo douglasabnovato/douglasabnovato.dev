@@ -110,7 +110,7 @@ export function useGithubExtras() {
     return () => {
       active = false
     }
-  }, [])
+  }, [cached])
 
   const gists = useMemo(() => {
     const fixos = gistsFixos.map(fixadoParaExibicao)

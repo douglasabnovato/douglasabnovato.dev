@@ -295,7 +295,7 @@ npm run lint
 npm run build
 ```
 
-O CI (`.github/workflows/ci.yml`) roda os testes e o build em todo push e pull request. O lint aparece no relatório do CI, mas ainda não bloqueia (item 2.2).
+O CI (`.github/workflows/ci.yml`) roda os testes e o build em todo push e pull request. O lint também bloqueia.
 
 Para o registro de acesso ao currículo funcionar em desenvolvimento, crie um `.env.local`:
 

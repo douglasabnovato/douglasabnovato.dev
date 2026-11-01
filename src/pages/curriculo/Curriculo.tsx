@@ -68,7 +68,7 @@ const useGithubSummary = () => {
     return () => {
       active = false
     }
-  }, [])
+  }, [cached])
 
   return { summary, state }
 }
