@@ -306,6 +306,13 @@ VITE_SUPABASE_ANON_KEY=...
 
 Sem essas variáveis o site roda normalmente; apenas o registro não é gravado.
 
+## Próximos passos com o responsável
+
+- Curadoria e Ideias: `/curadoria` e `/ideias` listam anotações, não cursos concluídos nem projetos entregues. Para retomar um item, reabra a issue dele.
+- #159 e #162 seguem abertas: citam contatos e dependem de conversas que só o responsável pode ter.
+- Issues públicas antigas citam nomes de pessoas e links privados, como as #18, #95 a #100, #155, #159, #162, #168 e #169. Revisar o texto delas no GitHub, porque editar a página não altera a issue.
+- A linha do tempo depende dos marcos confirmados pelo responsável.
+
 ## Branches
 
 ```
