@@ -144,18 +144,15 @@ const CACHE_KEY = 'projetos:catalogo-github'
 export type CatalogState = 'loading' | 'ok' | 'stale' | 'error'
 
 export function useProjectCatalog() {
-    const [repos, setRepos] = useState<GithubRepo[] | null>(null)
-    const [state, setState] = useState<CatalogState>('loading')
+    const [cached] = useState(() => getCachedData<GithubRepo[]>(CACHE_KEY))
+    const [agora] = useState(() => Date.now())
+    const [repos, setRepos] = useState<GithubRepo[] | null>(cached?.data ?? null)
+    const [state, setState] = useState<CatalogState>(cached ? 'ok' : 'loading')
 
     useEffect(() => {
         let active = true
 
-        const cached = getCachedData<GithubRepo[]>(CACHE_KEY)
-        if (cached) {
-            setRepos(cached.data)
-            setState('ok')
-            return
-        }
+        if (cached) return
 
         fetchGithubRepos()
             .then((data) => {
@@ -223,7 +220,7 @@ export function useProjectCatalog() {
         }).filter((s) => s.total > 0)
 
         const todos = [...buckets.values()].flat()
-        const limite30d = Date.now() - 30 * 86_400_000
+        const limite30d = agora - 30 * 86_400_000
 
         const indicators: CatalogIndicators = {
             repositorios: todos.length,
@@ -233,7 +230,7 @@ export function useProjectCatalog() {
         }
 
         return { sections, indicators }
-    }, [repos])
+    }, [repos, agora])
 
     return { sections, indicators, state }
 }

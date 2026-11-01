@@ -69,18 +69,14 @@ function fixadoParaExibicao(fixo: GistFixo): GistExibido {
 export type ExtrasState = 'loading' | 'ok' | 'stale' | 'error'
 
 export function useGithubExtras() {
-  const [extras, setExtras] = useState<Extras | null>(null)
-  const [state, setState] = useState<ExtrasState>('loading')
+  const [cached] = useState(() => getCachedData<Extras>(CACHE_KEY, TTL))
+  const [extras, setExtras] = useState<Extras | null>(cached?.data ?? null)
+  const [state, setState] = useState<ExtrasState>(cached ? 'ok' : 'loading')
 
   useEffect(() => {
     let active = true
 
-    const cached = getCachedData<Extras>(CACHE_KEY, TTL)
-    if (cached) {
-      setExtras(cached.data)
-      setState('ok')
-      return
-    }
+    if (cached) return
 
     // allSettled: se a organização falhar, os gists continuam aparecendo.
     Promise.allSettled([fetchUserProfile(), fetchGists(), fetchOrgInfo()])

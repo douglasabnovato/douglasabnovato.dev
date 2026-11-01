@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Moon, Sun } from 'lucide-react'
+import { gravarItem, lerItem } from '@/shared/lib/storage'
 
 type Theme = 'dark' | 'light'
 
@@ -9,13 +10,13 @@ function isValidTheme(value: string | null): value is Theme {
 
 export const ThemeToggle = () => {
   const [theme, setTheme] = useState<Theme>(() => {
-    const stored = localStorage.getItem('theme')
+    const stored = lerItem('theme')
     return isValidTheme(stored) ? stored : 'dark'
   })
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem('theme', theme)
+    gravarItem('theme', theme)
   }, [theme])
 
   return (

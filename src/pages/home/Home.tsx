@@ -9,6 +9,7 @@ import { fetchGithubRepos } from '@/entities/github/api/githubApi'
 import { getCachedData, getStaleData, setCachedData } from '@/shared/lib/localCache'
 import { channels, HANDLE } from '@/shared/config/channels'
 import profileImg from '@/assets/home/1-profile.jpg'
+import { useDocumentTitle } from '@/shared/lib/hooks/useDocumentTitle'
 
 /* ------------------------------------------------------------------ */
 /* Sinal de atividade — vem da API do GitHub                           */
@@ -19,16 +20,13 @@ type RepoDates = Record<string, string>
 const ACTIVITY_CACHE_KEY = 'home:github-activity'
 
 const useGithubActivity = () => {
-  const [dates, setDates] = useState<RepoDates | null>(null)
+  const [cached] = useState(() => getCachedData<RepoDates>(ACTIVITY_CACHE_KEY))
+  const [dates, setDates] = useState<RepoDates | null>(cached?.data ?? null)
 
   useEffect(() => {
     let active = true
 
-    const cached = getCachedData<RepoDates>(ACTIVITY_CACHE_KEY)
-    if (cached) {
-      setDates(cached.data)
-      return
-    }
+    if (cached) return
 
     fetchGithubRepos()
       .then((repos) => {
@@ -163,6 +161,7 @@ const ChannelBand = ({ repos, artigos }: { repos: number | null; artigos: number
 /* ------------------------------------------------------------------ */
 
 export const Home = () => {
+  useDocumentTitle(resumeData.shortName)
   const dates = useGithubActivity()
   const currentRoles = resumeData.experiences.filter((e) => e.tier === 'atual')
 
