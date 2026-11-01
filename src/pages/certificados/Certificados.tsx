@@ -13,6 +13,7 @@ import { RecordCard } from "@/entities/certificate/ui/RecordCard";
 import { RecordModal } from "@/entities/certificate/ui/RecordModal";
 import type { RegistroComprovacao } from "@/entities/certificate/model/types";
 import { useResumeAccess } from "@/entities/resume/model/useResumeAccess";
+import { useDocumentTitle } from "@/shared/lib/hooks/useDocumentTitle";
 
 const SectionHead = ({ title, total }: { title: string; total: number }) => (
   <div className="mb-5 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-default pb-2">
@@ -23,6 +24,7 @@ const SectionHead = ({ title, total }: { title: string; total: number }) => (
 );
 
 export const Certificados = () => {
+  useDocumentTitle("Certificados");
   const { isAuthorized } = useResumeAccess();
   const { secoes, indicadores } = useCertificates();
   const [aberto, setAberto] = useState<RegistroComprovacao | null>(null);

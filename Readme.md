@@ -283,12 +283,19 @@ src/
 ```bash
 git clone https://github.com/douglasabnovato/douglasabnovato.dev.git
 cd douglasabnovato.dev
-git checkout feature/projetos
 npm install
 npm run dev
 ```
 
 Em `http://localhost:5173`. O build de produção é `npm run build`, que roda `tsc -b` antes do Vite — erro de tipo impede o deploy.
+
+```bash
+npm test         # integridade dos dados: certificados, currículo e Blog
+npm run lint
+npm run build
+```
+
+O CI (`.github/workflows/ci.yml`) roda os testes e o build em todo push e pull request. O lint aparece no relatório do CI, mas ainda não bloqueia (item 2.2).
 
 Para o registro de acesso ao currículo funcionar em desenvolvimento, crie um `.env.local`:
 
@@ -302,8 +309,8 @@ Sem essas variáveis o site roda normalmente; apenas o registro não é gravado.
 ## Branches
 
 ```
-master             → produção
-developer          → integração
+master             → produção (deploy automático na Vercel)
+developer-mvp      → integração
 feature/projetos   → desenvolvimento ativo
 demais branches    → histórico das versões 1.0 a 5.2
 ```
@@ -328,7 +335,7 @@ demais branches    → histórico das versões 1.0 a 5.2
 - Experiência em três profundidades de leitura, por relevância e recência
 - Tecnologias apresentadas por evidência — cada uma com a empresa e o período em que foi usada
 - PDF de uma página, coluna única, alinhamento à esquerda e corpo em 9,5pt — legível por sistemas de triagem
-- Chart.js removido do código — as dependências ainda constam no `package.json` (issue 2.6)
+- Chart.js removido do código e do `package.json`, junto com as outras bibliotecas de PDF e gráfico nunca importadas (issue 2.6)
 - Botão de acesso ao acervo de certificados
 
 **Certificados**
@@ -383,6 +390,22 @@ demais branches    → histórico das versões 1.0 a 5.2
 # Relatório de engenharia
 
 **Apurado em 23/09/2026**, sobre a branch de desenvolvimento, com build de produção real. Os números abaixo são medidos, não estimados. Cada item que pede ação vira uma issue no plano da seção seguinte.
+
+## Atualização de 26/10/2026
+
+O relatório de 23/09 segue abaixo como linha de base. O que mudou desde então:
+
+| Área | Antes | Agora |
+|---|---|---|
+| JavaScript inicial | 181,61 kB gzip, um chunk | **89,95 kB gzip**, um chunk por página (2.1) |
+| Tipagem | `strict` não declarado | `strict: true` declarado no `tsconfig.app.json` (0.1) |
+| `localStorage` | `ThemeToggle` e `useResumeAccess` sem proteção | Leitura e gravação por `shared/lib/storage.ts`, com `try/catch` (0.2) |
+| CI | Nenhum workflow | `.github/workflows/ci.yml`: testes e build bloqueiam; lint informativo (0.3) |
+| Testes | Zero | Vitest com 14 testes de integridade dos dados (0.4 e parte de 1.1) |
+| Dependências não usadas | 5 de runtime e `@types/chart.js` | Removidas (parte de 2.6) |
+| Metadados | `lang="en"`, sem descrição, um título para tudo | `lang="pt-BR"`, descrição, Open Graph e título por página (parte de 2.8) |
+
+**O que o teste de integridade encontrou:** dois registros de comprovação com âncora sem destino no currículo — `reg-ifsudestemg` aponta para `ifsudestemg` e `reg-ufjf` para `ufjf`, mas os ids da formação são `if-sudeste` e `ufjf-dcc`. Os cards aparecem, com o nome da organização, mas sem período e contexto vindos do currículo. Estão listados em `ANCORAS_PENDENTES` no teste, que avisa quando forem corrigidos.
 
 ## Tamanho e composição
 
@@ -487,9 +510,9 @@ As imagens que de fato entram no build somam cerca de 2,1 MB em JPEG e são exib
 
 ## Riscos identificados
 
-**`ThemeToggle` derruba a aplicação inteira.** Lê `localStorage` dentro do inicializador do `useState`, sem `try/catch`. O componente vive no `MainLayout`, então uma exceção — navegação anônima, cookies bloqueados, storage cheio — apaga todas as páginas de uma vez. É o ponto mais frágil do projeto.
+**`ThemeToggle` derruba a aplicação inteira** *(resolvido em 26/10 — item 0.2)*. Lê `localStorage` dentro do inicializador do `useState`, sem `try/catch`. O componente vive no `MainLayout`, então uma exceção — navegação anônima, cookies bloqueados, storage cheio — apaga todas as páginas de uma vez. É o ponto mais frágil do projeto.
 
-**`useResumeAccess` tem o mesmo problema**, com alcance menor: quebra só o currículo.
+**`useResumeAccess` tem o mesmo problema** *(resolvido em 26/10 — item 0.2)*, com alcance menor: quebra só o currículo.
 
 **`CurriculumAccessModal`** é o único componente com cores literais (`bg-zinc-900`, `text-white`) em vez dos tokens do tema — ele ignora o modo claro. Além disso dá `window.location.reload()` após gravar e engole o erro do Supabase em `console.error`: se a gravação falhar, o visitante não fica sabendo.
 
@@ -510,14 +533,14 @@ Cada linha vira uma issue no GitHub, com o texto da coluna *Entrega* como títul
 **Fluxo de branch**
 
 ```
-feature/<área>-<assunto>   →   developer   →   master
+feature/<área>-<assunto>   →   developer-mvp   →   master
         1 issue = 1 PR         CI verde        produção
 ```
 
 - Uma issue, um PR. PR que resolve três issues não é revisável
 - Nome da branch: `feature/certificados-ordenacao`, `fix/tema-storage`, `chore/faxina-deps`
 - **Nenhum merge com CI vermelho.** Sem exceção — a exceção é o que corrói a regra
-- `master` só recebe merge vindo de `developer`
+- `master` só recebe merge vindo de `developer-mvp`
 
 **Convenção de commit**
 
@@ -548,12 +571,12 @@ Exemplo: `fix(tema): proteger leitura de localStorage com try/catch`
 
 Nada aqui muda o que o visitante vê. Tudo aqui impede que uma mudança futura quebre o site em silêncio.
 
-| Issue | Entrega | Pronto quando |
-|---|---|---|
-| **0.1** | Habilitar `strict: true` no `tsconfig.app.json` | `tsc -b --force` passa com zero erro e o build de produção continua verde |
-| **0.2** | Proteger toda leitura de `localStorage` com `try/catch` — `ThemeToggle` e `useResumeAccess` | O site abre e navega em janela anônima com storage bloqueado, caindo no tema padrão |
-| **0.3** | Workflow no GitHub Actions rodando `lint` e `build` em push e em PR | Um PR com erro de tipo aparece vermelho antes de qualquer revisão |
-| **0.4** | Teste de integridade dos dados: `certificates.data.ts`, `resume.data.ts` e `blog.data.ts` | O teste falha se houver id duplicado, `ancora` sem destino no currículo, seção fora de `ORDEM_SECOES`, data inválida ou arquivo referenciado que não existe em `public/arquivos` |
+| Issue | Entrega | Pronto quando | Situação |
+|---|---|---|---|
+| **0.1** | Habilitar `strict: true` no `tsconfig.app.json` | `tsc -b --force` passa com zero erro e o build de produção continua verde | Feito em 26/10 |
+| **0.2** | Proteger toda leitura de `localStorage` com `try/catch` — `ThemeToggle` e `useResumeAccess` | O site abre e navega em janela anônima com storage bloqueado, caindo no tema padrão | Feito em 26/10 |
+| **0.3** | Workflow no GitHub Actions rodando `lint` e `build` em push e em PR | Um PR com erro de tipo aparece vermelho antes de qualquer revisão | Feito em 26/10; lint ainda informativo até a 2.2 |
+| **0.4** | Teste de integridade dos dados: `certificates.data.ts`, `resume.data.ts` e `blog.data.ts` | O teste falha se houver id duplicado, `ancora` sem destino no currículo, seção fora de `ORDEM_SECOES`, data inválida ou arquivo referenciado que não existe em `public/arquivos` | Feito em 26/10; duas âncoras pendentes registradas |
 
 A issue 0.4 é a que paga mais rápido: são 161 registros mantidos à mão, e um `ancora` errado hoje só aparece quando alguém abre a página.
 
@@ -561,7 +584,7 @@ A issue 0.4 é a que paga mais rápido: são 161 registros mantidos à mão, e u
 
 | Issue | Entrega | Pronto quando |
 |---|---|---|
-| **1.1** | Vitest + Testing Library configurados, com script `npm test` | `npm test` roda no CI e no local, com um teste de fumaça passando |
+| **1.1** | Vitest + Testing Library configurados, com script `npm test` | `npm test` roda no CI e no local, com um teste de fumaça passando — *Vitest e `npm test` configurados em 26/10; faltam Testing Library e o teste de fumaça* |
 | **1.2** | Testes das funções puras: `resolverAncora`, `formato.ts`, `fallbackImage`, classificação por topic | Cada função tem caso feliz, caso de borda e caso de entrada inválida |
 | **1.3** | Testes dos hooks de dado ao vivo, com `fetch` mockado | Os quatro estados — `loading`, `ok`, `stale`, `error` — são exercitados, inclusive o retorno de dado antigo quando a API falha |
 | **1.4** | Teste de fumaça por rota | Cada página renderiza sem erro com a API mockada, e o `/certificados` mostra as nove seções |
@@ -573,14 +596,14 @@ Só depois da Fase 1: aqui se mexe em código que já funciona.
 
 | Issue | Entrega | Pronto quando |
 |---|---|---|
-| **2.1** | Code splitting por rota com `React.lazy` e `Suspense` | O chunk de entrada fica em torno de 93 kB gzip e cada página carrega o seu |
+| **2.1** | Code splitting por rota com `React.lazy` e `Suspense` | O chunk de entrada fica em torno de 93 kB gzip e cada página carrega o seu — *feito em 26/10: 89,95 kB gzip* |
 | **2.2** | Extrair o contrato `loading / ok / stale / error` em um hook único e eliminar os 5 `setState` em efeito | `npm run lint` retorna zero erro e os quatro hooks usam a mesma implementação |
 | **2.3** | Corrigir a função impura durante a renderização em `useProjectCatalog.ts:226` | Lint limpo e o catálogo continua igual em dois renders seguidos |
 | **2.4** | Mover a gravação de acesso ao currículo para uma função serverless na Vercel | O cliente Supabase sai do bundle do navegador — cerca de 210 kB a menos — e a gravação continua funcionando |
 | **2.5** | Corrigir o `CurriculumAccessModal`: tokens de tema, erro visível ao visitante, fim do `window.location.reload()` | O modal respeita o modo claro, informa a falha em vez de engoli-la, e libera o currículo sem recarregar a página |
-| **2.6** | Faxina: remover 5 dependências não usadas, 4 arquivos vazios, 2 órfãos e 691 KB de imagens nunca importadas | `npm ci` mais leve, nenhum import quebrado, build verde |
+| **2.6** | Faxina: remover 5 dependências não usadas, 4 arquivos vazios, 2 órfãos e 691 KB de imagens nunca importadas | `npm ci` mais leve, nenhum import quebrado, build verde — *dependências removidas e `useDocumentTitle.ts` implementado em 26/10; faltam 3 arquivos vazios, 2 órfãos e as imagens* |
 | **2.7** | Converter as imagens da Home para WebP, redimensionadas por nível de exibição | Os 2,1 MB caem para algo em torno de 300 KB, sem diferença visível |
-| **2.8** | `lang="pt-BR"`, `meta description` e título por página | O HTML declara o idioma correto e cada rota tem título e descrição próprios |
+| **2.8** | `lang="pt-BR"`, `meta description` e título por página | O HTML declara o idioma correto e cada rota tem título e descrição próprios — *idioma, descrição, Open Graph e título por página feitos em 26/10; faltam imagem de compartilhamento e descrição por rota* |
 | **2.9** | Unificar a contagem de repositórios entre a faixa da Home e a página Projetos | As duas telas leem a mesma função e não podem divergir |
 
 ## Fase 3 — Documentação
@@ -598,14 +621,7 @@ Pendências que não são issue de engenharia, mas envelhecem se ninguém as ano
 
 **Números do acervo do Blog** — `blog.data.ts` guarda a apuração de setembro de 2026. A cada ciclo de revisão, atualizar total, ano corrente, visualizações e leituras.
 
-**Divergências entre o currículo e os documentos** — a varredura do acervo encontrou quatro pontos em que o `resume.data.ts` e os documentos originais não batem. Estão em aberto, aguardando decisão de qual versão vai para o site:
-
-| Vínculo | O currículo diz | O documento diz |
-|---|---|---|
-| Grupo MYSA | fev/2025 – fev/2026 · Tech Growth CRM · Salesforce Developer | CTPS de 04/12/2023 a 05/09/2025 · Assistente de CRM |
-| Nvoip | dois papéis distintos | contrato único de 09/12/2020 a 31/08/2021 · Desenvolvedor Frontend Jr |
-| Brasil Center | a partir de set/2015 | CLT de 14/09/2015 a 09/09/2019, mais contrato de aprendiz em 2009 |
-| IF Sudeste MG | 2016 – 2017 | conclusão em 02/03/2020, diploma expedido em 02/06/2023 |
+**Divergências entre o currículo e os documentos** — em revisão, fora do repositório. O detalhamento envolve documentos pessoais e não é publicado aqui.
 
 **Função serverless na Vercel para a API do GitHub** — um endpoint com token de leitura resolve quatro coisas de uma vez: o limite de 60 requisições por hora, a contagem de commits por repositório, as colunas reais do board (Projects v2 só existe em GraphQL autenticado) e as issues fechadas. Atende as três páginas que leem a API.
 

@@ -108,18 +108,14 @@ function toArticle(raw: RawItem, index: number, total: number): Article {
 
 /** Lê o feed, guarda os itens crus e deriva os artigos em memória. */
 export function useMediumPosts() {
-  const [items, setItems] = useState<RawItem[] | null>(null);
-  const [state, setState] = useState<ArticleFeedState>("loading");
+  const [cached] = useState(() => getCachedData<RawItem[]>(CACHE_KEY));
+  const [items, setItems] = useState<RawItem[] | null>(cached?.data ?? null);
+  const [state, setState] = useState<ArticleFeedState>(cached ? "ok" : "loading");
 
   useEffect(() => {
     let active = true;
 
-    const cached = getCachedData<RawItem[]>(CACHE_KEY);
-    if (cached) {
-      setItems(cached.data);
-      setState("ok");
-      return;
-    }
+    if (cached) return;
 
     fetch(FEED_URL)
       .then((res) => {

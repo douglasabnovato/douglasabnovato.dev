@@ -1,12 +1,14 @@
+import { gravarItem, lerItem } from '@/shared/lib/storage';
+
 export const useResumeAccess = () => {
   const isAuthorized = () => {
-    return localStorage.getItem('curriculum_authorized') === 'true';
+    return lerItem('curriculum_authorized') === 'true';
   };
 
   const grantAccess = (firstName: string, company: string) => {
-    localStorage.setItem('curriculum_authorized', 'true');
-    localStorage.setItem('visitor_name', firstName);
-    localStorage.setItem('visitor_company', company);
+    gravarItem('curriculum_authorized', 'true');
+    gravarItem('visitor_name', firstName);
+    gravarItem('visitor_company', company);
   };
 
   return { isAuthorized, grantAccess };

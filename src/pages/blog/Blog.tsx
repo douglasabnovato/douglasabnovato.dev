@@ -13,8 +13,10 @@ import { useMediumPosts, relativeTime } from "@/entities/article/model/useMedium
 import { ArticleCard } from "@/entities/article/ui/ArticleCard";
 import { BlogDashboard } from "@/entities/article/ui/BlogDashboard";
 import { blogIntro, blogMeta, MEDIUM_PROFILE } from "@/entities/article/api/blog.data";
+import { useDocumentTitle } from "@/shared/lib/hooks/useDocumentTitle";
 
 export const Blog = () => {
+  useDocumentTitle("Blog");
   const { articles, state } = useMediumPosts();
   const ultimo = articles[0];
   const publicadoEm = ultimo ? relativeTime(ultimo.isoDate) : undefined;

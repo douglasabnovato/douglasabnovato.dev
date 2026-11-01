@@ -8,6 +8,7 @@ import { OrganizationCard } from '@/entities/github/ui/OrganizationCard'
 import { GistCard } from '@/entities/github/ui/GistCard'
 import { ArrowUpRight } from 'lucide-react'
 import type { ProjectSectionId } from '@/entities/project/model/types'
+import { useDocumentTitle } from '@/shared/lib/hooks/useDocumentTitle'
 
 /** Seções que usam card reduzido, por volume. */
 const COMPACTAS: ProjectSectionId[] = ['projetos', 'forks', 'arquivados']
@@ -27,6 +28,7 @@ const SectionHead = ({ title, total, nota }: { title: string; total: number; not
 )
 
 export const Projetos = () => {
+  useDocumentTitle('Projetos')
   const { sections, indicators, state } = useProjectCatalog()
   const { gists, totalGists, org } = useGithubExtras()
 

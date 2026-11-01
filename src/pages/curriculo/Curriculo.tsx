@@ -11,6 +11,7 @@ import { fetchGithubRepos, hasProductionLink } from '@/entities/github/api/githu
 import { getCachedData, getStaleData, setCachedData } from '@/shared/lib/localCache'
 import profileImg from '@/assets/home/1-profile.jpg'
 import '@/entities/resume/ui/curriculo-print.css'
+import { useDocumentTitle } from '@/shared/lib/hooks/useDocumentTitle'
 
 /* ------------------------------------------------------------------ */
 /* Dados ao vivo do GitHub                                             */
@@ -25,18 +26,14 @@ interface GithubSummary {
 const GITHUB_CACHE_KEY = 'curriculo:github-summary'
 
 const useGithubSummary = () => {
-  const [summary, setSummary] = useState<GithubSummary | null>(null)
-  const [state, setState] = useState<'loading' | 'ok' | 'stale' | 'error'>('loading')
+  const [cached] = useState(() => getCachedData<GithubSummary>(GITHUB_CACHE_KEY))
+  const [summary, setSummary] = useState<GithubSummary | null>(cached?.data ?? null)
+  const [state, setState] = useState<'loading' | 'ok' | 'stale' | 'error'>(cached ? 'ok' : 'loading')
 
   useEffect(() => {
     let active = true
 
-    const cached = getCachedData<GithubSummary>(GITHUB_CACHE_KEY)
-    if (cached) {
-      setSummary(cached.data)
-      setState('ok')
-      return
-    }
+    if (cached) return
 
     fetchGithubRepos()
       .then((repos) => {
@@ -125,15 +122,16 @@ const CareerTimeline = () => {
   )
 
   const now = new Date()
-  const endIndex = now.getFullYear() * 12 + now.getMonth()
+  const anoAtual = now.getFullYear()
+  const endIndex = anoAtual * 12 + now.getMonth()
   const startIndex = resumeData.careerStart * 12
   const span = Math.max(endIndex - startIndex + 1, 1)
 
   const years = useMemo(() => {
     const out: number[] = []
-    for (let y = resumeData.careerStart; y <= now.getFullYear(); y += 3) out.push(y)
+    for (let y = resumeData.careerStart; y <= anoAtual; y += 3) out.push(y)
     return out
-  }, [now])
+  }, [anoAtual])
 
   const tracks = useMemo(() => {
     const seen: TrackId[] = []
@@ -380,6 +378,7 @@ const ToolEvidence = () => {
 /* ------------------------------------------------------------------ */
 
 export const Curriculo = () => {
+  useDocumentTitle('Currículo')
   const { isAuthorized } = useResumeAccess()
   const [showModal, setShowModal] = useState(false)
   const printRef = useRef<HTMLDivElement>(null)
