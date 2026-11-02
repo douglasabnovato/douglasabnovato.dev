@@ -1,9 +1,9 @@
-import devFull1 from "../../../assets/home/2-dev-fullstack-1.jpg";
-import learnCore from "../../../assets/home/3-learnTECH-1.jpg";
-import learnBoot from "../../../assets/home/3-learnTECH-2.jpg";
-import learnTools from "../../../assets/home/3-learnTECH-3.jpg";
-import learnCareer from "../../../assets/home/3-learnTECH-4.jpg";
-import voltaExp1 from "../../../assets/home/4-volta-express-brasil-1.jpg";
+import devFull1 from "../../../assets/home/2-dev-fullstack-1.webp";
+import learnCore from "../../../assets/home/3-learnTECH-1.webp";
+import learnBoot from "../../../assets/home/3-learnTECH-2.webp";
+import learnTools from "../../../assets/home/3-learnTECH-3.webp";
+import learnCareer from "../../../assets/home/3-learnTECH-4.webp";
+import voltaExp1 from "../../../assets/home/4-volta-express-brasil-1.webp";
 import agendaTechImg from "../../../assets/home/6-bq-1.jpg";
 
 /**
