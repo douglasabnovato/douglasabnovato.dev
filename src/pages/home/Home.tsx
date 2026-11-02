@@ -217,7 +217,7 @@ export const Home = () => {
           <img
             src={destaque.image}
             alt={destaque.title}
-            loading="lazy"
+            fetchPriority="high"
             decoding="async"
             className="w-full aspect-video object-cover object-top rounded-xl border border-default img-emph-1"
           />
