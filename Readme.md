@@ -22,6 +22,8 @@
 
 ---
 
+> **Estado em 02/11/2026:** Publicado na Vercel. Verificação: `npm run lint`, `npm test`, `npm run build` e `npm run test:e2e`. Critérios em [docs/MVP.md](docs/MVP.md).
+
 ## Sobre
 
 Site pessoal que reúne trajetória profissional, projetos em andamento e a forma como eu conduzo produto. É também a origem do [ecossistema learnTECH](https://learn-tech-pied.vercel.app).
