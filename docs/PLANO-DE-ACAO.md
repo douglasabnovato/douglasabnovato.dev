@@ -60,4 +60,4 @@
 2. JSON-LD `ProfilePage` + `Person`, com teste.
 3. `MVP.md` com resumo, nível e "Finalizado"; README com o estado e os próximos passos.
 
-**Vira issue.** #251, #252, #253, #254 (responsável); #255, #256 (agente). #237 e #238 seguem com o responsável.
+**Vira issue.** #251, #252, #253, #254 (responsável); #255, #256 e #258 (agente; a #258 veio da variação das medições de 06/11). #237 e #238 seguem com o responsável.

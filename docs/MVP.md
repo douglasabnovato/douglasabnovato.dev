@@ -12,7 +12,7 @@
 | 4 | Escopo enxuto | O que não entra está registrado | Atende: lista abaixo |
 | 5 | Medição de uso | A métrica principal é coletada | Não atende: depende de uma conta do responsável (#251) |
 | 6 | Falhas tratadas | Erro, vazio e carregamento têm resposta clara | Atende: API do GitHub indisponível e rota inexistente testadas; currículo liberado mesmo sem `localStorage`, com teste (PR #250) |
-| 7 | Desempenho aceitável | LCP de até 2,5 s no celular | Atende: 2,13 s em 02/11/2026 |
+| 7 | Desempenho aceitável | LCP de até 2,5 s no celular | Atende: mediana de 1,71 s nas 7 execuções de 06/11/2026 (2,13 s em 02/11/2026); ver a variação nas medições abaixo |
 | 8 | Acessibilidade básica | Lighthouse e teclado | Atende: Lighthouse 100; Tab sem elemento sem nome ou sem foco |
 | 9 | Segurança e conformidade | Riscos decididos; termos cumpridos | Parcial: issues públicas com dados de terceiros, a editar pelo responsável (#253) |
 | 10 | Entrega confiável | Publicação só depois de CI verde | Parcial: CI verde em PR; a `master` não é protegida, conferido pela API em 06/11/2026 (#254) |
@@ -28,3 +28,7 @@
 **Medição:** Lighthouse 12.8.2 local, móvel, 3 execuções no site publicado. LCP 1,85 / 2,13 / 2,33 s (mediana 2,13 s; era 3,46 s antes do WebP), acessibilidade 100. O resultado varia entre execuções, e não houve teste em celular real.
 
 **Critério 5:** segue sem atender, porque nada coleta uso; depende de uma conta de medição do responsável.
+
+## Medições de 06/11/2026
+
+Site publicado depois do PR #257 (com o JSON-LD). Lighthouse 12.8.2 local, móvel simulado, sem aparelho real, 7 execuções em duas séries. Primeira série: LCP 2,72 / 1,67 / 2,67 s (mediana 2,67 s, acima da meta), com o computador sobrecarregado por outros processos. Segunda série: 1,71 / 1,70 / 1,51 s (mediana 1,70 s), desempenho 99 e TBT de 77 a 125 ms. Mediana das 7: 1,71 s. Acessibilidade 100 em todas. A variação mostra que a medição local não é confiável sozinha; a medição em ambiente estável está na #258.
