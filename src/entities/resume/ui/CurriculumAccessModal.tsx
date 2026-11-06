@@ -16,8 +16,8 @@ export const CurriculumAccessModal = ({ onClose }: { onClose: () => void }) => {
         { first_name: form.name, company: form.company }
       ]);
       grantAccess(form.name, form.company);
+      // Sem recarregar: fechar o modal já mostra o currículo, mesmo sem localStorage
       onClose();
-      window.location.reload();
     } catch (error) {
       console.error('Erro ao registrar acesso:', error);
     } finally {
