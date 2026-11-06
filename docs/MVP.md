@@ -2,19 +2,21 @@
 
 > Avaliação de 31/10/2026 com os mesmos 12 critérios usados no `movies`. "Não medido" significa que não há evidência, não que falhe.
 
+**Revisão de 06/11/2026 (ciclo de 03/11/2026, PR #250).** Nível: Produto (N3), 12 critérios. **Resultado:** 8 de 12 atendidos (1, 2, 4, 6, 7, 8, 11 e 12), 3 parciais (3, 9 e 10) e 1 não atendido (5). **Finalizado: sim** — os 4 que faltam dependem do responsável, e cada um tem issue com o rótulo `depende-do-responsavel`: #252 (3), #251 (5), #253 (9) e #254 (10).
+
 | # | Critério | Como verificar | Situação |
 |---|---|---|---|
 | 1 | Problema e público claros | Dá para explicar em uma frase | Atende |
 | 2 | Hipótese a validar | Existe uma aposta escrita, com meta | Atende: proposta abaixo |
-| 3 | Fluxo principal completo | Uma pessoa conclui sem ajuda | Parcial: navegação testada; pessoa de fora não testou |
+| 3 | Fluxo principal completo | Uma pessoa conclui sem ajuda | Parcial: navegação testada; pessoa de fora não testou (#252) |
 | 4 | Escopo enxuto | O que não entra está registrado | Atende: lista abaixo |
-| 5 | Medição de uso | A métrica principal é coletada | Não atende |
-| 6 | Falhas tratadas | Erro, vazio e carregamento têm resposta clara | Atende: API do GitHub indisponível e rota inexistente testadas |
+| 5 | Medição de uso | A métrica principal é coletada | Não atende: depende de uma conta do responsável (#251) |
+| 6 | Falhas tratadas | Erro, vazio e carregamento têm resposta clara | Atende: API do GitHub indisponível e rota inexistente testadas; currículo liberado mesmo sem `localStorage`, com teste (PR #250) |
 | 7 | Desempenho aceitável | LCP de até 2,5 s no celular | Atende: 2,13 s em 02/11/2026 |
 | 8 | Acessibilidade básica | Lighthouse e teclado | Atende: Lighthouse 100; Tab sem elemento sem nome ou sem foco |
-| 9 | Segurança e conformidade | Riscos decididos; termos cumpridos | Parcial: issues públicas com dados de terceiros, a editar pelo responsável |
-| 10 | Entrega confiável | Publicação só depois de CI verde | Parcial: CI verde em PR; a `master` não é protegida |
-| 11 | Testes dos fluxos críticos | Testes automatizados no CI | Atende: 6 testes Playwright e testes de dados no CI |
+| 9 | Segurança e conformidade | Riscos decididos; termos cumpridos | Parcial: issues públicas com dados de terceiros, a editar pelo responsável (#253) |
+| 10 | Entrega confiável | Publicação só depois de CI verde | Parcial: CI verde em PR; a `master` não é protegida, conferido pela API em 06/11/2026 (#254) |
+| 11 | Testes dos fluxos críticos | Testes automatizados no CI | Atende: 6 testes Playwright e 25 testes Vitest no CI |
 | 12 | Documentação honesta | Qualquer pessoa roda o projeto, e os números estão certos | Atende: README com estado e comandos conferidos |
 
 ## Revisão de 02/11/2026
