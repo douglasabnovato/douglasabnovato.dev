@@ -308,12 +308,27 @@ VITE_SUPABASE_ANON_KEY=...
 
 Sem essas variáveis o site roda normalmente; apenas o registro não é gravado.
 
-## Próximos passos com o responsável
+## Estado e próximos passos (ciclo de 03/11/2026)
 
-- Curadoria e Ideias: `/curadoria` e `/ideias` listam anotações, não cursos concluídos nem projetos entregues. Para retomar um item, reabra a issue dele.
-- #159 e #162 seguem abertas: citam contatos e dependem de conversas que só o responsável pode ter.
-- Issues públicas antigas citam nomes de pessoas e links privados, como as #18, #95 a #100, #155, #159, #162, #168 e #169. Revisar o texto delas no GitHub, porque editar a página não altera a issue.
-- A linha do tempo depende dos marcos confirmados pelo responsável.
+No ar em https://douglasabnovato-dev.vercel.app/ (HTTP 200 em 06/11/2026). Nível Produto (N3): 8 de 12 critérios atendidos, Finalizado: sim. Os 4 que faltam dependem do responsável.
+
+**O que foi feito**
+
+- Currículo liberado mesmo com cookies bloqueados, sem o laço do formulário (PR #250).
+- Dados estruturados `ProfilePage` + `Person` no `index.html`, com teste (PR #250).
+- Critérios do MVP revistos com as medições publicadas: LCP de 2,13 s e Lighthouse 100 (PR #248).
+- Contraste e LCP da página inicial corrigidos e fluxos testados no navegador (#243).
+
+**O que queremos fazer**
+
+- Do responsável: medir as visitas que abrem um projeto (#251), teste com pessoa de fora (#252), tirar dados de terceiros das issues antigas (#253), proteger a `master` (#254), confirmar os marcos da linha do tempo (#237) e revisar o artigo dos canais (#238).
+- Do código: imagem de prévia ao compartilhar o link (#255) e validar os dados estruturados no Google (#256).
+- `/curadoria` e `/ideias` listam anotações, não cursos concluídos nem projetos entregues. #159 e #162 citam contatos e ficam com o responsável.
+
+**Onde está a documentação**
+
+- [docs/MVP.md](docs/MVP.md): critérios, evidências e medições.
+- [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md): seção "Ciclo de 03/11/2026", com pesquisa, produto e engenharia.
 
 ## Branches
 
