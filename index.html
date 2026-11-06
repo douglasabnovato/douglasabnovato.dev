@@ -20,6 +20,30 @@
       content="Desenvolvedor fullstack. Desenvolvo produtos digitais que saem do papel e chegam ao usuário. Projetos, currículo e artigos."
     />
     <meta name="twitter:card" content="summary" />
+    <!-- Dados estruturados (schema.org ProfilePage + Person). sameAs = canais https ativos de src/shared/config/channels.ts, conferido em src/testes/dados-estruturados.test.ts -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "url": "https://douglasabnovato-dev.vercel.app/",
+        "inLanguage": "pt-BR",
+        "mainEntity": {
+          "@type": "Person",
+          "name": "Douglas A. B. Novato",
+          "alternateName": "douglasabnovato",
+          "jobTitle": "Desenvolvedor fullstack",
+          "url": "https://douglasabnovato-dev.vercel.app/",
+          "sameAs": [
+            "https://www.linkedin.com/in/douglasabnovato/",
+            "https://github.com/douglasabnovato",
+            "https://douglasabnovato.medium.com",
+            "https://www.instagram.com/douglasabnovato/",
+            "https://x.com/douglasabnovato",
+            "https://linktr.ee/douglasabnovato"
+          ]
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
