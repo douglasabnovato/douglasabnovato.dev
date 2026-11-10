@@ -2,22 +2,30 @@
 
 > Avaliação de 31/10/2026 com os mesmos 12 critérios usados no `movies`. "Não medido" significa que não há evidência, não que falhe.
 
-**Revisão de 06/11/2026 (ciclo de 03/11/2026, PR #250).** Nível: Produto (N3), 12 critérios. **Resultado:** 8 de 12 atendidos (1, 2, 4, 6, 7, 8, 11 e 12), 3 parciais (3, 9 e 10) e 1 não atendido (5). **Finalizado: sim** — os 4 que faltam dependem do responsável, e cada um tem issue com o rótulo `depende-do-responsavel`: #252 (3), #251 (5), #253 (9) e #254 (10).
+**Revisão de 10/11/2026 (ciclo da faixa de 90%, decisões D1 a D7 do repositório `engenharia`).** Nível: Produto (N3), 12 critérios.
+
+**Resumo:** 10 de 12 aplicáveis atendidos (1, 2, 3, 4, 6, 7, 8, 10, 11 e 12) e 2 parciais (5 e 9).
+
+**Finalizado:** sim — os 2 que faltam dependem do responsável, e cada um tem issue com o rótulo `depende-do-responsavel`: #251 (5, criar a conta do GoatCounter) e #253 (9, editar as issues antigas e restringir os documentos).
 
 | # | Critério | Como verificar | Situação |
 |---|---|---|---|
 | 1 | Problema e público claros | Dá para explicar em uma frase | Atende |
-| 2 | Hipótese a validar | Existe uma aposta escrita, com meta | Atende: proposta abaixo |
-| 3 | Fluxo principal completo | Uma pessoa conclui sem ajuda | Parcial: navegação testada; pessoa de fora não testou (#252) |
+| 2 | Hipótese a validar | Existe uma aposta escrita, com meta | Atende: meta decidida pelo coordenador em 10/11/2026 (decisão D1), revisável pelo responsável. Aposta abaixo, em "Revisão de 02/11/2026" |
+| 3 | Fluxo principal completo | Uma pessoa conclui sem ajuda | Atende (decisão D2): `npx playwright test` em 10/11/2026, 8 testes, 0 falhas; `e2e/projeto.pw.ts` vai da página inicial a um projeto no ar em 3 cliques (Projetos → No ar → nova aba). Site publicado responde (`curl`, HTTP 200, 10/11/2026) e o fluxo depende só dele e da API pública do GitHub. O teste com uma pessoa de fora virou validação de produto (#252) |
 | 4 | Escopo enxuto | O que não entra está registrado | Atende: lista abaixo |
-| 5 | Medição de uso | A métrica principal é coletada | Não atende: depende de uma conta do responsável (#251) |
+| 5 | Medição de uso | A métrica principal é coletada | Parcial: código pronto; falta a conta (decisão D5, #251). GoatCounter com o código `douglasabnovato`, só no site publicado, sem cookie, evento `abriu-projeto`; `npm test` (`src/testes/medicao.test.ts`) e `e2e/projeto.pw.ts` conferem que não carrega em localhost nem nos testes |
 | 6 | Falhas tratadas | Erro, vazio e carregamento têm resposta clara | Atende: API do GitHub indisponível e rota inexistente testadas; currículo liberado mesmo sem `localStorage`, com teste (PR #250) |
-| 7 | Desempenho aceitável | LCP de até 2,5 s no celular | Atende: mediana de 1,71 s nas 7 execuções de 06/11/2026 (2,13 s em 02/11/2026); ver a variação nas medições abaixo |
+| 7 | Desempenho aceitável | LCP de até 2,5 s no celular | Atende: Lighthouse 12.8.2 móvel no site publicado, 10/11/2026, segunda série (a primeira teve FCP observado de 8,8 s, inválida): 1,71 / 1,58 / 2,30 s, mediana 1,71 s, TBT 87 ms, elemento do LCP `section > img.w-full` (imagem de destaque) |
 | 8 | Acessibilidade básica | Lighthouse e teclado | Atende: Lighthouse 100; Tab sem elemento sem nome ou sem foco |
-| 9 | Segurança e conformidade | Riscos decididos; termos cumpridos | Parcial: issues públicas com dados de terceiros, a editar pelo responsável (#253) |
-| 10 | Entrega confiável | Publicação só depois de CI verde | Parcial: CI verde em PR; a `master` não é protegida, conferido pela API em 06/11/2026 (#254) |
-| 11 | Testes dos fluxos críticos | Testes automatizados no CI | Atende: 6 testes Playwright e 25 testes Vitest no CI |
-| 12 | Documentação honesta | Qualquer pessoa roda o projeto, e os números estão certos | Atende: README com estado e comandos conferidos |
+| 9 | Segurança e conformidade | Riscos decididos; termos cumpridos | Parcial: `npm audit --omit=dev` 0 vulnerabilidades e Dependabot pela API 0 alertas abertos, 10/11/2026. Faltam as issues públicas antigas com nomes de terceiros e links privados (#253): editar o texto não apaga o histórico de edição, que só o responsável remove, e restringir os documentos compartilhados é dele |
+| 10 | Entrega confiável | Publicação só depois de CI verde | Atende: `gh api repos/douglasabnovato/douglasabnovato.dev/rules/branches/master`, 10/11/2026: `required_status_checks` com `Testes e build` e `Fluxos no navegador`, além de PR obrigatório e bloqueio de force push e exclusão. A Vercel publica a `master`, que só recebe o que passou no CI (#254) |
+| 11 | Testes dos fluxos críticos | Testes automatizados no CI | Atende: 8 testes Playwright e 28 testes Vitest no CI (`npm test` em 10/11/2026: 28 testes, 0 falhas) |
+| 12 | Documentação honesta | Qualquer pessoa roda o projeto, e os números estão certos | Atende: README com estado e comandos conferidos contra o `package.json` em 10/11/2026 |
+
+## Histórico
+
+- 06/11/2026 (PR #250), critério 10 revisto em 10/11/2026: 9 de 12 (1, 2, 4, 6, 7, 8, 10, 11 e 12). O 3 estava "Parcial" à espera de uma pessoa de fora; o 5, "Não atende".
 
 ## Revisão de 02/11/2026
 

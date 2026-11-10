@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ArrowUpRight } from 'lucide-react'
 import { getFallbackImageFor } from '../model/fallbackImage'
 import { relativeTime } from '../model/useProjectCatalog'
+import { EVENTO_ABRIU_PROJETO } from '@/shared/lib/medicao'
 import type { CatalogProject } from '../model/types'
 
 /**
@@ -26,7 +27,8 @@ export const ProjectCard = ({ project, compact = false }: ProjectCardProps) => {
 
   return (
     <article className="group flex flex-col rounded-lg border border-default bg-surface overflow-hidden transition-colors hover:border-accent">
-      <a href={alvo} target="_blank" rel="noopener noreferrer" className="block">
+      <a href={alvo}
+          data-evento={EVENTO_ABRIU_PROJETO} target="_blank" rel="noopener noreferrer" className="block">
         <img
           src={src}
           onError={() => setSrc(getFallbackImageFor(project.name))}
@@ -46,6 +48,7 @@ export const ProjectCard = ({ project, compact = false }: ProjectCardProps) => {
         <h3 className="mt-1 text-sm font-medium text-primary">
 <a
           href={alvo}
+          data-evento={EVENTO_ABRIU_PROJETO}
           target="_blank"
           rel="noopener noreferrer"
           className="group-hover:text-accent transition-colors"
@@ -86,6 +89,7 @@ export const ProjectCard = ({ project, compact = false }: ProjectCardProps) => {
         {project.homepage?.trim() && (
 <a
           href = { project.homepage }
+          data-evento={EVENTO_ABRIU_PROJETO}
               target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-1 text-[11px] font-mono text-accent hover:underline"
