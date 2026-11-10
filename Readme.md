@@ -308,12 +308,14 @@ VITE_SUPABASE_ANON_KEY=...
 
 Sem essas variáveis o site roda normalmente; apenas o registro não é gravado.
 
-## Estado e próximos passos (ciclo de 03/11/2026)
+## Estado e próximos passos (ciclo de 10/11/2026)
 
-No ar em https://douglasabnovato-dev.vercel.app/ (HTTP 200 em 06/11/2026). Nível Produto (N3): 9 de 12 critérios atendidos, Finalizado: sim. Os 3 que faltam dependem do responsável. A `master` está protegida desde 10/11/2026 (ruleset `principal-protegida`, #254).
+No ar em https://douglasabnovato-dev.vercel.app/ (HTTP 200 em 10/11/2026). Nível Produto (N3): 10 de 12 critérios atendidos, Finalizado: sim. Os 2 que faltam dependem do responsável: a conta do GoatCounter (#251) e as issues antigas com dados de terceiros (#253). A `master` exige os jobs do CI verdes desde 10/11/2026.
 
 **O que foi feito**
 
+- Medição com GoatCounter pronta no código, só no site publicado e sem cookie, com o evento `abriu-projeto`; falta a conta (ciclo de 10/11/2026).
+- Teste Playwright do fluxo principal: da página inicial a um projeto no ar em 3 cliques (ciclo de 10/11/2026).
 - Currículo liberado mesmo com cookies bloqueados, sem o laço do formulário (PR #250).
 - Dados estruturados `ProfilePage` + `Person` no `index.html`, com teste (PR #250).
 - Critérios do MVP revistos com as medições publicadas: LCP de 2,13 s e Lighthouse 100 (PR #248).
