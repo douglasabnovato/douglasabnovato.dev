@@ -310,7 +310,7 @@ Sem essas variáveis o site roda normalmente; apenas o registro não é gravado.
 
 ## Estado e próximos passos (ciclo de 03/11/2026)
 
-No ar em https://douglasabnovato-dev.vercel.app/ (HTTP 200 em 06/11/2026). Nível Produto (N3): 8 de 12 critérios atendidos, Finalizado: sim. Os 4 que faltam dependem do responsável.
+No ar em https://douglasabnovato-dev.vercel.app/ (HTTP 200 em 06/11/2026). Nível Produto (N3): 9 de 12 critérios atendidos, Finalizado: sim. Os 3 que faltam dependem do responsável. A `master` está protegida desde 10/11/2026 (ruleset `principal-protegida`, #254).
 
 **O que foi feito**
 
@@ -321,7 +321,7 @@ No ar em https://douglasabnovato-dev.vercel.app/ (HTTP 200 em 06/11/2026). Níve
 
 **O que queremos fazer**
 
-- Do responsável: medir as visitas que abrem um projeto (#251), teste com pessoa de fora (#252), tirar dados de terceiros das issues antigas (#253), proteger a `master` (#254), confirmar os marcos da linha do tempo (#237) e revisar o artigo dos canais (#238).
+- Do responsável: medir as visitas que abrem um projeto (#251), teste com pessoa de fora (#252), tirar dados de terceiros das issues antigas (#253), confirmar os marcos da linha do tempo (#237) e revisar o artigo dos canais (#238).
 - Do código: imagem de prévia ao compartilhar o link (#255), validar os dados estruturados no Google (#256) e Lighthouse no CI com orçamento de LCP (#258).
 - `/curadoria` e `/ideias` listam anotações, não cursos concluídos nem projetos entregues. #159 e #162 citam contatos e ficam com o responsável.
 
