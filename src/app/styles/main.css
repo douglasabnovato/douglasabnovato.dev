@@ -50,6 +50,12 @@
     --track-transicao: #a1a1aa;
 }
 
+/* Foco visível do teclado, no acento do tema (contraste acima de 3:1 nos dois temas). */
+:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
 body {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
