@@ -314,21 +314,21 @@ Sem essas variáveis o site roda normalmente; apenas o registro não é gravado.
 
 ## Estado e próximos passos (ciclo de 16/11/2026)
 
-No ar em https://douglasabnovato-dev.vercel.app/ (HTTP 200 em 16/11/2026). Nível Produto (N3): 10 de 12 critérios atendidos, Finalizado: sim. Os 2 parciais dependem do responsável: a conta do GoatCounter (#251) e as issues públicas antigas (#253). A `master` exige os jobs do CI verdes.
+No ar em https://douglasabnovato-dev.vercel.app/ (HTTP 200 em 16/11/2026). Nível Produto (N3): 10 de 12 critérios atendidos, Finalizado: sim. Os 2 parciais dependem do responsável: a medição, da conta do GoatCounter (#251); a segurança, das issues públicas antigas (#253). O único alerta do Dependabot (`minimatch`, moderada, só no lint) está aceito na [ADR 0001](docs/adr/0001-aceitar-alertas-de-desenvolvimento-do-dependabot.md), porque não chega ao site. A `master` exige os jobs do CI verdes.
 
 **O que foi feito**
 
 - axe em 9 rotas e no menu do celular, nos temas escuro e claro, com dados reais do GitHub e do Medium gravados em `e2e/fixtures` (`node e2e/fixtures/gravar.mjs` regrava), falhando também com contraste não medido; ícone sem nome na faixa de canais corrigido (PR #275, sprint `developer/sprint-2026-11-19`).
 - Menu do celular pelo teclado: fechado fica fora do Tab, Esc fecha e devolve o foco, link escolhido não devolve o foco ao cabeçalho, e a animação de saída voltou a funcionar; contorno do foco no acento do tema (PR #275).
 - Aviso de lista vazia em Projetos e testes de erro, vazio e espera em Projetos e no Blog (PR #275).
-- `docs/DEPLOY.md` com a publicação na Vercel e o Pages legado a desligar (PR #275).
+- `docs/DEPLOY.md` com a publicação na Vercel e o Pages legado a desligar (PR #275). O Pages legado foi desligado em 16/11/2026 (#270).
 - Medição com GoatCounter pronta no código e teste do fluxo principal até um projeto no ar (PR #263).
 - Currículo liberado mesmo com cookies bloqueados e dados estruturados `ProfilePage` + `Person` (PR #250).
 
 **O que queremos fazer**
 
-- Do responsável: medir as visitas que abrem um projeto (#251), teste com pessoa de fora (#252), issues públicas antigas (#253), desligar o GitHub Pages legado (#270), confirmar os marcos da linha do tempo (#237) e revisar o artigo dos canais (#238).
-- Do código: medir de novo o LCP depois da publicação (#271), link "Pular para o conteúdo" (#272), Dependabot semanal (#274), imagem de prévia (#255), validar os dados estruturados no Google (#256) e Lighthouse no CI (#258).
+- Do responsável: medir as visitas que abrem um projeto (#251), teste com pessoa de fora (#252), issues públicas antigas (#253), fechar a #270 (o GitHub Pages legado foi desligado em 16/11/2026), confirmar os marcos da linha do tempo (#237) e revisar o artigo dos canais (#238).
+- Do código: medir de novo o LCP depois da publicação (#271), link "Pular para o conteúdo" (#272), Dependabot semanal (#274), atualizar o lint para tirar o `minimatch` 10, hoje aceito na ADR 0001 (#282), imagem de prévia (#255), validar os dados estruturados no Google (#256) e Lighthouse no CI (#258).
 
 **Onde está a documentação**
 
