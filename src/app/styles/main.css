@@ -64,6 +64,19 @@ body {
     transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
+/*
+ * Menu do celular. Fica fora das camadas do Tailwind porque a regra `*` acima
+ * também fica, e venceria qualquer utilitário de transição. Ao fechar, o
+ * `visibility` só muda no fim do deslize (200 ms); ao abrir, muda na hora.
+ */
+#menu-principal {
+    transition: transform 0.2s ease, visibility 0s linear 0.2s, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+#menu-principal[data-aberto] {
+    transition: transform 0.2s ease, visibility 0s, background-color 0.2s ease, border-color 0.2s ease;
+}
+
 @utility bg-page {
     background-color: var(--color-page);
 }

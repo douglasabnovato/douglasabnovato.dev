@@ -9,24 +9,37 @@ test.beforeEach(async ({ page }) => {
   await page.route('https://api.rss2json.com/**', (r) => r.fulfill({ json: { status: 'ok', items: [] } }))
 })
 
-test('o foco do teclado tem o contorno no acento do tema', async ({ page }) => {
-  await page.setViewportSize({ width: 1280, height: 900 })
-  await page.goto('/')
-  await page.addStyleTag({ content: '*, *::before, *::after { transition: none !important; }' })
-  await page.keyboard.press('Tab')
-  const foco = page.locator(':focus')
-  await expect(foco).toHaveCount(1)
-  const estilo = await foco.evaluate((el) => {
-    const s = getComputedStyle(el)
-    const acento = getComputedStyle(document.documentElement).getPropertyValue('--color-accent').trim()
-    // Converte o hexadecimal do token para o formato rgb() do getComputedStyle.
-    const n = parseInt(acento.slice(1), 16)
-    return { largura: s.outlineWidth, estiloLinha: s.outlineStyle, cor: s.outlineColor, acento: `rgb(${n >> 16}, ${(n >> 8) & 255}, ${n & 255})` }
+for (const tema of ['dark', 'light'] as const) {
+  test(`o foco do teclado tem o contorno no acento do tema ${tema === 'dark' ? 'escuro' : 'claro'}`, async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 900 })
+    await page.addInitScript((t) => {
+      try {
+        localStorage.setItem('theme', t)
+      } catch {
+        /* sem armazenamento */
+      }
+    }, tema)
+    await page.goto('/')
+    await expect(page.locator('html')).toHaveAttribute('data-theme', tema)
+    await page.addStyleTag({ content: '*, *::before, *::after { transition: none !important; }' })
+    await page.keyboard.press('Tab')
+    const foco = page.locator(':focus')
+    await expect(foco).toHaveCount(1)
+    const estilo = await foco.evaluate((el) => {
+      const s = getComputedStyle(el)
+      // O navegador resolve o token do acento em rgb(), em qualquer formato que ele tenha no CSS.
+      const amostra = document.createElement('span')
+      amostra.style.color = 'var(--color-accent)'
+      document.body.appendChild(amostra)
+      const acento = getComputedStyle(amostra).color
+      amostra.remove()
+      return { largura: s.outlineWidth, estiloLinha: s.outlineStyle, cor: s.outlineColor, acento }
+    })
+    expect(estilo.estiloLinha).toBe('solid')
+    expect(estilo.largura).toBe('2px')
+    expect(estilo.cor).toBe(estilo.acento)
   })
-  expect(estilo.estiloLinha).toBe('solid')
-  expect(estilo.largura).toBe('2px')
-  expect(estilo.cor).toBe(estilo.acento)
-})
+}
 
 test.describe('menu do celular', () => {
   test.use({ viewport: { width: 375, height: 800 } })
@@ -58,5 +71,47 @@ test.describe('menu do celular', () => {
     await page.keyboard.press('Escape')
     await expect(abrir).toHaveAttribute('aria-expanded', 'false')
     await expect(abrir).toBeFocused()
+  })
+
+  test('ao fechar, o menu desliza antes de sair da tela e do Tab', async ({ page }) => {
+    await page.goto('/')
+    await page.getByRole('button', { name: 'Abrir menu' }).click()
+    await expect(page.getByRole('button', { name: 'Fechar menu' })).toBeFocused()
+    await page.keyboard.press('Escape')
+    const menu = page.locator('#menu-principal')
+    // Logo depois do Esc, ainda visível (animação de saída); depois dos 200 ms, escondido.
+    expect(await menu.evaluate((el) => getComputedStyle(el).visibility)).toBe('visible')
+    await expect.poll(() => menu.evaluate((el) => getComputedStyle(el).visibility)).toBe('hidden')
+  })
+
+  test('escolher um link fecha o menu sem levar o foco de volta ao cabeçalho', async ({ page }) => {
+    await page.route('https://api.rss2json.com/**', (r) => r.fulfill({ json: { status: 'ok', items: [] } }))
+    await page.goto('/')
+    const abrir = page.getByRole('button', { name: 'Abrir menu' })
+    await page.keyboard.press('Tab')
+    await page.keyboard.press('Enter')
+    await expect(page.getByRole('button', { name: 'Fechar menu' })).toBeFocused()
+    await page.keyboard.press('Tab')
+    await page.keyboard.press('Tab')
+    await page.keyboard.press('Tab')
+    await expect(page.getByRole('navigation', { name: 'Menu principal' }).getByRole('link', { name: 'Blog' })).toBeFocused()
+    await page.keyboard.press('Enter')
+    await expect(page).toHaveURL(/\/blog$/)
+    await expect(abrir).toHaveAttribute('aria-expanded', 'false')
+    await expect(abrir).not.toBeFocused()
+  })
+
+  test('o Tab que sai do menu aberto fecha o menu', async ({ page }) => {
+    await page.goto('/')
+    const abrir = page.getByRole('button', { name: 'Abrir menu' })
+    await page.keyboard.press('Tab')
+    await page.keyboard.press('Enter')
+    await expect(page.getByRole('button', { name: 'Fechar menu' })).toBeFocused()
+    // Do "Fechar menu", 6 Tabs passam pelos links e o 7º chega ao botão de tema; o 8º sai do menu.
+    for (let i = 0; i < 7; i++) await page.keyboard.press('Tab')
+    await expect(page.getByRole('button', { name: /Modo (claro|escuro)/ })).toBeFocused()
+    await page.keyboard.press('Tab')
+    await expect(abrir).toHaveAttribute('aria-expanded', 'false')
+    expect(await page.evaluate(() => !!document.activeElement?.closest('#menu-principal'))).toBe(false)
   })
 })
