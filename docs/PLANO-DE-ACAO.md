@@ -52,8 +52,9 @@
 - Issues públicas antigas com dados de terceiros (#253, do responsável).
 
 **Qualidade.**
-- Testes: axe (`e2e/acessibilidade.pw.ts`) em 9 rotas, com o currículo fechado e liberado, nos temas escuro e claro, a 1280 px, com transições desligadas. Teclado (`e2e/teclado.pw.ts`): contorno do foco no acento, menu fechado fora do Tab, Enter abre, Esc fecha e devolve o foco.
-- Os testes novos foram conferidos contra o código anterior: sem as correções, 5 falham.
+- Testes: axe (`e2e/acessibilidade.pw.ts`) em 9 rotas, com o currículo fechado e liberado, nos temas escuro e claro, a 1280 px, com transições desligadas, e no menu do celular aberto. GitHub e Medium respondem com dados reais gravados em `e2e/fixtures`. Teclado (`e2e/teclado.pw.ts`): contorno do foco no acento dos dois temas, menu fechado fora do Tab, Enter abre, Esc fecha e devolve o foco, link escolhido não devolve o foco ao cabeçalho, Tab que sai do menu o fecha. Falhas (`e2e/falhas.pw.ts`): erro, vazio e espera em Projetos e no Blog.
+- Os testes novos foram conferidos contra o código anterior, em 16/11/2026: com `git stash push -- src` e `npm run build`, `npx playwright test e2e/teclado.pw.ts e2e/acessibilidade.pw.ts` deu 5 falhas (2 axe, 3 teclado); com o `Sidebar.tsx`, o `MainLayout.tsx` e o `main.css` de antes da revisão, os 3 testes novos do menu falharam. Um texto sobre gradiente cai em `incomplete` de `color-contrast`, que o teste trata como falha.
+- A revisão independente mostrou que o menu fechava sem animação. A causa: a regra global `* { transition }` do `main.css` fica fora das camadas do Tailwind e vence o `transition-transform`, então o menu nunca deslizou. A transição do menu passou para uma regra própria no `main.css`.
 - Desempenho: Lighthouse 12.8.2 móvel no site publicado, com o bundle conferido contra a `master`.
 - Segurança: `npm audit --omit=dev` e alertas do Dependabot pela API.
 
@@ -67,7 +68,7 @@
 3. Lighthouse no site publicado e `MVP.md` com a evidência de cada "Atende".
 4. `docs/DEPLOY.md` com a Vercel e o Pages legado.
 
-**Vira issue.** Desligar o Pages legado (responsável). Próximos passos do código: #255, #256, #258 e as novas deste ciclo.
+**Vira issue.** Desligar o Pages legado (#270, responsável). Medir de novo o LCP depois da publicação (#271), link "Pular para o conteúdo" (#272), Dependabot semanal (#274). O axe com dados reais (#273) entrou neste ciclo, depois da revisão. Seguem #255, #256 e #258.
 
 ## Ciclo de 03/11/2026
 

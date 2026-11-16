@@ -12,6 +12,8 @@ Não há passo manual nem workflow de deploy: o `.github/workflows/ci.yml` só t
 
 ## Configuração do projeto na Vercel (já feita)
 
+O painel da Vercel é da conta do responsável, e o agente não o abre. A tabela vem do que o repositório e a API do GitHub mostram em 16/11/2026 (`package.json`, `vercel.json` e os deployments `Production` da `master`). Os campos do painel devem ser conferidos pelo responsável.
+
 | Campo | Valor |
 |---|---|
 | Framework Preset | Vite |

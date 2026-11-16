@@ -1,5 +1,7 @@
-# CI do douglasabnovato.dev: testes de integridade dos dados e build de produção
-# (tsc -b + vite build) em todo push e pull request. O lint também bloqueia.
+# CI do douglasabnovato.dev, em todo push e pull request:
+# - "Testes e build": lint, testes Vitest e build de produção (tsc -b + vite build);
+# - "Fluxos no navegador": Playwright no build (fluxo principal, falhas, axe e teclado).
+# Os dois jobs são exigidos pelo ruleset da master.
 name: CI
 
 on:
