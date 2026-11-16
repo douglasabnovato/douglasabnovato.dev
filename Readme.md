@@ -314,7 +314,7 @@ Sem essas variáveis o site roda normalmente; apenas o registro não é gravado.
 
 ## Estado e próximos passos (ciclo de 16/11/2026)
 
-No ar em https://douglasabnovato-dev.vercel.app/ (HTTP 200 em 16/11/2026). Nível Produto (N3): 10 de 12 critérios atendidos, Finalizado: sim. Os 2 parciais dependem do responsável: a conta do GoatCounter (#251) e as issues públicas antigas (#253). A `master` exige os jobs do CI verdes.
+No ar em https://douglasabnovato-dev.vercel.app/ (HTTP 200 em 16/11/2026). Nível Produto (N3): 10 de 12 critérios atendidos, Finalizado: não. Parciais: a medição depende da conta do GoatCounter (#251, responsável); a segurança, das issues públicas antigas (#253, responsável) e de 1 alerta do Dependabot aberto (`minimatch`, moderada, só no lint), sem correção sem versão maior (#282). A `master` exige os jobs do CI verdes.
 
 **O que foi feito**
 
@@ -328,7 +328,7 @@ No ar em https://douglasabnovato-dev.vercel.app/ (HTTP 200 em 16/11/2026). Níve
 **O que queremos fazer**
 
 - Do responsável: medir as visitas que abrem um projeto (#251), teste com pessoa de fora (#252), issues públicas antigas (#253), fechar a #270 (o GitHub Pages legado foi desligado em 16/11/2026), confirmar os marcos da linha do tempo (#237) e revisar o artigo dos canais (#238).
-- Do código: medir de novo o LCP depois da publicação (#271), link "Pular para o conteúdo" (#272), Dependabot semanal (#274), imagem de prévia (#255), validar os dados estruturados no Google (#256) e Lighthouse no CI (#258).
+- Do código: medir de novo o LCP depois da publicação (#271), link "Pular para o conteúdo" (#272), Dependabot semanal (#274), o alerta do `minimatch` que resta (#282), imagem de prévia (#255), validar os dados estruturados no Google (#256) e Lighthouse no CI (#258).
 
 **Onde está a documentação**
 
