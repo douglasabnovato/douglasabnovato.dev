@@ -1,42 +1,52 @@
 # MVP — critérios
 
-> Avaliação de 31/10/2026 com os mesmos 12 critérios usados no `movies`. "Não medido" significa que não há evidência, não que falhe.
+**Nível:** Produto (N3). Os 12 critérios valem.
 
-**Revisão de 10/11/2026 (ciclo da faixa de 90%, decisões D1 a D7 do repositório `engenharia`).** Nível: Produto (N3), 12 critérios.
+**Revisão de 16/11/2026** (ciclo de 16/11/2026, branch `feature/2026-11-16` → `developer/sprint-2026-11-19`).
 
 **Resumo:** 10 de 12 aplicáveis atendidos (1, 2, 3, 4, 6, 7, 8, 10, 11 e 12) e 2 parciais (5 e 9).
 
-**Finalizado:** sim — os 2 que faltam dependem do responsável, e cada um tem issue com o rótulo `depende-do-responsavel`: #251 (5, criar a conta do GoatCounter) e #253 (9, editar as issues antigas e restringir os documentos).
+**Finalizado:** sim. Os 2 parciais dependem do responsável, e cada um tem issue com o rótulo `depende-do-responsavel`: #251 (5, criar a conta do GoatCounter) e #253 (9, issues públicas antigas).
 
 | # | Critério | Como verificar | Situação |
 |---|---|---|---|
-| 1 | Problema e público claros | Dá para explicar em uma frase | Atende |
-| 2 | Hipótese a validar | Existe uma aposta escrita, com meta | Atende: meta decidida pelo coordenador em 10/11/2026 (decisão D1), revisável pelo responsável. Aposta abaixo, em "Revisão de 02/11/2026" |
-| 3 | Fluxo principal completo | Uma pessoa conclui sem ajuda | Atende (decisão D2): `npx playwright test` em 10/11/2026, 8 testes, 0 falhas; `e2e/projeto.pw.ts` vai da página inicial a um projeto no ar em 3 cliques (Projetos → No ar → nova aba). Site publicado responde (`curl`, HTTP 200, 10/11/2026) e o fluxo depende só dele e da API pública do GitHub. O teste com uma pessoa de fora virou validação de produto (#252) |
-| 4 | Escopo enxuto | O que não entra está registrado | Atende: lista abaixo |
-| 5 | Medição de uso | A métrica principal é coletada | Parcial: código pronto; falta a conta (decisão D5, #251). GoatCounter com o código `douglasabnovato`, só no site publicado, sem cookie, evento `abriu-projeto`; `npm test` (`src/testes/medicao.test.ts`) e `e2e/projeto.pw.ts` conferem que não carrega em localhost nem nos testes |
-| 6 | Falhas tratadas | Erro, vazio e carregamento têm resposta clara | Atende: API do GitHub indisponível e rota inexistente testadas; currículo liberado mesmo sem `localStorage`, com teste (PR #250) |
-| 7 | Desempenho aceitável | LCP de até 2,5 s no celular | Atende: Lighthouse 12.8.2 móvel no site publicado, 10/11/2026, segunda série (a primeira teve FCP observado de 8,8 s, inválida): 1,71 / 1,58 / 2,30 s, mediana 1,71 s, TBT 87 ms, elemento do LCP `section > img.w-full` (imagem de destaque) |
-| 8 | Acessibilidade básica | Lighthouse e teclado | Atende: Lighthouse 100; Tab sem elemento sem nome ou sem foco |
-| 9 | Segurança e conformidade | Riscos decididos; termos cumpridos | Parcial: `npm audit --omit=dev` 0 vulnerabilidades e Dependabot pela API 0 alertas abertos, 10/11/2026. Faltam as issues públicas antigas com nomes de terceiros e links privados (#253): editar o texto não apaga o histórico de edição, que só o responsável remove, e restringir os documentos compartilhados é dele |
-| 10 | Entrega confiável | Publicação só depois de CI verde | Atende: `gh api repos/douglasabnovato/douglasabnovato.dev/rules/branches/master`, 10/11/2026: `required_status_checks` com `Testes e build` e `Fluxos no navegador`, além de PR obrigatório e bloqueio de force push e exclusão. A Vercel publica a `master`, que só recebe o que passou no CI (#254) |
-| 11 | Testes dos fluxos críticos | Testes automatizados no CI | Atende: 8 testes Playwright e 28 testes Vitest no CI (`npm test` em 10/11/2026: 28 testes, 0 falhas) |
-| 12 | Documentação honesta | Qualquer pessoa roda o projeto, e os números estão certos | Atende: README com estado e comandos conferidos contra o `package.json` em 10/11/2026 |
+| 1 | Problema e público claros | Dá para explicar em uma frase | Atende: "Quem avalia o responsável (recrutadores, clientes e parceiros) acha, em poucos cliques, projetos no ar e o que foi feito em cada um." Frase abaixo, em "Problema e hipótese" |
+| 2 | Hipótese a validar | Aposta escrita, com meta e "saberemos quando" | Atende: hipótese abaixo, com a meta (1 em cada 4 visitas abre um projeto) e o "saberemos quando" (painel do GoatCounter por 30 dias, #251) |
+| 3 | Fluxo principal completo | Teste de ponta a ponta no navegador no CI | Atende: `e2e/projeto.pw.ts` vai da página inicial a um projeto no ar em 3 cliques (Projetos → No ar → nova aba). `npm run test:e2e` em 16/11/2026: 35 testes, 0 falhas; job `Fluxos no navegador` verde no run 43833304165 (commit `82db78b`) |
+| 4 | Escopo enxuto | O que não entra está registrado | Atende: seção "Fora do MVP" abaixo |
+| 5 | Medição de uso | Painel da ferramenta com visitas | Parcial: o código do GoatCounter está pronto (só no site publicado, sem cookie, evento `abriu-projeto`; `src/testes/medicao.test.ts` e `e2e/projeto.pw.ts`). Falta a conta, do responsável (#251) |
+| 6 | Falhas tratadas | Testes que simulam falha de rede, lista vazia e espera | Atende: `e2e/falhas.pw.ts` (16/11/2026) cobre a API do GitHub recusando (403) e a lista vazia em Projetos, e o feed do Medium com falha e vazio no Blog; `e2e/fluxo.pw.ts` cobre a página inicial sem a API e a rota inexistente; o carregamento mostra "Carregando…" (`role="status"`) e "—" nos indicadores. `npm run test:e2e` em 16/11/2026: 35 testes, 0 falhas |
+| 7 | Desempenho aceitável | Lighthouse móvel no site publicado, 3 execuções válidas, mediana, TBT e elemento do LCP | Atende: Lighthouse 12.8.2 móvel em https://douglasabnovato-dev.vercel.app/, 16/11/2026, 05:38 a 05:40. Build medido: `master` `4753b76` (deploy `Production` da Vercel; bundle `index-85GoStO7.js`). 5 execuções válidas: LCP 1,54 / 1,69 / 2,39 / 1,51 / 1,69 s, **mediana 1,69 s**; TBT 39 / 66 / 144 / 0 / 66 ms (mediana 66 ms); elemento do LCP `section > img.w-full` (imagem de destaque). Este ciclo muda o CSS do foco e o menu do celular: medir de novo depois da publicação (#271) |
+| 8 | Acessibilidade básica | axe sem violações (claro e escuro, desktop, dados reais) e teclado | Atende: `e2e/acessibilidade.pw.ts` roda o axe (WCAG 2.1 A e AA) em 9 rotas, com o currículo fechado e liberado, nos temas escuro e claro (o site tem tema escuro próprio por `data-theme`), a 1280 px, com transições desligadas, e falha também com `color-contrast` em `incomplete`: 20 casos, 0 violações em 16/11/2026. Dados: os do site (certificados, Blog, curadoria e currículo) são reais; GitHub e Medium são simulados no formato da API (o axe com os dados vivos fica na #273). Teclado: `e2e/teclado.pw.ts` confere o contorno do foco no acento do tema, o menu do celular fora do Tab quando fechado, Enter para abrir e Esc para fechar com o foco de volta. Job `Fluxos no navegador` verde no run 43833304165 |
+| 9 | Segurança e conformidade | `npm audit --omit=dev`, Dependabot pela API, sem segredo, dados pessoais decididos | Parcial: `npm audit --omit=dev` com 0 vulnerabilidades e `gh api "repos/douglasabnovato/douglasabnovato.dev/dependabot/alerts?state=open&per_page=100"` com 0 alertas abertos, 16/11/2026; nenhum segredo no código (só a chave anônima do Supabase, por desenho, protegida por RLS). Falta a decisão do responsável sobre as issues públicas antigas (#253) |
+| 10 | Entrega confiável | CI nos PRs e principal protegida | Atende: `gh api repos/douglasabnovato/douglasabnovato.dev/rules/branches/master`, 16/11/2026: `deletion`, `non_fast_forward`, `pull_request` e `required_status_checks` com `Testes e build` e `Fluxos no navegador`. A Vercel publica só a `master` (`docs/DEPLOY.md`) |
+| 11 | Testes dos fluxos críticos | Testes automatizados no CI, sem `skip` | Atende: 35 testes Playwright e 28 testes Vitest no CI, sem `skip` no código (`grep -rn "\.skip" e2e src` sem resultado, 16/11/2026). Run 43833304165: `Testes e build` e `Fluxos no navegador` verdes |
+| 12 | Documentação honesta | README com comandos conferidos e link que responde hoje | Atende: comandos do README (`npm run dev`, `npm test`, `npm run lint`, `npm run build`, `npm run test:e2e`) conferidos contra o `package.json` em 16/11/2026; link da Vercel com HTTP 200 em 16/11/2026; publicação em `docs/DEPLOY.md` |
+
+## Problema e hipótese
+
+**Problema e público.** Quem avalia o responsável (recrutadores, clientes e parceiros) precisa achar, em poucos cliques, projetos no ar e o que foi feito em cada um. O site é o link enviado às vagas.
+
+**Hipótese.** Acreditamos que mostrar os projetos no ar, com o que foi feito em cada um, fará quem avalia chegar a um projeto em até 3 cliques e abrir ao menos um. **Meta:** 1 em cada 4 visitas abre um projeto. **Saberemos quando** o painel do GoatCounter mostrar, por 30 dias, a razão entre o evento `abriu-projeto` e as visitas (#251). A meta foi decidida pelo coordenador em 10/11/2026 e pode ser revista pelo responsável. O teste com uma pessoa de fora é validação de produto (#252).
+
+## Fora do MVP
+
+- Linha do tempo com marcos não confirmados (#237).
+- Artigo completo sobre os canais de web design (#238).
+- `/curadoria` e `/ideias` só listam anotações; não são cursos concluídos nem projetos entregues.
+- Imagem de prévia por página (a imagem geral está na #255).
+- Domínio próprio e plano pago (ambiente gratuito).
+
+## Medições de 16/11/2026
+
+Lighthouse 12.8.2 local, móvel simulado, no site publicado, com `--chrome-flags="--headless --no-sandbox"`. Antes de medir: o deploy `Production` da Vercel aponta para `4753b76` (a `master`), e os chunks que não dependem das variáveis do Supabase (`NotFound-*.js`, `curadoria.data-*.js`) batem com o build local.
+
+- **Primeira série (05:22 a 05:28), descartada em parte:** a máquina estava carregada. Execuções com FCP observado de 2,9 s, 8,7 s e 5,3 s foram descartadas; as válidas (FCP observado ~1 s) deram 1,70 e 1,70 s.
+- **Segunda série (05:38 a 05:40), registrada:** 5 execuções válidas, FCP observado de 0,48 a 0,86 s. LCP 1,54 / 1,69 / 2,39 / 1,51 / 1,69 s, mediana 1,69 s; desempenho 0,96 a 1,00; TBT de 0 a 144 ms.
 
 ## Histórico
 
-- 06/11/2026 (PR #250), critério 10 revisto em 10/11/2026: 9 de 12 (1, 2, 4, 6, 7, 8, 10, 11 e 12). O 3 estava "Parcial" à espera de uma pessoa de fora; o 5, "Não atende".
-
-## Revisão de 02/11/2026
-
-**Hipótese (proposta, sem validação):** Se o portfólio mostrar projetos no ar e o que foi feito em cada um, quem avalia chega a um projeto em menos de 3 cliques, e ao menos 1 em cada 4 visitas abre um projeto.
-
-**Fora do MVP (proposta):** Linha do tempo com marcos não confirmados (#237), artigo completo sobre os canais (#238 parcial) e os cursos e as ideias registrados em `/curadoria` e `/ideias`, que só são listados.
-
-**Medição:** Lighthouse 12.8.2 local, móvel, 3 execuções no site publicado. LCP 1,85 / 2,13 / 2,33 s (mediana 2,13 s; era 3,46 s antes do WebP), acessibilidade 100. O resultado varia entre execuções, e não houve teste em celular real.
-
-**Critério 5:** segue sem atender, porque nada coleta uso; depende de uma conta de medição do responsável.
-
-## Medições de 06/11/2026
-
-Site publicado depois do PR #257 (com o JSON-LD). Lighthouse 12.8.2 local, móvel simulado, sem aparelho real, 7 execuções em duas séries. Primeira série: LCP 2,72 / 1,67 / 2,67 s (mediana 2,67 s, acima da meta), com o computador sobrecarregado por outros processos. Segunda série: 1,71 / 1,70 / 1,51 s (mediana 1,70 s), desempenho 99 e TBT de 77 a 125 ms. Mediana das 7: 1,71 s. Acessibilidade 100 em todas. A variação mostra que a medição local não é confiável sozinha; a medição em ambiente estável está na #258.
+- 10/11/2026 (PR #263, sprint #262): 10 de 12 (1, 2, 3, 4, 6, 7, 8, 10, 11 e 12). O critério 8 se apoiava só no Lighthouse 100 e num Tab manual; desde 16/11/2026 se apoia no axe e no teste de teclado do CI.
+- 06/11/2026 (PR #250): 9 de 12. O 3 estava "Parcial" à espera de uma pessoa de fora; o 5, "Não atende". Lighthouse em duas séries: medianas de 2,67 s (máquina carregada) e 1,70 s.
+- 02/11/2026 (PR #248): LCP local de 2,13 s, depois do WebP (era 3,46 s).
+- 31/10/2026: primeira avaliação com os 12 critérios (`docs/AVALIACAO.md`).
