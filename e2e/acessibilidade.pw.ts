@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs'
 import AxeBuilder from '@axe-core/playwright'
 import { expect, test, type Page } from '@playwright/test'
 
@@ -10,68 +11,17 @@ import { expect, test, type Page } from '@playwright/test'
  * - O axe não decide contraste sobre fundo translúcido ou gradiente e devolve
  *   esses casos em `incomplete`. O teste falha também com eles, para ninguém
  *   achar que "sem violação" quer dizer "contraste conferido".
- * - A API do GitHub e o feed do Medium são simulados com dados no formato real,
- *   para o teste não depender do limite de 60 requisições por hora.
+ * - A API do GitHub e o feed do Medium respondem com dados reais gravados em
+ *   `e2e/fixtures`, para o teste não depender do limite de 60 requisições por hora.
+ *   As imagens externas (capas) são cortadas.
  */
 
-const repo = (id: number, name: string, extra: Record<string, unknown> = {}) => ({
-  id,
-  name,
-  full_name: `douglasabnovato/${name}`,
-  description: `Descrição do projeto ${name}`,
-  html_url: `https://github.com/douglasabnovato/${name}`,
-  homepage: '',
-  language: 'TypeScript',
-  stargazers_count: id,
-  forks_count: 0,
-  open_issues_count: id % 3,
-  updated_at: '2026-11-01T00:00:00Z',
-  created_at: '2025-01-01T00:00:00Z',
-  pushed_at: '2026-11-01T00:00:00Z',
-  topics: [] as string[],
-  fork: false,
-  archived: false,
-  ...extra,
-})
-
-const repos = [
-  repo(1, 'projeto-especial', { topics: ['especial', 'react'], homepage: 'https://especial.example.com' }),
-  repo(2, 'projeto-destaque', { topics: ['destaque', 'vite'], homepage: 'https://destaque.example.com' }),
-  repo(3, 'projeto-mvp', { topics: ['mvp'], language: 'JavaScript' }),
-  repo(4, 'projeto-curso', { topics: ['curso'], language: 'Python' }),
-  repo(5, 'projeto-comum'),
-  repo(6, 'projeto-fork', { fork: true }),
-  repo(7, 'projeto-arquivado', { archived: true, language: null }),
-]
-
-const usuario = { login: 'douglasabnovato', public_repos: 7, public_gists: 2, followers: 10, following: 5 }
-const gists = [
-  {
-    id: 'g1',
-    html_url: 'https://gist.github.com/douglasabnovato/g1',
-    description: 'Gist de exemplo',
-    files: { 'exemplo.ts': { filename: 'exemplo.ts', language: 'TypeScript' } },
-    created_at: '2026-10-01T00:00:00Z',
-    updated_at: '2026-10-01T00:00:00Z',
-    public: true,
-  },
-]
-const medium = {
-  status: 'ok',
-  items: [
-    {
-      title: 'Artigo de exemplo',
-      pubDate: '2026-10-20 12:00:00',
-      link: 'https://douglasabnovato.medium.com/artigo-de-exemplo',
-      guid: 'https://medium.com/p/exemplo',
-      author: 'douglasabnovato',
-      thumbnail: '',
-      description: '<p>Resumo do artigo de exemplo.</p>',
-      content: '<p>Resumo do artigo de exemplo.</p>',
-      categories: ['react'],
-    },
-  ],
-}
+// Respostas reais e públicas, gravadas por `node e2e/fixtures/gravar.mjs` (só os campos que o site lê).
+const ler = (nome: string) => JSON.parse(readFileSync(new URL(`./fixtures/${nome}`, import.meta.url), 'utf8'))
+const repos = ler('github-repos.json')
+const usuario = ler('github-usuario.json')
+const gists = ler('github-gists.json')
+const medium = ler('medium.json')
 
 async function simularApis(page: Page) {
   // A rota registrada por último vence: a genérica vem antes.
@@ -135,4 +85,27 @@ for (const tema of temas) {
       expect(contrasteIndeciso, `contraste que o axe não conseguiu medir em ${nome} (${tema})`).toEqual([])
     })
   }
+}
+
+for (const tema of temas) {
+  test(`axe sem violações com o menu do celular aberto no tema ${tema === 'dark' ? 'escuro' : 'claro'}`, async ({ page }) => {
+    await page.setViewportSize({ width: 375, height: 800 })
+    await simularApis(page)
+    await page.addInitScript((t) => {
+      try {
+        localStorage.setItem('theme', t)
+      } catch {
+        /* sem armazenamento */
+      }
+    }, tema)
+    await page.goto('/')
+    await expect(page.locator('html')).toHaveAttribute('data-theme', tema)
+    await page.addStyleTag({ content: '*, *::before, *::after { transition: none !important; animation: none !important; }' })
+    await page.getByRole('button', { name: 'Abrir menu' }).click()
+    await expect(page.getByRole('button', { name: 'Fechar menu' })).toBeFocused()
+
+    const resultado = await new AxeBuilder({ page }).include('#menu-principal').withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze()
+    expect(resultado.violations.map((v) => v.id)).toEqual([])
+    expect(resultado.incomplete.filter((v) => v.id === 'color-contrast').flatMap((v) => v.nodes.map((n) => n.target.join(' ')))).toEqual([])
+  })
 }

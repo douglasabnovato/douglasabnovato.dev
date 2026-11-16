@@ -1,0 +1,1512 @@
+[
+ {
+  "id": "27559b774aea9eddeb02e4321bf6b094",
+  "description": "SVG para criar imagem para o meu projeto web",
+  "html_url": "https://gist.github.com/douglasabnovato/27559b774aea9eddeb02e4321bf6b094",
+  "created_at": "2026-09-21T14:53:06Z",
+  "updated_at": "2026-09-21T14:53:07Z",
+  "comments": 0,
+  "files": {
+   "index.html": {
+    "filename": "index.html",
+    "language": "HTML",
+    "size": 3126
+   }
+  }
+ },
+ {
+  "id": "b9d296d1c7538affc28842203a1a96da",
+  "description": "SVG para criar imagem para o meu projeto web",
+  "html_url": "https://gist.github.com/douglasabnovato/b9d296d1c7538affc28842203a1a96da",
+  "created_at": "2026-09-21T14:52:46Z",
+  "updated_at": "2026-09-21T14:52:47Z",
+  "comments": 0,
+  "files": {
+   "index.html": {
+    "filename": "index.html",
+    "language": "HTML",
+    "size": 2842
+   }
+  }
+ },
+ {
+  "id": "9655d2cff5aa7aafb9a0f74df9937ec4",
+  "description": "Imagem criada com svg para usar em projeto web",
+  "html_url": "https://gist.github.com/douglasabnovato/9655d2cff5aa7aafb9a0f74df9937ec4",
+  "created_at": "2026-09-21T14:32:16Z",
+  "updated_at": "2026-09-21T14:32:16Z",
+  "comments": 0,
+  "files": {
+   "index.html": {
+    "filename": "index.html",
+    "language": "HTML",
+    "size": 4052
+   }
+  }
+ },
+ {
+  "id": "8bb113100ff14b77fb66bb6429302f16",
+  "description": "Imagem criada com svg para usar em projeto web",
+  "html_url": "https://gist.github.com/douglasabnovato/8bb113100ff14b77fb66bb6429302f16",
+  "created_at": "2026-09-21T14:31:36Z",
+  "updated_at": "2026-09-21T14:31:47Z",
+  "comments": 0,
+  "files": {
+   "index.html": {
+    "filename": "index.html",
+    "language": "HTML",
+    "size": 4318
+   }
+  }
+ },
+ {
+  "id": "1b2cd7cc42e19659c225a6529b39ae2c",
+  "description": "Imagem criada com svg para usar em projeto web",
+  "html_url": "https://gist.github.com/douglasabnovato/1b2cd7cc42e19659c225a6529b39ae2c",
+  "created_at": "2026-09-21T14:30:57Z",
+  "updated_at": "2026-09-21T14:31:12Z",
+  "comments": 0,
+  "files": {
+   "index.html": {
+    "filename": "index.html",
+    "language": "HTML",
+    "size": 3917
+   }
+  }
+ },
+ {
+  "id": "fa4df9cbfa1c62d6973deab658bee5bf",
+  "description": "Criar botão com link para linkar redes sociais",
+  "html_url": "https://gist.github.com/douglasabnovato/fa4df9cbfa1c62d6973deab658bee5bf",
+  "created_at": "2026-07-31T19:16:58Z",
+  "updated_at": "2026-07-31T19:16:59Z",
+  "comments": 0,
+  "files": {
+   "index.html": {
+    "filename": "index.html",
+    "language": "HTML",
+    "size": 1419
+   }
+  }
+ },
+ {
+  "id": "bcd9f56c604d094c45a1ed28e1e2995f",
+  "description": "Javascript da landing page para a copa do mundo",
+  "html_url": "https://gist.github.com/douglasabnovato/bcd9f56c604d094c45a1ed28e1e2995f",
+  "created_at": "2026-07-20T00:39:35Z",
+  "updated_at": "2026-07-20T00:39:36Z",
+  "comments": 0,
+  "files": {
+   "main.js": {
+    "filename": "main.js",
+    "language": "JavaScript",
+    "size": 2321
+   }
+  }
+ },
+ {
+  "id": "e66a4e6cbfbd826d05f73acc8249a696",
+  "description": "CSS da landing page da copa do mundo",
+  "html_url": "https://gist.github.com/douglasabnovato/e66a4e6cbfbd826d05f73acc8249a696",
+  "created_at": "2026-07-20T00:37:57Z",
+  "updated_at": "2026-07-20T00:37:57Z",
+  "comments": 0,
+  "files": {
+   "style.css": {
+    "filename": "style.css",
+    "language": "CSS",
+    "size": 6663
+   }
+  }
+ },
+ {
+  "id": "5173b30f18b9964b8a08e1fa192b672e",
+  "description": "html da nossa landing page de copa do mundo",
+  "html_url": "https://gist.github.com/douglasabnovato/5173b30f18b9964b8a08e1fa192b672e",
+  "created_at": "2026-07-20T00:36:33Z",
+  "updated_at": "2026-07-20T00:36:34Z",
+  "comments": 0,
+  "files": {
+   "index.html": {
+    "filename": "index.html",
+    "language": "HTML",
+    "size": 8141
+   }
+  }
+ },
+ {
+  "id": "7262a9f1448d16dfbed5d7ad2fb3fc48",
+  "description": "Css do projeto",
+  "html_url": "https://gist.github.com/douglasabnovato/7262a9f1448d16dfbed5d7ad2fb3fc48",
+  "created_at": "2026-07-17T20:55:19Z",
+  "updated_at": "2026-07-17T20:55:19Z",
+  "comments": 0,
+  "files": {
+   "style.css": {
+    "filename": "style.css",
+    "language": "CSS",
+    "size": 6111
+   }
+  }
+ },
+ {
+  "id": "adf6b4015eb53053e448aeb8ce3eebf3",
+  "description": "pagina em html",
+  "html_url": "https://gist.github.com/douglasabnovato/adf6b4015eb53053e448aeb8ce3eebf3",
+  "created_at": "2026-07-17T20:54:36Z",
+  "updated_at": "2026-07-17T20:54:37Z",
+  "comments": 0,
+  "files": {
+   "index.html": {
+    "filename": "index.html",
+    "language": "HTML",
+    "size": 5775
+   }
+  }
+ },
+ {
+  "id": "2bc1a01edc6caf8b646d8e35e84f0768",
+  "description": "Um modelo para o melhor README.md de projeto.",
+  "html_url": "https://gist.github.com/douglasabnovato/2bc1a01edc6caf8b646d8e35e84f0768",
+  "created_at": "2025-09-03T18:23:51Z",
+  "updated_at": "2025-09-03T18:36:05Z",
+  "comments": 0,
+  "files": {
+   "readme.md": {
+    "filename": "readme.md",
+    "language": "Markdown",
+    "size": 1842
+   }
+  }
+ },
+ {
+  "id": "d2ea7775fc5c41dcc3fd7c3193d6d8b8",
+  "description": "Estrutura v2 de css para lp de síndico",
+  "html_url": "https://gist.github.com/douglasabnovato/d2ea7775fc5c41dcc3fd7c3193d6d8b8",
+  "created_at": "2025-03-19T23:01:30Z",
+  "updated_at": "2025-03-19T23:01:30Z",
+  "comments": 0,
+  "files": {
+   "style.css": {
+    "filename": "style.css",
+    "language": "CSS",
+    "size": 1509
+   }
+  }
+ },
+ {
+  "id": "f67798a53d75ed8aebb0528cd3b36984",
+  "description": "Estrutura v2 de html para lp de síndico",
+  "html_url": "https://gist.github.com/douglasabnovato/f67798a53d75ed8aebb0528cd3b36984",
+  "created_at": "2025-03-19T22:55:44Z",
+  "updated_at": "2025-03-19T22:55:44Z",
+  "comments": 0,
+  "files": {
+   "index.html": {
+    "filename": "index.html",
+    "language": "HTML",
+    "size": 2935
+   }
+  }
+ },
+ {
+  "id": "e473232dd3daabcb3ecf7df3cad78c74",
+  "description": "Estrutura inicial de css para lp de síndico",
+  "html_url": "https://gist.github.com/douglasabnovato/e473232dd3daabcb3ecf7df3cad78c74",
+  "created_at": "2025-03-19T22:33:04Z",
+  "updated_at": "2025-03-19T22:33:04Z",
+  "comments": 0,
+  "files": {
+   "style.css": {
+    "filename": "style.css",
+    "language": "CSS",
+    "size": 390
+   }
+  }
+ },
+ {
+  "id": "e61f93f18b9bb0908c3a85341abb0643",
+  "description": "Estrutura inicial de html para lp de síndico",
+  "html_url": "https://gist.github.com/douglasabnovato/e61f93f18b9bb0908c3a85341abb0643",
+  "created_at": "2025-03-19T22:31:35Z",
+  "updated_at": "2025-03-19T22:31:35Z",
+  "comments": 0,
+  "files": {
+   "index.html": {
+    "filename": "index.html",
+    "language": "HTML",
+    "size": 1235
+   }
+  }
+ },
+ {
+  "id": "5a8c2a8588037127ba7c07805a56e42c",
+  "description": "Estrutura básica de css",
+  "html_url": "https://gist.github.com/douglasabnovato/5a8c2a8588037127ba7c07805a56e42c",
+  "created_at": "2025-03-19T22:04:04Z",
+  "updated_at": "2025-03-19T22:04:05Z",
+  "comments": 0,
+  "files": {
+   "style.css": {
+    "filename": "style.css",
+    "language": "CSS",
+    "size": 405
+   }
+  }
+ },
+ {
+  "id": "253a251c4768f7f5b43ef75c335e2cb4",
+  "description": "Estrutura básica de html",
+  "html_url": "https://gist.github.com/douglasabnovato/253a251c4768f7f5b43ef75c335e2cb4",
+  "created_at": "2025-03-19T21:56:44Z",
+  "updated_at": "2025-03-19T21:56:44Z",
+  "comments": 0,
+  "files": {
+   "index.html": {
+    "filename": "index.html",
+    "language": "HTML",
+    "size": 345
+   }
+  }
+ },
+ {
+  "id": "f997dea5a96334e4704ca4e91a0c1437",
+  "description": "Para consumirmos uma API precisamos trabalhar com a assincronicidade, que nesse caso foi tratada com o async await. Em seguida, converter o retorno em JSON para objeto Javascript com o método .json(). Além de chamar a função para ela acontecer.",
+  "html_url": "https://gist.github.com/douglasabnovato/f997dea5a96334e4704ca4e91a0c1437",
+  "created_at": "2023-07-29T23:05:12Z",
+  "updated_at": "2023-07-29T23:05:12Z",
+  "comments": 0,
+  "files": {
+   "consumirApi.js": {
+    "filename": "consumirApi.js",
+    "language": "JavaScript",
+    "size": 226
+   }
+  }
+ },
+ {
+  "id": "755cb56b56e4dcbbdd982536999a117c",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/755cb56b56e4dcbbdd982536999a117c",
+  "created_at": "2023-05-24T18:21:55Z",
+  "updated_at": "2023-05-24T18:25:35Z",
+  "comments": 2,
+  "files": {
+   "image-bmp.py": {
+    "filename": "image-bmp.py",
+    "language": "Python",
+    "size": 125
+   }
+  }
+ },
+ {
+  "id": "8e4512f07b0c3e9acc95a07a6e4d29c3",
+  "description": "array php",
+  "html_url": "https://gist.github.com/douglasabnovato/8e4512f07b0c3e9acc95a07a6e4d29c3",
+  "created_at": "2023-03-27T19:21:43Z",
+  "updated_at": "2023-03-27T19:22:01Z",
+  "comments": 0,
+  "files": {
+   "teste.php": {
+    "filename": "teste.php",
+    "language": "PHP",
+    "size": 61
+   }
+  }
+ },
+ {
+  "id": "4320a90e490b936ebcc51a7327f4dd71",
+  "description": "o componente com prop name",
+  "html_url": "https://gist.github.com/douglasabnovato/4320a90e490b936ebcc51a7327f4dd71",
+  "created_at": "2023-03-07T21:11:57Z",
+  "updated_at": "2023-03-07T21:11:58Z",
+  "comments": 0,
+  "files": {
+   "AnimalCard.js": {
+    "filename": "AnimalCard.js",
+    "language": "JavaScript",
+    "size": 161
+   }
+  }
+ },
+ {
+  "id": "daa7a24d8c1d5d41bc9ea78cb1eef7ad",
+  "description": "um prop de name para AnimalCard",
+  "html_url": "https://gist.github.com/douglasabnovato/daa7a24d8c1d5d41bc9ea78cb1eef7ad",
+  "created_at": "2023-03-07T21:10:33Z",
+  "updated_at": "2023-03-07T21:10:33Z",
+  "comments": 0,
+  "files": {
+   "App.js": {
+    "filename": "App.js",
+    "language": "JavaScript",
+    "size": 275
+   }
+  }
+ },
+ {
+  "id": "5aaf25fa63f2fe6e0bdb0386bf7074df",
+  "description": "matriz de objetos",
+  "html_url": "https://gist.github.com/douglasabnovato/5aaf25fa63f2fe6e0bdb0386bf7074df",
+  "created_at": "2023-03-07T20:58:22Z",
+  "updated_at": "2023-03-07T20:58:22Z",
+  "comments": 0,
+  "files": {
+   "data.js": {
+    "filename": "data.js",
+    "language": "JavaScript",
+    "size": 597
+   }
+  }
+ },
+ {
+  "id": "6dbe09d36c0316483eff6596941fb9ae",
+  "description": "Código 5. Desmontagem",
+  "html_url": "https://gist.github.com/douglasabnovato/6dbe09d36c0316483eff6596941fb9ae",
+  "created_at": "2023-03-07T20:04:51Z",
+  "updated_at": "2023-03-07T20:04:51Z",
+  "comments": 0,
+  "files": {
+   "codigo-5.js": {
+    "filename": "codigo-5.js",
+    "language": "JavaScript",
+    "size": 393
+   }
+  }
+ },
+ {
+  "id": "536919eb87279b3a8d64dce16c805bb4",
+  "description": "Código 4. Atualização do ciclo de vida de um componente",
+  "html_url": "https://gist.github.com/douglasabnovato/536919eb87279b3a8d64dce16c805bb4",
+  "created_at": "2023-03-07T20:00:28Z",
+  "updated_at": "2023-03-07T20:00:28Z",
+  "comments": 0,
+  "files": {
+   "codigo-4.js": {
+    "filename": "codigo-4.js",
+    "language": "JavaScript",
+    "size": 399
+   }
+  }
+ },
+ {
+  "id": "490e88cb904f2250aae60433f9e9d6b3",
+  "description": "Código 3. Montagem do ciclo de vida de um componente",
+  "html_url": "https://gist.github.com/douglasabnovato/490e88cb904f2250aae60433f9e9d6b3",
+  "created_at": "2023-03-07T19:49:43Z",
+  "updated_at": "2023-03-07T19:49:43Z",
+  "comments": 0,
+  "files": {
+   "montagem.js": {
+    "filename": "montagem.js",
+    "language": "JavaScript",
+    "size": 381
+   }
+  }
+ },
+ {
+  "id": "b185b3891558e9f571cf4974ee08aee1",
+  "description": "Código 2. Inicialização do ciclo de vida de um componente",
+  "html_url": "https://gist.github.com/douglasabnovato/b185b3891558e9f571cf4974ee08aee1",
+  "created_at": "2023-03-07T19:46:03Z",
+  "updated_at": "2023-03-07T19:46:03Z",
+  "comments": 0,
+  "files": {
+   "useState.js": {
+    "filename": "useState.js",
+    "language": "JavaScript",
+    "size": 272
+   }
+  }
+ },
+ {
+  "id": "a65125ea12b00565216ac3b8da1b7614",
+  "description": "pré processdor",
+  "html_url": "https://gist.github.com/douglasabnovato/a65125ea12b00565216ac3b8da1b7614",
+  "created_at": "2023-03-06T22:34:49Z",
+  "updated_at": "2023-03-06T22:34:49Z",
+  "comments": 0,
+  "files": {
+   "estilo.sass": {
+    "filename": "estilo.sass",
+    "language": "Sass",
+    "size": 276
+   }
+  }
+ },
+ {
+  "id": "446035127714c5a65da23d305c2df9ff",
+  "description": "exemplo html",
+  "html_url": "https://gist.github.com/douglasabnovato/446035127714c5a65da23d305c2df9ff",
+  "created_at": "2023-03-06T22:33:23Z",
+  "updated_at": "2023-03-06T22:33:24Z",
+  "comments": 0,
+  "files": {
+   "html.html": {
+    "filename": "html.html",
+    "language": "HTML",
+    "size": 371
+   }
+  }
+ },
+ {
+  "id": "a55d6601cce99bfecfaac2209a2cac0f",
+  "description": "pré-processador",
+  "html_url": "https://gist.github.com/douglasabnovato/a55d6601cce99bfecfaac2209a2cac0f",
+  "created_at": "2023-03-06T22:32:23Z",
+  "updated_at": "2023-03-06T22:32:23Z",
+  "comments": 0,
+  "files": {
+   "sass.sass": {
+    "filename": "sass.sass",
+    "language": "Sass",
+    "size": 128
+   }
+  }
+ },
+ {
+  "id": "6133819638f0532650b7dbbf51b2a3f8",
+  "description": "pré-processador",
+  "html_url": "https://gist.github.com/douglasabnovato/6133819638f0532650b7dbbf51b2a3f8",
+  "created_at": "2023-03-06T22:31:14Z",
+  "updated_at": "2023-03-06T22:31:14Z",
+  "comments": 0,
+  "files": {
+   "sass.sass": {
+    "filename": "sass.sass",
+    "language": "Sass",
+    "size": 165
+   }
+  }
+ },
+ {
+  "id": "3683e4346b00e853f46268091c3ecbc9",
+  "description": "api rest",
+  "html_url": "https://gist.github.com/douglasabnovato/3683e4346b00e853f46268091c3ecbc9",
+  "created_at": "2023-03-06T17:31:47Z",
+  "updated_at": "2023-03-06T17:31:48Z",
+  "comments": 0,
+  "files": {
+   "person-1.json": {
+    "filename": "person-1.json",
+    "language": "JSON",
+    "size": 116
+   }
+  }
+ },
+ {
+  "id": "cbad2b3bb18634507b3d3edc31cdb3e2",
+  "description": "api rest",
+  "html_url": "https://gist.github.com/douglasabnovato/cbad2b3bb18634507b3d3edc31cdb3e2",
+  "created_at": "2023-03-06T17:29:49Z",
+  "updated_at": "2023-03-06T17:29:49Z",
+  "comments": 0,
+  "files": {
+   "persons.json": {
+    "filename": "persons.json",
+    "language": "JSON",
+    "size": 196
+   }
+  }
+ },
+ {
+  "id": "65d2b1150bc205ce9e175dae87a345b7",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/65d2b1150bc205ce9e175dae87a345b7",
+  "created_at": "2023-02-27T11:22:10Z",
+  "updated_at": "2023-02-27T11:22:11Z",
+  "comments": 0,
+  "files": {
+   "render.js": {
+    "filename": "render.js",
+    "language": "JavaScript",
+    "size": 61
+   }
+  }
+ },
+ {
+  "id": "15576c898178b7f6341318923956cdce",
+  "description": "Modern JavaScript in React Documentation",
+  "html_url": "https://gist.github.com/douglasabnovato/15576c898178b7f6341318923956cdce",
+  "created_at": "2022-11-30T19:45:11Z",
+  "updated_at": "2022-11-30T19:45:12Z",
+  "comments": 0,
+  "files": {
+   "modern_js.md": {
+    "filename": "modern_js.md",
+    "language": "Markdown",
+    "size": 2441
+   }
+  }
+ },
+ {
+  "id": "48da833042cdeac114a7c846df88ea58",
+  "description": "Add React in One Minute",
+  "html_url": "https://gist.github.com/douglasabnovato/48da833042cdeac114a7c846df88ea58",
+  "created_at": "2022-10-28T13:24:50Z",
+  "updated_at": "2022-10-28T14:10:06Z",
+  "comments": 0,
+  "files": {
+   "index.html": {
+    "filename": "index.html",
+    "language": "HTML",
+    "size": 785
+   },
+   "like_button.js": {
+    "filename": "like_button.js",
+    "language": "JavaScript",
+    "size": 511
+   }
+  }
+ },
+ {
+  "id": "69e9a662c34a84adedaa340ab35e5702",
+  "description": "Multiple React components on a single HTML page",
+  "html_url": "https://gist.github.com/douglasabnovato/69e9a662c34a84adedaa340ab35e5702",
+  "created_at": "2022-10-28T13:24:41Z",
+  "updated_at": "2022-10-28T14:10:09Z",
+  "comments": 0,
+  "files": {
+   "index.html": {
+    "filename": "index.html",
+    "language": "HTML",
+    "size": 1226
+   },
+   "like_button.js": {
+    "filename": "like_button.js",
+    "language": "JavaScript",
+    "size": 790
+   }
+  }
+ },
+ {
+  "id": "3f80bb1542b97b18944d308fb15fdb07",
+  "description": "How to Set Up Minification",
+  "html_url": "https://gist.github.com/douglasabnovato/3f80bb1542b97b18944d308fb15fdb07",
+  "created_at": "2022-10-28T13:24:39Z",
+  "updated_at": "2022-10-28T14:10:18Z",
+  "comments": 0,
+  "files": {
+   "minification.md": {
+    "filename": "minification.md",
+    "language": "Markdown",
+    "size": 802
+   }
+  }
+ },
+ {
+  "id": "b473040ab9b015556c45cdfbb658dbf7",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/b473040ab9b015556c45cdfbb658dbf7",
+  "created_at": "2022-10-11T12:29:56Z",
+  "updated_at": "2022-10-11T12:31:55Z",
+  "comments": 0,
+  "files": {
+   "favicon.html": {
+    "filename": "favicon.html",
+    "language": "HTML",
+    "size": 434
+   }
+  }
+ },
+ {
+  "id": "7fd6bc6c2ded499e596e88a2a35ca5ed",
+  "description": "Para execução equivalente ao componentWillUnmount, uma função que executa logo antes do componente sair da tela, vamos retornar uma função dentro do useEffect.",
+  "html_url": "https://gist.github.com/douglasabnovato/7fd6bc6c2ded499e596e88a2a35ca5ed",
+  "created_at": "2022-09-05T12:33:54Z",
+  "updated_at": "2022-09-05T12:33:54Z",
+  "comments": 0,
+  "files": {
+   "useEffectComponentWillUnmount.jsx": {
+    "filename": "useEffectComponentWillUnmount.jsx",
+    "language": "JavaScript",
+    "size": 143
+   }
+  }
+ },
+ {
+  "id": "e8dbc56cb64a1ab88e5e981d012494a7",
+  "description": "Se quiser que esta função execute toda vez que o componente renderizar é só passar a função de efeito e não passar nada como segundo argumento do useEffect",
+  "html_url": "https://gist.github.com/douglasabnovato/e8dbc56cb64a1ab88e5e981d012494a7",
+  "created_at": "2022-09-05T12:29:42Z",
+  "updated_at": "2022-09-05T12:29:42Z",
+  "comments": 0,
+  "files": {
+   "useEffectAllRender.jsx": {
+    "filename": "useEffectAllRender.jsx",
+    "language": "JavaScript",
+    "size": 97
+   }
+  }
+ },
+ {
+  "id": "58a7ec5dded1a31fc302c63584e8b881",
+  "description": "Se quisermos executar apenas uma vez. Basta deixar o array de dependências vazio e assim a função de efeito executa apenas no primeiro render.",
+  "html_url": "https://gist.github.com/douglasabnovato/58a7ec5dded1a31fc302c63584e8b881",
+  "created_at": "2022-09-05T12:25:52Z",
+  "updated_at": "2022-09-05T12:25:52Z",
+  "comments": 0,
+  "files": {
+   "useEffectArrayVazio.jsx": {
+    "filename": "useEffectArrayVazio.jsx",
+    "language": "JavaScript",
+    "size": 207
+   }
+  }
+ },
+ {
+  "id": "e7cb7de458633e631198ad8f80de26c8",
+  "description": "Atenção a sua função de efeito que não pode ser uma async function. Criar e executar uma função dentro do useEffect ou com uma IIFE (immediately invoked function expression).",
+  "html_url": "https://gist.github.com/douglasabnovato/e7cb7de458633e631198ad8f80de26c8",
+  "created_at": "2022-09-05T12:20:20Z",
+  "updated_at": "2022-09-05T12:20:50Z",
+  "comments": 0,
+  "files": {
+   "useEffectAsync.jsx": {
+    "filename": "useEffectAsync.jsx",
+    "language": "JavaScript",
+    "size": 293
+   }
+  }
+ },
+ {
+  "id": "0819328f27d681fbb15ebbf19619c2fc",
+  "description": "sempre que props.userID mudar, a função de efeito será executada novamente.",
+  "html_url": "https://gist.github.com/douglasabnovato/0819328f27d681fbb15ebbf19619c2fc",
+  "created_at": "2022-09-05T12:13:13Z",
+  "updated_at": "2022-09-05T12:13:13Z",
+  "comments": 0,
+  "files": {
+   "useEffect.jsx": {
+    "filename": "useEffect.jsx",
+    "language": "JavaScript",
+    "size": 131
+   }
+  }
+ },
+ {
+  "id": "e56ff06d1cb8959e6d57ed872ef7c588",
+  "description": "no primeiro clique, prevState receberá o valor true e alterará o valor de show balance para false, depois receberá false e setará como true novamente  e assim sucessivamente por conta da negação.",
+  "html_url": "https://gist.github.com/douglasabnovato/e56ff06d1cb8959e6d57ed872ef7c588",
+  "created_at": "2022-09-05T11:59:01Z",
+  "updated_at": "2022-09-05T12:05:53Z",
+  "comments": 0,
+  "files": {
+   "useStateToggle.jsx": {
+    "filename": "useStateToggle.jsx",
+    "language": "JavaScript",
+    "size": 201
+   }
+  }
+ },
+ {
+  "id": "6ab7ff2968779a287a71f18c78f5fbb4",
+  "description": "o hooks useState e a função responsável por alterar o state, onChange.",
+  "html_url": "https://gist.github.com/douglasabnovato/6ab7ff2968779a287a71f18c78f5fbb4",
+  "created_at": "2022-09-05T11:55:27Z",
+  "updated_at": "2022-09-05T11:55:28Z",
+  "comments": 0,
+  "files": {
+   "useState.jsx": {
+    "filename": "useState.jsx",
+    "language": "JavaScript",
+    "size": 151
+   }
+  }
+ },
+ {
+  "id": "815f51dc7d6afc91eb80d8ed01e908f5",
+  "description": "fazer um readme",
+  "html_url": "https://gist.github.com/douglasabnovato/815f51dc7d6afc91eb80d8ed01e908f5",
+  "created_at": "2022-08-11T11:43:51Z",
+  "updated_at": "2022-08-11T11:44:12Z",
+  "comments": 0,
+  "files": {
+   "readme.md": {
+    "filename": "readme.md",
+    "language": "Markdown",
+    "size": 222
+   }
+  }
+ },
+ {
+  "id": "3cc915b8d73fe63d44877f9aeefcda4f",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/3cc915b8d73fe63d44877f9aeefcda4f",
+  "created_at": "2022-08-07T18:57:27Z",
+  "updated_at": "2022-08-07T18:57:27Z",
+  "comments": 0,
+  "files": {
+   "prefers-color-scheme.css": {
+    "filename": "prefers-color-scheme.css",
+    "language": "CSS",
+    "size": 473
+   }
+  }
+ },
+ {
+  "id": "c6bcac9a619365260fd9def5ee16412a",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/c6bcac9a619365260fd9def5ee16412a",
+  "created_at": "2022-08-07T18:56:07Z",
+  "updated_at": "2022-08-07T18:56:07Z",
+  "comments": 0,
+  "files": {
+   "color-scheme.css": {
+    "filename": "color-scheme.css",
+    "language": "CSS",
+    "size": 162
+   }
+  }
+ },
+ {
+  "id": "9c6ae5bc4697b6656c792e2ccf3b1a13",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/9c6ae5bc4697b6656c792e2ccf3b1a13",
+  "created_at": "2022-08-07T18:55:25Z",
+  "updated_at": "2022-08-07T18:55:25Z",
+  "comments": 0,
+  "files": {
+   "color-scheme.css": {
+    "filename": "color-scheme.css",
+    "language": "CSS",
+    "size": 149
+   }
+  }
+ },
+ {
+  "id": "453082a9964395bc4b01718cf4a67ab4",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/453082a9964395bc4b01718cf4a67ab4",
+  "created_at": "2022-08-07T18:53:42Z",
+  "updated_at": "2022-08-07T18:53:42Z",
+  "comments": 0,
+  "files": {
+   "body.css": {
+    "filename": "body.css",
+    "language": "CSS",
+    "size": 144
+   }
+  }
+ },
+ {
+  "id": "28dde947a76ccd1aee9753f2158d774c",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/28dde947a76ccd1aee9753f2158d774c",
+  "created_at": "2022-08-07T18:52:23Z",
+  "updated_at": "2022-08-07T18:52:23Z",
+  "comments": 0,
+  "files": {
+   "matches.css": {
+    "filename": "matches.css",
+    "language": "CSS",
+    "size": 302
+   }
+  }
+ },
+ {
+  "id": "dc0277033931de672fa8904acdaf085c",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/dc0277033931de672fa8904acdaf085c",
+  "created_at": "2022-08-07T18:36:10Z",
+  "updated_at": "2022-08-07T18:36:10Z",
+  "comments": 0,
+  "files": {
+   "dark.css": {
+    "filename": "dark.css",
+    "language": "CSS",
+    "size": 418
+   }
+  }
+ },
+ {
+  "id": "e6062035c57879fbc7beb031818517ca",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/e6062035c57879fbc7beb031818517ca",
+  "created_at": "2022-08-07T16:53:59Z",
+  "updated_at": "2022-08-07T16:54:00Z",
+  "comments": 0,
+  "files": {
+   "regex.js": {
+    "filename": "regex.js",
+    "language": "JavaScript",
+    "size": 399
+   }
+  }
+ },
+ {
+  "id": "d33c1066e9dafe089f7e0adb582f320c",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/d33c1066e9dafe089f7e0adb582f320c",
+  "created_at": "2022-08-07T14:58:38Z",
+  "updated_at": "2022-08-07T14:58:38Z",
+  "comments": 0,
+  "files": {
+   "rel-noopener.html": {
+    "filename": "rel-noopener.html",
+    "language": "HTML",
+    "size": 79
+   }
+  }
+ },
+ {
+  "id": "59c95de050fd5c556153aaf1cb7ca0d3",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/59c95de050fd5c556153aaf1cb7ca0d3",
+  "created_at": "2022-08-07T14:34:24Z",
+  "updated_at": "2022-08-07T14:34:24Z",
+  "comments": 0,
+  "files": {
+   "superHeroes.json": {
+    "filename": "superHeroes.json",
+    "language": "JSON",
+    "size": 385
+   }
+  }
+ },
+ {
+  "id": "8332ee09ee89343dc5c6e7542bb80407",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/8332ee09ee89343dc5c6e7542bb80407",
+  "created_at": "2022-08-07T14:33:23Z",
+  "updated_at": "2022-08-07T14:33:24Z",
+  "comments": 0,
+  "files": {
+   "superHeroes.json": {
+    "filename": "superHeroes.json",
+    "language": "JSON",
+    "size": 38
+   }
+  }
+ },
+ {
+  "id": "bf02ef716e7d4d6ba9f65e7d6628acc6",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/bf02ef716e7d4d6ba9f65e7d6628acc6",
+  "created_at": "2022-08-07T14:32:48Z",
+  "updated_at": "2022-08-07T14:32:48Z",
+  "comments": 0,
+  "files": {
+   "superHeroes.json": {
+    "filename": "superHeroes.json",
+    "language": "JSON",
+    "size": 42
+   }
+  }
+ },
+ {
+  "id": "d267b172d2e5c2ef221079d190004026",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/d267b172d2e5c2ef221079d190004026",
+  "created_at": "2022-08-07T14:32:09Z",
+  "updated_at": "2022-08-07T14:32:09Z",
+  "comments": 0,
+  "files": {
+   "structure.json": {
+    "filename": "structure.json",
+    "language": "JSON",
+    "size": 827
+   }
+  }
+ },
+ {
+  "id": "9c7f896f09a48b3c7aafa21e13691970",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/9c7f896f09a48b3c7aafa21e13691970",
+  "created_at": "2022-08-07T13:28:24Z",
+  "updated_at": "2022-08-07T13:28:24Z",
+  "comments": 0,
+  "files": {
+   "aspect-ratio.css": {
+    "filename": "aspect-ratio.css",
+    "language": "CSS",
+    "size": 139
+   }
+  }
+ },
+ {
+  "id": "b32ec845ec72b7ac14d731e51e9105bb",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/b32ec845ec72b7ac14d731e51e9105bb",
+  "created_at": "2022-08-07T13:26:13Z",
+  "updated_at": "2022-08-07T13:26:14Z",
+  "comments": 0,
+  "files": {
+   "aspect-ratio.css": {
+    "filename": "aspect-ratio.css",
+    "language": "CSS",
+    "size": 67
+   }
+  }
+ },
+ {
+  "id": "586ea15dd1496e4a3daf98905a06f333",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/586ea15dd1496e4a3daf98905a06f333",
+  "created_at": "2022-08-07T13:25:04Z",
+  "updated_at": "2022-08-07T13:25:05Z",
+  "comments": 0,
+  "files": {
+   "iframe[width][height].css": {
+    "filename": "iframe[width][height].css",
+    "language": "CSS",
+    "size": 69
+   }
+  }
+ },
+ {
+  "id": "cba00ca0f8a47785ff98088b3a1d2d28",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/cba00ca0f8a47785ff98088b3a1d2d28",
+  "created_at": "2022-08-07T13:24:33Z",
+  "updated_at": "2022-08-07T13:24:33Z",
+  "comments": 0,
+  "files": {
+   "iframe.html": {
+    "filename": "iframe.html",
+    "language": "HTML",
+    "size": 68
+   }
+  }
+ },
+ {
+  "id": "628f361801a98ce9fa9d5859ece59cea",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/628f361801a98ce9fa9d5859ece59cea",
+  "created_at": "2022-08-07T13:23:14Z",
+  "updated_at": "2022-08-07T13:23:14Z",
+  "comments": 0,
+  "files": {
+   "aspect-ratio.css": {
+    "filename": "aspect-ratio.css",
+    "language": "CSS",
+    "size": 65
+   }
+  }
+ },
+ {
+  "id": "8a58747b406e94549f6cd84808edec89",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/8a58747b406e94549f6cd84808edec89",
+  "created_at": "2022-08-07T13:22:00Z",
+  "updated_at": "2022-08-07T13:22:00Z",
+  "comments": 0,
+  "files": {
+   "aspect-ratio.css": {
+    "filename": "aspect-ratio.css",
+    "language": "CSS",
+    "size": 67
+   }
+  }
+ },
+ {
+  "id": "1a4ffad91a6c624790d0cf42f04ca1ce",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/1a4ffad91a6c624790d0cf42f04ca1ce",
+  "created_at": "2022-08-07T13:21:33Z",
+  "updated_at": "2022-08-07T13:21:33Z",
+  "comments": 0,
+  "files": {
+   "aspect-ratio.css": {
+    "filename": "aspect-ratio.css",
+    "language": "CSS",
+    "size": 67
+   }
+  }
+ },
+ {
+  "id": "bfa640f331cdfabbf28578ca22ea20eb",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/bfa640f331cdfabbf28578ca22ea20eb",
+  "created_at": "2022-08-07T13:19:05Z",
+  "updated_at": "2022-08-07T13:19:05Z",
+  "comments": 0,
+  "files": {
+   "aspect-ratio.css": {
+    "filename": "aspect-ratio.css",
+    "language": "CSS",
+    "size": 45
+   }
+  }
+ },
+ {
+  "id": "77378aa9693f48a71b9da972ec71af19",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/77378aa9693f48a71b9da972ec71af19",
+  "created_at": "2022-08-07T13:17:47Z",
+  "updated_at": "2022-08-07T13:18:19Z",
+  "comments": 0,
+  "files": {
+   "aspect-ratio.css": {
+    "filename": "aspect-ratio.css",
+    "language": "CSS",
+    "size": 51
+   }
+  }
+ },
+ {
+  "id": "315a05d91900ea2c12bb79582c4909d1",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/315a05d91900ea2c12bb79582c4909d1",
+  "created_at": "2022-08-07T13:16:13Z",
+  "updated_at": "2022-08-07T13:16:13Z",
+  "comments": 0,
+  "files": {
+   "aspect-ratio.css": {
+    "filename": "aspect-ratio.css",
+    "language": "CSS",
+    "size": 36
+   }
+  }
+ },
+ {
+  "id": "d43b4b387e996a3c7e1f5e63415dc39f",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/d43b4b387e996a3c7e1f5e63415dc39f",
+  "created_at": "2022-08-07T13:13:56Z",
+  "updated_at": "2022-08-07T13:13:56Z",
+  "comments": 0,
+  "files": {
+   "aspect-ratio.css": {
+    "filename": "aspect-ratio.css",
+    "language": "CSS",
+    "size": 265
+   }
+  }
+ },
+ {
+  "id": "34138ee6ce464c1cd53bca5836615726",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/34138ee6ce464c1cd53bca5836615726",
+  "created_at": "2022-08-07T13:13:28Z",
+  "updated_at": "2022-08-07T13:13:28Z",
+  "comments": 0,
+  "files": {
+   "aspect-ratio.html": {
+    "filename": "aspect-ratio.html",
+    "language": "HTML",
+    "size": 130
+   }
+  }
+ },
+ {
+  "id": "0e7bcc12ee252e0a0daf46842b5f2eae",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/0e7bcc12ee252e0a0daf46842b5f2eae",
+  "created_at": "2022-08-07T13:11:50Z",
+  "updated_at": "2022-08-07T13:11:50Z",
+  "comments": 0,
+  "files": {
+   "aspect-ratio.css": {
+    "filename": "aspect-ratio.css",
+    "language": "CSS",
+    "size": 40
+   }
+  }
+ },
+ {
+  "id": "8d5f613ff714e3202f95ba61a5ae6636",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/8d5f613ff714e3202f95ba61a5ae6636",
+  "created_at": "2022-08-07T13:10:46Z",
+  "updated_at": "2022-08-07T13:10:46Z",
+  "comments": 0,
+  "files": {
+   "aspect-ratio.css": {
+    "filename": "aspect-ratio.css",
+    "language": "CSS",
+    "size": 479
+   }
+  }
+ },
+ {
+  "id": "4f9864f266827e74a60fcbfb2eda56e3",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/4f9864f266827e74a60fcbfb2eda56e3",
+  "created_at": "2022-08-07T13:09:47Z",
+  "updated_at": "2022-08-07T13:09:47Z",
+  "comments": 0,
+  "files": {
+   "aspect-ratio.css": {
+    "filename": "aspect-ratio.css",
+    "language": "CSS",
+    "size": 30
+   }
+  }
+ },
+ {
+  "id": "a1bebceb6b3300fb20c13bfbd9cde677",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/a1bebceb6b3300fb20c13bfbd9cde677",
+  "created_at": "2022-08-07T13:08:39Z",
+  "updated_at": "2022-08-07T13:08:40Z",
+  "comments": 0,
+  "files": {
+   "aspect-ratio.css": {
+    "filename": "aspect-ratio.css",
+    "language": "CSS",
+    "size": 133
+   }
+  }
+ },
+ {
+  "id": "8be08e9ae32f4cc333d041ec7856fe55",
+  "description": "listaMult para armazenar uma lista dos múltiplos ",
+  "html_url": "https://gist.github.com/douglasabnovato/8be08e9ae32f4cc333d041ec7856fe55",
+  "created_at": "2022-07-31T20:13:30Z",
+  "updated_at": "2022-07-31T20:13:54Z",
+  "comments": 0,
+  "files": {
+   "listaMult.js": {
+    "filename": "listaMult.js",
+    "language": "JavaScript",
+    "size": 1625
+   }
+  }
+ },
+ {
+  "id": "298d2a467d1fe46af209f50194da8a07",
+  "description": "solução a e solução b ",
+  "html_url": "https://gist.github.com/douglasabnovato/298d2a467d1fe46af209f50194da8a07",
+  "created_at": "2022-07-31T19:24:58Z",
+  "updated_at": "2022-07-31T19:25:43Z",
+  "comments": 1,
+  "files": {
+   "xpeducacao.js": {
+    "filename": "xpeducacao.js",
+    "language": "JavaScript",
+    "size": 1205
+   }
+  }
+ },
+ {
+  "id": "cbd2dcb8c9517028921a74aaaa67c50f",
+  "description": "desafio de código resolvido com javascript.",
+  "html_url": "https://gist.github.com/douglasabnovato/cbd2dcb8c9517028921a74aaaa67c50f",
+  "created_at": "2022-07-31T18:55:39Z",
+  "updated_at": "2022-07-31T18:55:39Z",
+  "comments": 0,
+  "files": {
+   "index.js": {
+    "filename": "index.js",
+    "language": "JavaScript",
+    "size": 693
+   }
+  }
+ },
+ {
+  "id": "30ec80f0d527569b166baf9cc3be3ff6",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/30ec80f0d527569b166baf9cc3be3ff6",
+  "created_at": "2022-07-28T18:05:12Z",
+  "updated_at": "2022-07-28T18:05:12Z",
+  "comments": 0,
+  "files": {
+   "flex.html": {
+    "filename": "flex.html",
+    "language": "HTML",
+    "size": 181
+   }
+  }
+ },
+ {
+  "id": "f71ad9cd9713aadef5c130eec956061b",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/f71ad9cd9713aadef5c130eec956061b",
+  "created_at": "2022-07-28T18:04:22Z",
+  "updated_at": "2022-07-28T18:04:44Z",
+  "comments": 0,
+  "files": {
+   "grid.html": {
+    "filename": "grid.html",
+    "language": "HTML",
+    "size": 186
+   }
+  }
+ },
+ {
+  "id": "ef9a1813a8772558ed079723cd2e0c9b",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/ef9a1813a8772558ed079723cd2e0c9b",
+  "created_at": "2022-07-28T17:55:07Z",
+  "updated_at": "2022-07-28T17:55:07Z",
+  "comments": 0,
+  "files": {
+   "style.html": {
+    "filename": "style.html",
+    "language": "HTML",
+    "size": 418
+   }
+  }
+ },
+ {
+  "id": "4ccc5f4783ae08fab0230328d4263663",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/4ccc5f4783ae08fab0230328d4263663",
+  "created_at": "2022-07-28T17:50:45Z",
+  "updated_at": "2022-07-28T17:51:24Z",
+  "comments": 0,
+  "files": {
+   "vw.html": {
+    "filename": "vw.html",
+    "language": "HTML",
+    "size": 43
+   }
+  }
+ },
+ {
+  "id": "85f95fa01ef0952451b5f5dce91f2a09",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/85f95fa01ef0952451b5f5dce91f2a09",
+  "created_at": "2022-07-28T17:48:49Z",
+  "updated_at": "2022-07-28T17:48:49Z",
+  "comments": 0,
+  "files": {
+   "picture.html": {
+    "filename": "picture.html",
+    "language": "HTML",
+    "size": 231
+   }
+  }
+ },
+ {
+  "id": "6140d8b93f28d1ddae7804b8424bc334",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/6140d8b93f28d1ddae7804b8424bc334",
+  "created_at": "2022-07-28T17:46:33Z",
+  "updated_at": "2022-07-28T17:46:33Z",
+  "comments": 0,
+  "files": {
+   "ax-width.html": {
+    "filename": "ax-width.html",
+    "language": "HTML",
+    "size": 60
+   }
+  }
+ },
+ {
+  "id": "6c2135537a42d8e5996ed1c6d97da05d",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/6c2135537a42d8e5996ed1c6d97da05d",
+  "created_at": "2022-07-28T17:45:31Z",
+  "updated_at": "2022-07-28T17:45:31Z",
+  "comments": 0,
+  "files": {
+   "width.html": {
+    "filename": "width.html",
+    "language": "HTML",
+    "size": 44
+   }
+  }
+ },
+ {
+  "id": "ed29b0b71927ed560bd832c80b49cb12",
+  "description": "meta",
+  "html_url": "https://gist.github.com/douglasabnovato/ed29b0b71927ed560bd832c80b49cb12",
+  "created_at": "2022-07-28T17:43:42Z",
+  "updated_at": "2022-07-28T17:43:42Z",
+  "comments": 0,
+  "files": {
+   "meta.html": {
+    "filename": "meta.html",
+    "language": "HTML",
+    "size": 70
+   }
+  }
+ },
+ {
+  "id": "8ac97b1d959592df869188ab77570247",
+  "description": "grid",
+  "html_url": "https://gist.github.com/douglasabnovato/8ac97b1d959592df869188ab77570247",
+  "created_at": "2022-07-28T17:26:42Z",
+  "updated_at": "2022-07-28T17:26:42Z",
+  "comments": 0,
+  "files": {
+   "grid.html": {
+    "filename": "grid.html",
+    "language": "HTML",
+    "size": 74
+   }
+  }
+ },
+ {
+  "id": "f265c4469b279b3896b855350405b41b",
+  "description": "exemplo prático grid-template-columns",
+  "html_url": "https://gist.github.com/douglasabnovato/f265c4469b279b3896b855350405b41b",
+  "created_at": "2022-07-28T17:12:17Z",
+  "updated_at": "2022-07-28T17:12:39Z",
+  "comments": 0,
+  "files": {
+   "grid-template-columns.css": {
+    "filename": "grid-template-columns.css",
+    "language": "CSS",
+    "size": 154
+   }
+  }
+ },
+ {
+  "id": "6373a671e7aeb6a1248068d904c351df",
+  "description": "grid-template-columns",
+  "html_url": "https://gist.github.com/douglasabnovato/6373a671e7aeb6a1248068d904c351df",
+  "created_at": "2022-07-28T17:07:53Z",
+  "updated_at": "2022-07-28T17:07:53Z",
+  "comments": 0,
+  "files": {
+   "grid-template-columns.css": {
+    "filename": "grid-template-columns.css",
+    "language": "CSS",
+    "size": 948
+   }
+  }
+ },
+ {
+  "id": "2581b48bbd1d8b0f64fe3dbe25272686",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/2581b48bbd1d8b0f64fe3dbe25272686",
+  "created_at": "2022-07-27T17:59:28Z",
+  "updated_at": "2022-07-27T17:59:28Z",
+  "comments": 0,
+  "files": {
+   "promise.js": {
+    "filename": "promise.js",
+    "language": "JavaScript",
+    "size": 623
+   }
+  }
+ },
+ {
+  "id": "1f1a02d1e9e7c9cf904a24242abfa615",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/1f1a02d1e9e7c9cf904a24242abfa615",
+  "created_at": "2022-07-27T17:57:41Z",
+  "updated_at": "2022-07-27T17:57:41Z",
+  "comments": 0,
+  "files": {
+   "map.js": {
+    "filename": "map.js",
+    "language": "JavaScript",
+    "size": 210
+   }
+  }
+ },
+ {
+  "id": "e267415d4e334f91e0ae529526624623",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/e267415d4e334f91e0ae529526624623",
+  "created_at": "2022-07-27T17:57:02Z",
+  "updated_at": "2022-07-27T17:57:02Z",
+  "comments": 0,
+  "files": {
+   "callback.js": {
+    "filename": "callback.js",
+    "language": "JavaScript",
+    "size": 204
+   }
+  }
+ },
+ {
+  "id": "e570eb333ddc835efe0a0eed5f3486f7",
+  "description": "",
+  "html_url": "https://gist.github.com/douglasabnovato/e570eb333ddc835efe0a0eed5f3486f7",
+  "created_at": "2022-07-27T17:55:20Z",
+  "updated_at": "2022-07-27T17:55:20Z",
+  "comments": 0,
+  "files": {
+   "debugger.js": {
+    "filename": "debugger.js",
+    "language": "JavaScript",
+    "size": 148
+   }
+  }
+ },
+ {
+  "id": "ef274d5e7ecf941f19a072bbc35c6ab2",
+  "description": "templateString",
+  "html_url": "https://gist.github.com/douglasabnovato/ef274d5e7ecf941f19a072bbc35c6ab2",
+  "created_at": "2022-07-27T17:53:59Z",
+  "updated_at": "2022-07-27T17:54:00Z",
+  "comments": 0,
+  "files": {
+   "templateString.js": {
+    "filename": "templateString.js",
+    "language": "JavaScript",
+    "size": 86
+   }
+  }
+ },
+ {
+  "id": "1eab4437231cf84ac66aad8dbeca064c",
+  "description": "Componente funcional sem estado",
+  "html_url": "https://gist.github.com/douglasabnovato/1eab4437231cf84ac66aad8dbeca064c",
+  "created_at": "2022-07-26T14:24:01Z",
+  "updated_at": "2022-07-26T14:24:02Z",
+  "comments": 0,
+  "files": {
+   "componentSemEstado.js": {
+    "filename": "componentSemEstado.js",
+    "language": "JavaScript",
+    "size": 118
+   }
+  }
+ },
+ {
+  "id": "a721711d4d2a02bd5cfce00c48f0f8c5",
+  "description": " Componente de classe",
+  "html_url": "https://gist.github.com/douglasabnovato/a721711d4d2a02bd5cfce00c48f0f8c5",
+  "created_at": "2022-07-26T14:23:16Z",
+  "updated_at": "2022-07-26T14:23:16Z",
+  "comments": 0,
+  "files": {
+   "classComponent.js": {
+    "filename": "classComponent.js",
+    "language": "JavaScript",
+    "size": 139
+   }
+  }
+ },
+ {
+  "id": "23655b87937e98ae013057cf44825024",
+  "description": "element em reactjs",
+  "html_url": "https://gist.github.com/douglasabnovato/23655b87937e98ae013057cf44825024",
+  "created_at": "2022-07-26T14:22:16Z",
+  "updated_at": "2022-07-26T14:22:16Z",
+  "comments": 0,
+  "files": {
+   "index.js": {
+    "filename": "index.js",
+    "language": "JavaScript",
+    "size": 48
+   }
+  }
+ },
+ {
+  "id": "eb212f6e8bdc3187821f5560eeb0c26e",
+  "description": "um Hook customizado",
+  "html_url": "https://gist.github.com/douglasabnovato/eb212f6e8bdc3187821f5560eeb0c26e",
+  "created_at": "2022-07-26T14:04:14Z",
+  "updated_at": "2022-07-26T14:04:15Z",
+  "comments": 0,
+  "files": {
+   "index.js": {
+    "filename": "index.js",
+    "language": "JavaScript",
+    "size": 291
+   }
+  }
+ },
+ {
+  "id": "91c3304b3392c271063cc3e3b1704bac",
+  "description": "componente que segue o movimento do mouse",
+  "html_url": "https://gist.github.com/douglasabnovato/91c3304b3392c271063cc3e3b1704bac",
+  "created_at": "2022-07-26T14:01:09Z",
+  "updated_at": "2022-07-26T14:01:40Z",
+  "comments": 0,
+  "files": {
+   "index.js": {
+    "filename": "index.js",
+    "language": "JavaScript",
+    "size": 111
+   }
+  }
+ }
+]
