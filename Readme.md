@@ -308,12 +308,14 @@ VITE_SUPABASE_ANON_KEY=...
 
 Sem essas variáveis o site roda normalmente; apenas o registro não é gravado.
 
-## Estado e próximos passos (ciclo de 03/11/2026)
+## Estado e próximos passos (ciclo de 10/11/2026)
 
-No ar em https://douglasabnovato-dev.vercel.app/ (HTTP 200 em 06/11/2026). Nível Produto (N3): 8 de 12 critérios atendidos, Finalizado: sim. Os 4 que faltam dependem do responsável.
+No ar em https://douglasabnovato-dev.vercel.app/ (HTTP 200 em 10/11/2026). Nível Produto (N3): 10 de 12 critérios atendidos, Finalizado: sim. Os 2 que faltam dependem do responsável: a conta do GoatCounter (#251) e as issues antigas com dados de terceiros (#253). A `master` exige os jobs do CI verdes desde 10/11/2026.
 
 **O que foi feito**
 
+- Medição com GoatCounter pronta no código, só no site publicado e sem cookie, com o evento `abriu-projeto`; falta a conta (ciclo de 10/11/2026).
+- Teste Playwright do fluxo principal: da página inicial a um projeto no ar em 3 cliques (ciclo de 10/11/2026).
 - Currículo liberado mesmo com cookies bloqueados, sem o laço do formulário (PR #250).
 - Dados estruturados `ProfilePage` + `Person` no `index.html`, com teste (PR #250).
 - Critérios do MVP revistos com as medições publicadas: LCP de 2,13 s e Lighthouse 100 (PR #248).
@@ -321,7 +323,7 @@ No ar em https://douglasabnovato-dev.vercel.app/ (HTTP 200 em 06/11/2026). Níve
 
 **O que queremos fazer**
 
-- Do responsável: medir as visitas que abrem um projeto (#251), teste com pessoa de fora (#252), tirar dados de terceiros das issues antigas (#253), proteger a `master` (#254), confirmar os marcos da linha do tempo (#237) e revisar o artigo dos canais (#238).
+- Do responsável: medir as visitas que abrem um projeto (#251), teste com pessoa de fora (#252), tirar dados de terceiros das issues antigas (#253), confirmar os marcos da linha do tempo (#237) e revisar o artigo dos canais (#238).
 - Do código: imagem de prévia ao compartilhar o link (#255), validar os dados estruturados no Google (#256) e Lighthouse no CI com orçamento de LCP (#258).
 - `/curadoria` e `/ideias` listam anotações, não cursos concluídos nem projetos entregues. #159 e #162 citam contatos e ficam com o responsável.
 

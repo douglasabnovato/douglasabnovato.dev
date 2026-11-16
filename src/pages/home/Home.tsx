@@ -10,6 +10,7 @@ import { getCachedData, getStaleData, setCachedData } from '@/shared/lib/localCa
 import { channels, HANDLE } from '@/shared/config/channels'
 import profileImg from '@/assets/home/1-profile.jpg'
 import { useDocumentTitle } from '@/shared/lib/hooks/useDocumentTitle'
+import { EVENTO_ABRIU_PROJETO } from '@/shared/lib/medicao'
 
 /* ------------------------------------------------------------------ */
 /* Sinal de atividade — vem da API do GitHub                           */
@@ -271,6 +272,7 @@ export const Home = () => {
               <a
                 key={child.id}
                 href={child.url}
+                data-evento={EVENTO_ABRIU_PROJETO}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block"

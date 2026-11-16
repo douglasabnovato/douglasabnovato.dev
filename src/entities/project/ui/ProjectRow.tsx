@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ArrowUpRight } from 'lucide-react'
 import { getFallbackImageFor } from '../model/fallbackImage'
 import { relativeTime } from '../model/useProjectCatalog'
+import { EVENTO_ABRIU_PROJETO } from '@/shared/lib/medicao'
 import type { CatalogProject } from '../model/types'
 
 function ogImage(repo: string) {
@@ -17,6 +18,7 @@ export const ProjectRow = ({ project }: { project: CatalogProject }) => {
   return (
     <a
       href={alvo}
+      data-evento={EVENTO_ABRIU_PROJETO}
       target="_blank"
       rel="noopener noreferrer"
       className="group flex gap-3 rounded-md border border-default bg-surface p-2.5 transition-colors hover:border-accent"
