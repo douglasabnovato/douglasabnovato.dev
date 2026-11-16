@@ -1,5 +1,5 @@
 // Regrava as respostas reais e públicas que o e2e/acessibilidade.pw.ts usa.
-// Uso: node e2e/fixtures/gravar.mjs (3 requisições sem token: GitHub e rss2json).
+// Uso: node e2e/fixtures/gravar.mjs (4 requisições sem token: repositórios, usuário e gists no GitHub, e o feed no rss2json).
 // Guarda só os campos que o site lê; o conteúdo dos artigos é cortado em 4 mil caracteres.
 import { writeFileSync } from 'node:fs'
 
