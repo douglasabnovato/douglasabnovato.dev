@@ -2,6 +2,74 @@
 
 > O plano de 26/10/2026 (fases 0 a 3) segue no `Readme.md`, seção "Plano de ação". Este arquivo guarda os ciclos datados a partir de 03/11/2026. O estado do MVP fica só em [`MVP.md`](MVP.md).
 
+## Ciclo de 16/11/2026
+
+> Branch `feature/2026-11-16` → `developer/sprint-2026-11-19` → `master`. Nível: Produto (N3), 12 critérios. A sprint anterior (PR #262) entrou na `master` em 16/11/2026.
+
+### Produto
+
+**Problema e público.** Quem avalia o responsável (recrutadores, clientes e parceiros) precisa achar, em poucos cliques, projetos no ar e o que foi feito em cada um. O site é o link enviado às vagas, e quem avalia pode navegar só pelo teclado ou no celular.
+
+**Hipótese e meta.** Se o portfólio mostrar projetos no ar e o que foi feito em cada um, quem avalia chega a um projeto em até 3 cliques, e ao menos 1 em cada 4 visitas abre um projeto. Saberemos quando o GoatCounter mostrar a razão entre o evento `abriu-projeto` e as visitas, por 30 dias (#251, conta do responsável).
+
+**O que a análise achou.**
+- O critério 8 estava "Atende" só com o Lighthouse. A régua pede axe nos dois temas, em desktop, e teste de teclado. Nenhum teste rodava o axe.
+- Na página inicial, o ícone do Linktree (Simple Icons) vem com `role="img"` e sem nome: o axe acusa `svg-img-alt`.
+- No celular, o menu fechado fica fora da tela, mas os links seguem no Tab: o foco some da tela. O menu também não fecha com Esc nem devolve o foco.
+- O foco do teclado usava o contorno padrão do navegador, sem token do tema.
+- O GitHub Pages está ligado no modo legado e publica o código-fonte da `master`: `douglasabnovato.github.io/douglasabnovato.dev` responde 200 com o `index.html` de desenvolvimento, que pede `/src/app/main.tsx` e não abre o site. A Vercel é a hospedagem real.
+
+**O que a pesquisa trouxe.**
+
+| Ideia | O que levamos para o projeto | Fonte |
+|---|---|---|
+| Resultado "incompleto" do axe | O axe separa o que não consegue decidir (por exemplo, contraste sobre fundo translúcido ou gradiente) em `incomplete`. O teste falha também com `color-contrast` em `incomplete`, para "sem violação" não esconder contraste não medido | [axe-core: API, objeto de resultados](https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#results-object) |
+| Foco visível | O critério 2.4.7 da WCAG pede um indicador de foco visível. Com o menu fora da tela, o foco ia para um link invisível. O contorno passa a usar o acento do tema, e o menu fechado sai da ordem do Tab | [W3C: Understanding 2.4.7 Focus Visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) |
+| Botão que mostra e esconde um bloco | O padrão "disclosure" da APG usa `aria-expanded` e `aria-controls` no botão. O botão "Abrir menu" ganhou os dois, e o Esc fecha o menu e devolve o foco | [W3C APG: Disclosure pattern](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/) |
+| Imagem de prévia | O protocolo Open Graph define `og:image` e `og:image:alt`; o card grande pede `twitter:card` `summary_large_image`. Fica para a #255 | [The Open Graph protocol](https://ogp.me/) |
+
+**Backlog priorizado (impacto × esforço).**
+
+| Prioridade | Item | Impacto | Esforço | Destino |
+|---|---|---|---|---|
+| 1 | axe nas 9 rotas, nos dois temas, com `incomplete` de contraste | Alto | Baixo | Este ciclo |
+| 2 | Ícone sem nome na faixa de canais | Médio | Baixo | Este ciclo |
+| 3 | Menu do celular pelo teclado (Tab, Esc, foco) e contorno de foco do tema | Alto | Baixo | Este ciclo |
+| 4 | Lighthouse móvel no site publicado, com o hash do bundle conferido | Médio | Baixo | Este ciclo |
+| 5 | Desligar o GitHub Pages legado | Médio | Baixo | Responsável (issue nova) |
+| 6 | Imagem de prévia (Open Graph) | Médio | Baixo | Issue (#255) |
+| 7 | Lighthouse no CI com orçamento de LCP | Médio | Médio | Issue (#258) |
+
+**Fora do escopo.** Imagem por página, linha do tempo (#237), artigo dos canais (#238), troca de hospedagem.
+
+### Engenharia
+
+**Arquitetura.** Sem mudança: SPA React 19 + TypeScript 6 + Vite 8, Tailwind 4 e React Router 7, em camadas (`app`, `pages`, `entities`, `shared`). Os testes de navegador rodam no build de produção (`vite preview`), com a API do GitHub e o feed do Medium simulados.
+
+**Riscos.**
+- O GitHub Pages legado publica uma cópia quebrada do site com o mesmo nome; quem acha esse endereço vê uma página vazia.
+- A medição local do Lighthouse varia com a carga da máquina; vale só a série com FCP observado baixo.
+- Issues públicas antigas com dados de terceiros (#253, do responsável).
+
+**Qualidade.**
+- Testes: axe (`e2e/acessibilidade.pw.ts`) em 9 rotas, com o currículo fechado e liberado, nos temas escuro e claro, a 1280 px, com transições desligadas, e no menu do celular aberto. GitHub e Medium respondem com dados reais gravados em `e2e/fixtures`. Teclado (`e2e/teclado.pw.ts`): contorno do foco no acento dos dois temas, menu fechado fora do Tab, Enter abre, Esc fecha e devolve o foco, link escolhido não devolve o foco ao cabeçalho, Tab que sai do menu o fecha. Falhas (`e2e/falhas.pw.ts`): erro, vazio e espera em Projetos e no Blog.
+- Os testes novos foram conferidos contra o código anterior, em 16/11/2026: com `git stash push -- src` e `npm run build`, `npx playwright test e2e/teclado.pw.ts e2e/acessibilidade.pw.ts` deu 5 falhas (2 axe, 3 teclado); com o `Sidebar.tsx`, o `MainLayout.tsx` e o `main.css` de antes da revisão, os 3 testes novos do menu falharam. Um texto sobre gradiente cai em `incomplete` de `color-contrast`, que o teste trata como falha.
+- A revisão independente mostrou que o menu fechava sem animação. A causa: a regra global `* { transition }` do `main.css` fica fora das camadas do Tailwind e vence o `transition-transform`, então o menu nunca deslizou. A transição do menu passou para uma regra própria no `main.css`.
+- Desempenho: Lighthouse 12.8.2 móvel no site publicado, com o bundle conferido contra a `master`.
+- Segurança: `npm audit --omit=dev` e alertas do Dependabot pela API.
+
+**Definição de pronto.** `npm run lint`, `npm test`, `npm run build` e `npm run test:e2e` passam; CI verde no PR; revisão independente feita; `docs/MVP.md` e `Readme.md` atualizados.
+
+### Plano de ação
+
+**Este ciclo executa.**
+1. axe nas rotas e nos dois temas, com o `incomplete` de contraste.
+2. Correção do ícone sem nome e do menu do celular pelo teclado, com testes.
+3. Lighthouse no site publicado e `MVP.md` com a evidência de cada "Atende".
+4. `docs/DEPLOY.md` com a Vercel e o Pages legado.
+
+**Vira issue.** Desligar o Pages legado (#270, responsável). Medir de novo o LCP depois da publicação (#271), link "Pular para o conteúdo" (#272), Dependabot semanal (#274). O axe com dados reais (#273) entrou neste ciclo, depois da revisão. Seguem #255, #256 e #258.
+
 ## Ciclo de 03/11/2026
 
 > Branch `feature/2026-11-06` → `developer/sprint-2026-11-12` → `master`. Nível: Produto (N3), 12 critérios.

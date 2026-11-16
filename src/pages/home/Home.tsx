@@ -135,6 +135,7 @@ const ChannelBand = ({ repos, artigos }: { repos: number | null; artigos: number
               className="group flex items-start gap-3 rounded-lg border border-default bg-surface px-4 py-3.5 hover:border-accent transition-colors"
             >
               <Icone
+                aria-hidden
                 size={16}
                 className="mt-0.5 shrink-0 text-muted group-hover:text-primary transition-colors"
               />

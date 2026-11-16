@@ -1,3 +1,4 @@
+import { useEffect, useRef, type FocusEvent } from 'react'
 import { NavLink } from 'react-router-dom'
 import { BookOpen, Home, FileText, LayoutGrid, Lightbulb, Newspaper, X } from 'lucide-react'
 import { ThemeToggle } from '../themeToggle/ThemeToggle'
@@ -13,10 +14,31 @@ const navItems = [
 
 interface SidebarProps {
   isOpen: boolean
+  /** Fecha e devolve o foco ao botão "Abrir menu" (Esc, "Fechar menu", clique fora). */
   onClose: () => void
+  /** Fecha sem mover o foco (link escolhido ou foco que saiu do menu). */
+  onDismiss: () => void
 }
 
-export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
+export const Sidebar = ({ isOpen, onClose, onDismiss }: SidebarProps) => {
+  const botaoFechar = useRef<HTMLButtonElement>(null)
+
+  // Menu do celular aberto: o foco vai para "Fechar menu", e o Esc fecha.
+  useEffect(() => {
+    if (!isOpen) return
+    botaoFechar.current?.focus()
+    const aoTeclar = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose()
+    }
+    document.addEventListener('keydown', aoTeclar)
+    return () => document.removeEventListener('keydown', aoTeclar)
+  }, [isOpen, onClose])
+
+  // Com o menu aberto, o Tab que sai dele fecha o menu, para o foco não ficar atrás do fundo escuro.
+  const aoSairDoFoco = (e: FocusEvent<HTMLElement>) => {
+    if (isOpen && e.relatedTarget instanceof Node && !e.currentTarget.contains(e.relatedTarget)) onDismiss()
+  }
+
   return (
     <>
       {isOpen && (
@@ -24,14 +46,18 @@ export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
       )}
 
       <nav
-        className={`fixed md:static top-0 left-0 h-screen md:h-auto w-56 flex-shrink-0 border-r border-default bg-surface-solid md:bg-surface p-4 flex flex-col gap-6 z-50 transition-transform duration-200 ${isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
+        id="menu-principal"
+        aria-label="Menu principal"
+        onBlur={aoSairDoFoco}
+        data-aberto={isOpen || undefined}
+        className={`fixed md:static top-0 left-0 h-screen md:h-auto w-56 flex-shrink-0 border-r border-default bg-surface-solid md:bg-surface p-4 flex flex-col gap-6 z-50 ${isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0 max-md:invisible'
           }`}
       >
         <div className="flex items-center justify-between px-2">
           <span className="font-bold text-lg">
             douglasabnovato<span className="text-muted">.dev</span>
           </span>
-          <button onClick={onClose} aria-label="Fechar menu" className="md:hidden text-secondary hover:text-primary">
+          <button ref={botaoFechar} onClick={onClose} aria-label="Fechar menu" className="md:hidden text-secondary hover:text-primary">
             <X size={20} />
           </button>
         </div>
@@ -41,7 +67,7 @@ export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
               <NavLink
                 to={to}
                 end={end}
-                onClick={onClose}
+                onClick={onDismiss}
                 className={({ isActive }) =>
                   `flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition-colors ${isActive
                     ? 'bg-surface-solid text-primary font-medium'

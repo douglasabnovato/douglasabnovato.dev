@@ -73,6 +73,15 @@ export const Projetos = () => {
       {state === 'stale' && (
         <p className="mt-6 text-[10px] font-mono text-muted">Exibindo dados em cache.</p>
       )}
+      {state === 'ok' && sections.length === 0 && (
+        <p className="mt-6 text-xs text-muted">
+          Nenhum repositório público encontrado agora. A lista completa está no{' '}
+          <a href="https://github.com/douglasabnovato" target="_blank" rel="noopener noreferrer" className="underline hover:text-accent">
+            GitHub
+          </a>
+          .
+        </p>
+      )}
 
       {/* ---------- GESTÃO DE PROJETOS ---------- */}
       <section className="mt-[var(--space-block)]">

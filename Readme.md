@@ -22,7 +22,7 @@
 
 ---
 
-> **Estado em 02/11/2026:** Publicado na Vercel. Verificação: `npm run lint`, `npm test`, `npm run build` e `npm run test:e2e`. Critérios em [docs/MVP.md](docs/MVP.md).
+> **Estado em 16/11/2026:** Publicado na Vercel. Verificação: `npm run lint`, `npm test`, `npm run build` e `npm run test:e2e`. Critérios em [docs/MVP.md](docs/MVP.md).
 
 ## Sobre
 
@@ -292,14 +292,18 @@ npm run dev
 Em `http://localhost:5173`. O build de produção é `npm run build`, que roda `tsc -b` antes do Vite — erro de tipo impede o deploy.
 
 ```bash
-npm test         # integridade dos dados: certificados, currículo e Blog
+npm test          # Vitest: integridade dos dados, currículo, medição e dados estruturados
 npm run lint
 npm run build
+npx playwright install chromium   # uma vez, antes do primeiro test:e2e
+npm run test:e2e  # Playwright no build: fluxo principal, falhas, axe nos dois temas e teclado
 ```
 
-O CI (`.github/workflows/ci.yml`) roda os testes e o build em todo push e pull request. O lint também bloqueia.
+O `test:e2e` sobe o `vite preview` na porta 4174; com a porta ocupada, use `PW_PORT=4391 npm run test:e2e`. Ele usa o `dist`, então rode o `npm run build` antes. O `@axe-core/playwright` pede Node 22.12 ou mais novo (o CI usa o 24).
 
-Para o registro de acesso ao currículo funcionar em desenvolvimento, crie um `.env.local`:
+O CI (`.github/workflows/ci.yml`) roda o lint, os testes e o build (job `Testes e build`) e os testes no navegador (job `Fluxos no navegador`) em todo push e pull request. A `master` só aceita PR com os dois jobs verdes.
+
+Para o registro de acesso ao currículo funcionar em desenvolvimento, crie um `.env.local` a partir do `.env.example`:
 
 ```
 VITE_SUPABASE_URL=...
@@ -308,37 +312,37 @@ VITE_SUPABASE_ANON_KEY=...
 
 Sem essas variáveis o site roda normalmente; apenas o registro não é gravado.
 
-## Estado e próximos passos (ciclo de 10/11/2026)
+## Estado e próximos passos (ciclo de 16/11/2026)
 
-No ar em https://douglasabnovato-dev.vercel.app/ (HTTP 200 em 10/11/2026). Nível Produto (N3): 10 de 12 critérios atendidos, Finalizado: sim. Os 2 que faltam dependem do responsável: a conta do GoatCounter (#251) e as issues antigas com dados de terceiros (#253). A `master` exige os jobs do CI verdes desde 10/11/2026.
+No ar em https://douglasabnovato-dev.vercel.app/ (HTTP 200 em 16/11/2026). Nível Produto (N3): 10 de 12 critérios atendidos, Finalizado: sim. Os 2 parciais dependem do responsável: a conta do GoatCounter (#251) e as issues públicas antigas (#253). A `master` exige os jobs do CI verdes.
 
 **O que foi feito**
 
-- Medição com GoatCounter pronta no código, só no site publicado e sem cookie, com o evento `abriu-projeto`; falta a conta (ciclo de 10/11/2026).
-- Teste Playwright do fluxo principal: da página inicial a um projeto no ar em 3 cliques (ciclo de 10/11/2026).
-- Currículo liberado mesmo com cookies bloqueados, sem o laço do formulário (PR #250).
-- Dados estruturados `ProfilePage` + `Person` no `index.html`, com teste (PR #250).
-- Critérios do MVP revistos com as medições publicadas: LCP de 2,13 s e Lighthouse 100 (PR #248).
-- Contraste e LCP da página inicial corrigidos e fluxos testados no navegador (#243).
+- axe em 9 rotas e no menu do celular, nos temas escuro e claro, com dados reais do GitHub e do Medium gravados em `e2e/fixtures` (`node e2e/fixtures/gravar.mjs` regrava), falhando também com contraste não medido; ícone sem nome na faixa de canais corrigido (PR #275, sprint `developer/sprint-2026-11-19`).
+- Menu do celular pelo teclado: fechado fica fora do Tab, Esc fecha e devolve o foco, link escolhido não devolve o foco ao cabeçalho, e a animação de saída voltou a funcionar; contorno do foco no acento do tema (PR #275).
+- Aviso de lista vazia em Projetos e testes de erro, vazio e espera em Projetos e no Blog (PR #275).
+- `docs/DEPLOY.md` com a publicação na Vercel e o Pages legado a desligar (PR #275).
+- Medição com GoatCounter pronta no código e teste do fluxo principal até um projeto no ar (PR #263).
+- Currículo liberado mesmo com cookies bloqueados e dados estruturados `ProfilePage` + `Person` (PR #250).
 
 **O que queremos fazer**
 
-- Do responsável: medir as visitas que abrem um projeto (#251), teste com pessoa de fora (#252), tirar dados de terceiros das issues antigas (#253), confirmar os marcos da linha do tempo (#237) e revisar o artigo dos canais (#238).
-- Do código: imagem de prévia ao compartilhar o link (#255), validar os dados estruturados no Google (#256) e Lighthouse no CI com orçamento de LCP (#258).
-- `/curadoria` e `/ideias` listam anotações, não cursos concluídos nem projetos entregues. #159 e #162 citam contatos e ficam com o responsável.
+- Do responsável: medir as visitas que abrem um projeto (#251), teste com pessoa de fora (#252), issues públicas antigas (#253), desligar o GitHub Pages legado (#270), confirmar os marcos da linha do tempo (#237) e revisar o artigo dos canais (#238).
+- Do código: medir de novo o LCP depois da publicação (#271), link "Pular para o conteúdo" (#272), Dependabot semanal (#274), imagem de prévia (#255), validar os dados estruturados no Google (#256) e Lighthouse no CI (#258).
 
 **Onde está a documentação**
 
 - [docs/MVP.md](docs/MVP.md): critérios, evidências e medições.
-- [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md): seção "Ciclo de 03/11/2026", com pesquisa, produto e engenharia.
+- [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md): seção "Ciclo de 16/11/2026", com análise, pesquisa, produto e engenharia.
+- [docs/DEPLOY.md](docs/DEPLOY.md): como o site chega ao ar e como conferir o build publicado.
 
 ## Branches
 
 ```
-master             → produção (deploy automático na Vercel)
-developer-mvp      → integração
-feature/projetos   → desenvolvimento ativo
-demais branches    → histórico das versões 1.0 a 5.2
+feature/AAAA-MM-DD            → um dia de trabalho
+developer/sprint-AAAA-MM-DD   → a sprint da semana (quinta-feira)
+master                        → produção (deploy automático na Vercel, protegida)
+demais branches               → histórico das versões 1.0 a 5.2 e ciclos anteriores
 ```
 
 ## Ecossistema
