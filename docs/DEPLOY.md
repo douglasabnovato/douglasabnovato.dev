@@ -43,7 +43,7 @@ O repositório também tem o GitHub Pages ligado no modo legado, publicando a ra
 Desligar é do responsável (issue com `depende-do-responsavel`):
 
 1. GitHub → repositório `douglasabnovato.dev` → **Settings** → **Pages**.
-2. Em **Build and deployment** → **Source**, escolher **GitHub Actions** e não criar workflow, ou clicar em **Unpublish site** se o botão aparecer.
+2. Em **Build and deployment**, com **Source** em **Deploy from a branch**, trocar **Branch** de `master` para **None** e clicar em **Save**. Se aparecer o menu **…** ao lado de **Visit site**, **Unpublish site** faz o mesmo.
 3. Conferir: `gh api repos/douglasabnovato/douglasabnovato.dev/pages` responde 404, e o endereço do Pages deixa de responder 200.
 
 ## Se a Vercel falhar
