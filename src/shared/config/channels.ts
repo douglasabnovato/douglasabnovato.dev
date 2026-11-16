@@ -31,7 +31,7 @@ export interface Channel {
   label: string;
   url: string;
   note: string;
-  icon: ComponentType<{ size?: number; className?: string }>;
+  icon: ComponentType<{ size?: number; className?: string; 'aria-hidden'?: boolean }>;
   live?: ChannelLive;
   active: boolean;
 }
