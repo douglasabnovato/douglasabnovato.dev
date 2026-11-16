@@ -38,15 +38,19 @@ curl -s https://douglasabnovato-dev.vercel.app/ | grep -oE 'assets/index-[^"]+\.
 
 O hash do `index-*.js` publicado difere do build local, porque a Vercel injeta as variáveis do Supabase. Compare os chunks que não dependem delas (`NotFound-*.js`, `curadoria.data-*.js`): em 16/11/2026, os dois batiam com o build local da `master` (`4753b76`).
 
-## GitHub Pages legado (a desligar)
+## GitHub Pages legado (desligado em 16/11/2026)
 
-O repositório também tem o GitHub Pages ligado no modo legado, publicando a raiz da `master` (`gh api repos/douglasabnovato/douglasabnovato.dev/pages`: `build_type: legacy`, 16/11/2026). Ele serve o `index.html` de desenvolvimento, que pede `/src/app/main.tsx`: https://douglasabnovato.github.io/douglasabnovato.dev/ responde 200, mas a página fica vazia.
+O repositório tinha o GitHub Pages ligado no modo legado, publicando a raiz da `master`. Ele servia o `index.html` de desenvolvimento, que pede `/src/app/main.tsx`, e a página ficava vazia.
 
-Desligar é do responsável (issue com `depende-do-responsavel`):
+Foi desligado em 16/11/2026, por ordem do responsável (#270). Conferido às 11:28:
 
-1. GitHub → repositório `douglasabnovato.dev` → **Settings** → **Pages**.
-2. Em **Build and deployment**, com **Source** em **Deploy from a branch**, trocar **Branch** de `master` para **None** e clicar em **Save**. Se aparecer o menu **…** ao lado de **Visit site**, **Unpublish site** faz o mesmo.
-3. Conferir: `gh api repos/douglasabnovato/douglasabnovato.dev/pages` responde 404, e o endereço do Pages deixa de responder 200.
+| Verificação | Resultado |
+|---|---|
+| `gh api repos/douglasabnovato/douglasabnovato.dev/pages` | 404 (Pages desligado) |
+| `curl -s -o /dev/null -w "%{http_code}" https://douglasabnovato.github.io/douglasabnovato.dev/` | 404 |
+| `curl -s -o /dev/null -w "%{http_code}" https://douglasabnovato-dev.vercel.app` | 200 |
+
+A Vercel é a única hospedagem. Não religar o Pages: ele publicaria o código-fonte, não o build.
 
 ## Se a Vercel falhar
 
