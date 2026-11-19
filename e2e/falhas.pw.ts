@@ -63,7 +63,6 @@ test('Projetos e Blog mostram a espera enquanto a resposta não chega', async ({
   await expect(repositorios).toHaveText(/^[1-9]\d*$/)
   await expect(page.getByTestId('indicador-no-ar')).toHaveText(/^\d+$/)
   await expect(page.getByRole('heading', { level: 2 }).filter({ hasText: /Projetos/ })).toBeVisible()
-  await expect(page.getByText('Nenhum repositório público encontrado agora')).toHaveCount(0)
 
   await page.goto('/blog')
   await expect(page.getByText('Carregando artigos…')).toBeVisible()

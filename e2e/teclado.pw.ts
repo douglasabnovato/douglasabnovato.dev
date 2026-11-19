@@ -24,9 +24,12 @@ for (const tema of ['dark', 'light'] as const) {
     // Espera o React desenhar o menu lateral antes do primeiro Tab.
     await expect(page.getByRole('navigation', { name: 'Menu principal' })).toBeVisible()
     await page.addStyleTag({ content: '*, *::before, *::after { transition: none !important; }' })
+    // O 1º Tab cai no "Pular para o conteúdo"; o 2º, no primeiro link do menu lateral.
     await page.keyboard.press('Tab')
-    const foco = page.locator(':focus')
-    await expect(foco).toHaveCount(1)
+    await expect(page.getByRole('link', { name: 'Pular para o conteúdo' })).toBeFocused()
+    await page.keyboard.press('Tab')
+    const foco = page.getByRole('navigation', { name: 'Menu principal' }).getByRole('link', { name: 'Home' })
+    await expect(foco).toBeFocused()
     const estilo = await foco.evaluate((el) => {
       const s = getComputedStyle(el)
       // O navegador resolve o token do acento em rgb(), em qualquer formato que ele tenha no CSS.
@@ -64,7 +67,9 @@ test.describe('pular para o conteúdo', () => {
       await page.keyboard.press('Enter')
       const conteudo = page.locator('main#conteudo')
       await expect(conteudo).toBeFocused()
-      await expect(page).toHaveURL(new RegExp(`${rota === '/' ? '/' : rota}$`))
+      // A URL fica a mesma: o link não deixa o #conteudo no endereço.
+      expect(new URL(page.url()).pathname).toBe(rota)
+      expect(new URL(page.url()).hash).toBe('')
       // O Tab seguinte já anda dentro do conteúdo, sem passar pelos 7 itens do menu lateral.
       await page.keyboard.press('Tab')
       expect(await page.evaluate(() => !!document.activeElement?.closest('main#conteudo'))).toBe(true)
