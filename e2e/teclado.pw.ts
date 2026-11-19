@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test'
+import { expect, test, type Locator, type Page } from '@playwright/test'
 
 /**
  * Critério 8, parte do teclado: só Tab, Enter e Esc, sem `.focus()` nem cliques.
@@ -21,6 +21,8 @@ for (const tema of ['dark', 'light'] as const) {
     }, tema)
     await page.goto('/')
     await expect(page.locator('html')).toHaveAttribute('data-theme', tema)
+    // Espera o React desenhar o menu lateral antes do primeiro Tab.
+    await expect(page.getByRole('navigation', { name: 'Menu principal' })).toBeVisible()
     await page.addStyleTag({ content: '*, *::before, *::after { transition: none !important; }' })
     await page.keyboard.press('Tab')
     const foco = page.locator(':focus')
@@ -44,27 +46,45 @@ for (const tema of ['dark', 'light'] as const) {
 test.describe('menu do celular', () => {
   test.use({ viewport: { width: 375, height: 800 } })
 
-  test('fechado, os links do menu não recebem foco', async ({ page }) => {
+  /**
+   * Abre a Home e espera o React desenhar o cabeçalho. Um Tab dado antes disso
+   * não cai no "Abrir menu", e o Enter seguinte não abre nada (#280).
+   */
+  const abrirHome = async (page: Page) => {
     await page.goto('/')
     const abrir = page.getByRole('button', { name: 'Abrir menu' })
+    await expect(abrir).toBeVisible()
     await expect(abrir).toHaveAttribute('aria-expanded', 'false')
-    // Dez Tabs passam pelo cabeçalho e pelo conteúdo; nenhum cai no menu escondido.
-    for (let i = 0; i < 10; i++) {
-      await page.keyboard.press('Tab')
-      const dentroDoMenu = await page.evaluate(() => !!document.activeElement?.closest('#menu-principal'))
-      expect(dentroDoMenu, `Tab ${i + 1}`).toBe(false)
-    }
-  })
+    return abrir
+  }
 
-  test('abre com Enter, leva o foco para dentro e fecha com Esc, devolvendo o foco', async ({ page }) => {
-    await page.goto('/')
-    const abrir = page.getByRole('button', { name: 'Abrir menu' })
+  /** Abre o menu só com Tab e Enter, e espera o estado "aberto" antes de seguir. */
+  const abrirMenuPeloTeclado = async (page: Page, abrir: Locator) => {
     // O botão de abrir é o primeiro elemento focável da página no celular.
     await page.keyboard.press('Tab')
     await expect(abrir).toBeFocused()
     await page.keyboard.press('Enter')
     await expect(abrir).toHaveAttribute('aria-expanded', 'true')
-    await expect(page.getByRole('button', { name: 'Fechar menu' })).toBeFocused()
+    await expect(page.locator('#menu-principal')).toHaveAttribute('data-aberto', 'true')
+    const fechar = page.getByRole('button', { name: 'Fechar menu' })
+    await expect(fechar).toBeFocused()
+    return fechar
+  }
+
+  const menuTemFoco = (page: Page) => page.evaluate(() => !!document.activeElement?.closest('#menu-principal'))
+
+  test('fechado, os links do menu não recebem foco', async ({ page }) => {
+    await abrirHome(page)
+    // Dez Tabs passam pelo cabeçalho e pelo conteúdo; nenhum cai no menu escondido.
+    for (let i = 0; i < 10; i++) {
+      await page.keyboard.press('Tab')
+      expect(await menuTemFoco(page), `Tab ${i + 1}`).toBe(false)
+    }
+  })
+
+  test('abre com Enter, leva o foco para dentro e fecha com Esc, devolvendo o foco', async ({ page }) => {
+    const abrir = await abrirHome(page)
+    await abrirMenuPeloTeclado(page, abrir)
     await page.keyboard.press('Tab')
     await expect(page.getByRole('navigation', { name: 'Menu principal' }).getByRole('link', { name: 'Home' })).toBeFocused()
 
@@ -74,27 +94,36 @@ test.describe('menu do celular', () => {
   })
 
   test('ao fechar, o menu desliza antes de sair da tela e do Tab', async ({ page }) => {
-    await page.goto('/')
-    await page.getByRole('button', { name: 'Abrir menu' }).click()
-    await expect(page.getByRole('button', { name: 'Fechar menu' })).toBeFocused()
-    await page.keyboard.press('Escape')
+    const abrir = await abrirHome(page)
+    await abrirMenuPeloTeclado(page, abrir)
     const menu = page.locator('#menu-principal')
-    // Logo depois do Esc, ainda visível (animação de saída); depois dos 200 ms, escondido.
-    expect(await menu.evaluate((el) => getComputedStyle(el).visibility)).toBe('visible')
+    await page.keyboard.press('Escape')
+    await expect(menu).not.toHaveAttribute('data-aberto')
+    // Fechado, o `visibility` só muda depois do deslize: a transição dele tem o atraso do `transform`.
+    const transicao = await menu.evaluate((el) => {
+      const s = getComputedStyle(el)
+      const propriedades = s.transitionProperty.split(',').map((p) => p.trim())
+      const atrasos = s.transitionDelay.split(',').map((d) => d.trim())
+      const duracoes = s.transitionDuration.split(',').map((d) => d.trim())
+      return {
+        atrasoVisibilidade: atrasos[propriedades.indexOf('visibility')],
+        duracaoDeslize: duracoes[propriedades.indexOf('transform')],
+      }
+    })
+    expect(transicao.duracaoDeslize).toBe('0.2s')
+    expect(transicao.atrasoVisibilidade).toBe(transicao.duracaoDeslize)
     await expect.poll(() => menu.evaluate((el) => getComputedStyle(el).visibility)).toBe('hidden')
   })
 
   test('escolher um link fecha o menu sem levar o foco de volta ao cabeçalho', async ({ page }) => {
-    await page.route('https://api.rss2json.com/**', (r) => r.fulfill({ json: { status: 'ok', items: [] } }))
-    await page.goto('/')
-    const abrir = page.getByRole('button', { name: 'Abrir menu' })
-    await page.keyboard.press('Tab')
-    await page.keyboard.press('Enter')
-    await expect(page.getByRole('button', { name: 'Fechar menu' })).toBeFocused()
-    await page.keyboard.press('Tab')
-    await page.keyboard.press('Tab')
-    await page.keyboard.press('Tab')
-    await expect(page.getByRole('navigation', { name: 'Menu principal' }).getByRole('link', { name: 'Blog' })).toBeFocused()
+    const abrir = await abrirHome(page)
+    await abrirMenuPeloTeclado(page, abrir)
+    const blog = page.getByRole('navigation', { name: 'Menu principal' }).getByRole('link', { name: 'Blog' })
+    // Do "Fechar menu", o Tab passa por Home e Projetos até chegar ao Blog.
+    for (let i = 0; i < 10 && !(await blog.evaluate((el) => el === document.activeElement)); i++) {
+      await page.keyboard.press('Tab')
+    }
+    await expect(blog).toBeFocused()
     await page.keyboard.press('Enter')
     await expect(page).toHaveURL(/\/blog$/)
     await expect(abrir).toHaveAttribute('aria-expanded', 'false')
@@ -102,16 +131,17 @@ test.describe('menu do celular', () => {
   })
 
   test('o Tab que sai do menu aberto fecha o menu', async ({ page }) => {
-    await page.goto('/')
-    const abrir = page.getByRole('button', { name: 'Abrir menu' })
-    await page.keyboard.press('Tab')
-    await page.keyboard.press('Enter')
-    await expect(page.getByRole('button', { name: 'Fechar menu' })).toBeFocused()
-    // Do "Fechar menu", 6 Tabs passam pelos links e o 7º chega ao botão de tema; o 8º sai do menu.
-    for (let i = 0; i < 7; i++) await page.keyboard.press('Tab')
-    await expect(page.getByRole('button', { name: /Modo (claro|escuro)/ })).toBeFocused()
+    const abrir = await abrirHome(page)
+    await abrirMenuPeloTeclado(page, abrir)
+    // Avança o Tab até o botão de tema, o último do menu, sem contar quantos links há antes.
+    const tema = page.getByRole('button', { name: /Modo (claro|escuro)/ })
+    for (let i = 0; i < 15 && !(await tema.evaluate((el) => el === document.activeElement)); i++) {
+      await page.keyboard.press('Tab')
+      expect(await menuTemFoco(page), `Tab ${i + 1} ainda dentro do menu`).toBe(true)
+    }
+    await expect(tema).toBeFocused()
     await page.keyboard.press('Tab')
     await expect(abrir).toHaveAttribute('aria-expanded', 'false')
-    expect(await page.evaluate(() => !!document.activeElement?.closest('#menu-principal'))).toBe(false)
+    expect(await menuTemFoco(page)).toBe(false)
   })
 })
