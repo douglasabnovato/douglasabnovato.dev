@@ -43,6 +43,35 @@ for (const tema of ['dark', 'light'] as const) {
   })
 }
 
+test.describe('pular para o conteúdo', () => {
+  test.use({ viewport: { width: 1280, height: 900 } })
+
+  for (const rota of ['/', '/projetos', '/blog']) {
+    test(`em ${rota}, o 1º Tab mostra o link, e o Enter leva o foco ao conteúdo`, async ({ page }) => {
+      await page.goto(rota)
+      const menu = page.getByRole('navigation', { name: 'Menu principal' })
+      await expect(menu).toBeVisible()
+      // As páginas internas carregam sob demanda: espera o título da página.
+      await expect(page.locator('main#conteudo h1').first()).toBeVisible()
+      const pular = page.getByRole('link', { name: 'Pular para o conteúdo' })
+      // Sem foco, o link fica fora da tela.
+      expect((await pular.boundingBox())?.y ?? 0).toBeLessThan(0)
+
+      await page.keyboard.press('Tab')
+      await expect(pular).toBeFocused()
+      await expect(pular).toBeInViewport()
+
+      await page.keyboard.press('Enter')
+      const conteudo = page.locator('main#conteudo')
+      await expect(conteudo).toBeFocused()
+      await expect(page).toHaveURL(new RegExp(`${rota === '/' ? '/' : rota}$`))
+      // O Tab seguinte já anda dentro do conteúdo, sem passar pelos 7 itens do menu lateral.
+      await page.keyboard.press('Tab')
+      expect(await page.evaluate(() => !!document.activeElement?.closest('main#conteudo'))).toBe(true)
+    })
+  }
+})
+
 test.describe('menu do celular', () => {
   test.use({ viewport: { width: 375, height: 800 } })
 
@@ -60,7 +89,9 @@ test.describe('menu do celular', () => {
 
   /** Abre o menu só com Tab e Enter, e espera o estado "aberto" antes de seguir. */
   const abrirMenuPeloTeclado = async (page: Page, abrir: Locator) => {
-    // O botão de abrir é o primeiro elemento focável da página no celular.
+    // No celular, o 1º Tab cai no "Pular para o conteúdo" e o 2º no botão de abrir.
+    await page.keyboard.press('Tab')
+    await expect(page.getByRole('link', { name: 'Pular para o conteúdo' })).toBeFocused()
     await page.keyboard.press('Tab')
     await expect(abrir).toBeFocused()
     await page.keyboard.press('Enter')
