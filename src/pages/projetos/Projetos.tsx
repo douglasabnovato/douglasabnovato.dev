@@ -51,13 +51,13 @@ export const Projetos = () => {
       {/* ---------- INDICADORES ---------- */}
       <section className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-[color:var(--color-border)] border-b border-default">
         {[
-          { valor: indicators.repositorios, label: 'repositórios' },
-          { valor: indicators.ativos30d, label: 'ativos nos últimos 30 dias' },
-          { valor: indicators.issuesAbertas, label: 'issues abertas' },
-          { valor: indicators.noAr, label: 'com link em produção' },
+          { id: 'repositorios', valor: indicators.repositorios, label: 'repositórios' },
+          { id: 'ativos', valor: indicators.ativos30d, label: 'ativos nos últimos 30 dias' },
+          { id: 'issues', valor: indicators.issuesAbertas, label: 'issues abertas' },
+          { id: 'no-ar', valor: indicators.noAr, label: 'com link em produção' },
         ].map((item) => (
-          <div key={item.label} className="px-4 py-6 first:pl-0">
-            <span className="block text-3xl font-mono tabular-nums text-primary">
+          <div key={item.id} className="px-4 py-6 first:pl-0">
+            <span data-testid={`indicador-${item.id}`} className="block text-3xl font-mono tabular-nums text-primary">
               {state === 'loading' ? '—' : item.valor}
             </span>
             <span className="block text-[11px] text-secondary mt-2 leading-snug">{item.label}</span>

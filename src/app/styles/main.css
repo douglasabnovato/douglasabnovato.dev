@@ -65,6 +65,32 @@ body {
 }
 
 /*
+ * "Pular para o conteúdo" (WCAG 2.4.1): primeiro foco da página, fora da tela
+ * até receber o foco. O <main> recebe o foco por script e não ganha contorno.
+ */
+.pular-conteudo {
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 60;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border-strong);
+    border-radius: 0.5rem;
+    background-color: var(--color-surface-solid);
+    color: var(--color-text-primary);
+    font-size: 0.875rem;
+    transform: translateY(-200%);
+}
+
+.pular-conteudo:focus {
+    transform: none;
+}
+
+#conteudo:focus {
+    outline: none;
+}
+
+/*
  * Menu do celular. Fica fora das camadas do Tailwind porque a regra `*` acima
  * também fica, e venceria qualquer utilitário de transição. Ao fechar, o
  * `visibility` só muda no fim do deslize (200 ms); ao abrir, muda na hora.
